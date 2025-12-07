@@ -44,6 +44,37 @@
             }
         }
 
+        @keyframes particle-float {
+            0%, 100% {
+                transform: translate(0, 0);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(20px, -20px);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes particle-pulse {
+            0%, 100% {
+                r: 2;
+                opacity: 0.4;
+            }
+            50% {
+                r: 3;
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes connection-flow {
+            0% {
+                stroke-dashoffset: 0;
+            }
+            100% {
+                stroke-dashoffset: 20;
+            }
+        }
+
         .animate-fadeInUp {
             animation: fadeInUp 0.6s ease-out forwards;
         }
@@ -55,6 +86,19 @@
         .gradient-animated {
             background-size: 200% 200%;
             animation: gradient-shift 8s ease infinite;
+        }
+
+        .particle-animated {
+            animation: particle-float 8s ease-in-out infinite;
+        }
+
+        .particle-pulse {
+            animation: particle-pulse 3s ease-in-out infinite;
+        }
+
+        .connection-animated {
+            stroke-dasharray: 5, 5;
+            animation: connection-flow 2s linear infinite;
         }
 
         .glass {
@@ -715,7 +759,68 @@
             <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50"></div>
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)]">
             </div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Animated Particles Background -->
+            <svg class="absolute inset-0 w-full h-full z-0" style="pointer-events: none; overflow: visible;">
+                <defs>
+                    <linearGradient id="particleGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+                        <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+                    </linearGradient>
+                    <linearGradient id="particleGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+                        <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.2" />
+                    </linearGradient>
+                    <linearGradient id="particleGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4" />
+                        <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <!-- Animated floating particles -->
+                <circle class="particle-animated" cx="8%" cy="18%" r="2" fill="url(#particleGradient1)" style="animation-delay: 0s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="22%" cy="12%" r="2.5" fill="url(#particleGradient2)" style="animation-delay: 1s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="35%" cy="25%" r="2" fill="url(#particleGradient3)" style="animation-delay: 2s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="65%" cy="22%" r="2.5" fill="url(#particleGradient1)" style="animation-delay: 3s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="78%" cy="28%" r="2" fill="url(#particleGradient2)" style="animation-delay: 4s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="92%" cy="32%" r="2.5" fill="url(#particleGradient3)" style="animation-delay: 5s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="12%" cy="68%" r="2" fill="url(#particleGradient1)" style="animation-delay: 6s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="28%" cy="72%" r="2.5" fill="url(#particleGradient2)" style="animation-delay: 7s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="42%" cy="78%" r="2" fill="url(#particleGradient3)" style="animation-delay: 0.5s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="88%" cy="74%" r="2.5" fill="url(#particleGradient1)" style="animation-delay: 1.5s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="72%" cy="82%" r="2" fill="url(#particleGradient2)" style="animation-delay: 2.5s;" filter="url(#glow)"/>
+                <circle class="particle-animated" cx="55%" cy="88%" r="2.5" fill="url(#particleGradient3)" style="animation-delay: 3.5s;" filter="url(#glow)"/>
+                
+                <!-- Pulsing center particles -->
+                <circle class="particle-pulse" cx="18%" cy="48%" r="2" fill="#3b82f6" opacity="0.4" style="animation-delay: 0s;"/>
+                <circle class="particle-pulse" cx="82%" cy="52%" r="2" fill="#06b6d4" opacity="0.4" style="animation-delay: 1s;"/>
+                <circle class="particle-pulse" cx="48%" cy="18%" r="2" fill="#8b5cf6" opacity="0.4" style="animation-delay: 2s;"/>
+                <circle class="particle-pulse" cx="52%" cy="82%" r="2" fill="#ec4899" opacity="0.4" style="animation-delay: 3s;"/>
+                <circle class="particle-pulse" cx="25%" cy="35%" r="1.5" fill="#10b981" opacity="0.3" style="animation-delay: 0.5s;"/>
+                <circle class="particle-pulse" cx="75%" cy="65%" r="1.5" fill="#f59e0b" opacity="0.3" style="animation-delay: 1.5s;"/>
+                
+                <!-- Connection lines between particles -->
+                <line class="connection-animated" x1="8%" y1="18%" x2="22%" y2="12%" stroke="#3b82f6" stroke-width="1" opacity="0.2" style="animation-delay: 0s;"/>
+                <line class="connection-animated" x1="22%" y1="12%" x2="35%" y2="25%" stroke="#8b5cf6" stroke-width="1" opacity="0.2" style="animation-delay: 0.5s;"/>
+                <line class="connection-animated" x1="65%" y1="22%" x2="78%" y2="28%" stroke="#06b6d4" stroke-width="1" opacity="0.2" style="animation-delay: 1s;"/>
+                <line class="connection-animated" x1="78%" y1="28%" x2="92%" y2="32%" stroke="#ec4899" stroke-width="1" opacity="0.2" style="animation-delay: 1.5s;"/>
+                <line class="connection-animated" x1="12%" y1="68%" x2="28%" y2="72%" stroke="#3b82f6" stroke-width="1" opacity="0.2" style="animation-delay: 2s;"/>
+                <line class="connection-animated" x1="28%" y1="72%" x2="42%" y2="78%" stroke="#8b5cf6" stroke-width="1" opacity="0.2" style="animation-delay: 2.5s;"/>
+                <line class="connection-animated" x1="88%" y1="74%" x2="72%" y2="82%" stroke="#06b6d4" stroke-width="1" opacity="0.2" style="animation-delay: 3s;"/>
+                <line class="connection-animated" x1="18%" y1="48%" x2="48%" y2="18%" stroke="#3b82f6" stroke-width="1" opacity="0.15" style="animation-delay: 0.3s;"/>
+                <line class="connection-animated" x1="82%" y1="52%" x2="52%" y2="82%" stroke="#06b6d4" stroke-width="1" opacity="0.15" style="animation-delay: 1.3s;"/>
+                <line class="connection-animated" x1="25%" y1="35%" x2="75%" y2="65%" stroke="#10b981" stroke-width="1" opacity="0.12" style="animation-delay: 0.8s;"/>
+                <line class="connection-animated" x1="35%" y1="25%" x2="65%" y2="22%" stroke="#8b5cf6" stroke-width="1" opacity="0.15" style="animation-delay: 1.8s;"/>
+            </svg>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">eCor – Trung tâm kết nối đa kênh</h2>
                     <p class="text-lg text-gray-600">Quản lý toàn bộ hoạt động từ cửa hàng, website, sàn thương mại điện
@@ -1344,6 +1449,150 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mouse interaction for particles with smooth animations
+        (function() {
+            const section = document.getElementById('omnichannel');
+            if (!section) return;
+
+            const svg = section.querySelector('svg');
+            if (!svg) return;
+
+            const particles = svg.querySelectorAll('circle.particle-animated, circle.particle-pulse');
+            const connections = svg.querySelectorAll('line.connection-animated');
+            
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+            let currentX = 0;
+            let currentY = 0;
+            let isHovering = false;
+
+            // Throttle mousemove for better performance
+            let rafId = null;
+            
+            section.addEventListener('mousemove', (e) => {
+                if (!rafId) {
+                    rafId = requestAnimationFrame(() => {
+                        const rect = section.getBoundingClientRect();
+                        mouseX = e.clientX - rect.left;
+                        mouseY = e.clientY - rect.top;
+                        
+                        // Calculate target offset based on mouse position
+                        const normalizedX = (mouseX / rect.width - 0.5) * 2;
+                        const normalizedY = (mouseY / rect.height - 0.5) * 2;
+                        targetX = normalizedX * 15;
+                        targetY = normalizedY * 15;
+                        
+                        isHovering = true;
+                        rafId = null;
+                    });
+                }
+            });
+
+            section.addEventListener('mouseleave', () => {
+                targetX = 0;
+                targetY = 0;
+                isHovering = false;
+            });
+
+            function animateParticles() {
+                // Smooth interpolation for mouse position
+                currentX += (targetX - currentX) * 0.1;
+                currentY += (targetY - currentY) * 0.1;
+
+                particles.forEach((particle, index) => {
+                    const baseX = parseFloat(particle.getAttribute('cx'));
+                    const baseY = parseFloat(particle.getAttribute('cy'));
+                    
+                    // Get stored position or use base
+                    let storedX = parseFloat(particle.getAttribute('data-x'));
+                    let storedY = parseFloat(particle.getAttribute('data-y'));
+                    
+                    if (isNaN(storedX)) storedX = baseX;
+                    if (isNaN(storedY)) storedY = baseY;
+                    
+                    // Calculate offset based on distance from center and mouse position
+                    const centerX = 50;
+                    const centerY = 50;
+                    const distFromCenter = Math.sqrt(
+                        Math.pow(baseX - centerX, 2) + Math.pow(baseY - centerY, 2)
+                    );
+                    const influence = Math.max(0, 1 - distFromCenter / 50);
+                    
+                    const offsetX = currentX * influence * (0.5 + index % 3 * 0.2);
+                    const offsetY = currentY * influence * (0.5 + index % 3 * 0.2);
+                    
+                    const newX = baseX + offsetX;
+                    const newY = baseY + offsetY;
+                    
+                    // Smooth transition
+                    const smoothX = storedX + (newX - storedX) * 0.15;
+                    const smoothY = storedY + (newY - storedY) * 0.15;
+                    
+                    particle.setAttribute('cx', smoothX);
+                    particle.setAttribute('cy', smoothY);
+                    particle.setAttribute('data-x', smoothX);
+                    particle.setAttribute('data-y', smoothY);
+                    
+                    // Dynamic opacity based on mouse proximity
+                    if (isHovering) {
+                        const particleX = (smoothX / 100) * section.offsetWidth;
+                        const particleY = (smoothY / 100) * section.offsetHeight;
+                        const distance = Math.sqrt(
+                            Math.pow(mouseX - particleX, 2) + Math.pow(mouseY - particleY, 2)
+                        );
+                        const maxDistance = 250;
+                        const baseOpacity = particle.classList.contains('particle-pulse') ? 0.4 : 0.3;
+                        const hoverOpacity = Math.min(0.9, baseOpacity + (1 - distance / maxDistance) * 0.5);
+                        particle.setAttribute('opacity', Math.max(0.2, hoverOpacity));
+                    } else {
+                        // Reset to base opacity
+                        const baseOpacity = particle.classList.contains('particle-pulse') ? 0.4 : 0.3;
+                        particle.setAttribute('opacity', baseOpacity);
+                    }
+                });
+
+                // Update connection lines with dynamic opacity
+                connections.forEach((line) => {
+                    const x1 = parseFloat(line.getAttribute('x1'));
+                    const y1 = parseFloat(line.getAttribute('y1'));
+                    const x2 = parseFloat(line.getAttribute('x2'));
+                    const y2 = parseFloat(line.getAttribute('y2'));
+                    
+                    const midX = (x1 + x2) / 2;
+                    const midY = (y1 + y2) / 2;
+                    
+                    if (isHovering) {
+                        const lineX = (midX / 100) * section.offsetWidth;
+                        const lineY = (midY / 100) * section.offsetHeight;
+                        const distance = Math.sqrt(
+                            Math.pow(mouseX - lineX, 2) + Math.pow(mouseY - lineY, 2)
+                        );
+                        const maxDistance = 350;
+                        const baseOpacity = parseFloat(line.getAttribute('opacity')) || 0.2;
+                        const hoverOpacity = Math.min(0.5, baseOpacity + (1 - distance / maxDistance) * 0.3);
+                        line.setAttribute('opacity', Math.max(0.1, hoverOpacity));
+                    } else {
+                        const baseOpacity = parseFloat(line.getAttribute('data-opacity')) || 0.2;
+                        line.setAttribute('opacity', baseOpacity);
+                    }
+                });
+
+                requestAnimationFrame(animateParticles);
+            }
+
+            // Store original opacity for connections
+            connections.forEach(line => {
+                line.setAttribute('data-opacity', line.getAttribute('opacity') || '0.2');
+            });
+
+            // Start animation
+            animateParticles();
+        })();
+    </script>
 </body>
 
 </html>
