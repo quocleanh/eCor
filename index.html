@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCor – Nền tảng vận hành bán lẻ đa kênh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(74, 180, 101, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(74, 180, 101, 0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .animate-slideInRight {
+            animation: slideInRight 0.6s ease-out forwards;
+        }
+
+        .animate-slideInLeft {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 2s ease-in-out infinite;
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Parallax effect */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Hover card lift effect */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Gradient animation */
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-green-600">eCor</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#products" class="text-gray-700 hover:text-green-600 transition">Sản phẩm</a>
+                    <a href="#features" class="text-gray-700 hover:text-green-600 transition">Tính năng</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-green-600 transition">Giải pháp</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-green-600 transition">Bảng giá</a>
+                    <a href="#docs" class="text-gray-700 hover:text-green-600 transition">Tài liệu</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition">Liên hệ</a>
+                </nav>
+                <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition font-medium">
+                    Đăng ký demo
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fadeInUp">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            eCor – Nền tảng vận hành bán lẻ đa kênh
+                        </h1>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Quản lý trọn vẹn hoạt động kinh doanh từ cửa hàng đến online trên một hệ thống duy nhất. Tự động hóa, đồng bộ, tối ưu chi phí.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start animate-fadeInUp delay-100">
+                                <span class="text-blue-600 mr-3 text-lg">✓</span>
+                                <span class="text-gray-700">Tự động hóa vận hành, giảm sai sót thủ công</span>
+                            </div>
+                            <div class="flex items-start animate-fadeInUp delay-200">
+                                <span class="text-blue-600 mr-3 text-lg">✓</span>
+                                <span class="text-gray-700">Đồng bộ đa kênh (POS, Website, Shopee, Lazada, TikTok Shop)</span>
+                            </div>
+                            <div class="flex items-start animate-fadeInUp delay-300">
+                                <span class="text-blue-600 mr-3 text-lg">✓</span>
+                                <span class="text-gray-700">Kiểm soát tồn kho real-time từng cửa hàng</span>
+                            </div>
+                            <div class="flex items-start animate-fadeInUp delay-400">
+                                <span class="text-blue-600 mr-3 text-lg">✓</span>
+                                <span class="text-gray-700">Mở rộng chuỗi bán lẻ nhanh chóng dễ dàng</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 animate-fadeInUp delay-500">
+                            <button class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition font-semibold animate-pulse-glow">
+                                Đăng ký demo
+                            </button>
+                            <button class="border border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition font-semibold">
+                                Xem tính năng chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden md:block animate-slideInRight">
+                        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover-lift animate-float">
+                            <div class="space-y-4">
+                                <div class="bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg h-32 flex items-center justify-center text-white text-sm font-semibold animate-gradient">
+                                    📊 Dashboard Theo Dõi Doanh Thu
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-green-50 rounded-lg p-4 hover-lift">
+                                        <p class="text-xs text-gray-600 mb-1">Đơn hàng hôm nay</p>
+                                        <p class="text-2xl font-bold text-green-600">234</p>
+                                    </div>
+                                    <div class="bg-emerald-50 rounded-lg p-4 hover-lift">
+                                        <p class="text-xs text-gray-600 mb-1">Doanh thu</p>
+                                        <p class="text-2xl font-bold text-emerald-600">45.2M</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-100 rounded-lg h-16 flex items-end justify-around px-2">
+                                    <div class="w-2 bg-green-500 rounded animate-bounce-slow" style="height: 40%;"></div>
+                                    <div class="w-2 bg-green-500 rounded animate-bounce-slow delay-100" style="height: 60%;"></div>
+                                    <div class="w-2 bg-green-500 rounded animate-bounce-slow delay-200" style="height: 80%;"></div>
+                                    <div class="w-2 bg-green-500 rounded animate-bounce-slow delay-300" style="height: 50%;"></div>
+                                    <div class="w-2 bg-green-500 rounded animate-bounce-slow delay-400" style="height: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Lợi ích chính của eCor</h2>
+                    <p class="text-lg text-gray-600">Giải pháp toàn diện cho doanh nghiệp bán lẻ hiện đại</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-green-50 rounded-xl p-8 border border-green-100 hover-lift animate-fadeInUp delay-100">
+                        <div class="text-4xl mb-4 animate-bounce-slow">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tự động hóa vận hành</h3>
+                        <p class="text-gray-700">Giảm sai sót thủ công, tăng tốc độ xử lý đơn hàng, quản lý ca làm việc tự động</p>
+                    </div>
+                    <div class="bg-emerald-50 rounded-xl p-8 border border-emerald-100 hover-lift animate-fadeInUp delay-200">
+                        <div class="text-4xl mb-4 animate-bounce-slow delay-100">🔄</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Đồng bộ đa kênh</h3>
+                        <p class="text-gray-700">Kết nối POS, Website, Shopee, Lazada, TikTok Shop trong một hệ thống duy nhất</p>
+                    </div>
+                    <div class="bg-lime-50 rounded-xl p-8 border border-lime-100 hover-lift animate-fadeInUp delay-300">
+                        <div class="text-4xl mb-4 animate-bounce-slow delay-200">💰</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tối ưu chi phí</h3>
+                        <p class="text-gray-700">Kiểm soát tồn kho, giảm hàng chậm luân chuyển, quản lý vận chuyển hiệu quả</p>
+                    </div>
+                    <div class="bg-teal-50 rounded-xl p-8 border border-teal-100 hover-lift animate-fadeInUp delay-400">
+                        <div class="text-4xl mb-4 animate-bounce-slow delay-300">📈</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Dữ liệu thực tế</h3>
+                        <p class="text-gray-700">Báo cáo chi tiết, phân tích doanh thu, lợi nhuận, hiệu suất từng kênh bán</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Section -->
+        <section id="products" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Các module chính</h2>
+                    <p class="text-lg text-gray-600">Giải pháp toàn diện cho mỗi khía cạnh kinh doanh bán lẻ</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">🛒 POS – Bán hàng tại cửa hàng</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Bán hàng tại quầy tốc độ cao</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Quét mã vạch, tìm kiếm nhanh</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Hỗ trợ nhiều phương thức thanh toán</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Quản lý ca làm việc, đối soát cuối ngày</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">📦 Quản lý sản phẩm & tồn kho</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Danh mục sản phẩm, SKU, biến thể</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Theo dõi tồn kho từng kho, từng cửa hàng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Nhập, xuất, chuyển kho, trả hàng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Kiểm kê, cảnh báo tồn kho thấp</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-300">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">💻 Website E-commerce</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Website bán hàng tối ưu tốc độ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Quản lý giỏ hàng, đơn hàng, vận chuyển</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Thanh toán online an toàn</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Tồn kho đồng bộ với POS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">🌐 Kết nối sàn TMĐT</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Kết nối Shopee, Lazada, TikTok Shop</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Đồng bộ sản phẩm, giá, tồn kho</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Đồng bộ đơn hàng về eCor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Theo dõi trạng thái giao hàng</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">📄 Hóa đơn điện tử</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Tự động phát hành từ đơn bán hàng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Đồng bộ với nhà cung cấp HĐĐT</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Hỗ trợ điều chỉnh, thay thế, hủy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Tuân thủ quy định pháp luật</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-300">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">🎁 Khách hàng & Loyalty</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Hồ sơ khách hàng chi tiết</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Lịch sử mua, tích điểm thành viên</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Quản lý voucher, ưu đãi, tri ân</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Xây dựng lòng trung thành khách hàng</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mt-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">💳 Tích hợp thanh toán</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>VNPay, MoMo, ZaloPay, QR ngân hàng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Giảm sai sót nhập liệu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Đối soát chính xác, nhanh chóng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Bảo mật giao dịch cao</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">🚚 Tích hợp vận chuyển</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>GHTK, GHN, Viettel Post…</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Tạo vận đơn tự động</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>In nhãn, theo dõi trạng thái</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Quản lý chi phí vận chuyển</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-300">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">📊 Báo cáo & phân tích</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Doanh thu theo kênh, cửa hàng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Lợi nhuận, chi phí, hiệu suất</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Vòng quay tồn kho</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <span>Hiệu suất nhân viên</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Omni-channel Flow Section -->
+        <section id="omnichannel" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">eCor – Trung tâm kết nối đa kênh</h2>
+                    <p class="text-lg text-gray-600">Quản lý toàn bộ hoạt động từ cửa hàng, website, sàn thương mại điện tử</p>
+                </div>
+                <div class="relative">
+                    <!-- Central Platform -->
+                    <div class="flex justify-center mb-12 animate-fadeInUp delay-200">
+                        <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl p-8 w-48 text-center shadow-lg hover-lift animate-pulse-glow">
+                            <p class="text-2xl font-bold animate-float">🏢</p>
+                            <p class="text-xl font-bold mt-2">eCor Platform</p>
+                            <p class="text-sm mt-2 opacity-90">Hệ thống quản lý tập trung</p>
+                        </div>
+                    </div>
+
+                    <!-- Channels Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                        <div class="flex flex-col items-center animate-fadeInUp delay-100">
+                            <div class="bg-green-50 rounded-xl p-6 w-full text-center border border-green-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow">🛍️</p>
+                                <p class="font-bold text-gray-900">POS</p>
+                                <p class="text-sm text-gray-600 mt-2">Bán hàng tại quầy</p>
+                            </div>
+                            <div class="w-0.5 h-8 bg-green-300 mt-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center animate-fadeInUp delay-200">
+                            <div class="bg-emerald-50 rounded-xl p-6 w-full text-center border border-emerald-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow delay-100">💻</p>
+                                <p class="font-bold text-gray-900">Website</p>
+                                <p class="text-sm text-gray-600 mt-2">Bán online riêng</p>
+                            </div>
+                            <div class="w-0.5 h-8 bg-emerald-300 mt-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center animate-fadeInUp delay-300">
+                            <div class="bg-red-50 rounded-xl p-6 w-full text-center border border-red-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow delay-200">🛒</p>
+                                <p class="font-bold text-gray-900">Shopee</p>
+                                <p class="text-sm text-gray-600 mt-2">Sàn TMĐT</p>
+                            </div>
+                            <div class="w-0.5 h-8 bg-red-300 mt-4"></div>
+                        </div>
+                        <div class="flex flex-col items-center animate-fadeInUp delay-400">
+                            <div class="bg-yellow-50 rounded-xl p-6 w-full text-center border border-yellow-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow delay-300">🏪</p>
+                                <p class="font-bold text-gray-900">Lazada</p>
+                                <p class="text-sm text-gray-600 mt-2">Sàn TMĐT</p>
+                            </div>
+                            <div class="w-0.5 h-8 bg-yellow-300 mt-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-12">
+                        <div class="flex flex-col items-center animate-fadeInUp delay-100">
+                            <div class="w-0.5 h-8 bg-purple-300 mb-4"></div>
+                            <div class="bg-purple-50 rounded-xl p-6 w-full text-center border border-purple-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow">🎬</p>
+                                <p class="font-bold text-gray-900">TikTok Shop</p>
+                                <p class="text-sm text-gray-600 mt-2">Sàn TMĐT</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center animate-fadeInUp delay-200">
+                            <div class="w-0.5 h-8 bg-orange-300 mb-4"></div>
+                            <div class="bg-orange-50 rounded-xl p-6 w-full text-center border border-orange-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow delay-100">📦</p>
+                                <p class="font-bold text-gray-900">Vận chuyển</p>
+                                <p class="text-sm text-gray-600 mt-2">GHTK, GHN…</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center animate-fadeInUp delay-300">
+                            <div class="w-0.5 h-8 bg-pink-300 mb-4"></div>
+                            <div class="bg-pink-50 rounded-xl p-6 w-full text-center border border-pink-200 hover-lift">
+                                <p class="text-3xl mb-2 animate-bounce-slow delay-200">💳</p>
+                                <p class="font-bold text-gray-900">Thanh toán</p>
+                                <p class="text-sm text-gray-600 mt-2">VNPay, MoMo…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 bg-green-50 rounded-xl p-8 border border-green-200 text-center animate-fadeInUp delay-400">
+                    <p class="text-lg text-gray-700">
+                        <span class="font-bold text-gray-900">eCor tích hợp</span> tất cả các kênh bán hàng vào một hệ thống duy nhất. 
+                        Dữ liệu sản phẩm, giá cả, tồn kho, đơn hàng <span class="font-bold text-green-600">đồng bộ tự động</span>, 
+                        giúp bạn quản lý kinh doanh hiệu quả và không sót đơn hàng nào.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solutions" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Giải pháp cho từng ngành</h2>
+                    <p class="text-lg text-gray-600">eCor được thiết kế để đáp ứng nhu cầu của nhiều ngành bán lẻ khác nhau</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-blue-50 rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-100">
+                        <p class="text-3xl mb-4">🛒</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cửa hàng thời trang</h3>
+                        <p class="text-gray-700">Quản lý size, màu sắc, mùa vụ, đồng bộ tồn kho giữa nhiều cửa hàng, tối ưu chuyên chở nội bộ.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-200">
+                        <p class="text-3xl mb-4 animate-bounce-slow delay-100">💄</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Chuỗi mỹ phẩm</h3>
+                        <p class="text-gray-700">Quản lý hạn sử dụng, batch, đặc tính sản phẩm, tích hợp loyalty cho khách hàng VIP.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-300">
+                        <p class="text-3xl mb-4 animate-bounce-slow delay-200">👶</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mẹ & bé</h3>
+                        <p class="text-gray-700">Quản lý các dòng sản phẩm khác nhau, theo dõi chi phí từ sản xuất đến bán hàng, báo cáo lợi nhuận.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-100">
+                        <p class="text-3xl mb-4 animate-bounce-slow delay-300">🛋️</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Nội thất & trang trí</h3>
+                        <p class="text-gray-700">Quản lý mẫu mã phức tạp, tùy chỉnh theo yêu cầu, theo dõi tiến độ sản xuất và giao hàng.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-200">
+                        <p class="text-3xl mb-4 animate-bounce-slow delay-400">⚡</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Điện máy & công nghệ</h3>
+                        <p class="text-gray-700">Quản lý bảo hành, dịch vụ bảo dưỡng, tích hợp hỗ trợ kỹ thuật, theo dõi chi phí logistics.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-300">
+                        <p class="text-3xl mb-4 animate-bounce-slow delay-500">🏪</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Chuỗi bán lẻ đa ngành</h3>
+                        <p class="text-gray-700">Hỗ trợ nhiều loại sản phẩm, quản lý nhiều cửa hàng, báo cáo tập trung theo cửa hàng và danh mục.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why eCor Section -->
+        <section id="why-ecor" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tại sao chọn eCor?</h2>
+                    <p class="text-lg text-gray-600">eCor là người bạn đáng tin cậy cho thành công của kinh doanh bán lẻ của bạn</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="space-y-4">
+                        <div class="flex items-start animate-slideInLeft delay-100">
+                            <span class="text-2xl text-green-600 mr-4 animate-bounce-slow">✓</span>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Hệ thống đa kênh toàn diện</h3>
+                                <p class="text-gray-700">Quản lý POS, Website, Shopee, Lazada, TikTok Shop… tất cả trong một nền tảng</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start animate-slideInLeft delay-200">
+                            <span class="text-2xl text-green-600 mr-4 animate-bounce-slow delay-100">✓</span>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Đồng bộ dữ liệu real-time</h3>
+                                <p class="text-gray-700">Tồn kho, sản phẩm, giá cả cập nhật tức thì trên tất cả kênh bán</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start animate-slideInLeft delay-300">
+                            <span class="text-2xl text-green-600 mr-4 animate-bounce-slow delay-200">✓</span>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Tự động hóa cao</h3>
+                                <p class="text-gray-700">Giảm sai sót thủ công, tăng tốc độ xử lý, tiết kiệm chi phí nhân sự</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start animate-slideInRight delay-100">
+                            <span class="text-2xl text-green-600 mr-4 animate-bounce-slow">✓</span>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Bảo mật dữ liệu hàng đầu</h3>
+                                <p class="text-gray-700">Mã hóa, backup tự động, tuân thủ tiêu chuẩn bảo mật quốc tế</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start animate-slideInRight delay-200">
+                            <span class="text-2xl text-green-600 mr-4 animate-bounce-slow delay-100">✓</span>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Mở rộng chuỗi dễ dàng</h3>
+                                <p class="text-gray-700">Thêm cửa hàng, kênh bán mới chỉ với vài click, không phải thay đổi cơ sở hạ tầng</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start animate-slideInRight delay-300">
+                            <span class="text-2xl text-green-600 mr-4 animate-bounce-slow delay-200">✓</span>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Hỗ trợ triển khai chuyên nghiệp</h3>
+                                <p class="text-gray-700">Đội ngũ tư vấn, hỗ trợ kỹ thuật 24/7, đào tạo nhân viên miễn phí</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-8 text-white text-center animate-fadeInUp delay-400 hover-lift">
+                    <p class="text-lg mb-2">
+                        <span class="font-bold">eCor cam kết</span> giúp bạn quản lý kinh doanh bán lẻ hiệu quả, tiết kiệm chi phí, 
+                        tăng doanh thu, và đạt được sự hài lòng cao nhất từ khách hàng.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Bảng giá</h2>
+                    <p class="text-lg text-gray-600">Chọn gói phù hợp với nhu cầu kinh doanh của bạn</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-6">Dành cho cửa hàng đơn lẻ mới bắt đầu</p>
+                        <div class="mb-6">
+                            <p class="text-sm text-gray-700">
+                                ✓ 1 cửa hàng<br>
+                                ✓ Hệ thống POS cơ bản<br>
+                                ✓ Quản lý sản phẩm & tồn kho<br>
+                                ✓ Website bán hàng đơn giản<br>
+                                ✓ Hỗ trợ qua email
+                            </p>
+                        </div>
+                        <p class="text-xl font-bold text-gray-900 mb-6">Theo nhu cầu</p>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold hover-lift">
+                            Liên hệ báo giá
+                        </button>
+                    </div>
+                    <div class="bg-green-600 text-white rounded-xl p-8 shadow-lg border border-green-700 transform scale-105 hover-lift animate-fadeInUp delay-200 animate-pulse-glow">
+                        <div class="bg-green-700 rounded-full inline-block px-4 py-1 text-sm font-bold mb-4">Phổ biến nhất</div>
+                        <h3 class="text-2xl font-bold mb-2">Growth</h3>
+                        <p class="text-green-100 mb-6">Dành cho chuỗi bán lẻ đang phát triển</p>
+                        <div class="mb-6">
+                            <p class="text-sm">
+                                ✓ Tối đa 20 cửa hàng<br>
+                                ✓ Hệ thống POS đầy đủ<br>
+                                ✓ Quản lý kho phức tạp<br>
+                                ✓ Website e-commerce nâng cao<br>
+                                ✓ Kết nối 1-2 sàn TMĐT<br>
+                                ✓ Hỗ trợ 24/7
+                            </p>
+                        </div>
+                        <p class="text-xl font-bold text-gray-900 mb-6">Theo nhu cầu</p>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition font-semibold hover-lift">
+                            Liên hệ báo giá
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover-lift animate-fadeInUp delay-300">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">Cho chuỗi bán lẻ lớn và đa ngành</p>
+                        <div class="mb-6">
+                            <p class="text-sm text-gray-700">
+                                ✓ Không giới hạn cửa hàng<br>
+                                ✓ Hệ thống POS đầy đủ<br>
+                                ✓ Quản lý kho toàn bộ<br>
+                                ✓ Website e-commerce tùy chỉnh<br>
+                                ✓ Kết nối tất cả các sàn TMĐT<br>
+                                ✓ API mở, tích hợp ERP/CRM<br>
+                                ✓ Hỗ trợ kỹ thuật + tư vấn
+                            </p>
+                        </div>
+                        <p class="text-xl font-bold text-gray-900 mb-6">Theo nhu cầu</p>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition font-semibold hover-lift">
+                            Liên hệ báo giá
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-fadeInUp">Sẵn sàng nâng tầm kinh doanh?</h2>
+                <p class="text-lg text-blue-100 mb-10 animate-fadeInUp delay-100">
+                    eCor giúp bạn quản lý toàn bộ hoạt động bán lẻ, tăng doanh thu, giảm chi phí, và phát triển chuỗi một cách bền vững.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp delay-200">
+                    <button class="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition font-bold text-lg hover-lift">
+                        Đăng ký demo miễn phí
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-emerald-500 transition font-bold text-lg hover-lift">
+                        Liên hệ tư vấn
+                    </button>
+                </div>
+                <p class="text-green-100 text-sm mt-8 animate-fadeInUp delay-300">
+                    Không cần thẻ tín dụng • Trải nghiệm 14 ngày miễn phí • Hủy bất cứ lúc nào
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <div>
+                    <p class="text-2xl font-bold text-white mb-4">eCor</p>
+                    <p class="text-sm">Nền tảng vận hành bán lẻ đa kênh toàn diện.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Sản phẩm</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Tính năng</a></li>
+                        <li><a href="#" class="hover:text-white transition">Bảng giá</a></li>
+                        <li><a href="#" class="hover:text-white transition">Giải pháp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Tài nguyên</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Tài liệu</a></li>
+                        <li><a href="#" class="hover:text-white transition">API</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Công ty</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Giới thiệu</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tuyển dụng</a></li>
+                        <li><a href="#" class="hover:text-white transition">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Pháp lý</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Điều khoản dịch vụ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-sm text-center">
+                    &copy; 2025 eCor. Tất cả quyền được bảo lưu.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
