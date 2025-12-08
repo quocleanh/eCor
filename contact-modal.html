@@ -1,0 +1,148 @@
+<!-- Contact Modal -->
+<div id="contactModal"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="glass rounded-2xl max-w-md w-full bg-white/95 p-8 shadow-2xl transform transition-all scale-95 opacity-0"
+        id="modalContent">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+                id="modalTitle">Liên hệ với chúng tôi</h3>
+            <button onclick="closeContactModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <form id="contactForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Họ và tên *</label>
+                <input type="text" name="name" required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Số điện thoại *</label>
+                    <input type="tel" name="phone" required pattern="[0-9]{10,11}"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                    <input type="email" name="email" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Tên doanh nghiệp</label>
+                <input type="text" name="company"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Lời nhắn</label>
+                <textarea name="message" rows="4"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none outline-none"></textarea>
+            </div>
+
+            <div class="flex gap-3 pt-4">
+                <button type="submit"
+                    class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 font-semibold shadow-lg hover-lift">
+                    Gửi thông tin
+                </button>
+                <button type="button" onclick="closeContactModal()"
+                    class="px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-200 font-semibold text-gray-700">
+                    Hủy
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Modal control functions
+    function openContactModal(type) {
+        const modal = document.getElementById('contactModal');
+        const modalContent = document.getElementById('modalContent');
+        const title = document.getElementById('modalTitle');
+
+        if (type === 'demo') {
+            title.textContent = 'Đăng ký demo';
+        } else if (type === 'consult') {
+            title.textContent = 'Liên hệ tư vấn';
+        } else {
+            title.textContent = 'Liên hệ với chúng tôi';
+        }
+
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+
+        // Trigger animation
+        setTimeout(() => {
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+        }, 10);
+    }
+
+    function closeContactModal() {
+        const modal = document.getElementById('contactModal');
+        const modalContent = document.getElementById('modalContent');
+
+        modalContent.classList.remove('scale-100', 'opacity-100');
+        modalContent.classList.add('scale-95', 'opacity-0');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }, 200);
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('contactModal')?.addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeContactModal();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeContactModal();
+        }
+    });
+
+    // Handle form submission
+    document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+
+        console.log('Form submitted:', data);
+
+        // Show success message with modern alert
+        const successDiv = document.createElement('div');
+        successDiv.className = 'fixed top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-4 rounded-lg shadow-xl z-[60] animate-fade-in';
+        successDiv.innerHTML = `
+            <div class="flex items-center gap-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                    <div class="font-bold">Gửi thành công!</div>
+                    <div class="text-sm">Chúng tôi sẽ liên hệ với bạn sớm nhất.</div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(successDiv);
+
+        setTimeout(() => {
+            successDiv.remove();
+        }, 3000);
+
+        // Reset form and close modal
+        this.reset();
+        closeContactModal();
+    });
+</script>
