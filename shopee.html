@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mở link Shopee — eCor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --shopee: #ee4d2d;
+      --shopee-soft: rgba(238, 77, 45, 0.12);
+      --shopee-hover: #d73211;
+      --bg: linear-gradient(160deg, #fffdfb 0%, #f0f9ff 45%, #fef3f2 100%);
+      --card: rgba(255, 255, 255, 0.92);
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: rgba(148, 163, 184, 0.35);
+      --radius: 20px;
+      --shadow: 0 22px 50px -12px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px 16px 48px;
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+      animation: up 0.45s ease-out;
+    }
+
+    @keyframes up {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--shopee);
+      background: var(--shopee-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 42ch;
+      margin: 0 auto;
+    }
+
+    .sub code {
+      font-size: 0.82em;
+      background: rgba(241, 245, 249, 0.9);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #334155;
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      animation: up 0.5s ease-out 0.05s both;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .field-wrap {
+      position: relative;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 16px 16px;
+      font-family: inherit;
+      font-size: 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fff;
+      color: var(--text);
+    }
+
+    @media (min-width: 480px) {
+      input[type="text"] { font-size: 0.95rem; }
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--shopee);
+      box-shadow: 0 0 0 3px var(--shopee-soft);
+    }
+
+    input[type="text"]::placeholder {
+      color: #94a3b8;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      flex: 1;
+      min-width: 120px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.2s, opacity 0.2s;
+    }
+
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      background: var(--shopee);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--shopee-hover);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-ghost {
+      background: #f1f5f9;
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      background: #e2e8f0;
+      color: var(--text);
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .err {
+      display: none;
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: #fef2f2;
+      color: #b91c1c;
+      font-size: 0.875rem;
+      border: 1px solid #fecaca;
+    }
+
+    .err.show { display: block; }
+
+    .history-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 32px 0 12px;
+      padding-top: 8px;
+    }
+
+    .history-head h2 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .history-head button {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .history-head button:hover { color: var(--shopee); }
+
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .item {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px 12px;
+      animation: up 0.35s ease-out both;
+    }
+
+    .item-main {
+      flex: 1;
+      min-width: 0;
+      cursor: pointer;
+      text-align: left;
+      background: none;
+      border: none;
+      font: inherit;
+      color: inherit;
+      padding: 4px 0;
+    }
+
+    .item-url {
+      font-size: 0.82rem;
+      word-break: break-all;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .item-meta {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .item-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .icon-btn:hover {
+      background: var(--shopee-soft);
+      color: var(--shopee);
+      border-color: transparent;
+    }
+
+    .icon-btn.danger:hover {
+      background: #fef2f2;
+      color: #b91c1c;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 28px 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 14px;
+      border: 1px dashed var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--shopee);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        Chuyển hướng nhanh
+      </div>
+      <h1>Mở link Shopee</h1>
+      <p class="sub">Dán link Shopee (sản phẩm, shop) — hệ thống tự gắn affiliate isclix (<code>url=</code> link bạn dán). Hoặc dán sẵn link <code>go.isclix.com</code> nếu cần.</p>
+    </header>
+
+    <section class="card" aria-labelledby="form-title">
+      <form id="link-form" novalidate>
+        <h2 id="form-title" class="sr-only">Nhập link</h2>
+        <label for="link-input">Link Shopee (sản phẩm / shop)</label>
+        <div class="field-wrap">
+          <input
+            type="text"
+            id="link-input"
+            name="url"
+            placeholder="https://shopee.vn/..."
+            autocomplete="url"
+            spellcheck="false"
+            inputmode="url"
+          >
+        </div>
+        <div id="err" class="err" role="alert"></div>
+        <div class="row">
+          <button type="submit" class="btn btn-primary" id="btn-open">Mở qua affiliate</button>
+          <button type="button" class="btn btn-ghost" id="btn-clear-field">Xóa ô</button>
+        </div>
+      </form>
+      <p class="hint">Link <strong>shopee.*</strong> được chuyển thành deep link isclix với <strong>url=</strong> (đã mã hóa) + <strong>utm_source=ecor</strong>, <strong>sub4=oneatweb</strong>. Nhấn <strong>Enter</strong> để gửi. Lịch sử lưu local.</p>
+    </section>
+
+    <div class="history-head">
+      <h2>Lịch sử</h2>
+      <button type="button" id="btn-clear-all" hidden>Xóa toàn bộ</button>
+    </div>
+    <ul class="list" id="history-list" aria-live="polite"></ul>
+    <div class="empty" id="history-empty">Chưa có link nào. Sau khi mở thành công, link sẽ xuất hiện ở đây.</div>
+
+    <footer>
+      <a href="index.html">Về trang chủ eCor</a>
+    </footer>
+  </div>
+
+  <style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }</style>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'ecor_shopee_link_history';
+      var MAX_ITEMS = 40;
+
+      var input = document.getElementById('link-input');
+      var err = document.getElementById('err');
+      var btnClearField = document.getElementById('btn-clear-field');
+      var btnClearAll = document.getElementById('btn-clear-all');
+      var listEl = document.getElementById('history-list');
+      var emptyEl = document.getElementById('history-empty');
+
+      function normalizeRaw(raw) {
+        var s = String(raw || '').trim();
+        if (!s) return '';
+        if (!/^https?:\/\//i.test(s)) s = 'https://' + s;
+        return s;
+      }
+
+      function parseUrl(s) {
+        try {
+          return new URL(s);
+        } catch (e) {
+          return null;
+        }
+      }
+
+      var AFFILIATE_DEEP_BASE = 'https://go.isclix.com/deep_link/5744706704859499028/4751584435713464237';
+
+      function isHttpUrl(u) {
+        return u && (u.protocol === 'https:' || u.protocol === 'http:');
+      }
+
+      function isShopeeHost(u) {
+        if (!isHttpUrl(u)) return false;
+        return u.hostname.toLowerCase().indexOf('shopee') !== -1;
+      }
+
+      function isIsclixHost(u) {
+        if (!isHttpUrl(u)) return false;
+        var h = u.hostname.toLowerCase();
+        return h === 'go.isclix.com' || h.slice(-11) === '.isclix.com';
+      }
+
+      /** Link Shopee thường → deep link affiliate (tham số url = link Shopee đã encode). */
+      function buildAffiliateUrl(shopeeHref) {
+        var q = new URLSearchParams();
+        q.set('url', shopeeHref);
+        q.set('utm_source', 'ecor');
+        q.set('sub4', 'oneatweb');
+        return AFFILIATE_DEEP_BASE + '?' + q.toString();
+      }
+
+      /** Lấy link Shopee bên trong tham số url= của isclix (để điền lại ô). */
+      function innerUrlFromIsclix(u) {
+        try {
+          var inner = u.searchParams.get('url');
+          if (!inner) return '';
+          var decoded = decodeURIComponent(inner);
+          var innerParsed = parseUrl(decoded.indexOf('http') === 0 ? decoded : 'https://' + decoded);
+          if (innerParsed && isShopeeHost(innerParsed)) return innerParsed.href;
+        } catch (e) { /* ignore */ }
+        return '';
+      }
+
+      function showError(msg) {
+        err.textContent = msg;
+        err.classList.add('show');
+      }
+
+      function hideError() {
+        err.classList.remove('show');
+        err.textContent = '';
+      }
+
+      function loadHistory() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return [];
+          var arr = JSON.parse(raw);
+          return Array.isArray(arr) ? arr : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveHistory(items) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(items.slice(0, MAX_ITEMS)));
+      }
+
+      function addToHistory(redirectUrl, srcShopeeUrl) {
+        var src = srcShopeeUrl || '';
+        var items = loadHistory().filter(function (x) {
+          if (!x) return false;
+          if (x.url === redirectUrl) return false;
+          if (src && x.src === src) return false;
+          return true;
+        });
+        items.unshift({
+          url: redirectUrl,
+          src: src || null,
+          at: Date.now()
+        });
+        saveHistory(items);
+        renderHistory();
+      }
+
+      function removeFromHistory(entryUrl) {
+        var items = loadHistory().filter(function (x) { return x.url !== entryUrl; });
+        saveHistory(items);
+        renderHistory();
+      }
+
+      function clearAllHistory() {
+        localStorage.removeItem(STORAGE_KEY);
+        renderHistory();
+      }
+
+      function formatTime(ts) {
+        try {
+          var d = new Date(ts);
+          return d.toLocaleString('vi-VN', { dateStyle: 'short', timeStyle: 'short' });
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function renderHistory() {
+        var items = loadHistory();
+        listEl.innerHTML = '';
+        if (items.length === 0) {
+          emptyEl.hidden = false;
+          btnClearAll.hidden = true;
+          return;
+        }
+        emptyEl.hidden = true;
+        btnClearAll.hidden = false;
+        items.forEach(function (entry, i) {
+          var li = document.createElement('li');
+          li.className = 'item';
+          li.style.animationDelay = (i * 0.03) + 's';
+
+          var main = document.createElement('button');
+          main.type = 'button';
+          main.className = 'item-main';
+          main.setAttribute('title', 'Điền lại link Shopee');
+          var showLine = entry.src || innerUrlFromIsclix(parseUrl(entry.url)) || entry.url;
+          main.innerHTML =
+            '<div class="item-url">' + escapeHtml(showLine) + '</div>' +
+            '<div class="item-meta">' + formatTime(entry.at) + (entry.src ? ' · affiliate' : '') + '</div>';
+          main.addEventListener('click', function () {
+            input.value = entry.src || innerUrlFromIsclix(parseUrl(entry.url)) || entry.url;
+            input.focus();
+            hideError();
+          });
+
+          var actions = document.createElement('div');
+          actions.className = 'item-actions';
+
+          var go = document.createElement('button');
+          go.type = 'button';
+          go.className = 'icon-btn';
+          go.setAttribute('aria-label', 'Mở link');
+          go.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+          go.addEventListener('click', function (e) {
+            e.stopPropagation();
+            openUrl(entry.url);
+          });
+
+          var del = document.createElement('button');
+          del.type = 'button';
+          del.className = 'icon-btn danger';
+          del.setAttribute('aria-label', 'Xóa khỏi lịch sử');
+          del.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>';
+          del.addEventListener('click', function (e) {
+            e.stopPropagation();
+            removeFromHistory(entry.url);
+          });
+
+          actions.appendChild(go);
+          actions.appendChild(del);
+          li.appendChild(main);
+          li.appendChild(actions);
+          listEl.appendChild(li);
+        });
+      }
+
+      function escapeHtml(s) {
+        var d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+      }
+
+      function openUrl(url) {
+        hideError();
+        var normalized = normalizeRaw(url);
+        if (!normalized) {
+          showError('Vui lòng nhập link.');
+          return false;
+        }
+        var u = parseUrl(normalized);
+        if (!u) {
+          showError('Link không hợp lệ. Kiểm tra lại định dạng URL.');
+          return false;
+        }
+        if (isIsclixHost(u)) {
+          var inner = innerUrlFromIsclix(u);
+          addToHistory(u.href, inner || null);
+          window.location.assign(u.href);
+          return true;
+        }
+        if (isShopeeHost(u)) {
+          var finalUrl = buildAffiliateUrl(u.href);
+          addToHistory(finalUrl, u.href);
+          window.location.assign(finalUrl);
+          return true;
+        }
+        showError('Chỉ hỗ trợ link Shopee (shopee.…) hoặc link affiliate isclix (go.isclix.com).');
+        return false;
+      }
+
+      document.getElementById('link-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        openUrl(input.value);
+      });
+
+      btnClearField.addEventListener('click', function () {
+        input.value = '';
+        input.focus();
+        hideError();
+      });
+
+      btnClearAll.addEventListener('click', function () {
+        if (confirm('Xóa toàn bộ lịch sử link trên trình duyệt này?')) clearAllHistory();
+      });
+
+      renderHistory();
+    })();
+  </script>
+</body>
+</html>
