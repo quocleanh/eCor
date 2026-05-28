@@ -76,6 +76,37 @@
       transform: scale(1.02);
     }
 
+    .quick-amount-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .quick-btn {
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 2px solid var(--primary);
+      background: white;
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .quick-btn:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px -1px rgba(99, 102, 241, 0.3);
+    }
+
+    .quick-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
     .info {
       background: rgba(0, 0, 0, 0.02);
       padding: 20px;
@@ -220,13 +251,18 @@
 
 <div class="container">
   <button class="settings-trigger" onclick="toggleSettings()" title="Cài đặt">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m4.22-4.22l-4.24 4.24m5.08 4.22h-6m4.22 4.22l-4.24-4.24m5.08 4.22v6m4.22 4.22l-4.24-4.24m-4.22-5.08h6m-4.22-4.22l-4.24 4.24m-5.08-4.22v-6m-4.22-4.22l4.24 4.24m-5.08 4.22h6m-4.22 4.22l4.24-4.24"></path></svg>
   </button>
 
   <h2>QR Chuyển Khoản</h2>
 
   <div class="qr-wrapper">
     <img id="qr" src="" alt="QR Code">
+  </div>
+
+  <div class="quick-amount-buttons">
+    <button class="quick-btn" onclick="setQuickAmount(25000)">25K</button>
+    <button class="quick-btn active" onclick="setQuickAmount(50000)">50K</button>
   </div>
 
   <div class="info">
@@ -299,6 +335,23 @@
     }
   }
 
+  function setQuickAmount(amount) {
+    currentConfig.amount = amount;
+    localStorage.setItem('qr_config', JSON.stringify(currentConfig));
+    generateQR();
+    updateQuickButtonStates();
+  }
+
+  function updateQuickButtonStates() {
+    const buttons = document.querySelectorAll('.quick-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+      if (parseInt(btn.textContent) * 1000 === currentConfig.amount) {
+        btn.classList.add('active');
+      }
+    });
+  }
+
   function saveSettings() {
     currentConfig.bank = document.getElementById('input-bank').value || DEFAULT_CONFIG.bank;
     currentConfig.account = document.getElementById('input-account').value || DEFAULT_CONFIG.account;
@@ -307,6 +360,7 @@
 
     localStorage.setItem('qr_config', JSON.stringify(currentConfig));
     generateQR();
+    updateQuickButtonStates();
     toggleSettings();
   }
 
@@ -349,8 +403,9 @@
 
   // ===== INIT =====
   generateQR();
+  updateQuickButtonStates();
   refreshAtMidnight();
 </script>
 
 </body>
-</html>
+</html>
