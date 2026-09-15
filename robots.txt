@@ -1,13 +1,7 @@
-# eCor robots.txt
-# Cho phép công cụ tìm kiếm và AI Crawler thu thập dữ liệu phục vụ GEO & Search
-
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*?*
 
-# AI Search Crawlers (Mở toàn diện theo chuẩn GEO)
+# Cho phép các AI Search Crawler đọc đầy đủ dữ liệu eCor
 User-agent: GPTBot
 Allow: /
 
@@ -20,10 +14,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: CCBot
-Allow: /
-
-User-agent: Applebot-Extended
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://ecor.vn/sitemap.xml
