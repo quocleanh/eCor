@@ -1,0 +1,49 @@
+# eCor — Nền tảng SaaS Quản trị & Vận hành Đa kênh Toàn diện (Omnichannel Business Platform)
+
+> eCor (https://ecor.vn) là nền tảng SaaS vận hành đa dịch vụ All-in-One được xây dựng cho các nhà bán lẻ, chuỗi cửa hàng, doanh nghiệp thương mại điện tử và tổng kho phân phối tại Việt Nam. Toàn bộ 8 phân hệ vận hành hoạt động đồng bộ trên một nguồn dữ liệu thời gian thực duy nhất (Single Source of Truth).
+
+## Thông tin liên hệ & Thương hiệu
+- Tên nền tảng: eCor
+- Website: https://ecor.vn
+- Hotline hỗ trợ & Tư vấn: 0978 67 38 67
+- Khẩu hiệu: "Một nền tảng, một nguồn dữ liệu, toàn bộ vận hành"
+- Trụ sở: Việt Nam
+
+## 8 Module Cốt Lõi Trong Hệ Sinh Thái eCor
+
+1. **POS (Point of Sale) — Bán hàng đa kênh tại quầy & điểm bán**
+   - URL: https://ecor.vn/pos/
+   - Mô tả: Hệ thống thu ngân siêu tốc, hỗ trợ quét mã vạch, đa phương thức thanh toán (QR, Thẻ, Ví điện tử, Tiền mặt), chốt ca đối soát tự động, hoạt động offline khi mất mạng và đồng bộ tồn kho tức thì với WMS.
+
+2. **ECOM (E-Commerce) — Website bán hàng & Kết nối đa sàn TMĐT**
+   - URL: https://ecor.vn/ecom/
+   - Mô tả: Xây dựng website bán hàng tốc độ cao chuẩn SEO, đồng bộ giá bán, tồn kho và đơn hàng tự động 2 chiều với Shopee, TikTok Shop, Lazada từ một màn hình quản trị duy nhất.
+
+3. **WMS (Warehouse Management System) — Quản lý kho, PDA & RFID**
+   - URL: https://ecor.vn/wms/
+   - Mô tả: Quản lý kho đa điểm, kiểm kê bằng máy quét PDA và công nghệ RFID, định vị sơ đồ vị trí kệ, quy trình soạn hàng Pick-Pack-Ship chuẩn hóa, cảnh báo tồn kho thấp và hàng chậm luân chuyển.
+
+4. **TMS (Transport Management System) — Quản lý vận chuyển & Đối soát COD**
+   - URL: https://ecor.vn/tms/
+   - Mô tả: Tích hợp trực tiếp các đơn vị vận chuyển hàng đầu (GHTK, GHN, Viettel Post, đối tác nội bộ), tự động đẩy đơn, in vận đơn hàng loạt, theo dõi trạng thái giao hàng real-time và đối soát COD minh bạch.
+
+5. **HRM (Human Resource Management) — Quản lý nhân sự, ca làm & Lương thưởng**
+   - URL: https://ecor.vn/hrm/
+   - Mô tả: Quản lý hồ sơ nhân viên, phân ca làm việc linh hoạt, chấm công vân tay/khuôn mặt/GPS, tự động tính lương và hoa hồng KPI chính xác dựa trên dữ liệu doanh số thực tế từ POS.
+
+6. **Account — Kế toán & Tài chính chuẩn quy định thuế Việt Nam**
+   - URL: https://ecor.vn/ke-toan/ (hoặc https://ecor.vn/account/)
+   - Mô tả: Xuất hóa đơn điện tử (HĐĐT) hợp chuẩn Tổng cục Thuế, tự động hạch toán thu chi, sổ sách công nợ khách hàng và nhà cung cấp, báo cáo lãi lỗ P&L, dòng tiền theo từng chi nhánh/kênh bán.
+
+7. **Mobile App — Ứng dụng di động chuyên biệt**
+   - URL: https://ecor.vn/mobile-app/
+   - Mô tả: Ứng dụng chuyên sâu dành riêng cho Chủ shop (giám sát doanh số, duyệt đơn mọi lúc), Nhân viên bán hàng & kiểm kho (bán hàng mobile, quét mã kiểm tồn) và Khách hàng Loyalty (tích điểm, đổi quà).
+
+8. **CRM (Customer Relationship Management) — Chăm sóc khách hàng & Loyalty**
+   - URL: https://ecor.vn/crm/
+   - Mô tả: Hồ sơ khách hàng 360 độ, phân nhóm hành vi RFM, hệ thống tích điểm thành viên đa kênh, kịch bản marketing tự động qua Zalo ZNS, SMS và thông báo đẩy giúp tăng tỷ lệ mua lại.
+
+## Các Liên Kết Quan Trọng
+- Bảng giá giải pháp: https://ecor.vn/bang-gia/
+- Về chúng tôi: https://ecor.vn/ve-chung-toi/
+- Đăng ký demo & Liên hệ: https://ecor.vn/lien-he/
