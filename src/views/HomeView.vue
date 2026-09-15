@@ -1,373 +1,534 @@
 <template>
   <div>
-    <!-- HERO SECTION -->
-    <section class="relative py-16 md:py-24 overflow-hidden border-b border-slate-200/60">
-      <HeroCanvas />
-      <div class="absolute inset-0 bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-slate-50 -z-10"></div>
-      
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-          
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 bg-blue-100/90 text-blue-700 border border-blue-200/80 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
-              Nền tảng SaaS Đa Dịch Vụ Cho Bán Lẻ & Chuỗi Doanh Nghiệp
-            </div>
-
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              Một nền tảng, một dữ liệu, <span class="gradient-text">toàn bộ vận hành</span>
-            </h1>
-
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-              eCor hợp nhất <strong>8 phân hệ cốt lõi</strong>: POS, TMĐT, Kho vận WMS, Giao nhận TMS, Nhân sự HRM, Kế toán HĐĐT, Mobile App và CRM vào một hệ điều hành thống nhất thời gian thực.
-            </p>
-
-            <!-- Key Feature Badges -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-2">
-              <div class="bg-white/80 border border-slate-200/80 rounded-xl p-3 shadow-sm hover-lift">
-                <div class="text-blue-600 font-extrabold text-lg">8 Module</div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">Tích hợp sẵn có</div>
-              </div>
-              <div class="bg-white/80 border border-slate-200/80 rounded-xl p-3 shadow-sm hover-lift">
-                <div class="text-cyan-600 font-extrabold text-lg">Real-time</div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">Đồng bộ tồn đa kênh</div>
-              </div>
-              <div class="bg-white/80 border border-slate-200/80 rounded-xl p-3 shadow-sm hover-lift">
-                <div class="text-indigo-600 font-extrabold text-lg">PDA & RFID</div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">Kiểm kho tức thời</div>
-              </div>
-              <div class="bg-white/80 border border-slate-200/80 rounded-xl p-3 shadow-sm hover-lift">
-                <div class="text-emerald-600 font-extrabold text-lg">99.98%</div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">Độ ổn định Cloud</div>
-              </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
-                @click="$emit('open-modal', { type: 'demo' })"
-                class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-cyan-700 transition-all cursor-pointer flex items-center justify-center gap-2"
-              >
-                <span>Trải Nghiệm Toàn Diện 14 Ngày</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </button>
-              <a
-                href="#he-sinh-thai"
-                class="glass border border-slate-300 text-slate-700 hover:text-blue-600 hover:border-blue-300 px-7 py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2"
-              >
-                <span>Xem Sơ Đồ Hệ Sinh Thái</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </a>
-            </div>
-
-            <!-- Trust Badge -->
-            <div class="flex items-center gap-4 text-xs text-slate-500 pt-2">
-              <div class="flex items-center gap-1 text-amber-500 font-bold">
-                ★★★★★
-              </div>
-              <span>Được tin dùng bởi hơn <strong>10,000+</strong> điểm bán & kho hàng trên toàn quốc</span>
-            </div>
-
-          </div>
-
-          <!-- Right Column: Interactive Multi-Module Dashboard -->
-          <div class="lg:col-span-5">
-            <div class="relative bg-white/95 rounded-2xl shadow-2xl border border-slate-200/90 p-5 sm:p-6 hover-lift backdrop-blur-md">
-              
-              <!-- Dashboard Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md">
-                    eC
-                  </div>
-                  <div>
-                    <h3 class="font-bold text-slate-900 text-sm">eCor Operations Hub</h3>
-                    <div class="flex items-center gap-1.5 text-xs text-emerald-600 font-semibold">
-                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                      <span>8 Phân hệ đang kết nối Real-time</span>
-                    </div>
-                  </div>
-                </div>
-                <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-md">Live Stream</span>
-              </div>
-
-              <!-- Module Metrics Matrix -->
-              <div class="grid grid-cols-2 gap-3 mb-4">
-                <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3">
-                  <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                    <span class="font-bold text-blue-700">POS & Quầy</span>
-                    <span class="text-emerald-600 font-bold">+18.4%</span>
-                  </div>
-                  <div class="text-lg font-extrabold text-slate-900">1,482 đơn</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5">Doanh thu: 348.5 tr</div>
-                </div>
-
-                <div class="bg-cyan-50/70 border border-cyan-100 rounded-xl p-3">
-                  <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                    <span class="font-bold text-cyan-700">ECOM & Sàn</span>
-                    <span class="text-emerald-600 font-bold">+34.2%</span>
-                  </div>
-                  <div class="text-lg font-extrabold text-slate-900">2,890 đơn</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5">Shopee, TikTok, Web</div>
-                </div>
-
-                <div class="bg-indigo-50/70 border border-indigo-100 rounded-xl p-3">
-                  <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                    <span class="font-bold text-indigo-700">WMS Kho Vận</span>
-                    <span class="text-blue-600 font-bold">RFID Sync</span>
-                  </div>
-                  <div class="text-lg font-extrabold text-slate-900">99.8%</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5">Độ chính xác kiểm tồn</div>
-                </div>
-
-                <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3">
-                  <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                    <span class="font-bold text-emerald-700">TMS Giao Vận</span>
-                    <span class="text-emerald-600 font-bold">Auto COD</span>
-                  </div>
-                  <div class="text-lg font-extrabold text-slate-900">97.6%</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5">Tỷ lệ giao thành công</div>
-                </div>
-              </div>
-
-              <!-- Realtime Operations Ticker -->
-              <div class="bg-slate-900 text-white rounded-xl p-3.5 space-y-2 text-xs">
-                <div class="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-1.5">
-                  <span class="font-bold uppercase tracking-wider text-[10px] text-slate-300">Nhật ký lõi tự động</span>
-                  <span class="text-emerald-400 font-mono">0.12s latency</span>
-                </div>
-                <div class="space-y-1.5 font-mono text-[11px]">
-                  <div class="flex items-center justify-between text-slate-300">
-                    <span class="text-blue-400">[POS #CH01]</span>
-                    <span>Xuất HĐĐT #HD-8932 (Account sync)</span>
-                  </div>
-                  <div class="flex items-center justify-between text-slate-300">
-                    <span class="text-cyan-400">[TIKTOK]</span>
-                    <span>Đơn mới #TK-4820 &rarr; WMS Pick-list</span>
-                  </div>
-                  <div class="flex items-center justify-between text-slate-300">
-                    <span class="text-teal-400">[CRM]</span>
-                    <span>Tích 120 điểm & gửi ZNS cho Khách VIP</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-3 text-center">
-                <span class="text-[11px] text-slate-500">Mọi dữ liệu hạch toán tức thời, không độ trễ, không xung đột kênh.</span>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: THE 8 MODULES -->
-    <section id="he-sinh-thai" class="py-20 bg-white relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
-            Kiến Trúc Đột Phá
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Một Nền Tảng — Một Nguồn Dữ Liệu Duy Nhất
-          </h2>
-          <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
-            Thay vì chắp vá 5-7 ứng dụng độc lập dẫn tới sai lệch dữ liệu và chồng chéo chi phí, eCor vận hành toàn bộ doanh nghiệp của bạn quanh một <strong>Lõi Dữ Liệu Thời Gian Thực (Single Source of Truth)</strong>.
-          </p>
+    <!-- 1. Hero Section: Tối giản, tập trung định vị giá trị lõi -->
+    <section class="bg-white border-b border-slate-200 py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Tagline chuẩn mực, câu chủ động -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+          Nền tảng SaaS Vận hành Bán Lẻ Hợp Nhất
         </div>
 
-        <!-- 8 Modules Grid -->
-        <div class="grid md:grid-cols-4 gap-6">
-          <article
-            v-for="mod in modulesList"
-            :key="mod.slug"
-            class="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-6 hover-lift relative group flex flex-col justify-between"
-          >
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform text-2xl">
-                {{ mod.icon }}
-              </div>
-              <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">{{ mod.badge }}</div>
-              <h3 class="text-xl font-bold text-slate-900 mb-2">{{ mod.title }}</h3>
-              <p class="text-sm text-slate-600 mb-4 leading-relaxed">
-                {{ mod.heroDesc }}
-              </p>
-            </div>
-            <div>
-              <router-link
-                :to="`/${mod.slug}`"
-                class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 group-hover:underline"
-              >
-                Chi tiết phân hệ {{ mod.code }} &rarr;
-              </router-link>
-            </div>
-          </article>
-        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+          Nền Tảng Vận Hành <br class="hidden sm:inline" />
+          <span class="text-blue-700">Bán Hàng – Kho – Kế Toán</span> Cho Doanh Nghiệp Bán Lẻ
+        </h1>
 
-      </div>
-    </section>
+        <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+          eCor giải quyết trọn vẹn bài toán vận hành trên một nền tảng duy nhất: một giao dịch bán hàng tại <strong>POS</strong> tự động trừ tồn kho <strong>WMS</strong> và tự động ghi sổ <strong>Kế toán</strong>, loại bỏ hoàn toàn tình trạng lệch số liệu và nhập liệu thủ công.
+        </p>
 
-    <!-- SECTION: BEFORE vs AFTER COMPARISON -->
-    <section class="py-20 bg-slate-50 border-y border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Sự Khác Biệt Khi Ứng Dụng eCor SaaS
-          </h2>
-          <p class="text-slate-600 mt-3 text-base sm:text-lg">
-            Bảng so sánh năng lực vận hành giữa mô hình cũ dùng phần mềm rời rạc và nền tảng eCor 8 module All-in-One.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/90 text-left text-sm">
-            <thead class="bg-slate-100/80 text-slate-700 font-bold border-b border-slate-200">
-              <tr>
-                <th class="p-4 sm:p-5 w-1/4">Tiêu Chí Đánh Giá</th>
-                <th class="p-4 sm:p-5 w-3/8 text-rose-700 bg-rose-50/50">Dùng Nhiều Ứng Dụng Rời Rạc</th>
-                <th class="p-4 sm:p-5 w-3/8 text-blue-700 bg-blue-50/50">Nền Tảng eCor (8 Module Hợp Nhất)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-200/80 text-slate-700">
-              <tr class="hover:bg-slate-50/80 transition-colors">
-                <td class="p-4 sm:p-5 font-semibold text-slate-900">1. Quản lý Tồn Kho Đa Kênh</td>
-                <td class="p-4 sm:p-5 text-rose-900 bg-rose-50/20">Cập nhật thủ công bằng Excel, chậm trễ 2-6 giờ, thường xuyên bị phạt hủy đơn sàn.</td>
-                <td class="p-4 sm:p-5 text-blue-950 font-medium bg-blue-50/20">Tồn kho đồng bộ real-time giữa Cửa hàng, Kho và Sàn (Shopee/TikTok) trong 0.5s.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/80 transition-colors">
-                <td class="p-4 sm:p-5 font-semibold text-slate-900">2. Kiểm Kê Kho Hàng</td>
-                <td class="p-4 sm:p-5 text-rose-900 bg-rose-50/20">Đóng cửa hàng mất 1-2 ngày, đếm tay ghi sổ, sai lệch tồn kho lên đến 8-12%.</td>
-                <td class="p-4 sm:p-5 text-blue-950 font-medium bg-blue-50/20">Quét mã bằng PDA/RFID, kiểm 5.000 SKU trong 30 phút mà không cần dừng bán.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/80 transition-colors">
-                <td class="p-4 sm:p-5 font-semibold text-slate-900">3. Vận Chuyển & COD</td>
-                <td class="p-4 sm:p-5 text-rose-900 bg-rose-50/20">Tự đăng nhập từng app ship, gõ lại địa chỉ, đối soát COD thủ công rất dễ thất thoát.</td>
-                <td class="p-4 sm:p-5 text-blue-950 font-medium bg-blue-50/20">Đẩy đơn 1-click, in 500 bill tự động, đối soát COD từng đơn chính xác 100%.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/80 transition-colors">
-                <td class="p-4 sm:p-5 font-semibold text-slate-900">4. Chấm Công & Tính Lương</td>
-                <td class="p-4 sm:p-5 text-rose-900 bg-rose-50/20">Kế toán mất 3-5 ngày mỗi đầu tháng cộng bill tay để tính hoa hồng bán hàng.</td>
-                <td class="p-4 sm:p-5 text-blue-950 font-medium bg-blue-50/20">HRM lấy trực tiếp doanh số từ POS, tự động chốt hoa hồng minh bạch từng nhân viên.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/80 transition-colors">
-                <td class="p-4 sm:p-5 font-semibold text-slate-900">5. Báo Cáo Tài Chính Lãi Lỗ</td>
-                <td class="p-4 sm:p-5 text-rose-900 bg-rose-50/20">Dữ liệu phân mảnh, cuối tháng mới biết lãi lỗ ước tính, dễ nhầm chi phí sàn.</td>
-                <td class="p-4 sm:p-5 text-blue-950 font-medium bg-blue-50/20">Báo cáo P&L tự động theo thời gian thực trên di động mọi lúc mọi nơi.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: SOLUTIONS BY INDUSTRY -->
-    <section id="giai-phap" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
-            Ngành Hàng Chuyên Biệt
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Thiết Kế Tối Ưu Cho Mọi Mô Hình Kinh Doanh
-          </h2>
-          <p class="text-slate-600 mt-3 text-base sm:text-lg">
-            Khám phá các trang giải pháp chi tiết được may đo riêng theo đặc thù từng ngành tại Việt Nam.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <router-link
-            v-for="sol in solutionsList"
-            :key="sol.slug"
-            :to="`/giai-phap/${sol.slug}`"
-            class="p-6 rounded-2xl border border-slate-200/80 bg-slate-50/50 hover-lift group block"
-          >
-            <div class="text-3xl mb-3">{{ sol.icon }}</div>
-            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 mb-2">{{ sol.title }}</h3>
-            <p class="text-xs text-slate-600 leading-relaxed mb-4">
-              {{ sol.summary }}
-            </p>
-            <span class="text-xs font-bold text-blue-600 group-hover:underline">
-              Xem giải pháp chi tiết &rarr;
-            </span>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <button @click="openModal" class="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-blue-700 hover:bg-blue-800 rounded-lg shadow-sm transition-colors">
+            Đăng ký tư vấn demo thực tế
+          </button>
+          <router-link to="/bang-gia" class="w-full sm:w-auto px-7 py-3.5 text-sm font-semibold text-slate-700 hover:text-blue-700 bg-white border border-slate-300 hover:border-blue-300 rounded-lg transition-colors">
+            Xem bảng giá minh bạch
           </router-link>
         </div>
 
+        <!-- Cam kết nhanh gọn -->
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-medium text-slate-500">
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            Dữ liệu đồng bộ tức thì
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            Tuân thủ chuẩn hoá đơn điện tử TT78
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            Triển khai trong 48 giờ
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION: FAQ -->
-    <section class="py-20 bg-slate-50 border-t border-slate-200/80">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Câu Hỏi Thường Gặp Về Nền Tảng eCor
+    <!-- 2. TRỌNG TÂM: Khối 3 Trụ Cột Lõi & Bảng Điều Khiển Dòng Chảy Dữ Liệu Khép Kín -->
+    <section class="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="text-xs font-bold text-blue-700 uppercase tracking-wider mb-2">Trọng Tâm Vận Hành</div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+            3 Trụ Cột Lõi: Vòng Khép Kín Dữ Liệu Tự Động
           </h2>
-          <p class="text-slate-600 mt-3 text-base">
-            Những thông tin giải đáp chuẩn xác nhất về kiến trúc và triển khai giải pháp eCor.
+          <p class="text-slate-600">
+            Không cần 3 phần mềm rời rạc, không cần xuất Excel đối chiếu cuối tháng. Dữ liệu chạy xuyên suốt thời gian thực giữa 3 bộ phận quan trọng nhất.
           </p>
         </div>
 
-        <FaqAccordion :faqs="homeFaqs" />
+        <!-- Bảng điều khiển Dòng chảy Vận hành (Interactive Console) -->
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden mb-12">
+          <!-- Thanh trạng thái mô phỏng -->
+          <div class="bg-slate-100/80 px-6 py-3 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 font-semibold text-slate-800">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Luồng Dữ Liệu Khép Kín Real-time
+            </div>
+            <div class="text-slate-500 flex items-center gap-4">
+              <span>Độ trễ đồng bộ: <strong class="text-emerald-700 tabular-nums font-mono">&lt; 0.2s</strong></span>
+              <span>Khớp số liệu: <strong class="text-emerald-700 tabular-nums font-mono">100%</strong></span>
+            </div>
+          </div>
+
+          <!-- 3 Panel Trụ Cột Lõi Bố Cục Ngang Có Mũi Tên Kết Nối -->
+          <div class="p-6 md:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-11 items-center gap-4">
+              <!-- Panel 1: POS Bán Hàng -->
+              <div class="lg:col-span-3 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-blue-300 transition-colors">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Trụ cột 1</span>
+                  <span class="px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800">POS</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Bán Hàng Tại Quầy</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Quét mã barcode 0.2s, thanh toán QR động, hoạt động offline khi rớt mạng, chốt ca tự động.
+                </p>
+                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                  <li class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    Bán hàng không ngắt quãng
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    Khớp tiền két cuối ngày
+                  </li>
+                </ul>
+                <router-link to="/pos" class="text-xs font-bold text-blue-700 hover:text-blue-800 inline-flex items-center gap-1">
+                  Khám phá chi tiết POS &rarr;
+                </router-link>
+              </div>
+
+              <!-- Mũi tên kết nối 1 -> 2 -->
+              <div class="lg:col-span-1 flex flex-col items-center justify-center text-center py-2 lg:py-0 text-blue-600">
+                <div class="text-[10px] font-semibold text-slate-500 uppercase mb-1 hidden lg:block">Trừ tồn</div>
+                <svg class="w-6 h-6 rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+
+              <!-- Panel 2: WMS Quản Trị Kho -->
+              <div class="lg:col-span-3 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-blue-300 transition-colors">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Trụ cột 2</span>
+                  <span class="px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800">WMS</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Quản Lý Kho & Kiểm Kê</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Quản lý SKU biến thể, vị trí ô kệ, kiểm kho bằng PDA/RFID, chuyển kho nội bộ tức thời.
+                </p>
+                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                  <li class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    Ngăn chặn bán vượt tồn
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    Cảnh báo hàng cận date/chậm
+                  </li>
+                </ul>
+                <router-link to="/wms" class="text-xs font-bold text-blue-700 hover:text-blue-800 inline-flex items-center gap-1">
+                  Khám phá chi tiết WMS &rarr;
+                </router-link>
+              </div>
+
+              <!-- Mũi tên kết nối 2 -> 3 -->
+              <div class="lg:col-span-1 flex flex-col items-center justify-center text-center py-2 lg:py-0 text-blue-600">
+                <div class="text-[10px] font-semibold text-slate-500 uppercase mb-1 hidden lg:block">Định giá vốn</div>
+                <svg class="w-6 h-6 rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+
+              <!-- Panel 3: Kế Toán & Tài Chính -->
+              <div class="lg:col-span-3 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-blue-300 transition-colors">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Trụ cột 3</span>
+                  <span class="px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800">Account</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Kế Toán & Hoá Đơn</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Tự động ghi nhận doanh thu từ POS, giá vốn từ WMS. Phát hành HĐĐT tuân thủ TT78, báo cáo thuế.
+                </p>
+                <ul class="text-xs text-slate-700 space-y-2 mb-4">
+                  <li class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    Đối soát 3 chiều tự động
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    Không cần gõ tay lại hoá đơn
+                  </li>
+                </ul>
+                <router-link to="/ke-toan" class="text-xs font-bold text-blue-700 hover:text-blue-800 inline-flex items-center gap-1">
+                  Khám phá Kế toán &rarr;
+                </router-link>
+              </div>
+            </div>
+
+            <!-- Tương Tác Nghiệp Vụ: Xem Luồng Chạy Thực Tế -->
+            <div class="mt-8 pt-6 border-t border-slate-200 bg-slate-50/50 rounded-xl p-4 sm:p-6">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+                <div class="text-xs font-bold text-slate-900 uppercase tracking-wide">
+                  Mô phỏng chu trình dữ liệu thực tế:
+                </div>
+                <!-- 3 Kịch bản tương tác -->
+                <div class="flex flex-wrap gap-2">
+                  <button 
+                    @click="activeScenario = 'sale'"
+                    :class="activeScenario === 'sale' ? 'bg-blue-700 text-white' : 'bg-white text-slate-700 border border-slate-200'"
+                    class="px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors"
+                  >
+                    1 Đơn bán tại quầy
+                  </button>
+                  <button 
+                    @click="activeScenario = 'inventory'"
+                    :class="activeScenario === 'inventory' ? 'bg-blue-700 text-white' : 'bg-white text-slate-700 border border-slate-200'"
+                    class="px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors"
+                  >
+                    Kiểm kho phát hiện lệch
+                  </button>
+                  <button 
+                    @click="activeScenario = 'procurement'"
+                    :class="activeScenario === 'procurement' ? 'bg-blue-700 text-white' : 'bg-white text-slate-700 border border-slate-200'"
+                    class="px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors"
+                  >
+                    Nhập kho từ Nhà cung cấp
+                  </button>
+                </div>
+              </div>
+
+              <!-- Hiển thị dữ liệu thay đổi ở cả 3 module -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div class="p-3.5 bg-white border border-slate-200 rounded-lg">
+                  <div class="font-bold text-blue-700 mb-1">Tại quầy POS:</div>
+                  <p class="text-slate-600 leading-relaxed">{{ scenarios[activeScenario].pos }}</p>
+                </div>
+                <div class="p-3.5 bg-white border border-slate-200 rounded-lg">
+                  <div class="font-bold text-blue-700 mb-1">Tại kho WMS:</div>
+                  <p class="text-slate-600 leading-relaxed">{{ scenarios[activeScenario].wms }}</p>
+                </div>
+                <div class="p-3.5 bg-white border border-slate-200 rounded-lg">
+                  <div class="font-bold text-blue-700 mb-1">Tại Kế toán:</div>
+                  <p class="text-slate-600 leading-relaxed">{{ scenarios[activeScenario].account }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION: CTA BANNER -->
-    <section class="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 text-white text-center">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
-          Sẵn Sàng Nâng Tầm Vận Hành Bán Lẻ Cùng eCor?
-        </h2>
-        <p class="text-blue-100 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed">
-          Đội ngũ chuyên gia eCor sẵn sàng khảo sát thực tế và thiết lập bản demo 1:1 phù hợp chính xác với mô hình kinh doanh của bạn.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <button
-            @click="$emit('open-modal', { type: 'demo' })"
-            class="bg-white text-blue-700 hover:bg-slate-100 px-9 py-4 rounded-xl font-bold text-lg shadow-2xl transition-all cursor-pointer"
-          >
-            Đăng Ký Demo Trải Nghiệm Ngay
-          </button>
-          <a
-            href="tel:0978673867"
-            class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2"
-          >
-            Hotline: 0978 67 38 67
-          </a>
+    <!-- 3. Vì Sao Chọn eCor: 4 Lý Do Thực Tế -->
+    <section class="py-16 md:py-20 bg-white border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Vì Sao Doanh Nghiệp Chọn eCor?</h2>
+          <p class="text-slate-600 text-sm">Không tô vẽ tính năng phức tạp, eCor tập trung giải quyết đúng các nút thắt nhức nhối nhất trong quản trị bán lẻ.</p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm mb-3">1</div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Một nguồn dữ liệu duy nhất (Single Source of Truth)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Dữ liệu tồn kho, doanh thu và công nợ lưu trữ tập trung. Không có độ trễ giữa bộ phận bán hàng, kho vận và phòng tài chính kế toán.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm mb-3">2</div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Triệt tiêu hoàn toàn khâu nhập tay dữ liệu</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Mỗi hóa đơn phát sinh tự động tạo định khoản kế toán, trừ tồn kho và cập nhật báo cáo lãi lỗ tức thì, giúp tiết kiệm hàng trăm giờ đối chiếu mỗi tháng.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm mb-3">3</div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Đo đạc chính xác chi phí & giá vốn thực tế</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Áp dụng linh hoạt các phương pháp tính giá vốn đích danh, FIFO hoặc bình quân gia quyền. Báo cáo lãi gộp từng mặt hàng chuẩn xác theo thời gian thực.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm mb-3">4</div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Hỗ trợ kỹ thuật thực chiến 24/7 tại Việt Nam</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Đội ngũ kỹ sư triển khai trực tiếp hỗ trợ chuẩn hóa danh mục SKU, đào tạo nhân viên thu ngân và kết nối hóa đơn điện tử tận nơi trong 48 giờ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HỆ SINH THÁI MỞ RỘNG (5 Module: Trình bày gọn gàng, không cạnh tranh không gian 3 lõi) -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Mở Rộng Liền Mạch</div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">Mở Rộng Hệ Sinh Thái Khi Doanh Nghiệp Cần</h2>
+          <p class="text-xs text-slate-600">
+            Bắt đầu vững chắc từ 3 trụ cột lõi, và kích hoạt thêm các module chuyên biệt chỉ với một cú nhấp chuột.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+          <!-- ECOM -->
+          <router-link to="/mo-rong/ecom" class="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-sm transition-all group">
+            <div class="text-xs font-bold text-blue-700 mb-1">ECOM</div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 mb-2">TMĐT Đa Sàn</h3>
+            <p class="text-xs text-slate-500 line-clamp-3 mb-3">
+              Website bán hàng và kết nối Shopee, TikTok Shop, Lazada. Tự động đồng bộ tồn kho với POS và WMS.
+            </p>
+            <span class="text-xs font-semibold text-blue-600 group-hover:underline">Chi tiết &rarr;</span>
+          </router-link>
+
+          <!-- TMS -->
+          <router-link to="/mo-rong/tms" class="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-sm transition-all group">
+            <div class="text-xs font-bold text-blue-700 mb-1">TMS</div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 mb-2">Quản Lý Giao Vận</h3>
+            <p class="text-xs text-slate-500 line-clamp-3 mb-3">
+              Đẩy đơn tự động tới GHN, GHTK, Viettel Post. Đối soát tiền thu hộ COD tự động khớp vào Kế toán.
+            </p>
+            <span class="text-xs font-semibold text-blue-600 group-hover:underline">Chi tiết &rarr;</span>
+          </router-link>
+
+          <!-- HRM -->
+          <router-link to="/mo-rong/hrm" class="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-sm transition-all group">
+            <div class="text-xs font-bold text-blue-700 mb-1">HRM</div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 mb-2">Nhân Sự & Ca Kíp</h3>
+            <p class="text-xs text-slate-500 line-clamp-3 mb-3">
+              Chấm công theo ca tại cửa hàng, tự động tính hoa hồng bán hàng từ dữ liệu thực tế tại quầy POS.
+            </p>
+            <span class="text-xs font-semibold text-blue-600 group-hover:underline">Chi tiết &rarr;</span>
+          </router-link>
+
+          <!-- Mobile App -->
+          <router-link to="/mo-rong/mobile-app" class="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-sm transition-all group">
+            <div class="text-xs font-bold text-blue-700 mb-1">Mobile App</div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 mb-2">App Di Động</h3>
+            <p class="text-xs text-slate-500 line-clamp-3 mb-3">
+              App quản trị doanh thu real-time cho chủ shop, app kiểm kho PDA và app tích điểm chăm sóc khách.
+            </p>
+            <span class="text-xs font-semibold text-blue-600 group-hover:underline">Chi tiết &rarr;</span>
+          </router-link>
+
+          <!-- CRM -->
+          <router-link to="/mo-rong/crm" class="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-sm transition-all group">
+            <div class="text-xs font-bold text-blue-700 mb-1">CRM</div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 mb-2">Quan Hệ Khách Hàng</h3>
+            <p class="text-xs text-slate-500 line-clamp-3 mb-3">
+              Hồ sơ khách hàng 360 độ, tích điểm đa kênh, phân hạng VIP và chăm sóc tự động qua Zalo OA/SMS.
+            </p>
+            <span class="text-xs font-semibold text-blue-600 group-hover:underline">Chi tiết &rarr;</span>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Bảng Giá Tóm Tắt (3 Gói Rõ Nghĩa) -->
+    <section class="py-16 md:py-20 bg-white border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Gói Chi Phí Minh Bạch Cho Mọi Quy Mô</h2>
+          <p class="text-slate-600 text-sm">Không phụ phí ẩn, không giới hạn tính năng lõi. Nâng cấp linh hoạt khi mở rộng chi nhánh.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Gói Cơ Bản -->
+          <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 mb-1">Khởi Tạo</h3>
+              <p class="text-xs text-slate-500 mb-4">Cửa hàng bán lẻ độc lập mới vận hành</p>
+              <div class="text-2xl font-extrabold text-slate-900 tabular-nums mb-4">199.000đ <span class="text-xs font-normal text-slate-500">/tháng</span></div>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                <li>&bull; 1 Điểm bán POS (offline-first)</li>
+                <li>&bull; Quản lý kho cơ bản WMS</li>
+                <li>&bull; Sổ quỹ & thu chi Kế toán</li>
+                <li>&bull; Xuất báo cáo Excel</li>
+              </ul>
+            </div>
+            <button @click="openModal" class="w-full py-2.5 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:border-blue-600 hover:text-blue-700 transition-colors">
+              Đăng ký dùng thử
+            </button>
+          </div>
+
+          <!-- Gói Tiêu Chuẩn (Nổi bật) -->
+          <div class="p-6 rounded-xl border-2 border-blue-600 bg-white relative shadow-sm flex flex-col justify-between">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[11px] font-bold bg-blue-600 text-white">Khuyên Dùng</span>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 mb-1">Chuyên Nghiệp</h3>
+              <p class="text-xs text-slate-500 mb-4">Chuỗi 2-5 cửa hàng & bán đa kênh</p>
+              <div class="text-2xl font-extrabold text-blue-700 tabular-nums mb-4">499.000đ <span class="text-xs font-normal text-slate-500">/tháng</span></div>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                <li>&bull; Trọn bộ 3 trụ cột: <strong>POS + WMS + Kế toán</strong></li>
+                <li>&bull; Kết nối Hoá đơn điện tử hợp chuẩn TT78</li>
+                <li>&bull; Kiểm kho bằng PDA mã vạch</li>
+                <li>&bull; Đối soát 3 chiều tự động</li>
+                <li>&bull; Tặng kèm kết nối 1 sàn TMĐT</li>
+              </ul>
+            </div>
+            <button @click="openModal" class="w-full py-2.5 text-xs font-bold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors shadow-sm">
+              Đăng ký tư vấn ngay
+            </button>
+          </div>
+
+          <!-- Gói Chuỗi Doanh Nghiệp -->
+          <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 mb-1">Chuỗi & Tổng Kho</h3>
+              <p class="text-xs text-slate-500 mb-4">Hệ thống từ 5 chi nhánh hoặc tổng kho phân phối</p>
+              <div class="text-2xl font-extrabold text-slate-900 tabular-nums mb-4">990.000đ <span class="text-xs font-normal text-slate-500">/tháng</span></div>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                <li>&bull; Không giới hạn chi nhánh & người dùng</li>
+                <li>&bull; Mở khóa toàn bộ 8 phân hệ (TMS, HRM, CRM...)</li>
+                <li>&bull; Báo cáo tài chính hợp nhất chuỗi</li>
+                <li>&bull; Kỹ sư hỗ trợ riêng 24/7 & SLA 99.9%</li>
+              </ul>
+            </div>
+            <button @click="openModal" class="w-full py-2.5 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:border-blue-600 hover:text-blue-700 transition-colors">
+              Liên hệ báo giá chuỗi
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <router-link to="/bang-gia" class="text-xs font-bold text-blue-700 hover:underline">
+            Xem bảng so sánh tính năng chi tiết tất cả các gói &rarr;
+          </router-link>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAQ Accordion (Chuẩn Schema FAQPage) -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-2">Câu Hỏi Thường Gặp</h2>
+          <p class="text-xs text-slate-600">Giải đáp các thắc mắc cốt lõi về cơ chế vận hành của eCor.</p>
+        </div>
+
+        <div class="space-y-3">
+          <div v-for="(faq, idx) in faqs" :key="idx" class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+            <button @click="faq.open = !faq.open" class="w-full px-5 py-3.5 text-left text-sm font-semibold text-slate-800 flex items-center justify-between hover:text-blue-700 transition-colors">
+              <span>{{ faq.q }}</span>
+              <span class="text-slate-400 font-bold ml-2">{{ faq.open ? '−' : '+' }}</span>
+            </button>
+            <div v-if="faq.open" class="px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              {{ faq.a }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Banner Form CTA Cuối Trang -->
+    <section class="py-16 bg-slate-900 text-white text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">Sẵn Sàng Chuẩn Hóa Vận Hành Bán Lẻ Ngay Hôm Nay?</h2>
+        <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+          Hãy để chuyên gia eCor trực tiếp khảo sát bài toán thực tế của cửa hàng/chuỗi của bạn và demo giải pháp trong 15 phút.
+        </p>
+
+        <form @submit.prevent="handleQuickRegister" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+          <input 
+            v-model="quickPhone" 
+            type="tel" 
+            required 
+            placeholder="Nhập số điện thoại của bạn..." 
+            class="px-4 py-3 text-sm rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 flex-1"
+          />
+          <button type="submit" :disabled="submitting" class="px-6 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors whitespace-nowrap">
+            {{ submitting ? 'Đang gửi...' : 'Nhận tư vấn ngay' }}
+          </button>
+        </form>
+        <p class="text-[11px] text-slate-500 mt-3">Hoặc gọi trực tiếp hotline: <a href="tel:0978673867" class="text-blue-400 font-bold hover:underline">0978 67 38 67</a></p>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import HeroCanvas from '@/components/HeroCanvas.vue'
-import FaqAccordion from '@/components/FaqAccordion.vue'
-import { modulesList } from '@/data/modulesData'
-import { solutionsList } from '@/data/solutionsData'
+import { ref, reactive } from 'vue'
 
-defineEmits(['open-modal'])
+const activeScenario = ref('sale')
 
-const homeFaqs = [
-  {
-    q: 'eCor là gì và định vị ra sao trên thị trường phần mềm quản trị?',
-    a: 'eCor là nền tảng SaaS vận hành đa dịch vụ (Omnichannel Business Platform) tích hợp sẵn 8 phân hệ nghiệp vụ: POS, ECOM, WMS, TMS, HRM, Account, Mobile App và CRM hoạt động trên một lõi dữ liệu dùng chung (Single Source of Truth).'
+const scenarios = {
+  sale: {
+    pos: 'Thu ngân quét barcode mã áo sơ mi (550.000đ). Khách quét VietQR động. Đơn hàng hoàn tất và in hoá đơn tức thì.',
+    wms: 'Hệ thống tự động trừ 1 áo sơ mi tại kho quầy. Tồn kho khả dụng cập nhật ngay lập tức sang các kênh bán khác.',
+    account: 'Tự động hạch toán Doanh thu bán lẻ (TK 511) và Giá vốn hàng bán (TK 632). Xuất file hoá đơn điện tử mã CQT.'
   },
-  {
-    q: 'Doanh nghiệp có thể mua lẻ từng module (ví dụ chỉ POS hoặc chỉ WMS) không?',
-    a: 'Hoàn toàn được. eCor cung cấp chính sách giá linh hoạt: Doanh nghiệp có thể bắt đầu với 1-2 module cốt lõi như POS hoặc WMS rồi mở rộng dần sang các phân hệ khác chỉ với một click kích hoạt mà không làm gián đoạn bán hàng.'
+  inventory: {
+    pos: 'Nhân viên thu ngân không thể chọn bán sản phẩm đang nằm trong danh sách kiểm kê hoặc có trạng thái lệch kho.',
+    wms: 'Thủ kho dùng máy quét PDA kiểm kê tại kệ A, phát hiện thiếu 1 sản phẩm so với sổ sách, tạo phiếu kiểm kê lệch.',
+    account: 'Tự động hạch toán chênh lệch vào Tài sản thiếu chờ xử lý (TK 1381) và thông báo tới kế toán trưởng phê duyệt.'
   },
-  {
-    q: 'eCor có hoạt động khi bị mất kết nối Internet không?',
-    a: 'Có. Phân hệ POS của eCor được trang bị kiến trúc Offline-First độc quyền. Khi rớt mạng Internet, thu ngân vẫn quét mã, in bill bình thường. Dữ liệu sẽ tự động đồng bộ hóa lên máy chủ đám mây ngay khi có kết nối trở lại.'
-  },
-  {
-    q: 'Hệ thống WMS của eCor có tương thích với các dòng máy quét PDA và RFID nào?',
-    a: 'WMS eCor tương thích với hầu hết các thiết bị quét mã vạch 1D/2D chuyên dụng chạy hệ điều hành Android (như Zebra, Honeywell, Chainway, Urovo) và các đầu đọc thẻ RFID cố định hoặc cầm tay.'
+  procurement: {
+    pos: 'Ngay sau khi kho bấm hoàn tất nhập, danh mục hàng hóa tại quầy thu ngân tự động hiển thị số lượng sẵn sàng bán.',
+    wms: 'Thủ kho quét mã nhận 200 sản phẩm từ Nhà cung cấp, phân bổ vào vị trí ô kệ chi tiết và in tem nhãn barcode.',
+    account: 'Tự động tăng giá trị tồn kho (TK 156) và ghi nhận công nợ phải trả Nhà cung cấp (TK 331) theo đúng hạn thanh toán.'
   }
-]
+}
+
+const faqs = reactive([
+  {
+    q: 'Dữ liệu bán hàng ở POS có tự động đồng bộ sang kho WMS và Kế toán không?',
+    a: 'Có. Toàn bộ hệ thống eCor sử dụng chung một cơ sở dữ liệu thời gian thực. Bất kỳ đơn hàng nào bán ra tại quầy sẽ lập tức trừ tồn kho tương ứng ở WMS và tự động tạo bút toán doanh thu, giá vốn ở phân hệ Kế toán mà không cần con người can thiệp hay nhập lại.',
+    open: true
+  },
+  {
+    q: 'Khi mất mạng Internet, quầy POS có tiếp tục bán hàng được không?',
+    a: 'Được 100%. Phân hệ POS của eCor được trang bị kiến trúc Offline-First chuyên dụng. Thu ngân vẫn quét mã, mở đơn và in bill cho khách bình thường. Toàn bộ dữ liệu bán trong lúc mất mạng sẽ tự động đồng bộ an toàn lên mây ngay khi có kết nối trở lại.',
+    open: false
+  },
+  {
+    q: 'eCor có hỗ trợ xuất Hóa đơn điện tử theo quy định Thuế (Thông tư 78) không?',
+    a: 'Có. Phân hệ Kế toán của eCor tích hợp trực tiếp với các nhà cung cấp giải pháp HĐĐT hợp chuẩn tại Việt Nam. Bạn có thể phát hành hoá đơn điện tử có mã của cơ quan thuế trực tiếp từ giao diện đơn bán.',
+    open: false
+  },
+  {
+    q: 'Tôi có thể bắt đầu với 3 module lõi trước rồi sau này mới mở rộng không?',
+    a: 'Chính xác! Đó là cách tiếp cận thông minh nhất được hơn 80% khách hàng của eCor lựa chọn. Bạn hoàn toàn có thể triển khai trước bộ 3 POS - WMS - Kế toán để vận hành ổn định, sau đó kích hoạt thêm ECOM, TMS hay CRM bất cứ khi nào mở rộng quy mô.',
+    open: false
+  }
+])
+
+const quickPhone = ref('')
+const submitting = ref(false)
+
+function openModal() {
+  window.dispatchEvent(new CustomEvent('open-demo-modal'))
+}
+
+async function handleQuickRegister() {
+  if (!quickPhone.value) return
+  submitting.value = true
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: '39a2af8f-3d80-448e-98a5-482c38bfae27',
+        subject: 'Yêu cầu tư vấn nhanh từ eCor Trang Chủ',
+        phone: quickPhone.value
+      })
+    })
+    const data = await res.json()
+    if (data.success) {
+      alert('Cảm ơn bạn! Đội ngũ eCor đã nhận số điện thoại ' + quickPhone.value + ' và sẽ liên hệ trong 15 phút.')
+      quickPhone.value = ''
+    } else {
+      alert('Vui lòng liên hệ hotline: 0978 67 38 67 để được hỗ trợ tức thì!')
+    }
+  } catch (err) {
+    alert('Vui lòng liên hệ hotline: 0978 67 38 67 để được hỗ trợ tức thì!')
+  } finally {
+    submitting.value = false
+  }
+}
 </script>

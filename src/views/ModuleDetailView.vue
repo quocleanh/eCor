@@ -1,185 +1,156 @@
 <template>
-  <div v-if="currentModule" class="bg-slate-50 min-h-screen">
+  <div v-if="currentModule" class="bg-white min-h-screen">
     
-    <!-- BLOCK 1: HERO RIÊNG CỦA MODULE -->
-    <section class="relative py-16 md:py-24 bg-gradient-to-b from-blue-50/70 via-white to-slate-50 border-b border-slate-200/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              {{ currentModule.badge }} — {{ currentModule.code }}
-            </div>
-            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              {{ currentModule.tagline }}
-            </h1>
-            <p class="text-lg text-slate-600 leading-relaxed">
-              {{ currentModule.heroDesc }}
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
-                @click="$emit('open-modal', { type: 'module', moduleName: currentModule.title })"
-                class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl hover:shadow-2xl transition-all cursor-pointer"
-              >
-                Trải Nghiệm {{ currentModule.code }} Miễn Phí 14 Ngày
-              </button>
-              <a
-                href="#tinh-nang"
-                class="glass border border-slate-300 text-slate-700 hover:text-blue-600 px-7 py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2"
-              >
-                Xem Tính Năng Chi Tiết &darr;
-              </a>
-            </div>
+    <!-- 1. Breadcrumbs tối giản & Header riêng của Module -->
+    <div class="border-b border-slate-200 bg-slate-50/70 py-4">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+          <router-link to="/" class="hover:text-blue-700">Trang chủ</router-link>
+          <span>/</span>
+          <span v-if="isCoreModule" class="text-blue-700 font-semibold">3 Trụ Cột Vận Hành Lõi</span>
+          <span v-else class="text-slate-600">Hệ Sinh Thái Mở Rộng</span>
+          <span>/</span>
+          <span class="text-slate-900 font-bold">{{ currentModule.title }}</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- 2. Hero Section Của Module -->
+    <section class="py-14 md:py-20 border-b border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider mb-4"
+               :class="isCoreModule ? 'bg-blue-100 text-blue-800' : 'bg-slate-100 text-slate-700'">
+            {{ isCoreModule ? 'Module Lõi Trọng Tâm' : 'Module Mở Rộng' }} — {{ currentModule.code }}
           </div>
 
-          <div class="lg:col-span-5">
-            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200/90 space-y-4 hover-lift">
-              <div class="flex items-center justify-between border-b pb-3">
-                <div class="flex items-center gap-2">
-                  <span class="text-2xl">{{ currentModule.icon }}</span>
-                  <span class="font-bold text-slate-900 text-sm">{{ currentModule.title }}</span>
-                </div>
-                <span class="text-xs bg-emerald-100 text-emerald-700 font-bold px-2 py-0.5 rounded-full">Sẵn Sàng Triển Khai</span>
-              </div>
-              <div class="space-y-2 text-xs">
-                <div
-                  v-for="(feat, idx) in currentModule.features.slice(0, 3)"
-                  :key="idx"
-                  class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-2.5"
-                >
-                  <span class="text-blue-600 font-bold">✓</span>
-                  <div>
-                    <strong class="text-slate-900 block">{{ feat.title }}</strong>
-                    <p class="text-slate-500 text-[11px] mt-0.5 line-clamp-1">{{ feat.desc }}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 bg-blue-50 rounded-xl text-blue-900 text-xs font-bold text-center">
-                Đồng bộ dữ liệu thời gian thực với toàn bộ 7 phân hệ còn lại của eCor
-              </div>
-            </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+            {{ currentModule.tagline }}
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+            {{ currentModule.heroDesc }}
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <button @click="openModal" class="px-6 py-3 text-sm font-bold text-white bg-blue-700 hover:bg-blue-800 rounded-lg shadow-sm transition-colors">
+              Đăng ký tư vấn demo {{ currentModule.code }}
+            </button>
+            <router-link to="/bang-gia" class="px-5 py-3 text-sm font-semibold text-slate-700 hover:text-blue-700 bg-white border border-slate-300 rounded-lg transition-colors">
+              Xem báo giá chi tiết
+            </router-link>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BLOCK 2: NỖI ĐAU KHÁCH HÀNG GẶP PHẢI -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Những Khó Khăn Thường Gặp Khi Thiếu {{ currentModule.code }} Chuyên Sâu
-          </h2>
-          <p class="text-slate-600 mt-2 text-sm sm:text-base">Các bài toán thực tế mà các nhà bán lẻ và quản lý đang phải đối mặt mỗi ngày.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div
-            v-for="(pain, idx) in currentModule.pains"
-            :key="idx"
-            class="p-6 rounded-2xl bg-rose-50/50 border border-rose-100 space-y-3"
-          >
-            <div class="text-2xl">{{ pain.icon }}</div>
-            <h3 class="font-bold text-rose-900 text-base">{{ pain.title }}</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {{ pain.desc }}
-            </p>
+    <!-- NẾU LÀ MODULE LÕI (POS, WMS, Kế toán) -> TEMPLATE ĐẦY ĐỦ CHUYÊN SÂU -->
+    <div v-if="isCoreModule">
+      <!-- 3. BÀI TOÁN THỰC TẾ & NỖI ĐAU CỦA CỬA HÀNG -->
+      <section class="py-14 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-10">
+            <div class="text-xs font-bold text-blue-700 uppercase tracking-wider mb-1">Thực Trạng Vận Hành</div>
+            <h2 class="text-2xl font-bold text-slate-900">Các Bài Toán Nút Thắt eCor {{ currentModule.code }} Giải Quyết</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div v-for="(pain, idx) in currentModule.pains" :key="idx" class="p-5 rounded-xl bg-white border border-slate-200">
+              <div class="text-2xl mb-3">{{ pain.icon }}</div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">{{ pain.title }}</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">{{ pain.desc }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- BLOCK 3: TÍNH NĂNG CỐT LÕI (6 FEATURES) -->
-    <section id="tinh-nang" class="py-16 bg-slate-50 border-y border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Năng Lực Vượt Trội Của Phân Hệ eCor {{ currentModule.code }}
-          </h2>
-          <p class="text-slate-600 mt-2 text-sm sm:text-base">Thiết kế tối ưu cho tốc độ và hiệu suất vận hành chuẩn xác.</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div
-            v-for="(feat, idx) in currentModule.features"
-            :key="idx"
-            class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3 hover-lift"
-          >
-            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
-              {{ feat.num }}
+      <!-- 4. TÍNH NĂNG CHI TIẾT CỦA MODULE LÕI -->
+      <section class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <div class="text-xs font-bold text-blue-700 uppercase tracking-wider mb-1">Nghiệp Vụ Thực Chiến</div>
+            <h2 class="text-2xl font-bold text-slate-900">Tính Năng Cốt Lõi Được Xây Dựng Cho Người Vận Hành</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div v-for="(feat, idx) in currentModule.features" :key="idx" class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:border-blue-300 transition-colors">
+              <h3 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                {{ feat.title }}
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">{{ feat.desc }}</p>
             </div>
-            <h3 class="font-bold text-slate-900 text-base">{{ feat.title }}</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {{ feat.desc }}
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. VÒNG KHÉP KÍN DỮ LIỆU VỚI 2 MODULE LÕI CÒN LẠI -->
+      <section class="py-16 bg-blue-50/60 border-b border-blue-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-8">
+            <div class="text-xs font-bold text-blue-700 uppercase tracking-wider mb-1">Vòng Khép Kín Dữ Liệu</div>
+            <h2 class="text-2xl font-bold text-slate-900">Cách {{ currentModule.code }} Đồng Bộ Liền Mạch</h2>
+            <p class="text-xs text-slate-600 mt-2">
+              Không cần xuất file trung gian. Một thao tác trên {{ currentModule.code }} lập tức kích hoạt phản hồi tức thì trên các phân hệ còn lại.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- BLOCK 4: LỢI ÍCH & SỐ LIỆU ĐO LƯỜNG ĐƯỢC -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-tr from-blue-900 to-indigo-900 text-white shadow-2xl">
-          <div class="text-center max-w-2xl mx-auto mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold">Hiệu Quả Đo Lường Thực Tế</h2>
-            <p class="text-blue-200 text-sm mt-2">Dữ liệu tổng hợp từ các doanh nghiệp đã triển khai phân hệ {{ currentModule.code }}.</p>
-          </div>
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            <div
-              v-for="(met, idx) in currentModule.metrics"
-              :key="idx"
-              class="p-4 rounded-xl bg-white/10 backdrop-blur-sm"
-            >
-              <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400">{{ met.value }}</div>
-              <div class="text-xs sm:text-sm text-blue-100 mt-1">{{ met.label }}</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div v-for="(integ, idx) in currentModule.integrations" :key="idx" class="p-5 rounded-xl bg-white border border-blue-200">
+              <div class="text-xs font-bold text-blue-700 mb-1">&rarr; {{ integ.label }}</div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">{{ integ.desc.split(':')[0] || integ.label }}</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">{{ integ.desc }}</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- BLOCK 5: TÍCH HỢP HỆ SINH THÁI (INTERNAL LINKING) -->
-    <section class="py-16 bg-slate-50 border-t border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Kết Nối Tự Động Trong Hệ Sinh Thái eCor
-          </h2>
-          <p class="text-slate-600 mt-2 text-sm">{{ currentModule.code }} tương tác 2 chiều mượt mà với các phân hệ khác.</p>
+    <!-- NẾU LÀ MODULE MỞ RỘNG (ECOM, TMS, HRM, Mobile App, CRM) -> TEMPLATE RÚT GỌN GỌN GÀNG -->
+    <div v-else>
+      <!-- 3. TÍNH NĂNG CHÍNH RÚT GỌN -->
+      <section class="py-14 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-8">
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Tính Năng Chính</div>
+            <h2 class="text-2xl font-bold text-slate-900">Năng Lực Mở Rộng Của Phân Hệ {{ currentModule.code }}</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div v-for="(feat, idx) in currentModule.features.slice(0, 4)" :key="idx" class="p-5 rounded-xl bg-white border border-slate-200">
+              <h3 class="text-sm font-bold text-slate-900 mb-2">{{ feat.title }}</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">{{ feat.desc }}</p>
+            </div>
+          </div>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <router-link
-            v-for="(integ, idx) in currentModule.integrations"
-            :key="idx"
-            :to="`/${integ.target}`"
-            class="p-6 rounded-2xl bg-white border border-slate-200/90 hover-lift group block"
-          >
-            <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">&rarr; {{ integ.label }}</div>
-            <h3 class="font-bold text-slate-900 group-hover:text-blue-600 mb-2">{{ integ.desc.split(':')[0] || integ.label }}</h3>
+      </section>
+
+      <!-- 4. KHỐI TÍCH HỢP VỚI 3 MODULE LÕI -->
+      <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 max-w-3xl">
+            <h3 class="text-sm font-bold text-blue-700 mb-2">Tích hợp tự động vào 3 trụ cột lõi (POS - WMS - Kế toán)</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              {{ integ.desc }}
+              Mọi dữ liệu từ phân hệ {{ currentModule.code }} được đẩy thẳng về kho trung tâm WMS, quầy thu ngân POS và sổ sách kế toán tài chính. Doanh nghiệp không cần cấu hình API phức tạp hay quản lý hai hệ thống riêng biệt.
             </p>
-          </router-link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- BLOCK 6: FAQ MODULE & BANNER CTA -->
-    <section class="py-16 bg-white border-t border-slate-200/80">
+    <!-- 6. FAQ CHUYÊN BIỆT & CTA CUỐI TRANG -->
+    <section class="py-16 bg-white border-b border-slate-200">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center mb-8">
-          Giải Đáp Thắc Mắc Về eCor {{ currentModule.code }}
-        </h2>
-        
+        <h2 class="text-xl font-bold text-slate-900 mb-6 text-center">Câu Hỏi Thường Gặp Về eCor {{ currentModule.code }}</h2>
         <FaqAccordion :faqs="currentModule.faqs" class="mb-12" />
 
-        <!-- Banner CTA -->
-        <div class="p-8 rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center space-y-4 shadow-xl">
-          <h3 class="text-2xl font-bold">Nâng Tầm Vận Hành Doanh Nghiệp Cùng eCor {{ currentModule.code }}</h3>
-          <p class="text-blue-100 text-sm max-w-xl mx-auto">Chuyên viên eCor sẽ tư vấn thiết lập bản thử nghiệm phù hợp chính xác với mô hình của bạn.</p>
-          <button
-            @click="$emit('open-modal', { type: 'module', moduleName: currentModule.title })"
-            class="bg-white text-blue-700 font-bold px-8 py-3.5 rounded-xl shadow-lg hover:bg-slate-100 transition-all cursor-pointer"
-          >
-            Đăng Ký Demo {{ currentModule.code }} Ngay
+        <div class="p-8 rounded-2xl bg-slate-900 text-white text-center">
+          <h3 class="text-xl font-bold mb-2">Sẵn Sàng Triển Khai {{ currentModule.code }} Cho Cửa Hàng Của Bạn?</h3>
+          <p class="text-xs text-slate-400 max-w-lg mx-auto mb-6">
+            Đội ngũ chuyên gia eCor sẵn sàng khảo sát bài toán thực tế và thiết lập dữ liệu mẫu ngay trong ngày.
+          </p>
+          <button @click="openModal" class="px-6 py-3 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
+            Đăng ký tư vấn trực tiếp
           </button>
         </div>
       </div>
@@ -199,12 +170,28 @@ import { useRoute } from 'vue-router'
 import { modulesData } from '@/data/modulesData'
 import FaqAccordion from '@/components/FaqAccordion.vue'
 
-defineEmits(['open-modal'])
-
 const route = useRoute()
 
 const currentModule = computed(() => {
-  const slug = route.params.slug || route.path.replace(/^\//, '')
+  // Chuẩn hóa path: loại bỏ slash đầu và tiền tố mo-rong/ nếu có
+  const cleanPath = route.path.replace(/^\//, '').replace(/^mo-rong\//, '')
+  const slug = route.params.slug || cleanPath
+  
+  // Mapping đặc thù cho kế toán/account
+  if (slug === 'ke-toan' || slug === 'account') {
+    return modulesData['ke-toan'] || modulesData['account'] || null
+  }
+  
   return modulesData[slug] || null
 })
+
+const isCoreModule = computed(() => {
+  if (!currentModule.value) return false
+  const code = (currentModule.value.code || '').toUpperCase()
+  return code === 'POS' || code === 'WMS' || code === 'ACCOUNT' || currentModule.value.slug === 'ke-toan' || currentModule.value.slug === 'pos' || currentModule.value.slug === 'wms'
+})
+
+function openModal() {
+  window.dispatchEvent(new CustomEvent('open-demo-modal'))
+}
 </script>
