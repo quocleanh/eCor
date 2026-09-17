@@ -1,66 +1,164 @@
 <template>
-  <footer class="bg-slate-900 text-slate-400 py-14 border-t border-slate-800 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
-        
-        <!-- Brand Info -->
-        <div class="space-y-4">
+  <footer class="bg-white border-t border-slate-200 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+        <!-- Brand & Contact -->
+        <div class="lg:col-span-2 space-y-4">
           <router-link to="/" class="inline-block">
-            <img src="/ecor-logo.png" alt="Logo eCor" class="h-9 w-auto brightness-0 invert" width="120" height="36" />
+            <img src="/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
           </router-link>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            eCor là nền tảng SaaS vận hành bán lẻ hợp nhất: kết nối trọn vẹn Bán hàng (POS) – Kho (WMS) – Kế toán trên một nguồn dữ liệu thời gian thực, mở rộng liền mạch khi doanh nghiệp phát triển.
+          <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+            Giải pháp SaaS chuyên biệt cho quản lý kho hàng (WMS), điều vận vận tải (TMS) và kết nối thương mại đa sàn. Tối ưu chi phí và bứt phá hiệu suất vận hành.
           </p>
-          <div class="text-xs text-slate-400 space-y-1 pt-1">
-            <p><strong>Hotline:</strong> <a href="tel:0978673867" class="text-blue-400 hover:underline tabular-nums">0978 67 38 67</a></p>
-            <p><strong>Email:</strong> contact@ecor.vn</p>
-            <p><strong>Website:</strong> https://ecor.vn</p>
+          <div class="space-y-2 pt-2 text-sm text-slate-700">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-md bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <span>Hotline hỗ trợ: <strong class="text-slate-900 font-semibold"> 097 8673867</strong> (24/7)</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-md bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span>Email: <a href="mailto:contact@ecor.vn" class="text-sky-600 hover:underline">contact@ecor.vn</a></span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-md bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <span>Website: <strong class="text-slate-800">https://ecor.vn</strong></span>
+            </div>
           </div>
         </div>
 
-        <!-- 3 Module Lõi -->
+        <!-- Col 2: Sản Phẩm -->
         <div>
-          <h3 class="text-white font-bold text-xs mb-3 uppercase tracking-wider text-blue-400">3 Trụ Cột Lõi</h3>
-          <ul class="space-y-2 text-xs">
-            <li><router-link to="/pos" class="hover:text-white transition-colors">POS — Bán hàng quầy & ca kíp</router-link></li>
-            <li><router-link to="/wms" class="hover:text-white transition-colors">WMS — Quản lý kho & PDA</router-link></li>
-            <li><router-link to="/ke-toan" class="hover:text-white transition-colors">Kế toán — HĐĐT & Sổ sách thuế</router-link></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+            Sản Phẩm
+          </h4>
+          <ul class="space-y-2.5 text-sm">
+            <li>
+              <router-link to="/wms" class="hover:text-sky-600 transition-colors">
+                Hệ thống WMS Thông minh
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/tms" class="hover:text-sky-600 transition-colors">
+                Hệ thống TMS Vận tải
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/pos" class="hover:text-sky-600 transition-colors">
+                ecor POS Bán hàng
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/wms" class="hover:text-sky-600 transition-colors">
+                Quản lý kho đa điểm
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+                Đồng bộ đa sàn E-com
+              </router-link>
+            </li>
           </ul>
         </div>
 
-        <!-- 5 Module Mở Rộng -->
+        <!-- Col 3: Giải Pháp -->
         <div>
-          <h3 class="text-white font-bold text-xs mb-3 uppercase tracking-wider text-slate-300">Hệ Sinh Thái Mở Rộng</h3>
-          <ul class="space-y-2 text-xs">
-            <li><router-link to="/mo-rong/ecom" class="hover:text-white transition-colors">ECOM — TMĐT & Đa sàn</router-link></li>
-            <li><router-link to="/mo-rong/tms" class="hover:text-white transition-colors">TMS — Vận chuyển & COD</router-link></li>
-            <li><router-link to="/mo-rong/hrm" class="hover:text-white transition-colors">HRM — Nhân sự & Hoa hồng</router-link></li>
-            <li><router-link to="/mo-rong/mobile-app" class="hover:text-white transition-colors">Mobile App — App quản trị & KH</router-link></li>
-            <li><router-link to="/mo-rong/crm" class="hover:text-white transition-colors">CRM — Loyalty & Khách hàng 360</router-link></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+            Giải Pháp
+          </h4>
+          <ul class="space-y-2.5 text-sm">
+            <li>
+              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+                Chuỗi bán lẻ & FMCG
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+                Doanh nghiệp Logistics 3PL
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+                Thương mại điện tử E-commerce
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+                Kho lạnh & Dược phẩm
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+                Sản xuất & Phân phối
+              </router-link>
+            </li>
           </ul>
         </div>
 
-        <!-- Thông Tin & SEO Links -->
+        <!-- Col 4: Tài Nguyên & Hỗ Trợ -->
         <div>
-          <h3 class="text-white font-bold text-xs mb-3 uppercase tracking-wider text-slate-300">Thông Tin Khác</h3>
-          <ul class="space-y-2 text-xs">
-            <li><router-link to="/bang-gia" class="hover:text-white transition-colors">Bảng giá gói</router-link></li>
-            <li><router-link to="/ve-chung-toi" class="hover:text-white transition-colors">Về chúng tôi (E-E-A-T)</router-link></li>
-            <li><router-link to="/lien-he" class="hover:text-white transition-colors">Liên hệ tư vấn</router-link></li>
-            <li><a href="/llms.txt" target="_blank" class="hover:text-white transition-colors">Tài liệu AI Search (llms.txt)</a></li>
-            <li><a href="/sitemap.xml" target="_blank" class="hover:text-white transition-colors">Sơ đồ trang (sitemap.xml)</a></li>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+            Tài Nguyên
+          </h4>
+          <ul class="space-y-2.5 text-sm">
+            <li>
+              <router-link to="/tai-nguyen" class="hover:text-sky-600 transition-colors">
+                Tài liệu API & Webhook
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/tai-nguyen" class="hover:text-sky-600 transition-colors">
+                Trung tâm hướng dẫn
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/bang-gia" class="hover:text-sky-600 transition-colors">
+                Bảng giá dịch vụ
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/khach-hang" class="hover:text-sky-600 transition-colors">
+                Khách hàng tiêu biểu
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/lien-he" class="hover:text-sky-600 transition-colors">
+                Liên hệ chuyên gia tư vấn
+              </router-link>
+            </li>
           </ul>
         </div>
-
       </div>
 
-      <!-- Copyright -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>&copy; 2026 eCor SaaS Platform. Tất cả các quyền được bảo lưu.</p>
-        <p>Phần mềm quản trị Bán hàng – Kho – Kế toán chuẩn mực cho doanh nghiệp Việt Nam.</p>
-      </div>
+      <!-- Bottom Bar -->
+      <div class="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div class="flex items-center gap-2">
+          <span>© 2025 eCor Platform. Tất cả các quyền được bảo lưu.</span>
+        </div>
 
+        <div class="flex items-center gap-6">
+          <router-link to="/tai-nguyen" class="hover:text-slate-600">Quyền riêng tư</router-link>
+          <router-link to="/tai-nguyen" class="hover:text-slate-600">Bảo mật hệ thống</router-link>
+          <span class="inline-flex items-center gap-1.5 text-emerald-600">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Hệ thống máy chủ vận hành 99.98% SLA
+          </span>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+</script>

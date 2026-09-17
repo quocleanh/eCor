@@ -1,206 +1,423 @@
 <template>
-  <div class="bg-slate-50 min-h-screen py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid lg:grid-cols-12 gap-12 items-start">
-        
-        <!-- Left Column: NAP Info -->
-        <div class="lg:col-span-5 space-y-8">
-          <div>
-            <div class="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
-              Kết Nối Cùng Chuyên Gia
+  <div class="bg-[#fafcff] text-slate-800">
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-sky-100/60 via-blue-50/30 to-transparent blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 shadow-sm">
+          <span>🤝 Đồng Hành Cùng Doanh Nghiệp Bạn</span>
+        </div>
+
+        <h1 class="mt-6 text-3xl sm:text-5xl lg:text-[48px] font-extrabold text-slate-900 tracking-tight leading-[1.2] max-w-4xl mx-auto">
+          Kết Nối Với Chuyên Gia Giải Pháp <span class="text-sky-600">ecor.vn</span>
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Dù bạn đang vận hành một kho hàng đơn lẻ hay chuỗi cung ứng đa kênh phức tạp, đội ngũ chuyên gia của chúng tôi sẽ cùng bạn phân tích và thiết kế mô hình vận hành tối ưu nhất.
+        </p>
+
+        <!-- 4 Badges -->
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+          <div class="p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm">
+            <span class="text-xs text-slate-400 block font-medium">&lt; 10 Phút</span>
+            <strong class="text-xs sm:text-sm font-bold text-slate-800">Phản hồi trung bình</strong>
+          </div>
+          <div class="p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm">
+            <span class="text-xs text-slate-400 block font-medium">3 – 7 Ngày</span>
+            <strong class="text-xs sm:text-sm font-bold text-slate-800">Thời gian Go-Live</strong>
+          </div>
+          <div class="p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm">
+            <span class="text-xs text-slate-400 block font-medium">14 Ngày</span>
+            <strong class="text-xs sm:text-sm font-bold text-slate-800">Dùng thử trải nghiệm</strong>
+          </div>
+          <div class="p-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm">
+            <span class="text-xs text-slate-400 block font-medium">99.9%</span>
+            <strong class="text-xs sm:text-sm font-bold text-slate-800">Cam kết SLA uptime</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MAIN TWO-COLUMN CONTACT & SURVEY AREA -->
+    <section class="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Column: Direct Channels & Specialists -->
+        <div class="lg:col-span-5 space-y-6 text-left">
+          <!-- Channels Box -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
+            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+              <h3 class="font-extrabold text-slate-900 text-sm">Kênh Liên Hệ Nhanh</h3>
+              <span class="text-[10px] bg-emerald-100 text-emerald-700 font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Trực tuyến
+              </span>
             </div>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Chúng Tôi Sẵn Sàng <span class="gradient-text">Đồng Hành Cùng Bạn</span>
-            </h1>
-            <p class="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
-              Dù bạn là một cửa hàng bán lẻ đơn lẻ hay một chuỗi phân phối đa điểm, đội ngũ chuyên gia của eCor luôn sẵn sàng khảo sát hiện trạng và đề xuất lộ trình số hóa tối ưu nhất.
-            </p>
+
+            <a href="tel:0822235858" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-sky-50 transition-colors group">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold">📞</div>
+                <div>
+                  <div class="text-[11px] text-slate-400">Hotline tư vấn giải pháp 24/7</div>
+                  <strong class="text-sm font-bold text-slate-900 group-hover:text-sky-700"> 097 8673867</strong>
+                </div>
+              </div>
+              <span class="text-slate-400 group-hover:text-sky-700">→</span>
+            </a>
+
+            <a href="mailto:contact@ecor.vn" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-sky-50 transition-colors group">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold">✉️</div>
+                <div>
+                  <div class="text-[11px] text-slate-400">Hòm thư chuyên gia kỹ thuật</div>
+                  <strong class="text-sm font-bold text-slate-900 group-hover:text-sky-700">contact@ecor.vn</strong>
+                </div>
+              </div>
+              <span class="text-slate-400 group-hover:text-sky-700">→</span>
+            </a>
           </div>
 
-          <div class="space-y-4">
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          <!-- Office Locations -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-3 text-xs">
+            <h4 class="font-extrabold text-slate-900 text-xs uppercase tracking-wider text-slate-400">Hệ Thống Văn Phòng Đại Diện</h4>
+            
+            <div class="p-3 bg-slate-50 rounded-2xl">
+              <strong class="text-slate-800 block text-xs">🏢 Văn phòng TP. Hồ Chí Minh</strong>
+              <p class="text-slate-500 mt-1">891 Nguyễn Kiệm, Hạnh Thông, TP HCM</p>
+            </div>
+          </div>
+
+          <!-- 1-1 Booking Banner -->
+          <div class="p-5 rounded-3xl bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200 flex items-center justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <strong class="text-xs font-bold text-sky-900">Đặt lịch trao đổi 1–1 riêng</strong>
+                <span class="text-[10px] bg-sky-600 text-white font-bold px-2 py-0.5 rounded">30 phút Demo</span>
               </div>
-              <div>
-                <h3 class="font-bold text-slate-900 text-sm">Hotline Hỗ Trợ 24/7</h3>
-                <a href="tel:0978673867" class="text-base font-extrabold text-blue-600 hover:underline">0978 67 38 67</a>
-                <p class="text-xs text-slate-500 mt-0.5">Tư vấn giải pháp & Hỗ trợ kỹ thuật trực tiếp</p>
-              </div>
+              <p class="text-[11px] text-sky-700 mt-1">Trao đổi trực tiếp qua Google Meet với Kỹ sư Trưởng kiến trúc kho vận.</p>
+            </div>
+            <button 
+              @click="$emit('open-modal', { type: 'demo', moduleName: 'Đặt lịch 1-1 Google Meet' })"
+              class="px-3.5 py-2 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-xl shadow-sm shrink-0"
+            >
+              Chọn lịch →
+            </button>
+          </div>
+
+          <!-- Team of Experts -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-3">
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <h4 class="font-extrabold text-slate-900 text-xs">Đội Ngũ Chuyên Gia Trực Tiếp Tư Vấn</h4>
+              <span class="text-[10px] text-slate-400">Hà Nội & Sài Gòn</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <div class="space-y-3 pt-1">
+              <div class="flex items-center gap-3">
+                <img src="/images/assets/expert-nam.png" alt="Trần Đức Nam" class="w-10 h-10 rounded-full object-cover border border-slate-200" />
+                <div>
+                  <strong class="text-xs text-slate-800 block">Trần Đức Nam</strong>
+                  <span class="text-[10px] bg-sky-50 text-sky-700 font-semibold px-1.5 py-0.5 rounded">Trưởng phòng Giải Pháp WMS</span>
+                  <p class="text-[10px] text-slate-400 mt-0.5">8+ năm triển khai hệ thống chuỗi bán lẻ & 3PL</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-bold text-slate-900 text-sm">Email Phản Hồi</h3>
-                <span class="text-sm font-semibold text-slate-800">contact@ecor.vn</span>
-                <p class="text-xs text-slate-500 mt-0.5">Phản hồi trong vòng 15 phút làm việc</p>
-              </div>
-            </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <div class="flex items-center gap-3">
+                <img src="/images/assets/expert-lan.png" alt="Lê Hoàng Lan" class="w-10 h-10 rounded-full object-cover border border-slate-200" />
+                <div>
+                  <strong class="text-xs text-slate-800 block">Lê Hoàng Lan</strong>
+                  <span class="text-[10px] bg-cyan-50 text-cyan-700 font-semibold px-1.5 py-0.5 rounded">Chuyên viên Cấp Cao TMS</span>
+                  <p class="text-[10px] text-slate-400 mt-0.5">Tối ưu lộ trình và định tuyến vận tải đa kênh</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-bold text-slate-900 text-sm">Địa Bàn Triển Khai</h3>
-                <span class="text-sm font-semibold text-slate-800">Toàn quốc (Hà Nội, TP.HCM, Đà Nẵng, Cần Thơ...)</span>
-                <p class="text-xs text-slate-500 mt-0.5">Hỗ trợ kỹ thuật viên lắp đặt thiết bị tại chỗ</p>
+
+              <div class="flex items-center gap-3">
+                <img src="/images/assets/expert-huy.png" alt="Nguyễn Quốc Huy" class="w-10 h-10 rounded-full object-cover border border-slate-200" />
+                <div>
+                  <strong class="text-xs text-slate-800 block">Nguyễn Quốc Huy</strong>
+                  <span class="text-[10px] bg-indigo-50 text-indigo-700 font-semibold px-1.5 py-0.5 rounded">Kỹ Sư Trưởng ERP & API</span>
+                  <p class="text-[10px] text-slate-400 mt-0.5">Chuyên gia đồng bộ SAP, Oracle, MISA, KiotViet</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Form -->
-        <div class="lg:col-span-7">
-          <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-xl">
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Đăng Ký Khảo Sát & Nhận Bản Demo 1:1</h2>
-            <p class="text-slate-500 text-xs sm:text-sm mb-6">Điền thông tin bên dưới, chuyên viên eCor sẽ liên hệ chuẩn bị kịch bản demo riêng theo đúng ngành hàng của bạn.</p>
+        <!-- Right Column: Interactive Multi-step Survey Form -->
+        <div class="lg:col-span-7 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl text-left">
+          <div class="pb-4 border-b border-slate-100">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 block">Khảo Sát Nhu Cầu Vận Hành</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">Đăng Ký Tư Vấn & Nhận Kế Hoạch Triển Khai</h3>
+            <p class="text-xs text-slate-500 mt-1">Điền thông tin để ecor.vn cấu hình mô hình bản quyền và kịch bản demo sát với ngành hàng của bạn nhất.</p>
+          </div>
 
-            <form @submit.prevent="handleSubmit" class="space-y-4">
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Họ và tên *</label>
-                  <input
-                    v-model="form.name"
-                    type="text"
-                    required
-                    placeholder="Nguyễn Văn A"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 text-sm outline-none"
-                  />
-                </div>
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Số điện thoại *</label>
-                  <input
-                    v-model="form.phone"
-                    type="tel"
-                    required
-                    placeholder="09xx xxx xxx"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 text-sm outline-none"
-                  />
-                </div>
-              </div>
+          <div v-if="submitted" class="py-12 text-center space-y-4">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
+              ✓
+            </div>
+            <h4 class="text-xl font-bold text-slate-900">Gửi Yêu Cầu Thành Công!</h4>
+            <p class="text-sm text-slate-600 max-w-md mx-auto">
+              Chuyên gia giải pháp eCor sẽ liên hệ lại trực tiếp qua số điện thoại của bạn trong vòng <strong>10 phút</strong>.
+            </p>
+            <button @click="submitted = false" class="px-6 py-2.5 bg-sky-600 text-white rounded-xl text-xs font-bold">Gửi yêu cầu khác</button>
+          </div>
 
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Email</label>
-                  <input
-                    v-model="form.email"
-                    type="email"
-                    placeholder="email@doanhnghiep.vn"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 text-sm outline-none"
-                  />
-                </div>
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Tên doanh nghiệp / Cửa hàng</label>
-                  <input
-                    v-model="form.company"
-                    type="text"
-                    placeholder="Chuỗi thời trang XYZ"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 text-sm outline-none"
-                  />
-                </div>
-              </div>
-
+          <form v-else @submit.prevent="handleSubmit" class="space-y-4 mt-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Phân hệ quan tâm nhất</label>
-                <select
-                  v-model="form.module"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 text-sm outline-none bg-white"
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên người liên hệ *</label>
+                <input v-model="form.name" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 outline-none text-xs" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Số điện thoại di động *</label>
+                <input v-model="form.phone" required placeholder="09xxxxxxxxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 outline-none text-xs" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email doanh nghiệp *</label>
+                <input v-model="form.email" required placeholder="an.nguyen@congty.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 outline-none text-xs" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tên doanh nghiệp / Chuỗi cửa hàng</label>
+                <input v-model="form.company" placeholder="Tên công ty hoặc thương hiệu" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 outline-none text-xs" />
+              </div>
+            </div>
+
+            <!-- Giải pháp quan tâm đa chọn -->
+            <div>
+              <div class="flex justify-between items-center mb-1.5">
+                <label class="block text-xs font-bold text-slate-700 uppercase">Giải pháp bạn đang quan tâm nhất? (Có thể chọn nhiều mục)</label>
+                <span class="text-[10px] text-sky-600 font-bold">Được cá nhân hóa</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <label 
+                  class="p-3 rounded-xl border cursor-pointer flex items-center gap-2.5 transition-all"
+                  :class="selectedModules.includes('wms') ? 'bg-sky-50 border-sky-400 text-sky-900 font-bold' : 'border-slate-200 bg-slate-50/50'"
                 >
-                  <option value="Hệ sinh thái toàn diện 8 module">Trọn bộ 8 Module All-in-One</option>
-                  <option value="POS Bán hàng tại quầy">POS — Điểm bán hàng</option>
-                  <option value="ECOM Web & Sàn TMĐT">ECOM — Web & Sàn TMĐT</option>
-                  <option value="WMS Kho vận PDA RFID">WMS — Quản lý kho hàng PDA/RFID</option>
-                  <option value="TMS Giao vận & COD">TMS — Quản lý vận chuyển</option>
-                  <option value="HRM Nhân sự & Tính lương">HRM — Quản lý nhân sự</option>
-                  <option value="Account Kế toán & HĐĐT">Account — Kế toán & Hóa đơn điện tử</option>
-                  <option value="Mobile App chuyên biệt">Mobile App — Bộ ba app di động</option>
-                  <option value="CRM Chăm sóc khách hàng">CRM — Chăm sóc khách hàng Loyalty</option>
-                </select>
-              </div>
+                  <input type="checkbox" value="wms" v-model="selectedModules" class="rounded text-sky-600" />
+                  <div>
+                    <span>Quản trị kho WMS</span>
+                    <span class="text-[10px] text-slate-400 font-normal block">Kiểm kê, phân tầng, barcode</span>
+                  </div>
+                </label>
 
-              <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Mô tả bài toán hiện tại của bạn</label>
-                <textarea
-                  v-model="form.message"
-                  rows="3"
-                  placeholder="Ví dụ: Đang có 3 cửa hàng và 1 kho hàng, muốn đồng bộ tồn kho với Shopee và TikTok Shop..."
-                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 text-sm outline-none resize-none"
-                ></textarea>
-              </div>
+                <label 
+                  class="p-3 rounded-xl border cursor-pointer flex items-center gap-2.5 transition-all"
+                  :class="selectedModules.includes('tms') ? 'bg-cyan-50 border-cyan-400 text-cyan-900 font-bold' : 'border-slate-200 bg-slate-50/50'"
+                >
+                  <input type="checkbox" value="tms" v-model="selectedModules" class="rounded text-cyan-600" />
+                  <div>
+                    <span>Điều phối vận tải TMS</span>
+                    <span class="text-[10px] text-slate-400 font-normal block">Định tuyến xe, tài xế, COD</span>
+                  </div>
+                </label>
 
-              <div class="pt-2">
+                <label 
+                  class="p-3 rounded-xl border cursor-pointer flex items-center gap-2.5 transition-all"
+                  :class="selectedModules.includes('omni') ? 'bg-rose-50 border-rose-400 text-rose-900 font-bold' : 'border-slate-200 bg-slate-50/50'"
+                >
+                  <input type="checkbox" value="omni" v-model="selectedModules" class="rounded text-rose-600" />
+                  <div>
+                    <span>Omnichannel Hub</span>
+                    <span class="text-[10px] text-slate-400 font-normal block">Shopee, Lazada, TikTok Shop</span>
+                  </div>
+                </label>
+
+                <label 
+                  class="p-3 rounded-xl border cursor-pointer flex items-center gap-2.5 transition-all"
+                  :class="selectedModules.includes('erp') ? 'bg-indigo-50 border-indigo-400 text-indigo-900 font-bold' : 'border-slate-200 bg-slate-50/50'"
+                >
+                  <input type="checkbox" value="erp" v-model="selectedModules" class="rounded text-indigo-600" />
+                  <div>
+                    <span>Tích hợp ERP / Kế toán</span>
+                    <span class="text-[10px] text-slate-400 font-normal block">SAP, Fast, Bravo, MISA</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Quy mô kho / xe -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Quy mô kho hoặc đội xe hiện tại của bạn</label>
+              <div class="grid grid-cols-3 gap-2 text-xs">
                 <button
-                  type="submit"
-                  :disabled="isSubmitting"
-                  class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-sm cursor-pointer flex items-center justify-center gap-2"
+                  type="button"
+                  @click="scale = 'sme'"
+                  class="p-3 rounded-xl border text-center transition-all"
+                  :class="scale === 'sme' ? 'bg-sky-600 text-white font-bold border-sky-600 shadow' : 'bg-slate-50 border-slate-200 text-slate-700'"
                 >
-                  <svg v-if="isSubmitting" class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  <span>{{ isSubmitting ? 'Đang gửi...' : 'Gửi Yêu Cầu Tư Vấn & Demo Miễn Phí' }}</span>
+                  <span class="block font-bold">Khởi đầu / SME</span>
+                  <span class="text-[10px] opacity-80 block mt-0.5">&lt; 500m² hoặc 1–5 xe</span>
+                </button>
+
+                <button
+                  type="button"
+                  @click="scale = 'growth'"
+                  class="p-3 rounded-xl border text-center transition-all"
+                  :class="scale === 'growth' ? 'bg-sky-600 text-white font-bold border-sky-600 shadow' : 'bg-slate-50 border-slate-200 text-slate-700'"
+                >
+                  <span class="block font-bold">Đang tăng trưởng</span>
+                  <span class="text-[10px] opacity-80 block mt-0.5">500 – 2,000m² / 15 xe</span>
+                </button>
+
+                <button
+                  type="button"
+                  @click="scale = 'enterprise'"
+                  class="p-3 rounded-xl border text-center transition-all"
+                  :class="scale === 'enterprise' ? 'bg-sky-600 text-white font-bold border-sky-600 shadow' : 'bg-slate-50 border-slate-200 text-slate-700'"
+                >
+                  <span class="block font-bold">Doanh nghiệp lớn</span>
+                  <span class="text-[10px] opacity-80 block mt-0.5">&gt; 2,000m² / Nhiều kho</span>
                 </button>
               </div>
-            </form>
-          </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ghi chú yêu cầu đặc biệt (tùy chọn)</label>
+              <textarea v-model="form.notes" rows="2" placeholder="Ví dụ: Cần đồng bộ với máy quét mã vạch Honeywell cầm tay, kết nối hóa đơn điện tử..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-sky-500 outline-none text-xs resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+              <span>🚀</span>
+              <span>Gửi Yêu Cầu & Nhận Kế Hoạch Demo Miễn Phí</span>
+            </button>
+
+            <div class="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-100">
+              <span>🔒 Bảo mật dữ liệu 100%</span>
+              <span>⚡ Dùng thử 14 ngày không cần thẻ</span>
+              <span>🏢 Hỗ trợ Onsite trực tiếp</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MÁY TÍNH DỰ TOÁN QUY MÔ NHANH -->
+    <section class="py-16 bg-white border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">📊 Máy tính dự toán quy mô nhanh</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Ước Lượng Giải Pháp Theo Sản Lượng Đơn Hàng</h3>
+        <p class="text-xs text-slate-500 mt-1">Chọn mức tải vận hành trung bình mỗi ngày của hệ thống bạn để nhận biết cấu hình ecor phù hợp cùng thời gian đưa vào thực tế.</p>
+
+        <!-- Tier volume buttons -->
+        <div class="mt-6 inline-flex rounded-full bg-slate-100 p-1 border border-slate-200">
+          <button
+            v-for="vol in ['100 – 500 đơn/ngày', '500 – 2,500 đơn/ngày', '> 5,000 đơn/ngày']"
+            :key="vol"
+            @click="selectedVol = vol"
+            class="px-5 py-2 rounded-full text-xs font-bold transition-all"
+            :class="selectedVol === vol ? 'bg-sky-600 text-white shadow' : 'text-slate-600 hover:text-slate-900'"
+          >
+            {{ vol }}
+          </button>
         </div>
 
-      </div>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span class="text-[10px] text-slate-400 font-bold uppercase block">GÓI BẢN QUYỀN ĐỀ XUẤT</span>
+            <strong class="text-base text-sky-700 font-extrabold block mt-1">
+              {{ selectedVol === '100 – 500 đơn/ngày' ? 'ecor Standard WMS' : (selectedVol === '500 – 2,500 đơn/ngày' ? 'ecor Professional Suite' : 'ecor Enterprise Cloud') }}
+            </strong>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              {{ selectedVol === '100 – 500 đơn/ngày' ? 'Phù hợp kho đơn lẻ, xuất nhập tồn thời gian thực qua app di động và máy quét mã vạch thông dụng.' : (selectedVol === '500 – 2,500 đơn/ngày' ? 'Bao gồm Wave picking tối ưu, điều phối xe TMS và đồng bộ đa sàn tự động.' : 'Hạ tầng Dedicated Private Cloud, xử lý hàng triệu đơn không nghẽn.') }}
+            </p>
+            <div class="pt-4 mt-4 border-t border-slate-200 text-xs text-slate-600">
+              Người dùng khuyến nghị: <strong>{{ selectedVol === '100 – 500 đơn/ngày' ? '3 – 8 Quản kho' : (selectedVol === '500 – 2,500 đơn/ngày' ? '15 – 30 Nhân sự' : 'Không giới hạn') }}</strong>
+            </div>
+          </div>
 
-    </div>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span class="text-[10px] text-slate-400 font-bold uppercase block">THỜI GIAN SẴN SÀNG GO-LIVE</span>
+            <strong class="text-base text-slate-900 font-extrabold block mt-1">
+              {{ selectedVol === '100 – 500 đơn/ngày' ? '3 – 5 Ngày làm việc' : (selectedVol === '500 – 2,500 đơn/ngày' ? '7 – 10 Ngày làm việc' : '2 – 3 Tuần Onsite') }}
+            </strong>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">Bao gồm nhập liệu danh mục SKU, layout mã vị trí kệ và hướng dẫn nhân viên kho thao tác trực tiếp.</p>
+            <div class="pt-4 mt-4 border-t border-slate-200 text-xs text-slate-600">
+              Hình thức: <strong>Online & Onsite 1 ngày</strong>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-sky-50/60 border border-sky-200">
+            <span class="text-[10px] text-sky-700 font-bold uppercase block">HIỆU QUẢ KỲ VỌNG ĐO LƯỜNG</span>
+            <strong class="text-base text-emerald-700 font-extrabold block mt-1">Giảm 75% Sai Sót Nhặt Hàng</strong>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">Tối ưu hóa hành trình nhặt (Pick & Pack), tự động in phiếu gửi đơn vận chuyển không cần nhập tay.</p>
+            <div class="pt-4 mt-4 border-t border-sky-200 text-xs text-sky-900 font-bold">
+              Độ trễ xử lý đơn: &lt; 3 Phút / Đơn
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FAQ VỀ QUY TRÌNH TRIỂN KHAI -->
+    <section class="py-20 bg-[#fafcff]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Giải Đáp Thắc Mắc</span>
+        <h2 class="mt-2 text-3xl font-extrabold text-slate-900 tracking-tight">
+          Câu Hỏi Thường Gặp Về Quy Trình Triển Khai
+        </h2>
+        <p class="mt-3 text-sm text-slate-500">Mọi thông tin cần thiết giúp bạn an tâm chuyển dịch công nghệ số hóa kho vận cùng ecor.vn.</p>
+
+        <div class="mt-10 space-y-3 text-left">
+          <details 
+            v-for="(faq, idx) in faqs" 
+            :key="idx"
+            class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm group"
+          >
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-sm text-slate-900 select-none">
+              <span>{{ faq.q }}</span>
+              <span class="faq-icon text-slate-400 transition-transform duration-200 font-mono text-lg">▾</span>
+            </summary>
+            <p class="mt-3 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+              {{ faq.a }}
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
-const isSubmitting = ref(false)
-const form = ref({
+defineEmits(['open-modal'])
+
+const submitted = ref(false)
+const selectedVol = ref('100 – 500 đơn/ngày')
+const selectedModules = ref(['wms'])
+const scale = ref('growth')
+
+const form = reactive({
   name: '',
   phone: '',
   email: '',
   company: '',
-  module: 'Hệ sinh thái toàn diện 8 module',
-  message: ''
+  notes: ''
 })
 
-async function handleSubmit() {
-  isSubmitting.value = true
-  try {
-    const formData = new FormData()
-    formData.append('access_key', '39a2af8f-3d80-448e-98a5-482c38bfae27')
-    formData.append('subject', 'Khách hàng đăng ký từ trang Liên Hệ eCor')
-    formData.append('from_name', 'Website eCor.vn (Vue)')
-    formData.append('lead_type', 'Liên hệ tư vấn')
-    formData.append('page_url', window.location.href)
-    formData.append('name', form.value.name)
-    formData.append('phone', form.value.phone)
-    formData.append('email', form.value.email)
-    formData.append('company', form.value.company)
-    formData.append('selected_module', form.value.module)
-    formData.append('message', form.value.message)
-
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    })
-    const data = await response.json().catch(() => ({}))
-
-    if (response.ok && data.success) {
-      alert('Gửi thông tin thành công! Chuyên viên eCor sẽ liên hệ hỗ trợ bạn trong vòng 15 phút.')
-      form.value = { name: '', phone: '', email: '', company: '', module: 'Hệ sinh thái toàn diện 8 module', message: '' }
-    } else {
-      throw new Error(data.message || 'Lỗi gửi form')
-    }
-  } catch (error) {
-    alert('Chưa gửi được dữ liệu. Vui lòng liên hệ trực tiếp hotline 0978 67 38 67 để được hỗ trợ nhanh nhất.')
-  } finally {
-    isSubmitting.value = false
-  }
+function handleSubmit() {
+  submitted.value = true
 }
+
+const faqs = [
+  {
+    q: 'ecor.vn mất bao lâu để triển khai vào hệ thống kho sẵn có của chúng tôi?',
+    a: 'Đối với kho tiêu chuẩn dưới 5.000m², thời gian hoàn thiện cấu hình layout ô kệ, kết nối máy quét và đưa vào vận hành thực tế trung bình từ 3 – 5 ngày làm việc. Quá trình này không làm gián đoạn việc xuất nhập hàng ngày.'
+  },
+  {
+    q: 'Chúng tôi có cần mua thêm thiết bị máy móc chuyên dụng đặc thù không?',
+    a: 'Không bắt buộc. Bạn có thể tận dụng ngay điện thoại Android sẵn có của nhân viên kho để quét mã vạch qua camera. Khi muốn tối ưu tốc độ tối đa, ecor sẽ tư vấn các dòng máy quét PDA chuyên dụng phù hợp nhất với ngân sách.'
+  },
+  {
+    q: 'ecor có hỗ trợ tích hợp với phần mềm ERP / Kế toán hiện tại của doanh nghiệp không?',
+    a: 'Có. ecor cung cấp cổng Open API và hệ thống Webhook chuẩn RESTful cho phép đồng bộ tự động 2 chiều với SAP, Oracle NetSuite, Microsoft Dynamics, MISA AMIS, Fast, Bravo và các phần mềm nội bộ.'
+  },
+  {
+    q: 'Chính sách hỗ trợ kỹ thuật và bảo hành vận hành ra sao?',
+    a: 'Chúng tôi duy trì cam kết hỗ trợ kỹ thuật 24/7/365 qua kênh riêng Zalo/Hotline cho các sự cố khẩn cấp. Mỗi khách hàng đều có kỹ sư giải pháp đồng hành trực tiếp trong suốt quá trình vận hành.'
+  }
+]
 </script>

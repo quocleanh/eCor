@@ -1,92 +1,84 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import ModuleDetailView from '@/views/ModuleDetailView.vue'
-import SolutionDetailView from '@/views/SolutionDetailView.vue'
-import PricingView from '@/views/PricingView.vue'
-import AboutView from '@/views/AboutView.vue'
-import ContactView from '@/views/ContactView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
-  },
-  // 3 Module Lõi Trọng Tâm
-  {
-    path: '/pos',
-    name: 'module-pos',
-    component: ModuleDetailView
+    component: () => import('@/views/HomeView.vue'),
+    meta: { title: 'eCor — Đồng Bộ Logistics, Kho Bãi & Thương Mại Của Bạn' }
   },
   {
     path: '/wms',
-    name: 'module-wms',
-    component: ModuleDetailView
+    name: 'wms',
+    component: () => import('@/views/WmsView.vue'),
+    meta: { title: 'ecor WMS — Giải Pháp Quản Trị Kho Thông Minh Chuẩn 4.0' }
   },
   {
-    path: '/ke-toan',
-    name: 'module-ke-toan',
-    component: ModuleDetailView
+    path: '/tms',
+    name: 'tms',
+    component: () => import('@/views/TmsView.vue'),
+    meta: { title: 'ecor TMS — Quản Lý & Điều Phối Vận Tải Real-Time' }
   },
   {
-    path: '/account',
-    redirect: '/ke-toan'
-  },
-  // 5 Module Mở Rộng Hệ Sinh Thái (/mo-rong/...)
-  {
-    path: '/mo-rong/ecom',
-    name: 'module-mo-rong-ecom',
-    component: ModuleDetailView
+    path: '/pos',
+    name: 'pos',
+    component: () => import('@/views/PosView.vue'),
+    meta: { title: 'ecor POS — Bán Hàng Siêu Tốc & Quản Trị Điểm Bán Đa Chuỗi' }
   },
   {
-    path: '/mo-rong/tms',
-    name: 'module-mo-rong-tms',
-    component: ModuleDetailView
+    path: '/giai-phap',
+    name: 'solutions',
+    component: () => import('@/views/SolutionsView.vue'),
+    meta: { title: 'Giải Pháp Vận Hành Chuỗi Cung Ứng Theo Ngành — eCor' }
   },
-  {
-    path: '/mo-rong/hrm',
-    name: 'module-mo-rong-hrm',
-    component: ModuleDetailView
-  },
-  {
-    path: '/mo-rong/mobile-app',
-    name: 'module-mo-rong-mobile-app',
-    component: ModuleDetailView
-  },
-  {
-    path: '/mo-rong/crm',
-    name: 'module-mo-rong-crm',
-    component: ModuleDetailView
-  },
-  // Redirect tương thích URL cũ sang /mo-rong/...
-  { path: '/ecom', redirect: '/mo-rong/ecom' },
-  { path: '/tms', redirect: '/mo-rong/tms' },
-  { path: '/hrm', redirect: '/mo-rong/hrm' },
-  { path: '/mobile-app', redirect: '/mo-rong/mobile-app' },
-  { path: '/crm', redirect: '/mo-rong/crm' },
-
-  // Giải Pháp Ngành Nghề
-  {
-    path: '/giai-phap/:slug',
-    name: 'solution-detail',
-    component: SolutionDetailView
-  },
-  // Các Trang Bổ Trợ
   {
     path: '/bang-gia',
     name: 'pricing',
-    component: PricingView
+    component: () => import('@/views/PricingView.vue'),
+    meta: { title: 'Bảng Giá Dịch Vụ & Gói Bản Quyền — eCor' }
   },
   {
-    path: '/ve-chung-toi',
-    name: 'about',
-    component: AboutView
+    path: '/khach-hang',
+    name: 'customers',
+    component: () => import('@/views/CustomersView.vue'),
+    meta: { title: 'Khách Hàng Tiêu Biểu & Câu Chuyện Thành Công — eCor' }
+  },
+  {
+    path: '/tai-nguyen',
+    name: 'resources',
+    component: () => import('@/views/ResourcesView.vue'),
+    meta: { title: 'Tài Nguyên, Tài Liệu API & Hướng Dẫn Tích Hợp — eCor' }
   },
   {
     path: '/lien-he',
     name: 'contact',
-    component: ContactView
+    component: () => import('@/views/ContactView.vue'),
+    meta: { title: 'Liên Hệ & Đăng Ký Khảo Sát Giải Pháp — eCor' }
   },
+  {
+    path: '/dang-nhap',
+    name: 'login',
+    component: () => import('@/views/AuthView.vue'),
+    meta: { title: 'Đăng Nhập Tài Khoản Doanh Nghiệp — eCor' }
+  },
+  {
+    path: '/dang-ky',
+    name: 'register',
+    component: () => import('@/views/AuthView.vue'),
+    meta: { title: 'Đăng Ký Tài Khoản Doanh Nghiệp — eCor' }
+  },
+
+  // Aliases & Backward Compatibility Redirects
+  { path: '/san-pham/wms', redirect: '/wms' },
+  { path: '/san-pham/tms', redirect: '/tms' },
+  { path: '/san-pham/pos', redirect: '/pos' },
+  { path: '/ke-toan', redirect: '/pos' },
+  { path: '/account', redirect: '/pos' },
+  { path: '/ecom', redirect: '/pos' },
+  { path: '/mo-rong/:pathMatch(.*)*', redirect: '/wms' },
+  { path: '/giai-phap/:pathMatch(.*)*', redirect: '/giai-phap' },
+  { path: '/ve-chung-toi', redirect: '/khach-hang' },
+
   // Fallback
   {
     path: '/:pathMatch(.*)*',
@@ -105,6 +97,12 @@ const router = createRouter({
     } else {
       return { top: 0, behavior: 'smooth' }
     }
+  }
+})
+
+router.afterEach((to) => {
+  if (to.meta && to.meta.title) {
+    document.title = to.meta.title
   }
 })
 

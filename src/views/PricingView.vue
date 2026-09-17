@@ -1,104 +1,366 @@
 <template>
-  <div class="bg-slate-50 min-h-screen py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
-          Chính Sách Giá Linh Hoạt
+  <div class="bg-[#fafcff] text-slate-800">
+    <!-- 1. HERO SECTION & BILLING TOGGLE -->
+    <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-sky-100/60 via-blue-50/30 to-transparent blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Tag -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-700 shadow-sm">
+          <span>● Bảng Giá Minh Bạch • Không Chi Phí Ẩn • Cam Kết SLA 99.98%</span>
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Đầu Tư Thông Minh — <span class="gradient-text">Tối Ưu Từng Đồng Chi Phí</span>
+
+        <!-- Title -->
+        <h1 class="mt-6 text-3xl sm:text-5xl lg:text-[48px] font-extrabold text-slate-900 tracking-tight leading-[1.2] max-w-4xl mx-auto">
+          Đầu Tư Thông Minh, Tối Ưu Chi Phí Cho Mọi Quy Mô Vận Hành
         </h1>
-        <p class="text-slate-600 mt-4 text-base sm:text-lg">
-          Lựa chọn gói giải pháp toàn diện theo quy mô kinh doanh hoặc chỉ đăng ký đúng những module bạn cần sử dụng.
+
+        <!-- Subtitle -->
+        <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Lựa chọn gói giải pháp linh hoạt từ mô hình khởi nghiệp, chuỗi bán lẻ tăng trưởng nhanh đến tập đoàn logistics lớn. Tiết kiệm ngay 20% khi thanh toán theo năm.
         </p>
-      </div>
 
-      <!-- PHẦN 1: GÓI QUY MÔ -->
-      <h2 class="text-xl font-bold text-slate-900 mb-6 text-center uppercase tracking-wider text-xs text-blue-600">
-        1. Gói Trọn Gói Theo Quy Mô Doanh Nghiệp
-      </h2>
-
-      <div class="grid lg:grid-cols-3 gap-8 mb-20">
-        <div
-          v-for="plan in pricingPlans"
-          :key="plan.id"
-          class="bg-white rounded-3xl p-8 border shadow-sm hover-lift flex flex-col justify-between relative"
-          :class="plan.isPopular ? 'border-2 border-blue-600 shadow-xl' : 'border-slate-200/90'"
-        >
-          <div
-            v-if="plan.isPopular"
-            class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md"
+        <!-- Billing Cycle Switcher -->
+        <div class="mt-8 inline-flex items-center p-1.5 rounded-full bg-slate-100 border border-slate-200 shadow-inner">
+          <button
+            @click="isAnnual = false"
+            class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all"
+            :class="!isAnnual ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'"
           >
-            Được Tin Dùng Nhiều Nhất
+            Thanh toán theo tháng
+          </button>
+          <button
+            @click="isAnnual = true"
+            class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5"
+            :class="isAnnual ? 'bg-sky-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'"
+          >
+            <span>Thanh toán theo năm</span>
+            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-extrabold">TIẾT KIỆM 20% + MIỄN PHÍ SETUP</span>
+          </button>
+        </div>
+
+        <!-- Trust Features -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 font-medium">
+          <span class="flex items-center gap-1">✓ Dùng thử 14 ngày không rủi ro</span>
+          <span class="flex items-center gap-1">✓ Bảo mật chuẩn ISO 27001</span>
+          <span class="flex items-center gap-1">✓ Hỗ trợ kỹ thuật chuyên gia 24/7</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. THREE PRICING TIERS -->
+    <section class="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <!-- TIER 1: STARTER -->
+        <div class="rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Khởi Điểm</span>
+              <span class="text-xl">🏪</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">ecor Starter</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Dành cho cửa hàng bán lẻ, kho đơn lẻ, shop TMĐT đang chuẩn hóa số hóa nhập-xuất-tồn.
+            </p>
+
+            <div class="py-3 border-y border-slate-100">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl sm:text-4xl font-black text-slate-900">
+                  {{ isAnnual ? '950,000' : '1,190,000' }}
+                </span>
+                <span class="text-xs text-slate-500 font-medium">đ / tháng</span>
+              </div>
+              <div class="text-[11px] text-slate-400 mt-1">
+                {{ isAnnual ? '11,400,000 đ thanh toán cả năm (tiết kiệm 2.8 triệu)' : '14,280,000 đ thanh toán hàng năm' }}
+              </div>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+              <span class="text-[11px] font-bold uppercase text-slate-700 block">Bao gồm trong gói:</span>
+              <ul class="space-y-2 text-xs text-slate-600">
+                <li class="flex items-center gap-2">✓ <strong>01 Kho vật lý</strong> + <strong>01 Điểm bán POS</strong></li>
+                <li class="flex items-center gap-2">✓ Tối đa 03 tài khoản nhân viên quản trị</li>
+                <li class="flex items-center gap-2">✓ Quản lý nhập - xuất - chuyển kho tức thời</li>
+                <li class="flex items-center gap-2">✓ In mã vạch Barcode chuẩn Code128 / QR Code</li>
+                <li class="flex items-center gap-2">✓ Ứng dụng di động PDA / Mobile quét mã Barcode</li>
+                <li class="flex items-center gap-2 text-slate-400 line-through">Điều phối xe TMS tự động hóa</li>
+                <li class="flex items-center gap-2">✓ Hỗ trợ ticket & Hotline giờ hành chính</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-8 mt-6">
+            <button
+              @click="$emit('open-modal', { type: 'pricing', moduleName: 'ecor Starter' })"
+              class="w-full py-3.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 font-bold text-sm transition-all"
+            >
+              Bắt đầu dùng thử 14 ngày
+            </button>
+          </div>
+        </div>
+
+        <!-- TIER 2: PROFESSIONAL (FEATURED) -->
+        <div class="rounded-3xl bg-white border-2 border-sky-600 p-8 shadow-xl relative flex flex-col justify-between text-left transform lg:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-sky-600 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-full shadow">
+            ⭐ Được Chọn Nhiều Nhất
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-bold text-slate-900">{{ plan.name }}</h3>
-            <p class="text-xs text-slate-500">{{ plan.target }}</p>
-            <div class="py-3 border-y border-slate-100">
-              <span class="text-3xl font-extrabold" :class="plan.isPopular ? 'text-blue-600' : 'text-slate-900'">
-                {{ plan.price }}
-              </span>
-              <span class="text-xs text-slate-500">{{ plan.period }}</span>
+            <div class="flex items-center justify-between pt-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Tăng Trưởng</span>
+              <span class="text-xl">🚀</span>
             </div>
-            <ul class="text-xs text-slate-600 space-y-2.5">
-              <li v-for="(feat, idx) in plan.features" :key="idx" class="flex items-center gap-2">
-                <span class="text-blue-600 font-bold">✓</span>
-                <span>{{ feat }}</span>
-              </li>
-            </ul>
+            <h3 class="text-2xl font-extrabold text-slate-900">ecor Professional</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Chuỗi bán lẻ đa điểm, kho E-commerce quy mô trung bình, doanh nghiệp sản xuất và phân phối FMCG.
+            </p>
+
+            <div class="py-3 border-y border-slate-100">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl sm:text-4xl font-black text-sky-700">
+                  {{ isAnnual ? '2,550,000' : '3,190,000' }}
+                </span>
+                <span class="text-xs text-slate-500 font-medium">đ / tháng</span>
+              </div>
+              <div class="text-[11px] text-sky-700 font-medium mt-1">
+                {{ isAnnual ? '30,600,000 đ thanh toán cả năm (tiết kiệm 7.6 triệu)' : '38,280,000 đ thanh toán hàng năm (tiết kiệm 9.6 triệu)' }}
+              </div>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+              <span class="text-[11px] font-bold uppercase text-slate-700 block">Bao gồm toàn bộ Starter và bổ sung:</span>
+              <ul class="space-y-2 text-xs text-slate-600">
+                <li class="flex items-center gap-2">✓ <strong>Lên đến 05 Kho vật lý</strong> & Chi nhánh bán hàng</li>
+                <li class="flex items-center gap-2">✓ <strong>15 tài khoản</strong> phân quyền đa nhiệm chi tiết</li>
+                <li class="flex items-center gap-2">✓ <strong>Quản lý sơ đồ ô kệ định vị 3D</strong> Slotting & Bin</li>
+                <li class="flex items-center gap-2">✓ <strong>Chiến thuật gom đơn sóng hàng</strong> Wave & Batch Picking</li>
+                <li class="flex items-center gap-2">✓ Kiểm soát lô/hạn theo chuẩn FIFO & FEFO tuyệt đối</li>
+                <li class="flex items-center gap-2">✓ Module điều phối vận tải <strong>ecor TMS</strong> (50 chuyến/tháng)</li>
+                <li class="flex items-center gap-2">✓ Đồng bộ 2 chiều sàn: <strong>Shopee, TikTok Shop, Lazada</strong></li>
+                <li class="flex items-center gap-2">✓ Hỗ trợ kỹ thuật <strong>24/7 qua Hotline & Kênh riêng Zalo</strong></li>
+              </ul>
+            </div>
           </div>
 
-          <div class="pt-8">
+          <div class="pt-8 mt-6">
             <button
-              @click="$emit('open-modal', { type: 'pricing', moduleName: plan.name })"
-              class="w-full py-3.5 rounded-xl font-bold text-sm transition-all"
-              :class="plan.isPopular
-                ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg hover:from-blue-700 hover:to-cyan-700'
-                : 'border-2 border-slate-800 text-slate-800 hover:bg-slate-50'"
+              @click="$emit('open-modal', { type: 'pricing', moduleName: 'ecor Professional' })"
+              class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-extrabold text-sm shadow-md hover:shadow-lg transition-all"
             >
-              {{ plan.btnText }}
+              Đăng ký gói Tăng Trưởng →
+            </button>
+          </div>
+        </div>
+
+        <!-- TIER 3: ENTERPRISE -->
+        <div class="rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Doanh Nghiệp</span>
+              <span class="text-xl">🏢</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">ecor Enterprise</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Tập đoàn chuỗi phân phối lớn, tổng kho logistics 3PL/4PL, chuỗi bán lẻ quy mô trên 20 chi nhánh.
+            </p>
+
+            <div class="py-3 border-y border-slate-100">
+              <div class="text-3xl sm:text-4xl font-black text-slate-900">Tùy Biến</div>
+              <div class="text-[11px] text-slate-400 mt-1">Báo giá theo lượng đơn và đặc thù quy trình</div>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+              <span class="text-[11px] font-bold uppercase text-slate-700 block">Đặc quyền cấp độ tập đoàn:</span>
+              <ul class="space-y-2 text-xs text-slate-600">
+                <li class="flex items-center gap-2">✓ <strong>Không giới hạn số lượng kho</strong> & tài khoản vận hành</li>
+                <li class="flex items-center gap-2">✓ Kiến trúc Multi-tenant chuyên biệt cho 3PL phục vụ nhiều chủ hàng</li>
+                <li class="flex items-center gap-2">✓ Thuật toán AI tối ưu cung đường TMS đa điểm giao tự động</li>
+                <li class="flex items-center gap-2">✓ Open API & Webhook tích hợp ERP: <strong>SAP, Oracle, MISA, Bravo</strong></li>
+                <li class="flex items-center gap-2">✓ Tùy chọn hạ tầng <strong>Private Cloud</strong> hoặc On-premise</li>
+                <li class="flex items-center gap-2">✓ Cam kết <strong>SLA 99.98% uptime</strong> kèm bồi thường tài chính</li>
+                <li class="flex items-center gap-2">✓ Kỹ sư giải pháp chuyên trách 1-1 đồng hành triển khai onsite</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-8 mt-6">
+            <button
+              @click="$emit('open-modal', { type: 'pricing', moduleName: 'ecor Enterprise' })"
+              class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-all"
+            >
+              Tư vấn giải pháp Enterprise
             </button>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- PHẦN 2: BẢNG MUA LẺ MODULE -->
-      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-sm mb-16">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">2. Đăng Ký Từng Phân Hệ Riêng Lẻ</h2>
-          <p class="text-slate-600 text-sm mt-2">Chỉ trả phí cho những tính năng bạn thực sự cần.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-          <div
-            v-for="mod in standaloneModules"
-            :key="mod.code"
-            class="p-4 rounded-2xl bg-slate-50 border space-y-2 hover-lift"
-          >
-            <div class="font-bold text-blue-700">{{ mod.name }}</div>
-            <div class="text-lg font-extrabold text-slate-900">{{ mod.price }} <span class="text-xs font-normal text-slate-500">/tháng</span></div>
-            <p class="text-xs text-slate-500">{{ mod.desc }}</p>
+    <!-- 3. INTERACTIVE COST CALCULATOR (MODULE BỔ SUNG) -->
+    <section class="py-16 bg-white border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Mở Rộng Không Giới Hạn</span>
+            <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Module Bổ Sung & Tính Toán Chi Phí Linh Hoạt</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Chỉ chi trả cho đúng năng lực doanh nghiệp cần dùng. Bật/tắt các module bất kỳ lúc nào ngay trên hệ thống.</p>
+          </div>
+          <div class="p-3 bg-sky-50 border border-sky-200 rounded-2xl text-right">
+            <span class="text-[10px] uppercase font-bold text-sky-700 block">Phí module dự kiến thêm:</span>
+            <span class="text-xl font-black text-sky-700">+ {{ calculatedExtraCost.toLocaleString('vi-VN') }} đ / tháng</span>
           </div>
         </div>
 
-        <div class="mt-8 text-center">
-          <button
-            @click="$emit('open-modal', { type: 'pricing', moduleName: 'Tư vấn module lẻ' })"
-            class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all cursor-pointer"
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+          <label 
+            class="p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between text-left"
+            :class="addons.wms ? 'border-sky-500 bg-sky-50/50 shadow-sm' : 'border-slate-200 bg-white hover:bg-slate-50'"
           >
-            Tư Vấn Ghép Gói Theo Nhu Cầu
+            <div class="flex justify-between items-start">
+              <span class="text-lg">📦</span>
+              <input type="checkbox" v-model="addons.wms" class="w-4 h-4 text-sky-600 rounded" />
+            </div>
+            <div class="mt-3">
+              <strong class="text-sm font-bold text-slate-900 block">ecor WMS Nâng cao</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Kiểm soát vị trí tầng ô kệ 3D, cross-docking và quản lý kho serial/IMEI phức tạp.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 mt-3 font-bold text-xs text-sky-700">+900,000 đ <span class="font-normal text-slate-400">/ tháng</span></div>
+          </label>
+
+          <label 
+            class="p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between text-left"
+            :class="addons.tms ? 'border-cyan-500 bg-cyan-50/50 shadow-sm' : 'border-slate-200 bg-white hover:bg-slate-50'"
+          >
+            <div class="flex justify-between items-start">
+              <span class="text-lg">🚚</span>
+              <input type="checkbox" v-model="addons.tms" class="w-4 h-4 text-cyan-600 rounded" />
+            </div>
+            <div class="mt-3">
+              <strong class="text-sm font-bold text-slate-900 block">ecor TMS Điều phối xe</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Tự động gom chuyến, định vị GPS tài xế thời gian thực và quản lý chi phí xăng dầu, POD.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 mt-3 font-bold text-xs text-cyan-700">+1,200,000 đ <span class="font-normal text-slate-400">/ tháng</span></div>
+          </label>
+
+          <label 
+            class="p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between text-left"
+            :class="addons.pos ? 'border-rose-500 bg-rose-50/50 shadow-sm' : 'border-slate-200 bg-white hover:bg-slate-50'"
+          >
+            <div class="flex justify-between items-start">
+              <span class="text-lg">🏪</span>
+              <input type="checkbox" v-model="addons.pos" class="w-4 h-4 text-rose-600 rounded" />
+            </div>
+            <div class="mt-3">
+              <strong class="text-sm font-bold text-slate-900 block">ecor POS Điểm bán</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Phần mềm tính tiền tại quầy, tích điểm CRM khách hàng, in hóa đơn nhanh ngay cả khi mất mạng.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 mt-3 font-bold text-xs text-rose-700">+450,000 đ <span class="font-normal text-slate-400">/ điểm / tháng</span></div>
+          </label>
+
+          <label 
+            class="p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between text-left"
+            :class="addons.erp ? 'border-indigo-500 bg-indigo-50/50 shadow-sm' : 'border-slate-200 bg-white hover:bg-slate-50'"
+          >
+            <div class="flex justify-between items-start">
+              <span class="text-lg">⚙️</span>
+              <input type="checkbox" v-model="addons.erp" class="w-4 h-4 text-indigo-600 rounded" />
+            </div>
+            <div class="mt-3">
+              <strong class="text-sm font-bold text-slate-900 block">Cổng kết nối ERP & Kế toán</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Tự động đồng bộ chứng từ thu chi, hóa đơn điện tử với MISA, SAP, Fast, Bravo qua Open API.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 mt-3 font-bold text-xs text-indigo-700">+1,500,000 đ <span class="font-normal text-slate-400">/ tháng</span></div>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FAQ ACCORDION -->
+    <section class="py-20 bg-[#fafcff]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Giải Đáp Thắc Mắc</span>
+        <h2 class="mt-2 text-3xl font-extrabold text-slate-900 tracking-tight">
+          Câu Hỏi Thường Gặp Về Bảng Giá
+        </h2>
+        <p class="mt-3 text-sm text-slate-500">Những điều bạn cần biết trước khi khởi tạo dịch vụ tại ecor.vn</p>
+
+        <div class="mt-10 space-y-3 text-left">
+          <details 
+            v-for="(faq, idx) in faqs" 
+            :key="idx"
+            class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm group"
+          >
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-sm text-slate-900 select-none">
+              <span>{{ faq.q }}</span>
+              <span class="faq-icon text-slate-400 transition-transform duration-200 font-mono text-lg">▾</span>
+            </summary>
+            <p class="mt-3 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+              {{ faq.a }}
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BANNER CTA -->
+    <section class="py-16 bg-gradient-to-r from-sky-700 to-cyan-600 text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold">Chưa Chắc Chắn Gói Nào Phù Hợp Cho Mô Hình Doanh Nghiệp?</h3>
+          <p class="text-sky-100 text-sm mt-1">Hãy liên hệ với đội ngũ kỹ sư vận hành ecor.vn để được khảo sát kho bãi thực địa, tư vấn kiến trúc giải pháp và lập bảng toán chi phí ROI chi tiết hoàn toàn miễn phí.</p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="tel:0822235858" class="px-5 py-3 rounded-xl bg-white text-sky-800 font-extrabold text-xs shadow hover:bg-slate-100 transition-all">Hotline:  097 8673867</a>
+          <button 
+            @click="$emit('open-modal', { type: 'pricing', moduleName: 'Tư Vấn Gói Giá Phù Hợp' })"
+            class="px-5 py-3 rounded-xl bg-sky-900/60 hover:bg-sky-900 text-white font-bold text-xs border border-white/30 transition-all"
+          >
+            Đăng ký khảo sát kho →
           </button>
         </div>
       </div>
-
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { pricingPlans, standaloneModules } from '@/data/pricingData'
+import { ref, reactive, computed } from 'vue'
 
 defineEmits(['open-modal'])
+
+const isAnnual = ref(true)
+
+const addons = reactive({
+  wms: false,
+  tms: false,
+  pos: false,
+  erp: false
+})
+
+const calculatedExtraCost = computed(() => {
+  let sum = 0
+  if (addons.wms) sum += 900000
+  if (addons.tms) sum += 1200000
+  if (addons.pos) sum += 450000
+  if (addons.erp) sum += 1500000
+  return sum
+})
+
+const faqs = [
+  {
+    q: 'Tôi có thể đổi gói dịch vụ khi quy mô công ty tăng trưởng không?',
+    a: 'Hoàn toàn được. Hệ thống eCor hỗ trợ nâng cấp hoặc bổ sung thêm kho, xe tải hoặc tài khoản người dùng bất kỳ lúc nào. Khoản chênh lệch sẽ được tự động tính toán bù trừ theo số ngày sử dụng thực tế còn lại trong chu kỳ.'
+  },
+  {
+    q: 'Chi phí triển khai Onsite và đào tạo nhân viên được tính như thế nào?',
+    a: 'Đối với gói Professional thanh toán năm và gói Enterprise, eCor miễn phí gói onboarding chuẩn trị giá 15.000.000 đ gồm đào tạo trực tuyến và hướng dẫn thiết lập hệ thống. Trường hợp khảo sát và cắm chốt trực tiếp tại hiện trường nhiều ngày, chi phí sẽ được thỏa thuận minh bạch theo địa bàn.'
+  },
+  {
+    q: 'ecor có tương thích với các máy quét Barcode / PDA cầm tay có sẵn không?',
+    a: 'Có. Ứng dụng ecor WMS và POS hỗ trợ toàn bộ các thiết bị chạy Android (Zebra, Honeywell, Datalogic, Sunmi, Urovo...) cũng như máy quét mã vạch không dây Bluetooth hoặc có dây USB kết nối trực tiếp với máy tính.'
+  },
+  {
+    q: 'Dữ liệu kho vận và khách hàng của chúng tôi được bảo mật như thế nào?',
+    a: 'Dữ liệu của quý doanh nghiệp được mã hóa AES-256 ở trạng thái lưu trữ và TLS 1.3 trong truyền tải, lưu trữ trên hạ tầng đám mây đạt tiêu chuẩn ISO/IEC 27001 với cơ chế sao lưu tự động hàng ngày và cam kết không chia sẻ cho bên thứ ba.'
+  }
+]
 </script>
