@@ -17,7 +17,7 @@
 
             <!-- Main Heading -->
             <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              <span class="text-sky-600">ecor.vn</span> – Đồng Bộ Logistics, Kho Bãi & Thương Mại Của Bạn.
+              Một nguồn dữ liệu. Toàn bộ vận hành.
             </h1>
 
             <!-- Subtitle -->
