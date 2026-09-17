@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <router-link to="/" class="flex items-center gap-3 group focus:outline-none">
-          <img src="/ecor-logo.png" alt="eCor Platform" class="h-16 w-auto object-contain transition-transform group-hover:scale-105" />
+          <img src="/ecor-logo.png" alt="eCor Platform" class="h-14 w-auto object-contain transition-transform group-hover:scale-105" />
         </router-link>
 
         <!-- Desktop Navigation -->
