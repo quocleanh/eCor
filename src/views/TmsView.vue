@@ -11,17 +11,17 @@
         <!-- Tag -->
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-700 shadow-sm">
           <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-          <span>ecor TMS 4.0 • Điều Phối Tuyến Đường Tối Ưu</span>
+          <span>{{ $t('tms.hero.badge') }}</span>
         </div>
 
         <!-- Title -->
         <h1 class="mt-6 text-3xl sm:text-5xl lg:text-[52px] font-extrabold text-zinc-900 tracking-tight leading-[1.2] max-w-5xl mx-auto">
-          Tối Ưu Hóa Mọi Tuyến Đường, Giám Sát Đội Xe & Giao Hàng Số Hóa Real-Time
+          {{ $t('tms.hero.title') }}
         </h1>
 
         <!-- Subtitle -->
         <p class="mt-5 text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal">
-          Thuật toán gom đơn đa điểm thông minh, tự động phân bổ tải trọng xe, kiểm soát chi phí nhiên liệu và ứng dụng tài xế e-POD trên một nền tảng đồng bộ duy nhất.
+          {{ $t('tms.hero.desc') }}
         </p>
 
         <!-- CTA Buttons -->
@@ -30,7 +30,7 @@
             @click="$emit('open-modal', { type: 'demo', moduleName: 'ecor TMS - Điều phối vận tải' })"
             class="px-8 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-base shadow-md hover:shadow-lg transition-all transform active:scale-95"
           >
-            Đăng Ký Tư Vấn Giải Pháp TMS →
+            {{ $t('tms.hero.consult') }}
           </button>
           <button 
             @click="$emit('open-modal', { type: 'demo', moduleName: 'Demo Tuyến Đường TMS' })"
@@ -39,7 +39,7 @@
             <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
               <svg class="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <span>Xem Demo Điều Phối Tuyến Đường</span>
+            <span>{{ $t('tms.hero.demo') }}</span>
           </button>
         </div>
 
@@ -47,15 +47,15 @@
         <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-zinc-500 font-medium">
           <span class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            Cắt giảm 22% chi phí vận hành xe
+            {{ $t('tms.hero.badge1') }}
           </span>
           <span class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            Lập chuyến tự động dưới 3 giây
+            {{ $t('tms.hero.badge2') }}
           </span>
           <span class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            Chuẩn kết nối Vận tải 4.0
+            {{ $t('tms.hero.badge3') }}
           </span>
         </div>
 
@@ -68,25 +68,25 @@
                 <div class="flex items-center justify-between pb-3 border-b border-zinc-200 text-xs">
                   <div class="flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
-                    <strong class="text-zinc-800">Trung Tâm Điều Phối Đội Xe Tuyến HCM – Miền Đông</strong>
+                    <strong class="text-zinc-800">{{ $t('mockTms.hubTitle') }}</strong>
                   </div>
-                  <span class="text-[10px] text-amber-700 bg-amber-100 font-bold px-2 py-0.5 rounded">Real-time GPS Sync</span>
+                  <span class="text-[10px] text-amber-700 bg-amber-100 font-bold px-2 py-0.5 rounded">{{ $t('mockTms.realtimeSync') }}</span>
                 </div>
 
                 <!-- Active Truck Alert -->
                 <div class="mt-4 p-3 bg-white rounded-xl border border-zinc-200 text-xs space-y-2">
                   <div class="flex justify-between items-center font-bold text-zinc-800">
-                    <span>Tải Hino 8T (51C-892.41)</span>
-                    <span class="text-amber-600 font-mono">Tốc độ: 58 km/h • Đang trả điểm 3/5</span>
+                    <span>{{ $t('mockTms.truckTitle') }}</span>
+                    <span class="text-amber-600 font-mono">{{ $t('mockTms.speed') }}</span>
                   </div>
                   <div class="grid grid-cols-2 gap-2 text-[11px] text-zinc-600 pt-1">
                     <div class="p-2 rounded bg-amber-50 text-amber-800 font-medium">
-                      Lộ trình QL1A - Tránh ngập<br>
-                      <strong>Rút ngắn: 14.8 km (-18 min)</strong>
+                      {{ $t('mockTms.route1') }}<br>
+                      <strong>{{ $t('mockTms.route1Sub') }}</strong>
                     </div>
                     <div class="p-2 rounded bg-amber-50 text-amber-800 font-medium">
-                      Giờ Cấm Tải Nội Đô<br>
-                      <strong>Bảo vệ khung giờ 06:00 - 09:00</strong>
+                      {{ $t('mockTms.route2') }}<br>
+                      <strong>{{ $t('mockTms.route2Sub') }}</strong>
                     </div>
                   </div>
                 </div>
@@ -95,19 +95,19 @@
                 <div class="mt-4 space-y-1.5 text-xs text-zinc-600">
                   <div class="flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                    <span>Kho Ecor Tân Tạo (Xuất phát 05:30)</span>
+                    <span>{{ $t('mockTms.way1') }}</span>
                   </div>
                   <div class="flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                    <span>Co.opmart Bình Tân (Đã giao xong 06:45)</span>
+                    <span>{{ $t('mockTms.way2') }}</span>
                   </div>
                   <div class="flex items-center gap-2 font-bold text-amber-700">
                     <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    <span>MM Mega An Phú (Đang trả hàng)</span>
+                    <span>{{ $t('mockTms.way3') }}</span>
                   </div>
                   <div class="flex items-center gap-2 text-zinc-400">
                     <span class="w-2 h-2 rounded-full bg-zinc-300"></span>
-                    <span>Bách Hóa Xanh Dĩ An (Dự kiến 09:15)</span>
+                    <span>{{ $t('mockTms.way4') }}</span>
                   </div>
                 </div>
               </div>
@@ -117,40 +117,40 @@
             <div class="lg:col-span-5 space-y-4">
               <!-- Load Capacity Box -->
               <div class="bg-zinc-50 border border-zinc-200/80 rounded-2xl p-5 text-xs">
-                <span class="text-[10px] text-zinc-400 uppercase font-bold block">PHÂN BỔ TẢI TRỌNG ĐƠN HÀNG</span>
+                <span class="text-[10px] text-zinc-400 uppercase font-bold block">{{ $t('mockTms.allocTitle') }}</span>
                 <div class="mt-2 space-y-2">
                   <div class="flex justify-between items-center">
-                    <span class="text-zinc-600">Tải Trọng Thực Tế</span>
-                    <strong class="text-zinc-900 font-mono">7.68 / 8.00 Tấn (96%)</strong>
+                    <span class="text-zinc-600">{{ $t('mockTms.allocAct') }}</span>
+                    <strong class="text-zinc-900 font-mono">{{ $t('mockTms.allocActVal') }}</strong>
                   </div>
                   <div class="w-full bg-zinc-200 rounded-full h-2">
                     <div class="bg-amber-600 h-2 rounded-full" style="width: 96%"></div>
                   </div>
 
                   <div class="flex justify-between items-center pt-2">
-                    <span class="text-zinc-600">Thể Tích Xếp Thùng (CBM)</span>
-                    <strong class="text-zinc-900 font-mono">32.0 / 32.0 m³ (100%)</strong>
+                    <span class="text-zinc-600">{{ $t('mockTms.allocVol') }}</span>
+                    <strong class="text-zinc-900 font-mono">{{ $t('mockTms.allocVolVal') }}</strong>
                   </div>
                   <div class="w-full bg-zinc-200 rounded-full h-2">
                     <div class="bg-amber-600 h-2 rounded-full" style="width: 100%"></div>
                   </div>
                 </div>
                 <p class="text-[11px] text-zinc-500 mt-3 pt-2 border-t border-zinc-200">
-                  Trạng thái: Đạt chuẩn đóng thùng 3D Tetris Packing. Không lãng phí diện tích sàn xe.
+                  {{ $t('mockTms.allocStat') }}
                 </p>
               </div>
 
               <!-- e-POD Digital Stamp Box -->
               <div class="bg-white border border-amber-200 rounded-2xl p-5 text-xs shadow-sm">
                 <div class="flex items-center justify-between pb-2 border-b border-zinc-100">
-                  <strong class="text-zinc-800">e-POD Điện Tử Hoàn Tất</strong>
-                  <span class="text-amber-600 font-bold bg-amber-50 px-2 py-0.5 rounded text-[10px]">Ký Số Thành Công</span>
+                  <strong class="text-zinc-800">{{ $t('mockTms.epodTitle') }}</strong>
+                  <span class="text-amber-600 font-bold bg-amber-50 px-2 py-0.5 rounded text-[10px]">{{ $t('mockTms.epodBadge') }}</span>
                 </div>
                 <div class="mt-3 space-y-1.5 text-[11px] text-zinc-600">
-                  <div>✓ Chữ Ký & Dấu Mộc Đại Diện</div>
-                  <div>✓ Đã định vị GPS: 10.7769° N, 106.7009° E</div>
+                  <div>{{ $t('mockTms.epodSign') }}</div>
+                  <div>{{ $t('mockTms.epodGps') }}</div>
                   <div class="pt-2 flex justify-between font-bold text-zinc-900">
-                    <span>Đối soát hóa đơn COD:</span>
+                    <span>{{ $t('mockTms.epodCod') }}</span>
                     <span class="text-amber-700">18.450.000 đ</span>
                   </div>
                 </div>
@@ -167,23 +167,23 @@
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">94.5%</div>
-            <div class="text-sm font-bold text-zinc-800 mt-2">Hệ Số Lắp Đầy Tải Trọng</div>
-            <p class="text-xs text-zinc-500 mt-1">Triệt tiêu tình trạng xe chạy rỗng chiều về nhờ gom đơn liên vùng và thuật toán xếp dỡ 3D tối ưu không gian sàn.</p>
+            <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m1.title') }}</div>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m1.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">-22%</div>
-            <div class="text-sm font-bold text-zinc-800 mt-2">Chi Phí Nhiên Liệu & Cước</div>
-            <p class="text-xs text-zinc-500 mt-1">Thuật toán định tuyến đa điểm chọn cung đường tối ưu km thực tế, giảm hao mòn động cơ và chi phí cầu đường BOT.</p>
+            <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m2.title') }}</div>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m2.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">98.2%</div>
-            <div class="text-sm font-bold text-zinc-800 mt-2">Tỷ Lệ Giao Đúng Hạn (OTD)</div>
-            <p class="text-xs text-zinc-500 mt-1">Hệ thống đối soát kẹt xe, cảnh báo sớm nguy cơ trễ hẹn điểm giao giúp điều phối viên chủ động chuyển hướng tức thì.</p>
+            <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m3.title') }}</div>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m3.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">100%</div>
-            <div class="text-sm font-bold text-zinc-800 mt-2">Số Hóa Chứng Từ Giao Nhận</div>
-            <p class="text-xs text-zinc-500 mt-1">Thay thế toàn bộ biên bản bàn giao giấy bằng e-POD ký số, chụp ảnh hiện trường, đẩy hóa đơn đối soát ngay lập tức.</p>
+            <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m4.title') }}</div>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m4.desc') }}</p>
           </div>
         </div>
       </div>
@@ -192,12 +192,12 @@
     <!-- 3. FOUR CORE PILLARS OF ECOR TMS -->
     <section class="py-20 bg-[#fafcff]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Kiến Trúc Vận Tải Toàn Diện</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">{{ $t('tms.pillars.badge') }}</span>
         <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
-          4 Đột Phá Nâng Cấp Hoạt Động Vận Tải
+          {{ $t('tms.pillars.title') }}
         </h2>
         <p class="mt-3 text-base text-zinc-500 max-w-2xl mx-auto">
-          Kết nối đồng bộ từ khâu lập kế hoạch chuyến, quản lý xe thầu phụ, tác nghiệp tài xế đến đối soát kế toán tài chính.
+          {{ $t('tms.pillars.desc') }}
         </p>
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
@@ -206,16 +206,16 @@
               <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               </div>
-              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">01 • AI Engine</span>
+              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">{{ $t('tms.pillars.p1.tag') }}</span>
             </div>
-            <h3 class="text-xl font-bold text-zinc-900 mt-5">Smart Route Optimization</h3>
+            <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('tms.pillars.p1.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Tự động gom đơn đa điểm theo thuật toán thông minh, giải quyết đồng thời bài toán trọng tải xe, thể tích (CBM), khung giờ mở cửa của điểm nhận và khung giờ giới nghiêm cấm tải tại các đô thị loại I.
+              {{ $t('tms.pillars.p1.desc') }}
             </p>
             <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-zinc-600">
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Cân đối CBM & Tấn</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Cảnh báo giờ cấm tải</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Giảm 35% thời gian lập chuyến</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p1.f1') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p1.f2') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p1.f3') }}</span>
             </div>
           </div>
 
@@ -224,16 +224,16 @@
               <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
               </div>
-              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">02 • Fleet Hub</span>
+              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">{{ $t('tms.pillars.p2.tag') }}</span>
             </div>
-            <h3 class="text-xl font-bold text-zinc-900 mt-5">Quản Lý Đội Xe & Thầu Phụ (Fleet & 3PL)</h3>
+            <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('tms.pillars.p2.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Theo dõi sát sao định mức dầu theo từng cung đường, tích hợp thiết bị cảm biến nhiên liệu, cảnh báo tự động chu kỳ thay nhớt, bảo dưỡng lốp và kỳ hạn đăng kiểm cho cả đội xe nội bộ lẫn nhà xe vệ tinh.
+              {{ $t('tms.pillars.p2.desc') }}
             </p>
             <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-zinc-600">
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Chống thất thoát nhiên liệu</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Quản lý định mức xe thầu</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Lịch bảo dưỡng chủ động</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p2.f1') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p2.f2') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p2.f3') }}</span>
             </div>
           </div>
 
@@ -242,16 +242,16 @@
               <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
                 📱
               </div>
-              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">03 • Mobile Tech</span>
+              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">{{ $t('tms.pillars.p3.tag') }}</span>
             </div>
-            <h3 class="text-xl font-bold text-zinc-900 mt-5">ecor Driver Mobile App (iOS / Android)</h3>
+            <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('tms.pillars.p3.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Tài xế tiếp nhận lệnh điều xe tức thì trên điện thoại, tích hợp bản đồ dẫn đường thông minh tránh đường kẹt xe, thực hiện ký điện tử e-POD, chụp ảnh niêm phong thùng xe và chứng từ không giấy tờ.
+              {{ $t('tms.pillars.p3.desc') }}
             </p>
             <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-zinc-600">
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Ký nhận e-POD thời gian thực</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Giao diện tài xế trực quan</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Báo cáo sự cố tức thì</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p3.f1') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p3.f2') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p3.f3') }}</span>
             </div>
           </div>
 
@@ -260,16 +260,16 @@
               <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
                 💰
               </div>
-              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">04 • Settlement</span>
+              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">{{ $t('tms.pillars.p4.tag') }}</span>
             </div>
-            <h3 class="text-xl font-bold text-zinc-900 mt-5">Đối Soát Cước & COD Tự Động</h3>
+            <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('tms.pillars.p4.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Cấu hình biểu phí vận tải linh hoạt theo km di chuyển, vùng cước, loại xe tải hay phụ phí dừng trả điểm. Khớp nối tức thì dòng tiền thu hộ COD của tài xế vào bảng cân đối kế toán với độ chính xác tuyệt đối.
+              {{ $t('tms.pillars.p4.desc') }}
             </p>
             <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-zinc-600">
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Biểu cước đa ma trận</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Đối soát COD tự động</span>
-              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">Xuất báo cáo thuế 1 click</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p4.f1') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p4.f2') }}</span>
+              <span class="px-2.5 py-1 bg-zinc-100 rounded-lg">{{ $t('tms.pillars.p4.f3') }}</span>
             </div>
           </div>
         </div>
@@ -281,26 +281,26 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div class="lg:col-span-6 space-y-4 text-left">
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Đồng Bộ Hệ Sinh Thái Vận Hành</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">{{ $t('tms.pipeline.badge') }}</span>
             <h2 class="text-3xl font-extrabold text-zinc-900 tracking-tight">
-              Từ Khâu Đóng Gói Kho WMS Sang Điều Xe TMS Chỉ 0 Phút Độ Trễ
+              {{ $t('tms.pipeline.title') }}
             </h2>
             <p class="text-zinc-600 text-sm leading-relaxed">
-              Không còn tình trạng xuất kho xong chờ lập kế hoạch xe. Khi kiện hàng hoàn tất đóng gói tại Dock xuất của ecor WMS, hệ thống lập tức đề xuất chuyến xe tối ưu theo mã hàng và lịch xuất bến.
+              {{ $t('tms.pipeline.desc') }}
             </p>
             <div class="space-y-3 pt-2 text-sm text-zinc-700 font-medium">
               <div class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <div>
-                  <strong class="text-zinc-900 block">Quản Trị Đa Kênh Toàn Diện (Omni-fulfillment)</strong>
-                  <span class="text-xs text-zinc-500">Tự động nhận diện đơn hàng sỉ (B2B Bulk) cho đội xe tải hoặc đơn lẻ TMĐT (B2C) chuyển tiếp đối tác.</span>
+                  <strong class="text-zinc-900 block">{{ $t('tms.pipeline.f1.title') }}</strong>
+                  <span class="text-xs text-zinc-500">{{ $t('tms.pipeline.f1.desc') }}</span>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <div>
-                  <strong class="text-zinc-900 block">Kết Nối 1-Click Tới Mạng Lưới Express</strong>
-                  <span class="text-xs text-zinc-500">Đẩy đơn siêu tốc và đồng bộ mã vận đơn tự động sang Viettel Post, GHTK, GHN, J&T Express khi vượt tải đội xe nhà.</span>
+                  <strong class="text-zinc-900 block">{{ $t('tms.pipeline.f2.title') }}</strong>
+                  <span class="text-xs text-zinc-500">{{ $t('tms.pipeline.f2.desc') }}</span>
                 </div>
               </div>
             </div>
@@ -340,12 +340,12 @@
     <!-- 5. FOUR OPERATIONAL MODELS IN VIETNAM -->
     <section class="py-20 bg-[#fafcff]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Ngành Nghề Chuyên Biệt</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">{{ $t('tms.models.badge') }}</span>
         <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
-          May Đo Cho Từng Mô Hình Vận Tải Tại Việt Nam
+          {{ $t('tms.models.title') }}
         </h2>
         <p class="mt-3 text-base text-zinc-500 max-w-2xl mx-auto">
-          Giải pháp được cấu hình linh hoạt nhằm giải quyết bài toán đặc thù của từng phân khúc chuỗi cung ứng.
+          {{ $t('tms.models.desc') }}
         </p>
 
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
@@ -356,13 +356,13 @@
                 <img src="/images/assets/tms-case-fmcg.png" alt="Doanh Nghiệp FMCG" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
-                <span class="text-[10px] font-bold text-amber-600 uppercase block">FMCG & Bán Lẻ</span>
-                <h4 class="font-bold text-zinc-900 text-sm mt-1">Doanh Nghiệp Phân Phối Tiêu Dùng Nhanh</h4>
-                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Gom hàng nghìn đơn nhỏ lẻ đến các tiệm tạp hóa, siêu thị theo khung giờ mở cửa nghiêm ngặt và hạn chế kẹt xe nội ô.</p>
+                <span class="text-[10px] font-bold text-amber-600 uppercase block">{{ $t('tms.models.m1.tag') }}</span>
+                <h4 class="font-bold text-zinc-900 text-sm mt-1">{{ $t('tms.models.m1.title') }}</h4>
+                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('tms.models.m1.desc') }}</p>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">Giảm 25% thời gian giao hàng</span>
+              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">{{ $t('tms.models.m1.commit') }}</span>
             </div>
           </div>
 
@@ -373,13 +373,13 @@
                 <img src="/images/assets/tms-case-construction.png" alt="Vật liệu & Xây dựng" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
-                <span class="text-[10px] font-bold text-amber-600 uppercase block">Vật Liệu & Xây Dựng</span>
-                <h4 class="font-bold text-zinc-900 text-sm mt-1">Đội Xe Vận Chuyển Công Trình</h4>
-                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Kiểm soát trọng tải xe nặng, cung đường cho phép lưu thông cầu đường và lịch bàn giao chuẩn khớp tiến độ thi công.</p>
+                <span class="text-[10px] font-bold text-amber-600 uppercase block">{{ $t('tms.models.m2.tag') }}</span>
+                <h4 class="font-bold text-zinc-900 text-sm mt-1">{{ $t('tms.models.m2.title') }}</h4>
+                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('tms.models.m2.desc') }}</p>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">100% tuân thủ tải trọng cầu đường</span>
+              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">{{ $t('tms.models.m2.commit') }}</span>
             </div>
           </div>
 
@@ -387,16 +387,16 @@
           <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div class="h-40 overflow-hidden bg-zinc-100">
-                <img src="/images/assets/tms-case-cold.png" alt="Cold Chain Logistics" class="w-full h-full object-cover" />
+                <img src="/images/assets/tms-case-cold.png" alt="{{ $t('tms.models.m3.tag') }}" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
                 <span class="text-[10px] font-bold text-amber-600 uppercase block">Cold Chain Logistics</span>
-                <h4 class="font-bold text-zinc-900 text-sm mt-1">Đơn Vị Vận Tải Hàng Lạnh</h4>
-                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Theo dõi biến thiên nhiệt độ thùng đông lạnh liên tục. Cảnh báo mở cửa thùng lâu bất thường bảo toàn độ tươi thực phẩm.</p>
+                <h4 class="font-bold text-zinc-900 text-sm mt-1">{{ $t('tms.models.m3.title') }}</h4>
+                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('tms.models.m3.desc') }}</p>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">Hao hụt nhiệt độ dưới 0.1%</span>
+              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">{{ $t('tms.models.m3.commit') }}</span>
             </div>
           </div>
 
@@ -404,16 +404,16 @@
           <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div class="h-40 overflow-hidden bg-zinc-100">
-                <img src="/images/assets/solutions-3pl.png" alt="3PL & 4PL Logistics" class="w-full h-full object-cover" />
+                <img src="/images/assets/solutions-3pl.png" alt="{{ $t('tms.models.m4.tag') }}" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
                 <span class="text-[10px] font-bold text-amber-600 uppercase block">3PL & 4PL Logistics</span>
-                <h4 class="font-bold text-zinc-900 text-sm mt-1">Nhà Cung Cấp Dịch Vụ Vận Tải</h4>
-                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Phân quyền đa đối tác (Multi-tenant), cấp tài khoản tra cứu riêng cho từng chủ hàng và tự động tính cước thầu phụ đa dạng.</p>
+                <h4 class="font-bold text-zinc-900 text-sm mt-1">{{ $t('tms.models.m4.title') }}</h4>
+                <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('tms.models.m4.desc') }}</p>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">Tăng 300% năng lực nhận cuốc</span>
+              <span class="text-xs font-bold text-amber-600 border-t border-zinc-100 pt-3 block">{{ $t('tms.models.m4.commit') }}</span>
             </div>
           </div>
         </div>
@@ -423,12 +423,12 @@
     <!-- 6. FORM ĐĂNG KÝ TƯ VẤN TMS -->
     <section class="py-20 bg-zinc-900 text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Đồng Hành Chuyển Đổi Số Vận Tải</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">{{ $t('tms.cta.badge') }}</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-          Sẵn Sàng Cắt Giảm 20%+ Chi Phí Vận Tải Cho Doanh Nghiệp?
+          {{ $t('tms.cta.title') }}
         </h2>
         <p class="text-zinc-400 text-sm max-w-xl mx-auto">
-          Đội ngũ chuyên gia supply chain của ecor sẵn sàng khảo sát thực tế đội xe và thiết lập lộ trình số hóa tối ưu nhất cho quý doanh nghiệp.
+          {{ $t('tms.cta.desc') }}
         </p>
 
         <div class="pt-4 flex flex-wrap justify-center gap-4">
@@ -436,13 +436,13 @@
             @click="$emit('open-modal', { type: 'demo', moduleName: 'ecor TMS' })"
             class="px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold text-sm shadow-lg transition-all"
           >
-            Gửi Yêu Cầu Tư Vấn TMS 4.0 →
+            {{ $t('tms.cta.btn') }}
           </button>
           <a 
             href="tel:0822235858"
             class="px-8 py-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-sm border border-zinc-700 transition-all"
           >
-            Hotline:  097 8673867
+            {{ $t('tms.cta.hotline') }}  097 8673867
           </a>
         </div>
       </div>
@@ -451,6 +451,10 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+
 import HeroCanvas from '@/components/HeroCanvas.vue'
 defineEmits(['open-modal'])
+
+const { t } = useI18n()
 </script>

@@ -2,38 +2,39 @@
   <div class="bg-[#fafcff] text-zinc-800">
     <!-- 1. HERO SECTION -->
     <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden">
+      <HeroCanvas :opacity="0.65" :particleCount="52" />
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-amber-100/60 via-amber-50/30 to-transparent blur-3xl pointer-events-none -z-10"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-700 shadow-sm">
-          <span>🤝 Đồng Hành Cùng Doanh Nghiệp Bạn</span>
+          <span>{{ $t('contact.hero.badge') }}</span>
         </div>
 
         <h1 class="mt-6 text-3xl sm:text-5xl lg:text-[48px] font-extrabold text-zinc-900 tracking-tight leading-[1.2] max-w-4xl mx-auto">
-          Kết Nối Với Chuyên Gia Giải Pháp <span class="text-amber-600">ecor.vn</span>
+          {{ $t('contact.hero.title') }} <span class="text-amber-600">{{ $t('contact.hero.titleHighlight') }}</span>
         </h1>
 
         <p class="mt-4 text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed">
-          Dù bạn đang vận hành một kho hàng đơn lẻ hay chuỗi cung ứng đa kênh phức tạp, đội ngũ chuyên gia của chúng tôi sẽ cùng bạn phân tích và thiết kế mô hình vận hành tối ưu nhất.
+          {{ $t('contact.hero.desc') }}
         </p>
 
         <!-- 4 Badges -->
         <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
           <div class="p-3.5 bg-white border border-zinc-200 rounded-2xl shadow-sm">
-            <span class="text-xs text-zinc-400 block font-medium">&lt; 10 Phút</span>
-            <strong class="text-xs sm:text-sm font-bold text-zinc-800">Phản hồi trung bình</strong>
+            <span class="text-xs text-zinc-400 block font-medium">{{ $t('contact.hero.b1Val') }}</span>
+            <strong class="text-xs sm:text-sm font-bold text-zinc-800">{{ $t('contact.hero.b1Title') }}</strong>
           </div>
           <div class="p-3.5 bg-white border border-zinc-200 rounded-2xl shadow-sm">
-            <span class="text-xs text-zinc-400 block font-medium">3 – 7 Ngày</span>
-            <strong class="text-xs sm:text-sm font-bold text-zinc-800">Thời gian Go-Live</strong>
+            <span class="text-xs text-zinc-400 block font-medium">{{ $t('contact.hero.b2Val') }}</span>
+            <strong class="text-xs sm:text-sm font-bold text-zinc-800">{{ $t('contact.hero.b2Title') }}</strong>
           </div>
           <div class="p-3.5 bg-white border border-zinc-200 rounded-2xl shadow-sm">
-            <span class="text-xs text-zinc-400 block font-medium">14 Ngày</span>
-            <strong class="text-xs sm:text-sm font-bold text-zinc-800">Dùng thử trải nghiệm</strong>
+            <span class="text-xs text-zinc-400 block font-medium">{{ $t('contact.hero.b3Val') }}</span>
+            <strong class="text-xs sm:text-sm font-bold text-zinc-800">{{ $t('contact.hero.b3Title') }}</strong>
           </div>
           <div class="p-3.5 bg-white border border-zinc-200 rounded-2xl shadow-sm">
-            <span class="text-xs text-zinc-400 block font-medium">99.9%</span>
-            <strong class="text-xs sm:text-sm font-bold text-zinc-800">Cam kết SLA uptime</strong>
+            <span class="text-xs text-zinc-400 block font-medium">{{ $t('contact.hero.b4Val') }}</span>
+            <strong class="text-xs sm:text-sm font-bold text-zinc-800">{{ $t('contact.hero.b4Title') }}</strong>
           </div>
         </div>
       </div>
@@ -47,10 +48,10 @@
           <!-- Channels Box -->
           <div class="bg-white border border-zinc-200 rounded-3xl p-6 shadow-sm space-y-4">
             <div class="flex justify-between items-center pb-3 border-b border-zinc-100">
-              <h3 class="font-extrabold text-zinc-900 text-sm">Kênh Liên Hệ Nhanh</h3>
+              <h3 class="font-extrabold text-zinc-900 text-sm">{{ $t('contact.channels.title') }}</h3>
               <span class="text-[10px] bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
-                Trực tuyến
+                {{ $t('contact.channels.status') }}
               </span>
             </div>
 
@@ -58,7 +59,7 @@
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">📞</div>
                 <div>
-                  <div class="text-[11px] text-zinc-400">Hotline tư vấn giải pháp 24/7</div>
+                  <div class="text-[11px] text-zinc-400">{{ $t('contact.channels.phoneTitle') }}</div>
                   <strong class="text-sm font-bold text-zinc-900 group-hover:text-amber-700"> 097 8673867</strong>
                 </div>
               </div>
@@ -69,7 +70,7 @@
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">✉️</div>
                 <div>
-                  <div class="text-[11px] text-zinc-400">Hòm thư chuyên gia kỹ thuật</div>
+                  <div class="text-[11px] text-zinc-400">{{ $t('contact.channels.mailTitle') }}</div>
                   <strong class="text-sm font-bold text-zinc-900 group-hover:text-amber-700">contact@ecor.vn</strong>
                 </div>
               </div>
@@ -79,11 +80,11 @@
 
           <!-- Office Locations -->
           <div class="bg-white border border-zinc-200 rounded-3xl p-6 shadow-sm space-y-3 text-xs">
-            <h4 class="font-extrabold text-zinc-900 text-xs uppercase tracking-wider text-zinc-400">Hệ Thống Văn Phòng Đại Diện</h4>
+            <h4 class="font-extrabold text-zinc-900 text-xs uppercase tracking-wider text-zinc-400">{{ $t('contact.channels.officeTitle') }}</h4>
             
             <div class="p-3 bg-zinc-50 rounded-2xl">
-              <strong class="text-zinc-800 block text-xs">🏢 Văn phòng TP. Hồ Chí Minh</strong>
-              <p class="text-zinc-500 mt-1">891 Nguyễn Kiệm, Hạnh Thông, TP HCM</p>
+              <strong class="text-zinc-800 block text-xs">{{ $t('contact.channels.officeName') }}</strong>
+              <p class="text-zinc-500 mt-1">{{ $t('contact.channels.officeAddress') }}</p>
             </div>
           </div>
 
@@ -91,24 +92,24 @@
           <div class="p-5 rounded-3xl bg-gradient-to-r from-amber-50 to-amber-50 border border-amber-200 flex items-center justify-between">
             <div>
               <div class="flex items-center gap-2">
-                <strong class="text-xs font-bold text-amber-900">Đặt lịch trao đổi 1–1 riêng</strong>
-                <span class="text-[10px] bg-amber-400 text-zinc-900 font-bold font-bold px-2 py-0.5 rounded">30 phút Demo</span>
+                <strong class="text-xs font-bold text-amber-900">{{ $t('contact.channels.bookingTitle') }}</strong>
+                <span class="text-[10px] bg-amber-400 text-zinc-900 font-bold font-bold px-2 py-0.5 rounded">{{ $t('contact.channels.bookingTag') }}</span>
               </div>
-              <p class="text-[11px] text-amber-700 mt-1">Trao đổi trực tiếp qua Google Meet với Kỹ sư Trưởng kiến trúc kho vận.</p>
+              <p class="text-[11px] text-amber-700 mt-1">{{ $t('contact.channels.bookingDesc') }}</p>
             </div>
             <button 
               @click="$emit('open-modal', { type: 'demo', moduleName: 'Đặt lịch 1-1 Google Meet' })"
               class="px-3.5 py-2 bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-bold text-xs rounded-xl shadow-sm shrink-0"
             >
-              Chọn lịch →
+              {{ $t('contact.channels.bookingBtn') }}
             </button>
           </div>
 
           <!-- Team of Experts -->
           <div class="bg-white border border-zinc-200 rounded-3xl p-6 shadow-sm space-y-3">
             <div class="flex justify-between items-center pb-2 border-b border-zinc-100">
-              <h4 class="font-extrabold text-zinc-900 text-xs">Đội Ngũ Chuyên Gia Trực Tiếp Tư Vấn</h4>
-              <span class="text-[10px] text-zinc-400">Hà Nội & Sài Gòn</span>
+              <h4 class="font-extrabold text-zinc-900 text-xs">{{ $t('contact.experts.title') }}</h4>
+              <span class="text-[10px] text-zinc-400">{{ $t('contact.experts.loc') }}</span>
             </div>
 
             <div class="space-y-3 pt-1">
@@ -116,8 +117,8 @@
                 <img src="/images/assets/expert-nam.png" alt="Trần Đức Nam" class="w-10 h-10 rounded-full object-cover border border-zinc-200" />
                 <div>
                   <strong class="text-xs text-zinc-800 block">Trần Đức Nam</strong>
-                  <span class="text-[10px] bg-amber-50 text-amber-700 font-semibold px-1.5 py-0.5 rounded">Trưởng phòng Giải Pháp WMS</span>
-                  <p class="text-[10px] text-zinc-400 mt-0.5">8+ năm triển khai hệ thống chuỗi bán lẻ & 3PL</p>
+                  <span class="text-[10px] bg-amber-50 text-amber-700 font-semibold px-1.5 py-0.5 rounded">{{ $t('contact.experts.e1Role') }}</span>
+                  <p class="text-[10px] text-zinc-400 mt-0.5">{{ $t('contact.experts.e1Desc') }}</p>
                 </div>
               </div>
 
@@ -125,8 +126,8 @@
                 <img src="/images/assets/expert-lan.png" alt="Lê Hoàng Lan" class="w-10 h-10 rounded-full object-cover border border-zinc-200" />
                 <div>
                   <strong class="text-xs text-zinc-800 block">Lê Hoàng Lan</strong>
-                  <span class="text-[10px] bg-amber-50 text-amber-700 font-semibold px-1.5 py-0.5 rounded">Chuyên viên Cấp Cao TMS</span>
-                  <p class="text-[10px] text-zinc-400 mt-0.5">Tối ưu lộ trình và định tuyến vận tải đa kênh</p>
+                  <span class="text-[10px] bg-amber-50 text-amber-700 font-semibold px-1.5 py-0.5 rounded">{{ $t('contact.experts.e2Role') }}</span>
+                  <p class="text-[10px] text-zinc-400 mt-0.5">{{ $t('contact.experts.e2Desc') }}</p>
                 </div>
               </div>
 
@@ -134,8 +135,8 @@
                 <img src="/images/assets/expert-huy.png" alt="Nguyễn Quốc Huy" class="w-10 h-10 rounded-full object-cover border border-zinc-200" />
                 <div>
                   <strong class="text-xs text-zinc-800 block">Nguyễn Quốc Huy</strong>
-                  <span class="text-[10px] bg-amber-50 text-amber-700 font-semibold px-1.5 py-0.5 rounded">Kỹ Sư Trưởng ERP & API</span>
-                  <p class="text-[10px] text-zinc-400 mt-0.5">Chuyên gia đồng bộ SAP, Oracle, MISA, KiotViet</p>
+                  <span class="text-[10px] bg-amber-50 text-amber-700 font-semibold px-1.5 py-0.5 rounded">{{ $t('contact.experts.e3Role') }}</span>
+                  <p class="text-[10px] text-zinc-400 mt-0.5">{{ $t('contact.experts.e3Desc') }}</p>
                 </div>
               </div>
             </div>
@@ -145,50 +146,50 @@
         <!-- Right Column: Interactive Multi-step Survey Form -->
         <div class="lg:col-span-7 bg-white border border-zinc-200 rounded-3xl p-6 sm:p-8 shadow-xl text-left">
           <div class="pb-4 border-b border-zinc-100">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 block">Khảo Sát Nhu Cầu Vận Hành</span>
-            <h3 class="text-xl sm:text-2xl font-extrabold text-zinc-900 mt-0.5">Đăng Ký Tư Vấn & Nhận Kế Hoạch Triển Khai</h3>
-            <p class="text-xs text-zinc-500 mt-1">Điền thông tin để ecor.vn cấu hình mô hình bản quyền và kịch bản demo sát với ngành hàng của bạn nhất.</p>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 block">{{ $t('contact.form.badge') }}</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-zinc-900 mt-0.5">{{ $t('contact.form.title') }}</h3>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('contact.form.desc') }}</p>
           </div>
 
           <div v-if="submitted" class="py-12 text-center space-y-4">
             <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
               ✓
             </div>
-            <h4 class="text-xl font-bold text-zinc-900">Gửi Yêu Cầu Thành Công!</h4>
+            <h4 class="text-xl font-bold text-zinc-900">{{ $t('contact.form.successTitle') }}</h4>
             <p class="text-sm text-zinc-600 max-w-md mx-auto">
-              Chuyên gia giải pháp eCor sẽ liên hệ lại trực tiếp qua số điện thoại của bạn trong vòng <strong>10 phút</strong>.
+              {{ $t('contact.form.successDesc1') }} <strong>{{ $t('contact.form.successDesc2') }}</strong>.
             </p>
-            <button @click="submitted = false" class="px-6 py-2.5 bg-amber-400 text-zinc-900 font-bold rounded-xl text-xs font-bold">Gửi yêu cầu khác</button>
+            <button @click="submitted = false" class="px-6 py-2.5 bg-amber-400 text-zinc-900 font-bold rounded-xl text-xs font-bold">{{ $t('contact.form.successBtn') }}</button>
           </div>
 
           <form v-else @submit.prevent="handleSubmit" class="space-y-4 mt-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">Họ và tên người liên hệ *</label>
-                <input v-model="form.name" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs" />
+                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('contact.form.fName') }}</label>
+                <input v-model="form.name" required placeholder="{{ $t('contact.form.fNamePl') }}" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs" />
               </div>
               <div>
-                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">Số điện thoại di động *</label>
+                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('contact.form.fPhone') }}</label>
                 <input v-model="form.phone" required placeholder="09xxxxxxxxx" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs" />
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">Email doanh nghiệp *</label>
+                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('contact.form.fEmail') }}</label>
                 <input v-model="form.email" required placeholder="an.nguyen@congty.com" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs" />
               </div>
               <div>
-                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">Tên doanh nghiệp / Chuỗi cửa hàng</label>
-                <input v-model="form.company" placeholder="Tên công ty hoặc thương hiệu" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs" />
+                <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('contact.form.fCompany') }}</label>
+                <input v-model="form.company" placeholder="{{ $t('contact.form.fCompanyPl') }}" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs" />
               </div>
             </div>
 
             <!-- Giải pháp quan tâm đa chọn -->
             <div>
               <div class="flex justify-between items-center mb-1.5">
-                <label class="block text-xs font-bold text-zinc-700 uppercase">Giải pháp bạn đang quan tâm nhất? (Có thể chọn nhiều mục)</label>
-                <span class="text-[10px] text-amber-600 font-bold">Được cá nhân hóa</span>
+                <label class="block text-xs font-bold text-zinc-700 uppercase">{{ $t('contact.form.solLabel') }}</label>
+                <span class="text-[10px] text-amber-600 font-bold">{{ $t('contact.form.solTag') }}</span>
               </div>
 
               <div class="grid grid-cols-2 gap-2 text-xs">
@@ -198,8 +199,8 @@
                 >
                   <input type="checkbox" value="wms" v-model="selectedModules" class="rounded text-amber-600" />
                   <div>
-                    <span>Quản trị kho WMS</span>
-                    <span class="text-[10px] text-zinc-400 font-normal block">Kiểm kê, phân tầng, barcode</span>
+                    <span>{{ $t('contact.form.s1Title') }}</span>
+                    <span class="text-[10px] text-zinc-400 font-normal block">{{ $t('contact.form.s1Desc') }}</span>
                   </div>
                 </label>
 
@@ -209,8 +210,8 @@
                 >
                   <input type="checkbox" value="tms" v-model="selectedModules" class="rounded text-amber-600" />
                   <div>
-                    <span>Điều phối vận tải TMS</span>
-                    <span class="text-[10px] text-zinc-400 font-normal block">Định tuyến xe, tài xế, COD</span>
+                    <span>{{ $t('contact.form.s2Title') }}</span>
+                    <span class="text-[10px] text-zinc-400 font-normal block">{{ $t('contact.form.s2Desc') }}</span>
                   </div>
                 </label>
 
@@ -220,8 +221,8 @@
                 >
                   <input type="checkbox" value="omni" v-model="selectedModules" class="rounded text-amber-600" />
                   <div>
-                    <span>Omnichannel Hub</span>
-                    <span class="text-[10px] text-zinc-400 font-normal block">Shopee, Lazada, TikTok Shop</span>
+                    <span>{{ $t('contact.form.s3Title') }}</span>
+                    <span class="text-[10px] text-zinc-400 font-normal block">{{ $t('contact.form.s3Desc') }}</span>
                   </div>
                 </label>
 
@@ -231,8 +232,8 @@
                 >
                   <input type="checkbox" value="erp" v-model="selectedModules" class="rounded text-amber-600" />
                   <div>
-                    <span>Tích hợp ERP / Kế toán</span>
-                    <span class="text-[10px] text-zinc-400 font-normal block">SAP, Fast, Bravo, MISA</span>
+                    <span>{{ $t('contact.form.s4Title') }}</span>
+                    <span class="text-[10px] text-zinc-400 font-normal block">{{ $t('contact.form.s4Desc') }}</span>
                   </div>
                 </label>
               </div>
@@ -240,7 +241,7 @@
 
             <!-- Quy mô kho / xe -->
             <div>
-              <label class="block text-xs font-bold text-zinc-700 uppercase mb-1.5">Quy mô kho hoặc đội xe hiện tại của bạn</label>
+              <label class="block text-xs font-bold text-zinc-700 uppercase mb-1.5">{{ $t('contact.form.scaleLabel') }}</label>
               <div class="grid grid-cols-3 gap-2 text-xs">
                 <button
                   type="button"
@@ -248,8 +249,8 @@
                   class="p-3 rounded-xl border text-center transition-all"
                   :class="scale === 'sme' ? 'bg-amber-400 text-zinc-900 font-bold font-bold border-amber-600 shadow' : 'bg-zinc-50 border-zinc-200 text-zinc-700'"
                 >
-                  <span class="block font-bold">Khởi đầu / SME</span>
-                  <span class="text-[10px] opacity-80 block mt-0.5">&lt; 500m² hoặc 1–5 xe</span>
+                  <span class="block font-bold">{{ $t('contact.form.sc1Title') }}</span>
+                  <span class="text-[10px] opacity-80 block mt-0.5">{{ $t('contact.form.sc1Desc') }}</span>
                 </button>
 
                 <button
@@ -258,8 +259,8 @@
                   class="p-3 rounded-xl border text-center transition-all"
                   :class="scale === 'growth' ? 'bg-amber-400 text-zinc-900 font-bold font-bold border-amber-600 shadow' : 'bg-zinc-50 border-zinc-200 text-zinc-700'"
                 >
-                  <span class="block font-bold">Đang tăng trưởng</span>
-                  <span class="text-[10px] opacity-80 block mt-0.5">500 – 2,000m² / 15 xe</span>
+                  <span class="block font-bold">{{ $t('contact.form.sc2Title') }}</span>
+                  <span class="text-[10px] opacity-80 block mt-0.5">{{ $t('contact.form.sc2Desc') }}</span>
                 </button>
 
                 <button
@@ -268,26 +269,26 @@
                   class="p-3 rounded-xl border text-center transition-all"
                   :class="scale === 'enterprise' ? 'bg-amber-400 text-zinc-900 font-bold font-bold border-amber-600 shadow' : 'bg-zinc-50 border-zinc-200 text-zinc-700'"
                 >
-                  <span class="block font-bold">Doanh nghiệp lớn</span>
-                  <span class="text-[10px] opacity-80 block mt-0.5">&gt; 2,000m² / Nhiều kho</span>
+                  <span class="block font-bold">{{ $t('contact.form.sc3Title') }}</span>
+                  <span class="text-[10px] opacity-80 block mt-0.5">{{ $t('contact.form.sc3Desc') }}</span>
                 </button>
               </div>
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">Ghi chú yêu cầu đặc biệt (tùy chọn)</label>
-              <textarea v-model="form.notes" rows="2" placeholder="Ví dụ: Cần đồng bộ với máy quét mã vạch Honeywell cầm tay, kết nối hóa đơn điện tử..." class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs resize-none"></textarea>
+              <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('contact.form.noteLabel') }}</label>
+              <textarea v-model="form.notes" rows="2" placeholder="{{ $t('contact.form.notePl') }}" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs resize-none"></textarea>
             </div>
 
             <button type="submit" class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2">
               <span>🚀</span>
-              <span>Gửi Yêu Cầu & Nhận Kế Hoạch Demo Miễn Phí</span>
+              <span>{{ $t('contact.form.submitBtn') }}</span>
             </button>
 
             <div class="flex items-center justify-between text-[11px] text-zinc-400 pt-2 border-t border-zinc-100">
-              <span>🔒 Bảo mật dữ liệu 100%</span>
-              <span>⚡ Dùng thử 14 ngày không cần thẻ</span>
-              <span>🏢 Hỗ trợ Onsite trực tiếp</span>
+              <span>{{ $t('contact.form.sec1') }}</span>
+              <span>{{ $t('contact.form.sec2') }}</span>
+              <span>{{ $t('contact.form.sec3') }}</span>
             </div>
           </form>
         </div>
@@ -297,14 +298,14 @@
     <!-- 3. MÁY TÍNH DỰ TOÁN QUY MÔ NHANH -->
     <section class="py-16 bg-white border-y border-zinc-200">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">📊 Máy tính dự toán quy mô nhanh</span>
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 mt-1">Ước Lượng Giải Pháp Theo Sản Lượng Đơn Hàng</h3>
-        <p class="text-xs text-zinc-500 mt-1">Chọn mức tải vận hành trung bình mỗi ngày của hệ thống bạn để nhận biết cấu hình ecor phù hợp cùng thời gian đưa vào thực tế.</p>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">{{ $t('contact.calc.badge') }}</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 mt-1">{{ $t('contact.calc.title') }}</h3>
+        <p class="text-xs text-zinc-500 mt-1">{{ $t('contact.calc.desc') }}</p>
 
         <!-- Tier volume buttons -->
         <div class="mt-6 inline-flex rounded-full bg-zinc-100 p-1 border border-zinc-200">
           <button
-            v-for="vol in ['100 – 500 đơn/ngày', '500 – 2,500 đơn/ngày', '> 5,000 đơn/ngày']"
+            v-for="vol in [$t('contact.calc.v1'), $t('contact.calc.v2'), $t('contact.calc.v3')]"
             :key="vol"
             @click="selectedVol = vol"
             class="px-5 py-2 rounded-full text-xs font-bold transition-all"
@@ -316,35 +317,35 @@
 
         <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-200">
-            <span class="text-[10px] text-zinc-400 font-bold uppercase block">GÓI BẢN QUYỀN ĐỀ XUẤT</span>
+            <span class="text-[10px] text-zinc-400 font-bold uppercase block">{{ $t('contact.calc.pLabel') }}</span>
             <strong class="text-base text-amber-700 font-extrabold block mt-1">
-              {{ selectedVol === '100 – 500 đơn/ngày' ? 'ecor Standard WMS' : (selectedVol === '500 – 2,500 đơn/ngày' ? 'ecor Professional Suite' : 'ecor Enterprise Cloud') }}
+              {{ selectedVol === $t('contact.calc.v1') ? $t('contact.calc.t1') : (selectedVol === $t('contact.calc.v2') ? $t('contact.calc.t2') : $t('contact.calc.t3')) }}
             </strong>
             <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
-              {{ selectedVol === '100 – 500 đơn/ngày' ? 'Phù hợp kho đơn lẻ, xuất nhập tồn thời gian thực qua app di động và máy quét mã vạch thông dụng.' : (selectedVol === '500 – 2,500 đơn/ngày' ? 'Bao gồm Wave picking tối ưu, điều phối xe TMS và đồng bộ đa sàn tự động.' : 'Hạ tầng Dedicated Private Cloud, xử lý hàng triệu đơn không nghẽn.') }}
+              {{ selectedVol === $t('contact.calc.v1') ? $t('contact.calc.d1') : (selectedVol === $t('contact.calc.v2') ? $t('contact.calc.d2') : $t('contact.calc.d3')) }}
             </p>
             <div class="pt-4 mt-4 border-t border-zinc-200 text-xs text-zinc-600">
-              Người dùng khuyến nghị: <strong>{{ selectedVol === '100 – 500 đơn/ngày' ? '3 – 8 Quản kho' : (selectedVol === '500 – 2,500 đơn/ngày' ? '15 – 30 Nhân sự' : 'Không giới hạn') }}</strong>
+              {{ $t('contact.calc.uLabel') }} <strong>{{ selectedVol === $t('contact.calc.v1') ? $t('contact.calc.u1') : (selectedVol === $t('contact.calc.v2') ? $t('contact.calc.u2') : $t('contact.calc.u3')) }}</strong>
             </div>
           </div>
 
           <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-200">
-            <span class="text-[10px] text-zinc-400 font-bold uppercase block">THỜI GIAN SẴN SÀNG GO-LIVE</span>
+            <span class="text-[10px] text-zinc-400 font-bold uppercase block">{{ $t('contact.calc.timeLabel') }}</span>
             <strong class="text-base text-zinc-900 font-extrabold block mt-1">
-              {{ selectedVol === '100 – 500 đơn/ngày' ? '3 – 5 Ngày làm việc' : (selectedVol === '500 – 2,500 đơn/ngày' ? '7 – 10 Ngày làm việc' : '2 – 3 Tuần Onsite') }}
+              {{ selectedVol === $t('contact.calc.v1') ? $t('contact.calc.time1') : (selectedVol === $t('contact.calc.v2') ? $t('contact.calc.time2') : $t('contact.calc.time3')) }}
             </strong>
-            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">Bao gồm nhập liệu danh mục SKU, layout mã vị trí kệ và hướng dẫn nhân viên kho thao tác trực tiếp.</p>
+            <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('contact.calc.timeDesc') }}</p>
             <div class="pt-4 mt-4 border-t border-zinc-200 text-xs text-zinc-600">
-              Hình thức: <strong>Online & Onsite 1 ngày</strong>
+              {{ $t('contact.calc.formLabel') }} <strong>{{ $t('contact.calc.formVal') }}</strong>
             </div>
           </div>
 
           <div class="p-6 rounded-2xl bg-amber-50/60 border border-amber-200">
-            <span class="text-[10px] text-amber-700 font-bold uppercase block">HIỆU QUẢ KỲ VỌNG ĐO LƯỜNG</span>
-            <strong class="text-base text-amber-700 font-extrabold block mt-1">Giảm 75% Sai Sót Nhặt Hàng</strong>
-            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">Tối ưu hóa hành trình nhặt (Pick & Pack), tự động in phiếu gửi đơn vận chuyển không cần nhập tay.</p>
+            <span class="text-[10px] text-amber-700 font-bold uppercase block">{{ $t('contact.calc.roiLabel') }}</span>
+            <strong class="text-base text-amber-700 font-extrabold block mt-1">{{ $t('contact.calc.roiTitle') }}</strong>
+            <p class="text-xs text-zinc-600 mt-2 leading-relaxed">{{ $t('contact.calc.roiDesc') }}</p>
             <div class="pt-4 mt-4 border-t border-amber-200 text-xs text-amber-900 font-bold">
-              Độ trễ xử lý đơn: &lt; 3 Phút / Đơn
+              {{ $t('contact.calc.roiRes') }}
             </div>
           </div>
         </div>
@@ -354,11 +355,11 @@
     <!-- 4. FAQ VỀ QUY TRÌNH TRIỂN KHAI -->
     <section class="py-20 bg-[#fafcff]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Giải Đáp Thắc Mắc</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">{{ $t('contact.faq.badge') }}</span>
         <h2 class="mt-2 text-3xl font-extrabold text-zinc-900 tracking-tight">
-          Câu Hỏi Thường Gặp Về Quy Trình Triển Khai
+          {{ $t('contact.faq.title') }}
         </h2>
-        <p class="mt-3 text-sm text-zinc-500">Mọi thông tin cần thiết giúp bạn an tâm chuyển dịch công nghệ số hóa kho vận cùng ecor.vn.</p>
+        <p class="mt-3 text-sm text-zinc-500">{{ $t('contact.faq.desc') }}</p>
 
         <div class="mt-10 space-y-3 text-left">
           <details 
@@ -381,12 +382,17 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import HeroCanvas from '@/components/HeroCanvas.vue'
+import { ref, reactive, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 defineEmits(['open-modal'])
 
+const { t } = useI18n()
 const submitted = ref(false)
-const selectedVol = ref('100 – 500 đơn/ngày')
+const selectedVol = ref('')
+import { onMounted } from 'vue'
+onMounted(() => { selectedVol.value = t('contact.calc.v1') })
 const selectedModules = ref(['wms'])
 const scale = ref('growth')
 
@@ -402,22 +408,10 @@ function handleSubmit() {
   submitted.value = true
 }
 
-const faqs = [
-  {
-    q: 'ecor.vn mất bao lâu để triển khai vào hệ thống kho sẵn có của chúng tôi?',
-    a: 'Đối với kho tiêu chuẩn dưới 5.000m², thời gian hoàn thiện cấu hình layout ô kệ, kết nối máy quét và đưa vào vận hành thực tế trung bình từ 3 – 5 ngày làm việc. Quá trình này không làm gián đoạn việc xuất nhập hàng ngày.'
-  },
-  {
-    q: 'Chúng tôi có cần mua thêm thiết bị máy móc chuyên dụng đặc thù không?',
-    a: 'Không bắt buộc. Bạn có thể tận dụng ngay điện thoại Android sẵn có của nhân viên kho để quét mã vạch qua camera. Khi muốn tối ưu tốc độ tối đa, ecor sẽ tư vấn các dòng máy quét PDA chuyên dụng phù hợp nhất với ngân sách.'
-  },
-  {
-    q: 'ecor có hỗ trợ tích hợp với phần mềm ERP / Kế toán hiện tại của doanh nghiệp không?',
-    a: 'Có. ecor cung cấp cổng Open API và hệ thống Webhook chuẩn RESTful cho phép đồng bộ tự động 2 chiều với SAP, Oracle NetSuite, Microsoft Dynamics, MISA AMIS, Fast, Bravo và các phần mềm nội bộ.'
-  },
-  {
-    q: 'Chính sách hỗ trợ kỹ thuật và bảo hành vận hành ra sao?',
-    a: 'Chúng tôi duy trì cam kết hỗ trợ kỹ thuật 24/7/365 qua kênh riêng Zalo/Hotline cho các sự cố khẩn cấp. Mỗi khách hàng đều có kỹ sư giải pháp đồng hành trực tiếp trong suốt quá trình vận hành.'
-  }
-]
+const faqs = computed(() => [
+  { q: t('contact.faq.q1'), a: t('contact.faq.a1') },
+  { q: t('contact.faq.q2'), a: t('contact.faq.a2') },
+  { q: t('contact.faq.q3'), a: t('contact.faq.a3') },
+  { q: t('contact.faq.q4'), a: t('contact.faq.a4') }
+])
 </script>

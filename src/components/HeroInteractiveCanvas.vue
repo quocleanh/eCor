@@ -4,7 +4,7 @@
     <div class="absolute top-0 left-0 w-full p-5 flex items-center justify-between text-xs z-10 pointer-events-none">
       <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 font-medium border border-amber-200/60 shadow-sm">
         <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"></span>
-        Vòng tuần hoàn vận hành liên tục
+        {{ $t('canvas.cycle') }}
       </span>
       <span class="text-[11px] font-semibold text-zinc-400">
         Real-time Sync
@@ -24,17 +24,19 @@
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
-        Chu trình khép kín không điểm nghẽn
+        {{ $t('canvas.closed') }}
       </span>
-      <span class="font-bold text-zinc-700">Độ trễ &lt; 0.5s</span>
+      <span class="font-bold text-zinc-700"><span v-html="$t('canvas.latency')"></span></span>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
+const { t } = useI18n()
 const router = useRouter()
 const containerRef = ref(null)
 const canvasRef = ref(null)
@@ -46,9 +48,9 @@ let height = 0
 let time = 0
 
 const nodes = [
-  { id: 'wms', label: '1. Kho Vận (WMS)', sub: 'Tồn kho & Pick-Pack', route: '/wms', color: '#fbbf24', angleOffset: -Math.PI / 6 },
-  { id: 'tms', label: '2. Đội Xe (TMS)', sub: 'Điều phối GPS & e-POD', route: '/tms', color: '#f59e0b', angleOffset: Math.PI / 2 },
-  { id: 'pos', label: '3. Bán Hàng (Omni)', sub: 'Shopee, TikTok, Store', route: '/pos', color: '#d97706', angleOffset: Math.PI + Math.PI / 6 }
+  { id: 'wms', label: t('canvas.wms'), sub: t('canvas.wmsSub'), route: '/wms', color: '#fbbf24', angleOffset: -Math.PI / 6 },
+  { id: 'tms', label: t('canvas.tms'), sub: t('canvas.tmsSub'), route: '/tms', color: '#f59e0b', angleOffset: Math.PI / 2 },
+  { id: 'pos', label: t('canvas.pos'), sub: t('canvas.posSub'), route: '/pos', color: '#d97706', angleOffset: Math.PI + Math.PI / 6 }
 ]
 
 const hoveredNode = ref(null)
@@ -144,7 +146,7 @@ const draw = () => {
   
   ctx.font = '500 10px system-ui, -apple-system, sans-serif'
   ctx.fillStyle = '#fde68a'
-  ctx.fillText('Đồng bộ 2 chiều', centerX, centerY + 18)
+  ctx.fillText(t('canvas.sync'), centerX, centerY + 18)
   ctx.restore()
   
   // Orbiting Nodes

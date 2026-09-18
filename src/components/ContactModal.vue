@@ -9,10 +9,10 @@
     >
       <div class="flex items-center justify-between mb-5">
         <div>
-          <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Khám Phá Sức Mạnh eCor</span>
+          <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">{{ $t('contactModal.tag') }}</span>
           <h3 class="text-xl sm:text-2xl font-extrabold text-zinc-900">{{ titleText }}</h3>
         </div>
-        <button @click="close" class="text-zinc-400 hover:text-zinc-700 p-2 rounded-lg" aria-label="Đóng modal">
+        <button @click="close" class="text-zinc-400 hover:text-zinc-700 p-2 rounded-lg" aria-label="{{ $t('contactModal.close') }}">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
@@ -25,33 +25,33 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h4 class="text-xl font-bold text-zinc-900 mb-2">Đăng Ký Thành Công!</h4>
+        <h4 class="text-xl font-bold text-zinc-900 mb-2">{{ $t('contactModal.successTitle') }}</h4>
         <p class="text-sm text-zinc-600 mb-6">
-          Chuyên viên giải pháp eCor sẽ liên hệ trực tiếp trong vòng <strong>10 phút</strong> để tư vấn và kích hoạt bản quyền demo miễn phí cho bạn.
+          <span v-html="$t('contactModal.successDesc')"></span>
         </p>
         <button
           @click="close"
           class="px-6 py-2.5 rounded-xl bg-amber-400 text-zinc-900 font-bold font-semibold text-sm hover:bg-amber-400 transition-colors"
         >
-          Đóng cửa sổ
+          {{ $t('contactModal.closeBtn') }}
         </button>
       </div>
 
       <form v-else @submit.prevent="handleSubmit" class="space-y-4 text-left">
         <div>
-          <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">Họ và tên *</label>
+          <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">{{ $t('contactModal.nameLabel') }}</label>
           <input
             v-model="form.name"
             type="text"
             required
-            placeholder="Ví dụ: Nguyễn Văn A"
+            :placeholder="$t('contactModal.namePlh')"
             class="w-full px-4 py-3 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 text-sm outline-none transition-all"
           />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">Số điện thoại *</label>
+            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">{{ $t('contactModal.phoneLabel') }}</label>
             <input
               v-model="form.phone"
               type="tel"
@@ -61,7 +61,7 @@
             />
           </div>
           <div>
-            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">Email công việc</label>
+            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">{{ $t('contactModal.emailLabel') }}</label>
             <input
               v-model="form.email"
               type="email"
@@ -73,35 +73,35 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">Tên doanh nghiệp</label>
+            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">{{ $t('contactModal.companyLabel') }}</label>
             <input
               v-model="form.company"
               type="text"
-              placeholder="Tên shop hoặc công ty"
+              :placeholder="$t('contactModal.companyPlh')"
               class="w-full px-4 py-3 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 text-sm outline-none transition-all"
             />
           </div>
           <div>
-            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">Giải pháp quan tâm</label>
+            <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">{{ $t('contactModal.solLabel') }}</label>
             <select
               v-model="form.module"
               class="w-full px-4 py-3 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 text-sm outline-none transition-all bg-white"
             >
-              <option value="Hệ thống ecor WMS - Quản lý kho thông minh">ecor WMS (Quản lý kho)</option>
-              <option value="Hệ thống ecor TMS - Điều phối vận tải">ecor TMS (Vận tải & Đội xe)</option>
-              <option value="ecor POS - Quản lý bán lẻ đa điểm">ecor POS (Bán hàng đa chuỗi)</option>
-              <option value="Omnichannel Hub & Đồng bộ sàn">Omnichannel (Đa kênh E-com)</option>
-              <option value="Trọn gói giải pháp Hợp nhất chuỗi cung ứng">Trọn gói Chuỗi Cung Ứng</option>
+              <option value="Hệ thống ecor WMS - Quản lý kho thông minh">{{ $t('contactModal.sol1') }}</option>
+              <option value="Hệ thống ecor TMS - Điều phối vận tải">{{ $t('contactModal.sol2') }}</option>
+              <option value="ecor POS - Quản lý bán lẻ đa điểm">{{ $t('contactModal.sol3') }}</option>
+              <option value="Omnichannel Hub & Đồng bộ sàn">{{ $t('contactModal.sol4') }}</option>
+              <option value="Trọn gói giải pháp Hợp nhất chuỗi cung ứng">{{ $t('contactModal.sol5') }}</option>
             </select>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">Quy mô hoặc yêu cầu cụ thể</label>
+          <label class="block text-xs font-bold text-zinc-700 uppercase tracking-wider mb-1.5">{{ $t('contactModal.reqLabel') }}</label>
           <textarea
             v-model="form.message"
             rows="2"
-            placeholder="Ví dụ: Đang có 3 cửa hàng, 1 kho tổng 2000m² và 10 xe tải vận chuyển..."
+            :placeholder="$t('contactModal.reqPlh')"
             class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 text-sm outline-none transition-all resize-none"
           ></textarea>
         </div>
@@ -116,7 +116,7 @@
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
-            <span>{{ isSubmitting ? 'Đang gửi thông tin...' : 'Gửi Yêu Cầu & Kích Hoạt Bản Demo Ngay' }}</span>
+            <span>{{ isSubmitting ? $t('contactModal.submitting') : $t('contactModal.submitBtn') }}</span>
           </button>
         </div>
 
@@ -125,13 +125,13 @@
             <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
-            Bảo mật chuẩn ISO 27001
+            {{ $t('contactModal.secure') }}
           </span>
           <span class="flex items-center gap-1">
             <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
-            14 ngày dùng thử miễn phí
+            {{ $t('contactModal.trial') }}
           </span>
         </div>
       </form>
@@ -180,7 +180,7 @@ watch(() => props.isOpen, (val) => {
 })
 
 const titleText = computed(() => {
-  return props.initialType === 'pricing' ? 'Nhận Báo Giá Chi Tiết' : 'Đăng Ký Tư Vấn & Trải Nghiệm Demo'
+  return props.initialType === 'pricing' ? t('contactModal.priceBtn') : t('contactModal.consultBtn')
 })
 
 function close() {

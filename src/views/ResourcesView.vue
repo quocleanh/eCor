@@ -2,19 +2,20 @@
   <div class="bg-[#fafcff] text-zinc-800">
     <!-- HERO -->
     <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden text-center">
+      <HeroCanvas :opacity="0.65" :particleCount="52" />
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-amber-100/60 via-amber-50/30 to-transparent blur-3xl pointer-events-none -z-10"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-700 shadow-sm">
-          <span>📚 Trung Tâm Tài Nguyên & Nhà Phát Triển</span>
+          <span>{{ $t('resources.hero.badge') }}</span>
         </div>
 
         <h1 class="mt-6 text-3xl sm:text-5xl lg:text-[48px] font-extrabold text-zinc-900 tracking-tight leading-[1.2] max-w-4xl mx-auto">
-          Tài Liệu Kỹ Thuật, Hướng Dẫn & <span class="text-amber-600">Open API ecor.vn</span>
+          {{ $t('resources.hero.title') }} <span class="text-amber-600">{{ $t('resources.hero.titleHighlight') }}</span>
         </h1>
 
         <p class="mt-4 text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed">
-          Tất cả tài liệu hướng dẫn vận hành kho bãi, định tuyến xe tải, quy chuẩn kết nối thiết bị phần cứng và tài liệu API RESTful dành cho kỹ sư phát triển.
+          {{ $t('resources.hero.desc') }}
         </p>
 
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -22,13 +23,13 @@
             href="#api-docs"
             class="px-8 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-sm shadow-md transition-all"
           >
-            Tài Liệu Open API 3.0 ↓
+            {{ $t('resources.hero.discover') }}
           </a>
           <router-link
             to="/lien-he"
             class="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-700 font-semibold text-sm border border-zinc-200 shadow-sm transition-all"
           >
-            Liên Hệ Chuyên Gia Hỗ Trợ
+            {{ $t('resources.hero.consult') }}
           </router-link>
         </div>
       </div>
@@ -43,14 +44,14 @@
             <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl">
               ⚡
             </div>
-            <h3 class="text-xl font-bold text-zinc-900">Tài Liệu API & Webhook</h3>
+            <h3 class="text-xl font-bold text-zinc-900">{{ $t('resources.grid.b1Title') }}</h3>
             <p class="text-xs text-zinc-500 leading-relaxed">
-              Tích hợp hệ thống nội bộ của bạn với ecor qua RESTful API chuẩn OpenAPI 3.0. Hỗ trợ xác thực Bearer Token, Webhook real-time sự kiện kho và đơn hàng.
+              {{ $t('resources.grid.b1Desc') }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 font-medium">
-              <li class="flex items-center gap-2">✓ API Quản lý Tồn kho & Ô Kệ (Inventory & Bin)</li>
-              <li class="flex items-center gap-2">✓ API Đồng bộ Đơn hàng & Lệnh xuất (Orders & Shipments)</li>
-              <li class="flex items-center gap-2">✓ Webhook cảnh báo biến động tồn & trạng thái xe GPS</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b1F1') }}</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b1F2') }}</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b1F3') }}</li>
             </ul>
           </div>
           <div class="pt-6 mt-6 border-t border-zinc-100">
@@ -58,7 +59,7 @@
               @click="$emit('open-modal', { type: 'demo', moduleName: 'Tài Liệu API eCor' })"
               class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1"
             >
-              <span>Xem tài liệu Swagger & Postman</span>
+              <span>{{ $t('resources.grid.b1Btn') }}</span>
               <span>→</span>
             </button>
           </div>
@@ -70,19 +71,19 @@
             <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl">
               📱
             </div>
-            <h3 class="text-xl font-bold text-zinc-900">Cấu Hình Thiết Bị & Phần Cứng</h3>
+            <h3 class="text-xl font-bold text-zinc-900">{{ $t('resources.grid.b2Title') }}</h3>
             <p class="text-xs text-zinc-500 leading-relaxed">
-              Hướng dẫn kết nối máy in vận đơn K80, máy quét mã vạch 1D/2D, máy kiểm kho PDA Android chuyên dụng và cân điện tử RS232 chỉ trong vài bước.
+              {{ $t('resources.grid.b2Desc') }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 font-medium">
-              <li class="flex items-center gap-2">✓ Cài đặt ứng dụng ecor PDA cho Zebra, Sunmi, Urovo</li>
-              <li class="flex items-center gap-2">✓ Cấu hình in nhãn Barcode Code128 / GS1 tự động</li>
-              <li class="flex items-center gap-2">✓ Khắc phục sự cố kết nối máy in mạng LAN / Wifi</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b2F1') }}</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b2F2') }}</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b2F3') }}</li>
             </ul>
           </div>
           <div class="pt-6 mt-6 border-t border-zinc-100">
             <router-link to="/lien-he" class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1">
-              <span>Yêu cầu hỗ trợ kỹ thuật Onsite</span>
+              <span>{{ $t('resources.grid.b2Btn') }}</span>
               <span>→</span>
             </router-link>
           </div>
@@ -94,14 +95,14 @@
             <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl">
               📖
             </div>
-            <h3 class="text-xl font-bold text-zinc-900">Cẩm Nang Quản Trị Logistics</h3>
+            <h3 class="text-xl font-bold text-zinc-900">{{ $t('resources.grid.b3Title') }}</h3>
             <p class="text-xs text-zinc-500 leading-relaxed">
-              Bộ tài liệu hướng dẫn chuẩn hóa sơ đồ mặt bằng kho hàng, phân bổ vị trí theo nguyên tắc ABC và xây dựng kịch bản nhặt hàng Wave Picking tối ưu quãng đường.
+              {{ $t('resources.grid.b3Desc') }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 font-medium">
-              <li class="flex items-center gap-2">✓ Mẫu layout kho chuẩn 500m² – 10.000m²</li>
-              <li class="flex items-center gap-2">✓ Quy trình kiểm kê định kỳ không gián đoạn kho</li>
-              <li class="flex items-center gap-2">✓ Biểu mẫu tính toán chi phí vận hành xe tải TMS</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b3F1') }}</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b3F2') }}</li>
+              <li class="flex items-center gap-2">✓ {{ $t('resources.grid.b3F3') }}</li>
             </ul>
           </div>
           <div class="pt-6 mt-6 border-t border-zinc-100">
@@ -109,7 +110,7 @@
               @click="$emit('open-modal', { type: 'demo', moduleName: 'Cẩm nang Logistics eCor' })"
               class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1"
             >
-              <span>Tải trọn bộ tài liệu (PDF)</span>
+              <span>{{ $t('resources.grid.b3Btn') }}</span>
               <span>→</span>
             </button>
           </div>
@@ -118,15 +119,15 @@
 
       <!-- FAQ Accordion -->
       <div class="mt-20 max-w-4xl mx-auto text-left">
-        <h3 class="text-2xl font-extrabold text-zinc-900 text-center mb-8">Câu Hỏi Thường Gặp Về Tích Hợp</h3>
+        <h3 class="text-2xl font-extrabold text-zinc-900 text-center mb-8">{{ $t('resources.faq.title') }}</h3>
         <div class="space-y-3">
           <div class="p-5 rounded-2xl bg-white border border-zinc-200">
-            <h4 class="font-bold text-sm text-zinc-900">Thời gian tạo tài khoản Sandbox để thử nghiệm API là bao lâu?</h4>
-            <p class="mt-2 text-xs text-zinc-600 leading-relaxed">Ngay lập tức sau khi đăng ký tài khoản dùng thử tại trang Đăng Ký, bạn sẽ nhận được API Key và quyền truy cập môi trường Sandbox với đầy đủ dữ liệu mẫu để thử nghiệm.</p>
+            <h4 class="font-bold text-sm text-zinc-900">{{ $t('resources.faq.q1') }}</h4>
+            <p class="mt-2 text-xs text-zinc-600 leading-relaxed">{{ $t('resources.faq.a1') }}</p>
           </div>
           <div class="p-5 rounded-2xl bg-white border border-zinc-200">
-            <h4 class="font-bold text-sm text-zinc-900">ecor có giới hạn số lượt gọi API (Rate Limit) không?</h4>
-            <p class="mt-2 text-xs text-zinc-600 leading-relaxed">Gói Starter hỗ trợ 2.000 calls/phút, gói Professional hỗ trợ 10.000 calls/phút và gói Enterprise Dedicated Server không giới hạn số lượng gọi API.</p>
+            <h4 class="font-bold text-sm text-zinc-900">{{ $t('resources.faq.q2') }}</h4>
+            <p class="mt-2 text-xs text-zinc-600 leading-relaxed">{{ $t('resources.faq.a2') }}</p>
           </div>
         </div>
       </div>
@@ -135,5 +136,10 @@
 </template>
 
 <script setup>
+import HeroCanvas from '@/components/HeroCanvas.vue'
+import { useI18n } from 'vue-i18n'
+
 defineEmits(['open-modal'])
+
+const { t } = useI18n()
 </script>
