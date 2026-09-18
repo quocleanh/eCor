@@ -144,6 +144,7 @@
             </li>
           </ul>
         </div>
+
       </div>
 
       <!-- Bottom Bar -->
@@ -154,12 +155,12 @@
         </div>
 
         <div class="flex items-center gap-6">
-          <router-link to="/tai-nguyen" class="hover:text-zinc-600">{{ $t('footer.privacy') }}</router-link>
-          <router-link to="/tai-nguyen" class="hover:text-zinc-600">{{ $t('footer.security') }}</router-link>
-          <span class="inline-flex items-center gap-1.5 text-amber-600">
+          <router-link to="/chinh-sach-bao-mat" class="hover:text-zinc-600">{{ $t('footer.privacy') }}</router-link>
+          <router-link to="/dieu-khoan-su-dung" class="hover:text-zinc-600">{{ $t('footer.security') }}</router-link>
+          <router-link to="/cam-ket-sla" class="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 transition-colors">
             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             {{ $t('footer.sla') }}
-          </span>
+          </router-link>
         </div>
       </div>
     </div>

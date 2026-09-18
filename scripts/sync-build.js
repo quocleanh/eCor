@@ -55,11 +55,11 @@ if (fs.existsSync(distLogo)) {
   console.log('✅ Đã đồng bộ ecor-logo.png ra root');
 }
 
-const distFavicon = path.join(distDir, 'favicon.jpg');
-const rootFavicon = path.join(rootDir, 'favicon.jpg');
+const distFavicon = path.join(distDir, 'favicon.png');
+const rootFavicon = path.join(rootDir, 'favicon.png');
 if (fs.existsSync(distFavicon)) {
   fs.copyFileSync(distFavicon, rootFavicon);
-  console.log('✅ Đã đồng bộ favicon.jpg ra root');
+  console.log('✅ Đã đồng bộ favicon.png ra root');
 }
 
 // 4. Đảm bảo file 404.html và CNAME có ở root

@@ -26,13 +26,14 @@
   <meta name="twitter:image" content="https://ecor.vn/og-image.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="/favicon.png">
+  <link rel="icon" type="image/png" href="/favion.png">
 
   <!-- GitHub Pages SPA Redirect Handler -->
   <script>
     (function(l) {
       if (l.search[1] === '/' ) {
-        var decoded = l.search.slice(1).split('&').map(function(s) {           return s.replace(/~and~/g, '&')
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
         }).join('?');
         window.history.replaceState(null, null,
             l.pathname.slice(0, -1) + decoded + l.hash
@@ -45,12 +46,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-DfGEMGgO.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-ubtXSumT.css">
 </head>
 
 <body class="bg-[#fafcff] text-slate-800 font-sans antialiased selection:bg-sky-600 selection:text-white">
   <div id="app"></div>
-
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

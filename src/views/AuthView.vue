@@ -71,7 +71,7 @@
           <form @submit.prevent="handleAuth" class="space-y-4 text-xs">
             <div v-if="mode === 'register'">
               <label class="block font-bold text-zinc-700 mb-1">Tên doanh nghiệp / Chuỗi cửa hàng *</label>
-              <input v-model="company" required placeholder="Công ty TNHH Logistics Vận Hành" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none" />
+              <input v-model="company" required placeholder="Thương hiệu của bạn" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none" />
             </div>
 
             <div>

@@ -34,8 +34,8 @@
     "prodPos": "eCor POS Sales",
     "prodMulti": "Multi-point Warehouse",
     "prodEcom": "Multi-platform E-com Sync",
-    "solRetail": "Retail & FMCG Chains",
-    "sol3pl": "3PL Logistics Enterprises",
+    "solRetail": "Retail & Small Retail Chains",
+    "sol3pl": "Small Transporters Small Chains",
     "solEcom": "E-commerce",
     "solCold": "Cold Storage & Pharmaceuticals",
     "solMfg": "Manufacturing & Distribution",
@@ -47,7 +47,11 @@
     "copyright": "© 2025 eCor Platform. All rights reserved.",
     "privacy": "Privacy Policy",
     "security": "System Security",
-    "sla": "Server System Operating at 99.98% SLA"
+    "sla": "Server System Operating at 99.98% SLA",
+    "legal": "Legal",
+    "legalPrivacy": "Privacy Policy",
+    "legalTerms": "Terms of Service",
+    "legalRefund": "Refund Policy"
   },
   "home": {
     "hero": {
@@ -57,7 +61,7 @@
       "register": "Book a Demo",
       "demo": "Watch 2-min Demo",
       "proof": "trusted nationwide",
-      "proofNum": "250+ enterprises"
+      "proofNum": "Thousands of small businesses"
     },
     "core": {
       "badge": "Core Solution Blocks",
@@ -125,7 +129,7 @@
         "link": "ecor WMS Details"
       },
       "tmsTab": {
-        "badge": "AI Fleet & Dispatching",
+        "badge": "AI Delivery Team & Dispatching",
         "title": "Optimize every route, fill 94.5% of vehicle load",
         "desc": "AI routing algorithm automatically groups orders by geography, calculates CBM volume, minimizes empty runs and digitizes delivery docs via e-POD.",
         "stat1Label": "Reduce Fuel Cost",
@@ -172,7 +176,7 @@
     "hero": {
       "badge": "ECOR WMS 4.0 • NEXT-GEN WAREHOUSE PLATFORM",
       "title": "Optimize Every Square Meter, Pinpoint Accuracy & Cut 60% Operating Costs",
-      "desc": "Advanced cloud WMS for omnichannel retail, FMCG distributors, and 3PL Logistics. Automate from Inbound to Outbound with 99.98% inventory accuracy.",
+      "desc": "Advanced cloud WMS for omnichannel retail, Small Retail distributors, and Small Transporters. Automate from Inbound to Outbound with 99.98% inventory accuracy.",
       "demo": "Experience Live WMS Demo →",
       "video": "Watch 3D Simulation Video",
       "trust1": "TRUSTED BY 250+ LOGISTICS CENTERS",
@@ -219,7 +223,7 @@
       },
       "p3": {
         "title": "Strict Lot & Expiry Control (FIFO / FEFO / LEFO)",
-        "desc": "Solve the issue of near-expiry and expired stock causing millions of dollars in losses for FMCG, Pharma, and Fresh Food supply chains.",
+        "desc": "Solve the issue of near-expiry and expired stock causing millions of dollars in losses for Small Retail, Pharma, and Fresh Food supply chains.",
         "f1": "System automatically forces picking based on expiration (First Expired First Out)",
         "f2": "Real-time near-expiry alerts (30 – 60 – 90 days) sent to the sales team"
       },
@@ -251,14 +255,14 @@
         "desc": "Allocate picking staff via PDA along the shortest route. Packing stations verify barcodes one last time before labeling."
       },
       "s5": {
-        "title": "Outbound & 3PL Handover",
+        "title": "Outbound & Owner-operator Handover",
         "desc": "Scan handover documents for shippers/trucks. Auto-sign e-PODs and sync order status to retail channels instantly."
       }
     },
     "models": {
       "badge": "High Adaptability",
       "title": "Deeply Tailored for Every Business Model",
-      "desc": "Whether you run a high-speed e-commerce hub, a sensitive cold chain, or a multi-tenant 3PL warehouse, ecor WMS has a specialized script.",
+      "desc": "Whether you run a high-speed e-commerce hub, a sensitive cold chain, or a multi-tenant Owner-operator warehouse, ecor WMS has a specialized script.",
       "m1": {
         "tag": "Retail & E-Commerce",
         "title": "Omnichannel Retail & E-Commerce Warehouse",
@@ -269,8 +273,8 @@
         "commit": "SLA: < 2 minutes / order"
       },
       "m2": {
-        "tag": "FMCG & Cold Storage",
-        "title": "FMCG Distribution & Cold Storage",
+        "tag": "Small Retail & Cold Storage",
+        "title": "Small Retail Distribution & Cold Storage",
         "desc": "Strict control of temperature and humidity ranges in specialized zones. Tight export date management, HACCP compliance, and full supply chain lot traceability.",
         "f1": "IoT Temperature Alerts",
         "f2": "Absolute FEFO Rules",
@@ -278,13 +282,13 @@
         "commit": "Food Safety & Medical Standards"
       },
       "m3": {
-        "tag": "3PL Logistics",
-        "title": "Multi-Tenant 3PL Warehouse",
+        "tag": "Small Transporters",
+        "title": "Multi-Tenant Owner-operator Warehouse",
         "desc": "Multi-tenant architecture allows managing hundreds of shippers on a single interface. Segregate data and configure automated CBM storage billing.",
         "f1": "Dedicated Customer Portal",
         "f2": "Daily CBM Storage Billing",
         "f3": "Automated Billing Reports",
-        "commit": "Save 80% of 3PL Billing Time"
+        "commit": "Save 80% of Owner-operator Billing Time"
       }
     },
     "compare": {
@@ -333,8 +337,8 @@
       "emailLabel": "Work Email *",
       "typeLabel": "Warehouse Model to Survey",
       "type1": "Retail & E-Commerce",
-      "type2": "FMCG & Cold Storage",
-      "type3": "Multi-Tenant 3PL",
+      "type2": "Small Retail & Cold Storage",
+      "type3": "Multi-Tenant Owner-operator",
       "type4": "Manufacturing & B2B",
       "areaLabel": "Estimated Warehouse Area",
       "area1": "Under 1,000 m²",
@@ -347,7 +351,7 @@
   "tms": {
     "hero": {
       "badge": "ecor TMS 4.0 • Optimal Route Dispatching",
-      "title": "Optimize Every Route, Monitor Fleets & Digitize Delivery Real-Time",
+      "title": "Optimize Every Route, Monitor Delivery Teams & Digitize Delivery Real-Time",
       "desc": "Smart multi-stop batching algorithm, automatic vehicle load distribution, fuel cost control, and e-POD driver app on a single unified platform.",
       "consult": "Register for TMS Solution Consulting →",
       "demo": "Watch Route Dispatching Demo",
@@ -390,8 +394,8 @@
         "f3": "Reduce routing time by 35%"
       },
       "p2": {
-        "tag": "02 • Fleet Hub",
-        "title": "Fleet & Subcontractor (3PL) Management",
+        "tag": "02 • Delivery Team Hub",
+        "title": "Delivery Team & Subcontractor (Owner-operator) Management",
         "desc": "Closely monitor fuel quotas for each route, integrate fuel sensors, and automate alerts for oil changes, tire maintenance, and inspection deadlines for both internal and satellite fleets.",
         "f1": "Prevent Fuel Loss",
         "f2": "Subcontractor Quota Management",
@@ -432,14 +436,14 @@
       "title": "Tailored for Every Transport Model in Vietnam",
       "desc": "Flexible configuration designed to solve the specific challenges of each supply chain segment.",
       "m1": {
-        "tag": "FMCG & Retail",
+        "tag": "Small Retail & Retail",
         "title": "Fast-Moving Consumer Goods Distributors",
         "desc": "Consolidate thousands of small orders to grocery stores and supermarkets according to strict opening hours while avoiding urban traffic jams.",
         "commit": "Reduce delivery time by 25%"
       },
       "m2": {
         "tag": "Materials & Construction",
-        "title": "Construction Transport Fleets",
+        "title": "Construction Transport Delivery Teams",
         "desc": "Control heavy vehicle payloads, permitted routing for road/bridge limits, and delivery schedules aligned with construction progress.",
         "commit": "100% compliance with bridge/road loads"
       },
@@ -450,7 +454,7 @@
         "commit": "Temperature loss under 0.1%"
       },
       "m4": {
-        "tag": "3PL & 4PL Logistics",
+        "tag": "Owner-operator & 4PL Logistics",
         "title": "Transport Service Providers",
         "desc": "Multi-tenant access control, providing separate tracking portals for each shipper and automating diverse subcontractor billing.",
         "commit": "Increase dispatch capacity by 300%"
@@ -458,8 +462,8 @@
     },
     "cta": {
       "badge": "Partner in Transport Digital Transformation",
-      "title": "Ready to Cut 20%+ of Your Enterprise Transport Costs?",
-      "desc": "ecor's supply chain experts are ready to survey your fleet operations and establish the most optimal digital transformation roadmap for your enterprise.",
+      "title": "Ready to Cut 20%+ of Your Small Chain Transport Costs?",
+      "desc": "ecor's supply chain experts are ready to survey your fleet operations and establish the most optimal digital transformation roadmap for your small business.",
       "btn": "Send TMS 4.0 Consultation Request →",
       "hotline": "Hotline:"
     }
@@ -580,7 +584,7 @@
       "badge": "INDUSTRY-SPECIFIC DEEP SOLUTION ECOSYSTEM",
       "title": "Solving Supply Chain Operations",
       "titleHighlight": "Tailored for Your Business",
-      "desc": "From omnichannel retail, FMCG cold storage, 3PL transport to large B2B distribution chains. ecor seamlessly connects warehousing (WMS), transport (TMS), and retail (POS) on a single Cloud platform.",
+      "desc": "From omnichannel retail, Small Retail cold storage, Owner-operator transport to large B2B distribution chains. ecor seamlessly connects warehousing (WMS), transport (TMS), and retail (POS) on a single Cloud platform.",
       "discover": "Discover Industry Solutions ↓",
       "consult": "Book a Business Survey (Free)"
     },
@@ -656,7 +660,7 @@
       },
       "m2": {
         "tag": "Cold Chain & Fresh Food",
-        "title": "FMCG, Food & Cold Chain",
+        "title": "Small Retail, Food & Cold Chain",
         "desc": "Standardized management by room/freeze/chill temperatures, FEFO mechanism automatically protects the expiry value of every lot.",
         "challenge": "Strict shelf-life management, temperature variations causing damage to frozen goods.",
         "solution": "Auto-select FEFO/FIFO lots, 30-60 day near-expiry alerts, 24/7 IoT temperature sensor connections.",
@@ -664,8 +668,8 @@
         "resultValue": "100% Traceability"
       },
       "m3": {
-        "tag": "Transport & Service Providers • Freight & 3PL Logistics",
-        "title": "Transport & 3PL / 4PL Logistics Providers",
+        "tag": "Transport & Service Providers • Freight & Small Transporters",
+        "title": "Transport & Owner-operator / 4PL Logistics Providers",
         "desc": "Multi-client platform with dedicated portals for partners to transparently check inventory, storage fees, and transport costs.",
         "challenge": "Mixed multi-client inventory, bulky hard-to-control subcontractor fleets, risk of losing paper documents.",
         "solution": "Multi-tenant authorization, load optimization algorithm reaching 94.5%, e-POD digital signing via mobile app.",
@@ -673,7 +677,7 @@
         "resultValue": "0 Dispatch Staff Added"
       },
       "m4": {
-        "tag": "Large Distribution Corp • B2B Enterprise Distribution",
+        "tag": "Large Distribution Corp • B2B Small Chain Distribution",
         "title": "Manufacturing & Multi-branch B2B Distribution",
         "desc": "Consolidate factory warehouses, regional transit hubs, and Tier 1 dealers into a single inventory view, seamlessly connecting with core ERPs.",
         "challenge": "Cumbersome inter-warehouse transfers, weeks-late data reconciliation with ERP accounting.",
@@ -685,7 +689,7 @@
     "testimonials": {
       "badge": "What Clients Say About ecor",
       "title": "Trusted by Industry Leaders",
-      "desc": "Over 450+ distribution and retail enterprises in Vietnam run their daily supply chains on ecor.",
+      "desc": "Over 450+ distribution and retail small businesss in Vietnam run their daily supply chains on ecor.",
       "t1": {
         "quote": "\"ecor WMS helped us survive Black Friday with a record 22,000 orders without any bottlenecks or missing orders on TikTok Shop. The wave picking system reduced warehouse staff travel by 40%.\"",
         "name": "Tran Nhat Nam",
@@ -697,9 +701,9 @@
         "role": "Head of Supply Chain - Dairy Milk Corp"
       },
       "t3": {
-        "quote": "\"Our 3PL clients are extremely satisfied because they can look up their own inventory via a dedicated portal. TMS dispatching reduced empty runs by 18%, boosting overall fleet efficiency.\"",
+        "quote": "\"Our Owner-operator clients are extremely satisfied because they can look up their own inventory via a dedicated portal. TMS dispatching reduced empty runs by 18%, boosting overall fleet efficiency.\"",
         "name": "Vo Hoang Quan",
-        "role": "Deputy General Director - VinaTrans 3PL"
+        "role": "Deputy General Director - VinaTrans Owner-operator"
       }
     },
     "cta": {
@@ -751,10 +755,10 @@
     },
     "security": {
       "title": "Data Security & Integrity Commitment",
-      "desc": "Customer data, revenue, and accounting books are the top-secret assets of your enterprise. eCor commits:",
+      "desc": "Customer data, revenue, and accounting books are the top-secret assets of your small business. eCor commits:",
       "f1": "256-bit SSL/TLS transmission encryption and automated hourly backups.",
       "f2": "Never share or commercialize customer data with third parties.",
-      "f3": "Provide Private Cloud deployment options for large enterprises.",
+      "f3": "Provide Private Cloud deployment options for large small businesss.",
       "btn": "Contact Tech & Security Department →"
     }
   },
@@ -762,7 +766,7 @@
     "hero": {
       "badge": "● Transparent Pricing • No Hidden Costs • 99.98% SLA",
       "title": "Smart Investment, Cost Optimization for Any Operation Scale",
-      "desc": "Choose a flexible solution package for startups, fast-growing retail chains, to large logistics enterprises. Save 20% instantly with annual billing.",
+      "desc": "Choose a flexible solution package for startups, fast-growing retail chains, to large logistics small businesss. Save 20% instantly with annual billing.",
       "monthly": "Bill Monthly",
       "annual": "Bill Annually",
       "annualTag": "SAVE 20% + FREE SETUP",
@@ -792,7 +796,7 @@
         "featured": "⭐ Most Popular",
         "tag": "Growth",
         "name": "ecor Professional",
-        "desc": "Multi-branch retail chains, mid-sized e-commerce warehouses, FMCG manufacturing and distribution.",
+        "desc": "Multi-branch retail chains, mid-sized e-commerce warehouses, Small Retail manufacturing and distribution.",
         "monthUnit": "VND / month",
         "annualNote": "30,600,000 VND billed annually (save 7.6 million)",
         "monthlyNote": "38,280,000 VND billed yearly (save 9.6 million)",
@@ -808,20 +812,20 @@
         "btn": "Register for Growth plan →"
       },
       "t3": {
-        "tag": "Enterprise",
-        "name": "ecor Enterprise",
-        "desc": "Large distribution corporations, 3PL/4PL logistics hubs, retail chains over 20 branches.",
+        "tag": "Small Chain",
+        "name": "ecor Small Chain",
+        "desc": "Large distribution corporations, Owner-operator/4PL logistics hubs, retail chains over 20 branches.",
         "price": "Custom",
         "priceNote": "Quoted based on order volume and process specifics",
-        "include": "Enterprise-grade privileges:",
+        "include": "Small Chain-grade privileges:",
         "f1": "Unlimited warehouses & operational accounts",
-        "f2": "Multi-tenant architecture dedicated for 3PL multi-clients",
+        "f2": "Multi-tenant architecture dedicated for Owner-operator multi-clients",
         "f3": "AI routing algorithm for automated multi-point TMS delivery",
         "f4": "Open API & Webhook ERP integration: SAP, Oracle, MISA, Bravo",
         "f5": "Private Cloud or On-premise infrastructure options",
         "f6": "99.98% SLA uptime commitment with financial compensation",
         "f7": "Dedicated 1-on-1 solution engineer for onsite rollout",
-        "btn": "Consult Enterprise solution"
+        "btn": "Consult Small Chain solution"
       }
     },
     "addons": {
@@ -851,11 +855,11 @@
       "q1": "Can I change my service plan as my company grows?",
       "a1": "Absolutely. The eCor system supports upgrading or adding warehouses, trucks, or user accounts at any time. The difference will be automatically calculated and prorated based on the remaining actual usage days in the billing cycle.",
       "q2": "How are Onsite deployment and staff training costs calculated?",
-      "a2": "For the annual Professional and Enterprise plans, eCor offers a free standard onboarding package worth 15,000,000 VND, including online training and system setup guidance. In cases requiring on-site surveys and deployment for several days, costs will be transparently agreed upon based on the location.",
+      "a2": "For the annual Professional and Small Chain plans, eCor offers a free standard onboarding package worth 15,000,000 VND, including online training and system setup guidance. In cases requiring on-site surveys and deployment for several days, costs will be transparently agreed upon based on the location.",
       "q3": "Is ecor compatible with existing Barcode scanners / PDAs?",
       "a3": "Yes. ecor WMS and POS applications support all Android-running devices (Zebra, Honeywell, Datalogic, Sunmi, Urovo...) as well as wireless Bluetooth or wired USB barcode scanners connected directly to a computer.",
       "q4": "How is our logistics and customer data secured?",
-      "a4": "Your enterprise data is encrypted with AES-256 at rest and TLS 1.3 in transit, hosted on ISO/IEC 27001-certified cloud infrastructure with daily automated backups and a commitment never to share it with third parties."
+      "a4": "Your small business data is encrypted with AES-256 at rest and TLS 1.3 in transit, hosted on ISO/IEC 27001-certified cloud infrastructure with daily automated backups and a commitment never to share it with third parties."
     },
     "cta": {
       "title": "Not Sure Which Plan Fits Your Business Model?",
@@ -896,7 +900,7 @@
       "title": "Expert Consulting Team",
       "loc": "Hanoi & Saigon",
       "e1Role": "Head of WMS Solutions",
-      "e1Desc": "8+ years deploying retail & 3PL systems",
+      "e1Desc": "8+ years deploying retail & Owner-operator systems",
       "e2Role": "Senior TMS Specialist",
       "e2Desc": "Omnichannel routing and transport optimization",
       "e3Role": "Chief ERP & API Engineer",
@@ -931,7 +935,7 @@
       "sc1Desc": "< 500m² or 1–5 trucks",
       "sc2Title": "Growing",
       "sc2Desc": "500 – 2,000m² / 15 trucks",
-      "sc3Title": "Large Enterprise",
+      "sc3Title": "Large Small Chain",
       "sc3Desc": "> 2,000m² / Multiple hubs",
       "noteLabel": "Special requests notes (Optional)",
       "notePl": "E.g., Need sync with Honeywell handheld scanners, e-invoice connection...",
@@ -954,7 +958,7 @@
       "t2": "ecor Professional Suite",
       "d2": "Includes optimized Wave picking, TMS dispatch, and automated multi-channel sync.",
       "u2": "15 – 30 Staff",
-      "t3": "ecor Enterprise Cloud",
+      "t3": "ecor Small Chain Cloud",
       "d3": "Dedicated Private Cloud infrastructure, handles millions of orders seamlessly.",
       "u3": "Unlimited",
       "uLabel": "Recommended users:",
@@ -986,17 +990,17 @@
   },
   "customers": {
     "hero": {
-      "badge": "● Trusted by Over 450+ Top Enterprises",
+      "badge": "● Trusted by Over 450+ Top Small Chains",
       "title": "Accompanying Brands to",
       "titleHighlight": "Breakthrough Supply Chain Operations",
-      "desc": "Discover how Vietnam's leading retail, 3PL logistics, and distribution chains optimize costs, speed up order processing, and comprehensively digitize with ecor.",
+      "desc": "Discover how Vietnam's leading retail, Owner-operator logistics, and distribution chains optimize costs, speed up order processing, and comprehensively digitize with ecor.",
       "discover": "Discover 3 typical stories ↓",
       "consult": "Book solution consultation"
     },
     "metrics": {
       "m1": {
         "val": "450+",
-        "title": "Large-scale Enterprises",
+        "title": "Large-scale Small Chains",
         "desc": "Successfully deployed nationwide."
       },
       "m2": {
@@ -1011,7 +1015,7 @@
       },
       "m4": {
         "val": "35% – 60%",
-        "title": "Reduced Warehouse & Fleet Costs",
+        "title": "Reduced Warehouse & Delivery Team Costs",
         "desc": "Optimized routing and warehouse staff."
       }
     },
@@ -1020,8 +1024,8 @@
       "title": "Real-world Application Cases",
       "filterAll": "All stories",
       "filterRetail": "Retail & E-Commerce",
-      "filterCold": "Cold Chain & FMCG",
-      "filter3PL": "Logistics & 3PL",
+      "filterCold": "Cold Chain & Small Retail",
+      "filterOwner-operator": "Logistics & Owner-operator",
       "c1": {
         "tag": "Retail & E-Commerce",
         "code": "CS-2024-08",
@@ -1046,10 +1050,10 @@
         "imgNote2": "45 connected branches"
       },
       "c2": {
-        "tag": "Cold Chain & FMCG",
+        "tag": "Cold Chain & Small Retail",
         "code": "CS-2024-11",
         "title": "GreenFarm Fresh Food Supply Chain",
-        "infra": "Scale: 3 multi-temp cold storage hubs & Fleet of 25 specialized trucks",
+        "infra": "Scale: 3 multi-temp cold storage hubs & Delivery Team of 25 specialized trucks",
         "challengeLabel": "Initial challenge:",
         "challengeDesc": "High rate of near-expiry fresh food spoilage; manually dispatched trucks often missed supermarket golden hours; fuel costs spiked 18% above norm.",
         "solutionLabel": "Solution from ecor:",
@@ -1069,7 +1073,7 @@
         "imgNote2": "25 trucks monitored by GPS/e-POD"
       },
       "c3": {
-        "tag": "Logistics & 3PL",
+        "tag": "Logistics & Owner-operator",
         "code": "CS-2024-03",
         "title": "VinaLogistics Third-Party Logistics Provider",
         "infra": "Facility: 18,000 m² distribution center • Serving 80+ client partners",
@@ -1077,7 +1081,7 @@
         "challengeDesc": "Decentralized management of multiple clients (Multi-client) with different storage rules; accounting team took 3-4 days at month-end to finalize storage and handling fees manually via Excel.",
         "solutionLabel": "Solution from ecor:",
         "solutionDesc": "Applied ecor Multi-Tenant WMS architecture, equipped with PDA scanners encoding pallet locations; provided Customer Portal for clients to proactively create inbound/outbound orders and look up fees.",
-        "quote": "\"Since switching to ecor, our 3PL clients can view their inventory and service costs instantly. Our team no longer works overnight overtime every month-end reconciliation period.\"",
+        "quote": "\"Since switching to ecor, our Owner-operator clients can view their inventory and service costs instantly. Our team no longer works overnight overtime every month-end reconciliation period.\"",
         "author": "Doan Van Thinh — Chief Executive Officer - VinaLogistics",
         "r1Title": "FEE REPORT EXPORT",
         "r1Val": "5 Mins",
@@ -1111,13 +1115,13 @@
       "p2Name": "GreenFarm Corp",
       "p2Desc": "Clean agriculture",
       "p3Name": "VinaLogistics",
-      "p3Desc": "3PL Logistics",
+      "p3Desc": "Small Transporters",
       "p4Name": "PharmaHealth",
       "p4Desc": "GSP Pharma & Medical",
       "p5Name": "TechDistribution",
       "p5Desc": "Consumer electronics",
       "p6Name": "VietFoods Group",
-      "p6Desc": "Omnichannel FMCG"
+      "p6Desc": "Omnichannel Small Retail"
     }
   },
   "resources": {
@@ -1154,7 +1158,7 @@
       "q1": "How long does it take to create a Sandbox account for API testing?",
       "a1": "Instantly. After registering for a trial account on the Registration page, you will receive an API Key and access to the Sandbox environment populated with full mock data for testing.",
       "q2": "Does ecor have an API rate limit?",
-      "a2": "The Starter plan supports 2,000 calls/min, the Professional plan supports 10,000 calls/min, and the Enterprise Dedicated Server plan has no API rate limits."
+      "a2": "The Starter plan supports 2,000 calls/min, the Professional plan supports 10,000 calls/min, and the Small Chain Dedicated Server plan has no API rate limits."
     }
   },
   "mockWms": {
@@ -1183,7 +1187,7 @@
   },
   "mockTms": {
     "hub": "DISPATCH CENTER HCM - EASTERN REGION",
-    "hubTitle": "Fleet Dispatch Center HCM – Eastern Region",
+    "hubTitle": "Delivery Team Dispatch Center HCM – Eastern Region",
     "gpsActive": "GPS Active",
     "truck": "Truck 51C-892.41 (8 tons)",
     "driver": "Driver: Tran Van Hung • Route QL1A",
@@ -1282,7 +1286,7 @@
     "flow3": "Monitor real-time inventory fluctuation. Auto notify to move goods to clearance area or push date before expiry.",
     "flow4": "Allocate picking personnel via PDA via shortest route. Packing table final checks barcode before applying shipping label.",
     "flow5": "Scan handover record to shipper/truck. Auto e-POD digital sign and real-time sync order status to retail channels.",
-    "modelsDesc": "Whether operating high-speed e-commerce warehouse, sensitive cold chain or multi-tenant 3PL warehouse, ecor WMS has specific processing scripts.",
+    "modelsDesc": "Whether operating high-speed e-commerce warehouse, sensitive cold chain or multi-tenant Owner-operator warehouse, ecor WMS has specific processing scripts.",
     "ecomTag": "Retail & E-Commerce",
     "ecomDesc": "Built for Mega Sale campaigns up to 100,000+ orders/day. 1-second instant stock sync to Shopee, TikTok Shop, Lazada & offline stores.",
     "ecomStat": "Processing SLA: &lt; 2 minutes / order",
@@ -1290,7 +1294,7 @@
     "coldStat": "Food Safety & Healthcare Standard",
     "coldDesc": "Strictly manage temp and humidity ranges of specialized zones. Strictly manage export dates, HACCP standards, trace batch origins.",
     "multiDesc": "Multi-tenant architecture allows managing hundreds of shippers on a single interface. Separate data and auto CBM storage fee config.",
-    "multiStat": "Save 80% time closing 3PL debts",
+    "multiStat": "Save 80% time closing Owner-operator debts",
     "compareDesc": "See the spectacular shift from traditional manual warehouse operation to a smart digitized data processing center",
     "formDesc": "ecor solution engineers will survey the actual premises, set up 3D shelf simulation and advise on lean warehouse plan completely free.",
     "areaMin": "Under 1,000 m²",
@@ -1310,7 +1314,7 @@
     "companyPlh": "Shop or company name",
     "solLabel": "Solution of Interest",
     "sol1": "ecor WMS (Warehouse Mgt)",
-    "sol2": "ecor TMS (Transport & Fleet)",
+    "sol2": "ecor TMS (Transport & Delivery Team)",
     "sol3": "ecor POS (Multi-chain Retail)",
     "sol4": "Omnichannel (E-com Multi-channel)",
     "sol5": "Complete Supply Chain Package",
@@ -1335,5 +1339,15 @@
     "pos": "3. Retail (Omni)",
     "posSub": "Shopee, TikTok, Store",
     "sync": "2-way Sync"
+  },
+  "cookie": {
+    "title": "Privacy & Cookie Settings",
+    "desc": "We use cookies to improve user experience on our website. By continuing to use the website, you agree to our ",
+    "policy": "Privacy Policy",
+    "and": " and ",
+    "terms": "Terms of Service",
+    "suffix": ".",
+    "decline": "Decline",
+    "accept": "Accept"
   }
 }

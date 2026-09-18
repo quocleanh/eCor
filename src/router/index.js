@@ -55,6 +55,7 @@ const routes = [
     component: () => import('@/views/ContactView.vue'),
     meta: { title: 'Liên Hệ & Đăng Ký Khảo Sát Giải Pháp — eCor' }
   },
+  
   {
     path: '/dang-nhap',
     name: 'login',
@@ -66,6 +67,25 @@ const routes = [
     name: 'register',
     component: () => import('@/views/AuthView.vue'),
     meta: { title: 'Đăng Ký Tài Khoản Doanh Nghiệp — eCor' }
+  },
+  {
+    path: '/chinh-sach-bao-mat',
+    name: 'privacy',
+    component: () => import('@/views/policy/PrivacyView.vue'),
+    meta: { title: 'Chính Sách Bảo Mật — eCor' }
+  },
+  {
+    path: '/dieu-khoan-su-dung',
+    name: 'terms',
+    component: () => import('@/views/policy/TermsView.vue'),
+    meta: { title: 'Điều Khoản Sử Dụng — eCor' }
+  },
+
+  {
+    path: '/cam-ket-sla',
+    name: 'sla',
+    component: () => import('@/views/policy/SlaView.vue'),
+    meta: { title: 'Cam Kết SLA & Bảo Hành — eCor' }
   },
 
   // Aliases & Backward Compatibility Redirects

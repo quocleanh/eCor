@@ -3,10 +3,16 @@
     <TheHeader @open-modal="handleOpenModal" />
 
     <main class="flex-grow">
-      <router-view @open-modal="handleOpenModal" />
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" @open-modal="handleOpenModal" />
+        </transition>
+      </router-view>
     </main>
 
     <TheFooter />
+
+    <CookieConsent />
 
     <ContactModal
       :is-open="isModalOpen"
@@ -18,9 +24,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import TheHeader from '@/components/TheHeader.vue'
-import TheFooter from '@/components/TheFooter.vue'
+import { ref, onMounted } from 'vue'
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
+import CookieConsent from './components/CookieConsent.vue'
 import ContactModal from '@/components/ContactModal.vue'
 
 const isModalOpen = ref(false)
