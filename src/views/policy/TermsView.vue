@@ -9,37 +9,37 @@
 <nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
 <a class="hover:text-primary transition-colors flex items-center gap-1" data-path="trang-chu" href="#">
 <span class="material-symbols-outlined text-[16px]">home</span>
-<span>Trang chủ</span>
+<span>{{ $t('policy.terms.t1') }}</span>
 </a>
 <span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
-<span class="text-on-surface-variant">Pháp lý &amp; Thỏa thuận</span>
+<span class="text-on-surface-variant">{{ $t('policy.terms.t2') }}</span>
 <span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
-<span class="text-primary font-semibold">Điều khoản sử dụng</span>
+<span class="text-primary font-semibold">{{ $t('policy.terms.t3') }}</span>
 </nav>
 <!-- Header Hero -->
 <div class="flex flex-col gap-space-md max-w-4xl">
 <div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high/80 text-primary w-fit shadow-sm">
 <span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span class="font-code-sm text-code-sm tracking-wide">Phiên bản 3.2 • Hiệu lực từ 01/01/2025 • Áp dụng toàn bộ hệ sinh thái SaaS eCor</span>
+<span class="font-code-sm text-code-sm tracking-wide">{{ $t('policy.terms.t4') }}</span>
 </div>
 <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
-          Điều Khoản Dịch Vụ &amp; Quy Định Sử Dụng Nền Tảng eCor SaaS
+          {{ $t('policy.terms.t5') }}
         </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-          Các quy định pháp lý mang tính ràng buộc giữa Nền tảng eCor và Khách hàng tổ chức/doanh nghiệp khai thác, vận hành bộ giải pháp số hóa chuỗi cung ứng: Kho vận WMS, Quản trị vận tải TMS, Quản trị đơn hàng OMS, POS bán lẻ và Cổng kết nối ERP.
+          {{ $t('policy.terms.t6') }}
         </p>
 <div class="flex flex-wrap items-center gap-space-md pt-space-2xs">
 <div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
 <span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
-<span>Chuẩn hóa Luật Giao dịch Điện tử 2023</span>
+<span>{{ $t('policy.terms.t7') }}</span>
 </div>
 <div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
 <span class="material-symbols-outlined text-[18px] text-secondary">security</span>
-<span>Bảo vệ quyền lợi Doanh nghiệp 100%</span>
+<span>{{ $t('policy.terms.t8') }}</span>
 </div>
 <div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
 <span class="material-symbols-outlined text-[18px] text-primary">history_edu</span>
-<span>Cập nhật định kỳ 6 tháng/lần</span>
+<span>{{ $t('policy.terms.t9') }}</span>
 </div>
 </div>
 </div>
@@ -50,9 +50,9 @@
 <div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-[26px]">contract</span>
 </div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Cấp phép SaaS minh bạch</h2>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.terms.t10') }}</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Quyền sử dụng phần mềm dạng dịch vụ thuê bao đám mây định lượng rõ theo số lượng kho, xe tải hoặc người dùng thực tế.
+            {{ $t('policy.terms.t11') }}
           </p>
 </div>
 <!-- Card 2 -->
@@ -60,9 +60,9 @@
 <div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center">
 <span class="material-symbols-outlined text-[26px]">shield_person</span>
 </div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Sở hữu dữ liệu 100%</h2>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.terms.t12') }}</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Khách hàng toàn quyền sở hữu thông tin hàng hóa, hóa đơn, thông tin đối tác và hồ sơ khách hàng được đưa lên hệ thống.
+            {{ $t('policy.terms.t13') }}
           </p>
 </div>
 <!-- Card 3 -->
@@ -70,9 +70,9 @@
 <div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-[26px]">support_agent</span>
 </div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Hỗ trợ kỹ thuật 24/7/365</h2>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.terms.t14') }}</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Đội ngũ trực kỹ sư trực chiến thường trực nhằm đảm bảo chuỗi cung ứng và nghiệp vụ xuất nhập kho diễn ra thông suốt.
+            {{ $t('policy.terms.t15') }}
           </p>
 </div>
 <!-- Card 4 -->
@@ -80,9 +80,9 @@
 <div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center">
 <span class="material-symbols-outlined text-[26px]">receipt_long</span>
 </div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Minh bạch không phụ phí</h2>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.terms.t16') }}</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Không chi phí bảo trì phát sinh ngầm, mọi nâng cấp tính năng nền tảng được tự động cập nhật đồng bộ cho toàn bộ tài khoản.
+            {{ $t('policy.terms.t17') }}
           </p>
 </div>
 </div>
@@ -98,46 +98,46 @@
 <div class="flex items-center justify-between pb-space-xs">
 <span class="font-label-lg text-label-lg text-on-surface flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-primary text-[20px]">list_alt</span>
-<span>Mục lục điều khoản</span>
+<span>{{ $t('policy.terms.t18') }}</span>
 </span>
-<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-code-sm text-code-sm">9 Phần</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-code-sm text-code-sm">{{ $t('policy.terms.t19') }}</span>
 </div>
 <nav class="flex flex-col gap-space-2xs" id="legal-toc">
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-1">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">01</span>
-<span class="truncate">Định nghĩa &amp; Thuật ngữ hệ thống</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t20') }}</span>
+<span class="truncate">{{ $t('policy.terms.t21') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-2">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">02</span>
-<span class="truncate">Đăng ký &amp; Bảo mật tài khoản Master</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t22') }}</span>
+<span class="truncate">{{ $t('policy.terms.t23') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-3">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">03</span>
-<span class="truncate">Bản quyền phần mềm &amp; Quyền sở hữu</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t24') }}</span>
+<span class="truncate">{{ $t('policy.terms.t25') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-4">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">04</span>
-<span class="truncate">Quy định Biểu phí, Gia hạn &amp; Nâng cấp</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t26') }}</span>
+<span class="truncate">{{ $t('policy.terms.t27') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-5">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">05</span>
-<span class="truncate">Quy tắc sử dụng &amp; Các hành vi bị cấm</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t28') }}</span>
+<span class="truncate">{{ $t('policy.terms.t29') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-6">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">06</span>
-<span class="truncate">Chấm dứt dịch vụ &amp; Bàn giao dữ liệu</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t30') }}</span>
+<span class="truncate">{{ $t('policy.terms.t31') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-7">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">07</span>
-<span class="truncate">Trách nhiệm pháp lý &amp; Bất khả kháng</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t32') }}</span>
+<span class="truncate">{{ $t('policy.terms.t33') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-8">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">08</span>
-<span class="truncate">Bảo mật thông tin &amp; Tiêu chuẩn ISO</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t34') }}</span>
+<span class="truncate">{{ $t('policy.terms.t35') }}</span>
 </a>
 <a class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#dieu-9">
-<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">09</span>
-<span class="truncate">Luật áp dụng &amp; Trọng tài thương mại</span>
+<span class="w-6 h-6 rounded-lg bg-surface-container-low group-hover:bg-primary-fixed text-primary flex items-center justify-center font-code-sm text-code-sm">{{ $t('policy.terms.t36') }}</span>
+<span class="truncate">{{ $t('policy.terms.t37') }}</span>
 </a>
 </nav>
 </div>
@@ -148,16 +148,16 @@
 <span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
 </div>
 <div>
-<div class="font-label-lg text-label-lg text-on-surface">Văn Bản Pháp Lý Mẫu</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant">Ký số &amp; Lưu trữ Doanh nghiệp</div>
+<div class="font-label-lg text-label-lg text-on-surface">{{ $t('policy.terms.t38') }}</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.terms.t39') }}</div>
 </div>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Doanh nghiệp có thể tải về bản hợp đồng mẫu tích hợp chữ ký số pháp nhân đầy đủ để phục vụ thẩm định pháp chế hoặc nộp chứng từ kế toán.
+            {{ $t('policy.terms.t40') }}
           </p>
 <a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container shadow-sm transition-all hover:-translate-y-[1px]" href="#">
 <span class="material-symbols-outlined text-[18px]">download</span>
-<span>Tải Bộ Hợp Đồng Mẫu SaaS (PDF)</span>
+<span>{{ $t('policy.terms.t41') }}</span>
 </a>
 </div>
 <!-- Operational Status Indicator -->
@@ -167,9 +167,9 @@
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
 <span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
 </span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tình trạng hệ thống đám mây</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">{{ $t('policy.terms.t42') }}</span>
 </div>
-<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-low text-secondary font-code-sm text-code-sm font-semibold">SLA 99.95% Up</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-low text-secondary font-code-sm text-code-sm font-semibold">{{ $t('policy.terms.t43') }}</span>
 </div>
 </div>
 <!-- Right Column: Detailed Legal Terms (8 cols) -->
@@ -180,205 +180,205 @@
 <span class="material-symbols-outlined text-[24px]">policy</span>
 </div>
 <div class="flex flex-col gap-space-2xs">
-<h3 class="font-label-lg text-label-lg text-on-surface">Lời ngỏ &amp; Hiệu lực ràng buộc pháp lý</h3>
+<h3 class="font-label-lg text-label-lg text-on-surface">{{ $t('policy.terms.t44') }}</h3>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Bằng việc hoàn tất quy trình tạo tài khoản Master, nhấn vào ô "Tôi đồng ý với Điều khoản dịch vụ", hoặc thực tế sử dụng bất kỳ phân hệ nào thuộc hệ sinh thái eCor (WMS, TMS, OMS, POS, ERP Connect), Quý Khách hàng cam kết đã đọc kỹ, thấu hiểu và hoàn toàn đồng ý tuân thủ toàn bộ các nội dung quy định tại văn bản này.
+              {{ $t('policy.terms.t45') }}
             </p>
 </div>
 </div>
 <!-- SECTION 1 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-1">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">01</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Định nghĩa &amp; Giải thích thuật ngữ</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t46') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t47') }}</h2>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            Trong phạm vi thỏa thuận này, trừ khi ngữ cảnh có quy định khác đi một cách rõ ràng, các thuật ngữ dưới đây sẽ được hiểu và áp dụng thống nhất theo các định nghĩa tương ứng:
+            {{ $t('policy.terms.t48') }}
           </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 <div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col gap-space-2xs">
-<span class="font-label-md text-label-md text-primary font-bold">1.1 Nền tảng eCor (Hệ thống)</span>
+<span class="font-label-md text-label-md text-primary font-bold">{{ $t('policy.terms.t49') }}</span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Toàn bộ hạ tầng điện toán đám mây, mã nguồn phần mềm, giao diện lập trình ứng dụng (API), ứng dụng di động cho tài xế/thủ kho và cổng thông tin web thuộc quyền sở hữu độc quyền của eCor Vietnam JSC.
+                {{ $t('policy.terms.t50') }}
               </p>
 </div>
 <div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col gap-space-2xs">
-<span class="font-label-md text-label-md text-primary font-bold">1.2 Dịch vụ Thuê bao SaaS</span>
+<span class="font-label-md text-label-md text-primary font-bold">{{ $t('policy.terms.t51') }}</span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Mô hình cấp quyền truy cập và sử dụng phần mềm trực tuyến thông qua trình duyệt web và thiết bị thông minh theo các gói cước định kỳ (tháng, quý, năm) mà không chuyển giao mã nguồn gốc.
+                {{ $t('policy.terms.t52') }}
               </p>
 </div>
 <div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col gap-space-2xs">
-<span class="font-label-md text-label-md text-primary font-bold">1.3 Tài khoản Quản trị Master</span>
+<span class="font-label-md text-label-md text-primary font-bold">{{ $t('policy.terms.t53') }}</span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Tài khoản cấp cao nhất được khởi tạo gắn liền với mã số thuế và định danh người đại diện pháp luật của Doanh nghiệp, có toàn quyền cấu hình kho, cấp phát phân quyền nhân viên và phê duyệt thanh toán.
+                {{ $t('policy.terms.t54') }}
               </p>
 </div>
 <div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col gap-space-2xs">
-<span class="font-label-md text-label-md text-primary font-bold">1.4 Dữ liệu Doanh nghiệp</span>
+<span class="font-label-md text-label-md text-primary font-bold">{{ $t('policy.terms.t55') }}</span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-                Mọi thông tin do Khách hàng tải lên, nhập liệu hoặc phát sinh qua hệ thống bao gồm: danh mục SKU hàng hóa, lịch sử lệnh xuất nhập kho, nhật trình định vị GPS của đội xe tải, dữ liệu thông tin khách hàng và số liệu doanh thu.
+                {{ $t('policy.terms.t56') }}
               </p>
 </div>
 </div>
 <div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-high/40 text-on-surface">
 <span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
 <div class="font-body-sm text-body-sm">
-<strong class="font-semibold">Thời gian hoạt động cam kết (Uptime SLA):</strong> eCor bảo đảm tính khả dụng của nền tảng đạt tối thiểu <strong>99.95%</strong> mỗi tháng dương lịch, không bao gồm các khung giờ bảo trì nâng cấp định kỳ đã báo trước ít nhất 48 giờ.
+<strong class="font-semibold">{{ $t('policy.terms.t57') }}</strong> {{ $t('policy.terms.t58') }} <strong>{{ $t('policy.terms.t59') }}</strong> {{ $t('policy.terms.t60') }}
             </div>
 </div>
 </section>
 <!-- SECTION 2 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-2">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">02</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Đăng ký &amp; Quản trị bảo mật tài khoản</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t61') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t62') }}</h2>
 </div>
 <div class="space-y-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
 <p>
-<strong class="text-on-surface font-semibold">2.1 Tính chính xác của thông tin pháp nhân:</strong> Khi thiết lập tài khoản Master, Doanh nghiệp có trách nhiệm cung cấp chính xác bản quét Giấy chứng nhận đăng ký kinh doanh, Mã số thuế, căn cước công dân người đại diện pháp luật hoặc giấy ủy quyền hợp lệ. eCor có quyền tạm đình chỉ tài khoản nếu phát hiện thông tin định danh sai lệch hoặc giả mạo.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t63') }}</strong> {{ $t('policy.terms.t64') }}
             </p>
 <p>
-<strong class="text-on-surface font-semibold">2.2 Cơ chế phân quyền RBAC (Role-Based Access Control):</strong> Hệ thống cho phép tài khoản Master thiết lập phân tầng đặc quyền chi tiết theo vị trí công việc:
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t65') }}</strong> {{ $t('policy.terms.t66') }}
             </p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm my-space-sm">
 <div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1">
-<span class="font-label-md text-label-md text-primary font-bold">Thủ kho &amp; Vận hành WMS</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Chỉ truy cập quét barcode, xác nhận nhập hàng, lấy hàng và đóng gói vị trí kệ.</span>
+<span class="font-label-md text-label-md text-primary font-bold">{{ $t('policy.terms.t67') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t68') }}</span>
 </div>
 <div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1">
-<span class="font-label-md text-label-md text-secondary font-bold">Tài xế &amp; Điều vận TMS</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Xem lộ trình chuyến xe, chụp ảnh POD ký nhận giao hàng, cập nhật tình trạng giao.</span>
+<span class="font-label-md text-label-md text-secondary font-bold">{{ $t('policy.terms.t69') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t70') }}</span>
 </div>
 <div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface font-bold">Kế toán &amp; Đối soát OMS</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Truy cập hóa đơn thuế, dòng tiền COD, báo cáo công nợ vận tải và trích xuất ERP.</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">{{ $t('policy.terms.t71') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t72') }}</span>
 </div>
 </div>
 <p>
-<strong class="text-on-surface font-semibold">2.3 Trách nhiệm bảo mật thông tin đăng nhập:</strong> Doanh nghiệp chịu trách nhiệm toàn bộ đối với các tác vụ phát sinh từ tài khoản của nhân viên mình. Khách hàng bắt buộc kích hoạt xác thực hai yếu tố (2FA) đối với các tài khoản có quyền truy xuất dữ liệu giá vốn hoặc cấu hình hệ thống.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t73') }}</strong> {{ $t('policy.terms.t74') }}
             </p>
 </div>
 <!-- Alert callout -->
 <div class="flex items-start gap-space-sm p-space-md rounded-xl bg-error-container/40 text-on-error-container">
 <span class="material-symbols-outlined text-error text-[24px]">gpp_maybe</span>
 <div class="font-body-sm text-body-sm">
-<strong>Nghiêm cấm chia sẻ tài khoản ngoài doanh nghiệp:</strong> Mỗi user được cấp phép tương ứng với một cá nhân duy nhất trong nội bộ Doanh nghiệp. Nghiêm cấm hành vi san sẻ hoặc cho thuê lại tài khoản cho các đơn vị thứ ba mà chưa có sự chấp thuận bằng văn bản của eCor.
+<strong>{{ $t('policy.terms.t75') }}</strong> {{ $t('policy.terms.t76') }}
             </div>
 </div>
 </section>
 <!-- SECTION 3 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-3">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">03</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Bản quyền phần mềm &amp; Quyền sở hữu trí tuệ</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t77') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t78') }}</h2>
 </div>
 <!-- Split graphic / Visual concept -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 <div class="bg-surface-container-low rounded-2xl p-space-lg flex flex-col gap-space-sm">
 <div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg text-primary font-bold">Quyền hạn eCor Vietnam</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">{{ $t('policy.terms.t79') }}</span>
 <span class="material-symbols-outlined text-primary text-[22px]">copyright</span>
 </div>
 <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant list-disc pl-space-md">
-<li>Sở hữu độc quyền 100% bản quyền tác giả đối với mã nguồn chương trình, logic thuật toán tối ưu xếp hàng 3D, thuật toán định tuyến xe thông minh.</li>
-<li>Sở hữu độc quyền nhãn hiệu thương mại eCor, logo nhận diện, giao diện đồ họa UI/UX và toàn bộ tài liệu hướng dẫn kỹ thuật đi kèm.</li>
-<li>Cấp phép quyền sử dụng có thời hạn, không độc quyền và không được chuyển nhượng cho Khách hàng.</li>
+<li>{{ $t('policy.terms.t80') }}</li>
+<li>{{ $t('policy.terms.t81') }}</li>
+<li>{{ $t('policy.terms.t82') }}</li>
 </ul>
 </div>
 <div class="bg-surface-container-low rounded-2xl p-space-lg flex flex-col gap-space-sm">
 <div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg text-secondary font-bold">Quyền hạn Khách hàng</span>
+<span class="font-label-lg text-label-lg text-secondary font-bold">{{ $t('policy.terms.t83') }}</span>
 <span class="material-symbols-outlined text-secondary text-[22px]">database</span>
 </div>
 <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant list-disc pl-space-md">
-<li>Sở hữu hoàn toàn và tuyệt đối mọi dữ liệu hàng tồn kho, giá trị tài sản, thông tin đại lý kinh doanh và thông tin người tiêu dùng cuối.</li>
-<li>eCor tuyệt đối không tự ý sao chép, thương mại hóa, cung cấp thông tin dữ liệu của Khách hàng cho đối thủ cạnh tranh dưới mọi hình thức.</li>
-<li>Khách hàng có quyền kết xuất trọn vẹn dữ liệu bất kỳ lúc nào dưới các định dạng tiêu chuẩn (JSON, Excel, CSV, SQL dump).</li>
+<li>{{ $t('policy.terms.t84') }}</li>
+<li>{{ $t('policy.terms.t85') }}</li>
+<li>{{ $t('policy.terms.t86') }}</li>
 </ul>
 </div>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            Mọi hành vi sao chép thiết kế, thực hiện kỹ thuật dịch ngược (Reverse Engineering), giải mã mã nhị phân, bẻ khóa API hoặc tạo lập sản phẩm phái sinh nhái lại quy trình nghiệp vụ chuyên biệt của eCor sẽ bị khởi kiện hình sự theo quy định của Luật Sở hữu trí tuệ Việt Nam và điều ước quốc tế WIPO.
+            {{ $t('policy.terms.t87') }}
           </p>
 </section>
 <!-- SECTION 4 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-4">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">04</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Quy định Biểu phí, Gia hạn &amp; Nâng cấp gói cước</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t88') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t89') }}</h2>
 </div>
 <div class="space-y-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
 <p>
-<strong class="text-on-surface font-semibold">4.1 Biểu phí dịch vụ SaaS:</strong> Phí sử dụng phần mềm được tính trên cơ sở chu kỳ (theo tháng, theo năm hoặc hợp đồng khung nhiều năm) căn cứ theo bảng giá niêm yết chính thức hoặc Phụ lục Hợp đồng kinh tế đã ký. Đơn giá thanh toán chưa bao gồm thuế Giá trị gia tăng (VAT 8% - 10% theo quy định từng thời kỳ).
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t90') }}</strong> {{ $t('policy.terms.t91') }}
             </p>
 <!-- Table simulation using compliant classes -->
 <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
 <div class="grid grid-cols-12 bg-surface-container-high/60 p-space-sm font-label-sm text-label-sm text-on-surface font-bold">
-<div class="col-span-4">Phân hệ dịch vụ</div>
-<div class="col-span-4">Căn cứ định lượng phí</div>
-<div class="col-span-4">Chu kỳ thanh toán &amp; Hóa đơn</div>
+<div class="col-span-4">{{ $t('policy.terms.t92') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t93') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t94') }}</div>
 </div>
 <div class="grid grid-cols-12 p-space-sm font-body-sm text-body-sm text-on-surface-variant border-b border-surface-container">
-<div class="col-span-4 font-semibold text-on-surface">eCor WMS (Kho vận)</div>
-<div class="col-span-4">Số lượng chi nhánh kho &amp; Điểm lưu trữ SKU</div>
-<div class="col-span-4">Trả trước theo năm / Xuất HĐĐT ngay</div>
+<div class="col-span-4 font-semibold text-on-surface">{{ $t('policy.terms.t95') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t96') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t97') }}</div>
 </div>
 <div class="grid grid-cols-12 p-space-sm font-body-sm text-body-sm text-on-surface-variant border-b border-surface-container">
-<div class="col-span-4 font-semibold text-on-surface">eCor TMS (Vận tải)</div>
-<div class="col-span-4">Số lượng đầu xe active hoặc số cuốc xe tháng</div>
-<div class="col-span-4">Đối soát ngày 05 hàng tháng</div>
+<div class="col-span-4 font-semibold text-on-surface">{{ $t('policy.terms.t98') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t99') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t100') }}</div>
 </div>
 <div class="grid grid-cols-12 p-space-sm font-body-sm text-body-sm text-on-surface-variant">
-<div class="col-span-4 font-semibold text-on-surface">eCor OMS &amp; ERP Sync</div>
-<div class="col-span-4">Số lượng đơn hàng xử lý đa kênh qua API</div>
-<div class="col-span-4">Tính theo bậc thang hạn ngạch</div>
+<div class="col-span-4 font-semibold text-on-surface">{{ $t('policy.terms.t101') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t102') }}</div>
+<div class="col-span-4">{{ $t('policy.terms.t103') }}</div>
 </div>
 </div>
 <p>
-<strong class="text-on-surface font-semibold">4.2 Nâng cấp và hạ cấp gói dịch vụ:</strong> Doanh nghiệp có thể nâng cấp thêm phân hệ hoặc bổ sung hạn ngạch user bất kỳ lúc nào trong chu kỳ hợp đồng. Phần chi phí phát sinh sẽ được tính lũy tiến tương ứng với số ngày còn lại của kỳ thanh toán hiện tại.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t104') }}</strong> {{ $t('policy.terms.t105') }}
             </p>
 <p>
-<strong class="text-on-surface font-semibold">4.3 Chính sách gia hạn tự động &amp; Grace Period:</strong> Trước 15 ngày kể từ ngày đáo hạn hợp đồng, eCor sẽ gửi email và thông báo trực tiếp trên giao diện Dashboard. Sau ngày đáo hạn, Doanh nghiệp được áp dụng thời hạn ân hạn <strong>07 ngày làm việc (Grace Period)</strong> để thực hiện thanh toán trước khi hệ thống chuyển sang chế độ tạm khóa chiều ghi dữ liệu.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t106') }}</strong> {{ $t('policy.terms.t107') }} <strong>{{ $t('policy.terms.t108') }}</strong> {{ $t('policy.terms.t109') }}
             </p>
 </div>
 </section>
 <!-- SECTION 5 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-5">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">05</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Quy tắc sử dụng &amp; Các hành vi bị nghiêm cấm</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t110') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t111') }}</h2>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            Nhằm đảm bảo sự an toàn thông tin chung và tính liên tục trong vận hành chuỗi cung ứng cho toàn bộ cộng đồng khách hàng trên cụm máy chủ phân tán, eCor nghiêm cấm tuyệt đối các hành vi sau:
+            {{ $t('policy.terms.t112') }}
           </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
 <div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-error text-[20px] mt-0.5">block</span>
 <div class="flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Lợi dụng lưu trữ hàng quốc cấm</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Sử dụng hệ thống để số hóa, điều phối hoặc che giấu các lô hàng thuộc danh mục hàng cấm, vũ khí, ma túy, hóa chất độc hại bị pháp luật Việt Nam cấm lưu hành.</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">{{ $t('policy.terms.t113') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t114') }}</span>
 </div>
 </div>
 <div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-error text-[20px] mt-0.5">block</span>
 <div class="flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Tấn công mạng &amp; Vượt quyền bảo mật</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Thực hiện các cuộc tấn công từ chối dịch vụ (DDoS), phát tán mã độc (trojan, spyware), dò quét lỗ hổng pentest khi chưa có văn bản thỏa thuận trước.</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">{{ $t('policy.terms.t115') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t116') }}</span>
 </div>
 </div>
 <div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-error text-[20px] mt-0.5">block</span>
 <div class="flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Lạm dụng băng thông API Webhook</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Viết bot cào dữ liệu scraping liên tục vượt quá rate-limit cho phép (tối đa 120 calls/phút/endpoint đối với gói doanh nghiệp thông thường).</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">{{ $t('policy.terms.t117') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t118') }}</span>
 </div>
 </div>
 <div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-error text-[20px] mt-0.5">block</span>
 <div class="flex flex-col gap-1">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Xuyên tạc chỉ số KPI báo cáo</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Làm sai lệch cố ý số liệu giao hàng POD hoặc tạo cuốc xe ảo để gian lận trợ giá từ các sàn thương mại điện tử hoặc đối tác vận tải kết nối.</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">{{ $t('policy.terms.t119') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t120') }}</span>
 </div>
 </div>
 </div>
@@ -386,34 +386,34 @@
 <!-- SECTION 6 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-6">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">06</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Chấm dứt dịch vụ &amp; Quy trình bàn giao dữ liệu</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t121') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t122') }}</h2>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            eCor tôn trọng quyền tự chủ của Doanh nghiệp trong việc thay đổi giải pháp công nghệ. Quy trình bàn giao dữ liệu khi hợp đồng hết hạn hoặc chấm dứt trước hạn được tuân thủ nghiêm ngặt theo các bước:
+            {{ $t('policy.terms.t123') }}
           </p>
 <!-- Stepper timeline component -->
 <div class="relative flex flex-col gap-space-md pl-space-lg">
 <div class="absolute left-3 top-2 bottom-2 w-0.5 bg-surface-container-highest"></div>
 <div class="relative flex items-start gap-space-md">
-<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold -ml-6 z-10">1</div>
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold -ml-6 z-10">{{ $t('policy.terms.t124') }}</div>
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface font-bold">Giai đoạn 01: Thông báo chấm dứt (Ngày 0 - Ngày 10)</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Bên có nhu cầu chấm dứt gửi thông báo bằng văn bản hoặc email có chữ ký số. Hai bên tiến hành đối soát hoàn tất công nợ phát sinh.</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">{{ $t('policy.terms.t125') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t126') }}</span>
 </div>
 </div>
 <div class="relative flex items-start gap-space-md">
-<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-code-sm text-code-sm font-bold -ml-6 z-10">2</div>
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-code-sm text-code-sm font-bold -ml-6 z-10">{{ $t('policy.terms.t127') }}</div>
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface font-bold">Giai đoạn 02: Trích xuất toàn bộ dữ liệu (Ngày 11 - Ngày 30)</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Hệ thống mở cổng xuất dữ liệu chuyên dụng Data Extraction Toolkit. Doanh nghiệp tải về toàn bộ lịch sử đơn hàng, tồn kho, hồ sơ nhà cung ứng dưới dạng file nén mã hóa AES-256.</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">{{ $t('policy.terms.t128') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t129') }}</span>
 </div>
 </div>
 <div class="relative flex items-start gap-space-md">
-<div class="w-6 h-6 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-code-sm text-code-sm font-bold -ml-6 z-10">3</div>
+<div class="w-6 h-6 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-code-sm text-code-sm font-bold -ml-6 z-10">{{ $t('policy.terms.t130') }}</div>
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface font-bold">Giai đoạn 03: Hủy dữ liệu vĩnh viễn (Sau Ngày 45)</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Sau 45 ngày kể từ ngày dừng dịch vụ, toàn bộ bản sao lưu (backup image) trên cloud storage sẽ được xóa tự động vĩnh viễn không thể phục hồi theo chuẩn quốc tế DoD 5220.22-M.</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">{{ $t('policy.terms.t131') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t132') }}</span>
 </div>
 </div>
 </div>
@@ -421,43 +421,43 @@
 <!-- SECTION 7 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-7">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">07</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Giới hạn trách nhiệm &amp; Điều khoản bất khả kháng</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t133') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t134') }}</h2>
 </div>
 <div class="space-y-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
 <p>
-<strong class="text-on-surface font-semibold">7.1 Giới hạn bồi thường tối đa:</strong> Trong mọi trường hợp khiếu nại phát sinh từ lỗi phần mềm được xác định hoàn toàn thuộc về eCor, tổng giá trị trách nhiệm bồi thường thiệt hại trực tiếp của eCor đối với Khách hàng sẽ không vượt quá tổng số tiền phí thuê bao mà Khách hàng đã thực thanh toán cho eCor trong vòng <strong>03 (ba) tháng gần nhất</strong> trước thời điểm xảy ra sự cố.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t135') }}</strong> {{ $t('policy.terms.t136') }} <strong>{{ $t('policy.terms.t137') }}</strong> {{ $t('policy.terms.t138') }}
             </p>
 <p>
-<strong class="text-on-surface font-semibold">7.2 Miễn trừ thiệt hại gián tiếp:</strong> eCor không chịu trách nhiệm đối với bất kỳ thiệt hại mang tính hệ quả, tổn thất cơ hội kinh doanh, giảm sút lợi nhuận, mất dữ liệu do thiết bị đầu cuối của khách hàng nhiễm virus hoặc các tác động từ sự cố mạng viễn thông quốc gia.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t139') }}</strong> {{ $t('policy.terms.t140') }}
             </p>
 <p>
-<strong class="text-on-surface font-semibold">7.3 Sự kiện bất khả kháng:</strong> Các sự kiện nằm ngoài tầm kiểm soát hợp lý của các bên bao gồm thiên tai, hỏa hoạn, động đất, lũ lụt, chiến tranh, dịch bệnh, đứt cáp quang biển quốc tế, quyết định cấm vận của cơ quan Nhà nước có thẩm quyền sẽ được xem là sự kiện bất khả kháng và miễn trách nhiệm thực hiện nghĩa vụ trong thời gian diễn ra sự kiện.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t141') }}</strong> {{ $t('policy.terms.t142') }}
             </p>
 </div>
 </section>
 <!-- SECTION 8 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-8">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">08</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Bảo mật thông tin &amp; Tiêu chuẩn ISO/IEC 27001</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t143') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t144') }}</h2>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            Toàn bộ cơ sở dữ liệu trên hạ tầng đám mây của eCor được bảo vệ nghiêm ngặt theo các tiêu chuẩn quốc tế và Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân:
+            {{ $t('policy.terms.t145') }}
           </p>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
 <div class="p-space-md bg-surface-container-low rounded-xl flex items-center gap-space-sm">
 <span class="material-symbols-outlined text-secondary text-[28px]">lock_clock</span>
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Mã hóa Rest &amp; Transit</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">TLS 1.3 qua đường truyền và AES-256 đối với phân vùng lưu trữ đĩa.</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">{{ $t('policy.terms.t146') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t147') }}</span>
 </div>
 </div>
 <div class="p-space-md bg-surface-container-low rounded-xl flex items-center gap-space-sm">
 <span class="material-symbols-outlined text-secondary text-[28px]">verified</span>
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Chứng chỉ ISO/IEC 27001</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Hệ thống quản lý an toàn thông tin được chứng nhận độc lập hàng năm.</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">{{ $t('policy.terms.t148') }}</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.terms.t149') }}</span>
 </div>
 </div>
 </div>
@@ -465,29 +465,29 @@
 <!-- SECTION 9 -->
 <section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg scroll-mt-28" id="dieu-9">
 <div class="flex items-center gap-space-sm">
-<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">09</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Luật áp dụng &amp; Giải quyết tranh chấp</h2>
+<span class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-code-sm text-code-sm font-bold">{{ $t('policy.terms.t150') }}</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">{{ $t('policy.terms.t151') }}</h2>
 </div>
 <div class="space-y-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
 <p>
-<strong class="text-on-surface font-semibold">9.1 Luật điều chỉnh:</strong> Điều khoản dịch vụ này và mọi mối quan hệ hợp đồng phát sinh giữa hai bên được điều chỉnh và diễn giải độc quyền theo hệ thống Pháp luật hiện hành của nước Cộng hòa Xã hội Chủ nghĩa Việt Nam.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t152') }}</strong> {{ $t('policy.terms.t153') }}
             </p>
 <p>
-<strong class="text-on-surface font-semibold">9.2 Cơ chế thương lượng &amp; Trọng tài thương mại:</strong> Mọi tranh chấp, bất đồng phát sinh từ hoặc liên quan đến thỏa thuận sử dụng dịch vụ này trước hết phải được ưu tiên giải quyết thông qua đàm phán thương lượng thiện chí giữa đại diện có thẩm quyền của hai bên trong vòng 30 (ba mươi) ngày.
+<strong class="text-on-surface font-semibold">{{ $t('policy.terms.t154') }}</strong> {{ $t('policy.terms.t155') }}
             </p>
 <p>
-              Trường hợp thương lượng không thành công, tranh chấp sẽ được đưa ra giải quyết chung thẩm tại <strong>Trung tâm Trọng tài Quốc tế Việt Nam (VIAC)</strong> theo Quy tắc tố tụng trọng tài của Trung tâm này. Địa điểm trọng tài diễn ra tại TP. Hồ Chí Minh, ngôn ngữ trọng tài là Tiếng Việt, phán quyết của Trọng tài là chung thẩm và có giá trị bắt buộc thi hành đối với cả hai bên.
+              {{ $t('policy.terms.t156') }} <strong>{{ $t('policy.terms.t157') }}</strong> {{ $t('policy.terms.t158') }}
             </p>
 </div>
 <!-- Signature Signoff note -->
 <div class="p-space-lg bg-surface-container-low/80 rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-md mt-space-sm">
 <div class="flex flex-col gap-1 text-center md:text-left">
-<span class="font-label-lg text-label-lg text-on-surface font-bold">Đại diện Nền tảng eCor</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Tổng Giám Đốc điều hành phê duyệt &amp; ký số điện tử ngày 01/01/2025</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">{{ $t('policy.terms.t159') }}</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.terms.t160') }}</span>
 </div>
 <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-lowest rounded-xl shadow-sm text-secondary font-code-sm text-code-sm font-semibold">
 <span class="material-symbols-outlined text-[18px]">verified</span>
-<span>Đã Ký Số Hợp Lệ</span>
+<span>{{ $t('policy.terms.t161') }}</span>
 </div>
 </div>
 </section>
@@ -501,28 +501,28 @@
 <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-surface-container-lowest/10 rounded-full blur-2xl pointer-events-none"></div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
 <div class="lg:col-span-8 flex flex-col gap-space-sm">
-<span class="font-code-sm text-code-sm tracking-wider uppercase opacity-80">Phòng Pháp Chế &amp; Hợp Đồng Doanh Nghiệp</span>
+<span class="font-code-sm text-code-sm tracking-wider uppercase opacity-80">{{ $t('policy.terms.t162') }}</span>
 <h2 class="font-headline-lg text-headline-lg font-bold leading-tight">
-              Cần điều chỉnh phụ lục SLA hoặc thỏa thuận bảo mật NDA riêng?
+              {{ $t('policy.terms.t163') }}
             </h2>
 <p class="font-body-md text-body-md opacity-90 max-w-2xl leading-relaxed">
-              Đối với các tập đoàn phân phối đa quốc gia, đơn vị logistics 3PL quy mô trên 50 đầu xe hoặc chuỗi kho vận trên 20.000m², đội ngũ luật sư chuyên trách của eCor sẵn sàng hỗ trợ rà soát và ký kết bộ hợp đồng tùy biến riêng biệt.
+              {{ $t('policy.terms.t164') }}
             </p>
 </div>
 <div class="lg:col-span-4 flex flex-col gap-space-sm items-stretch sm:items-start lg:items-end">
 <div class="flex flex-col gap-space-2xs bg-surface-container-lowest/15 backdrop-blur-md p-space-md rounded-2xl w-full text-on-primary">
 <div class="flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-[20px]">mail</span>
-<span class="font-label-md text-label-md">legal@ecor.vn / cskh@ecor.vn</span>
+<span class="font-label-md text-label-md">{{ $t('policy.terms.t165') }}</span>
 </div>
 <div class="flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-[20px]">call</span>
-<span class="font-label-md text-label-md font-bold">Hotline Doanh Nghiệp: 1900 6868</span>
+<span class="font-label-md text-label-md font-bold">{{ $t('policy.terms.t166') }}</span>
 </div>
 </div>
 <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-xl font-label-md text-label-md text-on-surface bg-surface-container-lowest hover:bg-surface-bright shadow-md transition-all hover:-translate-y-[1px]" data-path="lien-he" href="#">
 <span class="material-symbols-outlined text-[18px] text-primary">edit_document</span>
-<span>Yêu cầu ký kết NDA tùy chỉnh</span>
+<span>{{ $t('policy.terms.t167') }}</span>
 </a>
 </div>
 </div>

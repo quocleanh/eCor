@@ -5,63 +5,63 @@
 <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
 <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
 <nav class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant flex-wrap">
-<router-link to="/" class="hover:text-primary transition-colors">Trang chủ</router-link>
+<router-link to="/" class="hover:text-primary transition-colors">{{ $t('policy.sla.t1') }}</router-link>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="hover:text-primary transition-colors">Hỗ trợ &amp; Cam kết</span>
+<span class="hover:text-primary transition-colors">{{ $t('policy.sla.t2') }}</span>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="text-primary font-semibold">Chính sách bảo hành &amp; SLA</span>
+<span class="text-primary font-semibold">{{ $t('policy.sla.t3') }}</span>
 </nav>
 <div class="flex flex-col gap-space-sm max-w-4xl relative z-10">
 <div class="inline-flex items-center gap-space-xs px-space-md py-space-2xs rounded-full bg-surface-container-high text-primary w-fit">
 <span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-ping"></span>
-<span class="font-label-md text-label-md tracking-wide">Cam kết chất lượng SLA 99.98% Uptime • Đền bù dịch vụ rõ ràng • Hỗ trợ 24/7</span>
+<span class="font-label-md text-label-md tracking-wide">{{ $t('policy.sla.t4') }}</span>
 </div>
 <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
-          Chính Sách Bảo Trì, Hỗ Trợ Kỹ Thuật &amp; Cam Kết Chất Lượng Dịch Vụ (SLA)
+          {{ $t('policy.sla.t5') }}
         </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
-          Toàn bộ quy chuẩn về bảo hành phần mềm, nâng cấp tính năng định kỳ, thời gian phản hồi sự cố khẩn cấp và chính sách bồi hoàn dịch vụ minh bạch tại nền tảng đám mây ecor.vn.
+          {{ $t('policy.sla.t6') }}
         </p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md relative z-10 mt-space-sm">
 <div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
 <div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant">SLA Tính Khả Dụng</span>
+<span class="font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t7') }}</span>
 <span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">speed</span>
 </div>
 <div class="mt-space-md">
-<span class="font-headline-lg text-headline-lg text-primary tracking-tight">99.98%</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Cam kết Uptime thời gian hoạt động hệ thống toàn quốc</p>
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">{{ $t('policy.sla.t8') }}</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">{{ $t('policy.sla.t9') }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
 <div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant">Phản Hồi P1 (Khẩn Cấp)</span>
+<span class="font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t10') }}</span>
 <span class="material-symbols-outlined text-tertiary-container text-[28px]" style="font-variation-settings: 'FILL' 1;">timer</span>
 </div>
 <div class="mt-space-md">
-<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight">&lt; 15 Phút</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Thời gian kỹ sư chuyên trách phản hồi trực tiếp 24/7/365</p>
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight">{{ $t('policy.sla.t11') }}</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">{{ $t('policy.sla.t12') }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
 <div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant">Bản Vá &amp; Nâng Cấp</span>
+<span class="font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t13') }}</span>
 <span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">auto_mode</span>
 </div>
 <div class="mt-space-md">
-<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Tự Động 100%</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Miễn phí trọn đời cập nhật tính năng mới qua Cloud CI/CD</p>
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">{{ $t('policy.sla.t14') }}</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">{{ $t('policy.sla.t15') }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
 <div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface-variant">Cam Kết Bảo Hành</span>
+<span class="font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t16') }}</span>
 <span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">verified</span>
 </div>
 <div class="mt-space-md">
-<span class="font-headline-lg text-headline-lg text-secondary tracking-tight">30 Ngày</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Bảo hành hoàn tiền 100% nếu không đạt tiêu chuẩn nghiệp vụ</p>
+<span class="font-headline-lg text-headline-lg text-secondary tracking-tight">{{ $t('policy.sla.t17') }}</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">{{ $t('policy.sla.t18') }}</p>
 </div>
 </div>
 </div>
@@ -71,14 +71,14 @@
 <div>
 <div class="inline-flex items-center gap-space-2xs font-label-sm text-label-sm text-primary tracking-widest uppercase">
 <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-            Mục 01 • Ma Trận Phản Ứng Khẩn Cấp
+            {{ $t('policy.sla.t19') }}
           </div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-2xs">
-            Phân Cấp Mức Độ Sự Cố &amp; Thời Gian Xử Lý (Incident Severity Matrix)
+            {{ $t('policy.sla.t20') }}
           </h2>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
-          Áp dụng đồng bộ cho các phân hệ WMS kho vận, TMS điều phối vận tải và OMS cổng đơn hàng đa kênh.
+          {{ $t('policy.sla.t21') }}
         </p>
 </div>
 <div class="bg-surface-container-lowest rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] overflow-hidden">
@@ -86,11 +86,11 @@
 <table class="w-full text-left min-w-[800px]">
 <thead>
 <tr class="bg-surface-container-low">
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Cấp độ (Priority)</th>
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Mô tả đặc tính sự cố</th>
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Tiếp nhận &amp; Phản hồi</th>
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Giải pháp tạm (Workaround)</th>
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Giải quyết triệt để</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t22') }}</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t23') }}</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t24') }}</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t25') }}</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t26') }}</th>
 </tr>
 </thead>
 <tbody class="divide-y-0">
@@ -99,66 +99,66 @@
 <div class="flex items-center gap-space-xs">
 <span class="px-space-sm py-space-2xs rounded-full bg-error-container text-error font-label-sm text-label-sm flex items-center gap-1">
 <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
-                      P1 - Khẩn cấp
+                      {{ $t('policy.sla.t27') }}
                     </span>
 </div>
 </td>
 <td class="p-space-md align-top max-w-sm">
-<p class="font-body-sm text-body-sm text-on-surface font-medium">Toàn bộ hệ thống ngưng trệ</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Không thể nhập - xuất kho, nghẽn cổng đồng bộ sàn thương mại điện tử, tắc nghẽn bàn giao tài xế.</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">{{ $t('policy.sla.t28') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">{{ $t('policy.sla.t29') }}</p>
 </td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-tertiary font-bold">&lt; 15 phút (24/7)</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface font-medium">&lt; 2 giờ</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-primary font-bold">&lt; 4 giờ</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-tertiary font-bold">{{ $t('policy.sla.t30') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface font-medium">{{ $t('policy.sla.t31') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-primary font-bold">{{ $t('policy.sla.t32') }}</td>
 </tr>
 <tr class="hover:bg-surface-container-low/50 transition-colors bg-surface/30">
 <td class="p-space-md align-top">
 <div class="flex items-center gap-space-xs">
 <span class="px-space-sm py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
 <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-                      P2 - Nghiêm trọng
+                      {{ $t('policy.sla.t33') }}
                     </span>
 </div>
 </td>
 <td class="p-space-md align-top max-w-sm">
-<p class="font-body-sm text-body-sm text-on-surface font-medium">Gián đoạn tính năng trọng yếu</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Lỗi in nhãn vận đơn hàng loạt, mất kết nối thiết bị quét mã vạch PDA, ngắt kết nối tạm thời bảng định tuyến xe tải.</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">{{ $t('policy.sla.t34') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">{{ $t('policy.sla.t35') }}</p>
 </td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">&lt; 30 phút</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface font-medium">&lt; 4 giờ</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-primary font-medium">&lt; 8 giờ</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t36') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface font-medium">{{ $t('policy.sla.t37') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-primary font-medium">{{ $t('policy.sla.t38') }}</td>
 </tr>
 <tr class="hover:bg-surface-container-low/50 transition-colors">
 <td class="p-space-md align-top">
 <div class="flex items-center gap-space-xs">
 <span class="px-space-sm py-space-2xs rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
-                      P3 - Tiêu chuẩn
+                      {{ $t('policy.sla.t39') }}
                     </span>
 </div>
 </td>
 <td class="p-space-md align-top max-w-sm">
-<p class="font-body-sm text-body-sm text-on-surface font-medium">Sai lệch giao diện / Lỗi phụ</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Giao diện tải chậm nhẹ, sai định dạng báo cáo xuất Excel, thắc mắc thao tác quy trình điều chuyển nội bộ kho.</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">{{ $t('policy.sla.t40') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">{{ $t('policy.sla.t41') }}</p>
 </td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">&lt; 2 giờ (Giờ HC)</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">&lt; 12 giờ</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">&lt; 24 giờ</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t42') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t43') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t44') }}</td>
 </tr>
 <tr class="hover:bg-surface-container-low/50 transition-colors bg-surface/30">
 <td class="p-space-md align-top">
 <div class="flex items-center gap-space-xs">
 <span class="px-space-sm py-space-2xs rounded-full bg-surface-container-low text-outline font-label-sm text-label-sm">
-                      P4 - Đề xuất
+                      {{ $t('policy.sla.t45') }}
                     </span>
 </div>
 </td>
 <td class="p-space-md align-top max-w-sm">
-<p class="font-body-sm text-body-sm text-on-surface font-medium">Yêu cầu tính năng &amp; Góp ý</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Đề xuất tùy biến mẫu hóa đơn, bổ sung bộ lọc nâng cao, tích hợp cổng thanh toán hoặc hệ thống ERP ngoài.</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">{{ $t('policy.sla.t46') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">{{ $t('policy.sla.t47') }}</p>
 </td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">&lt; 24 giờ</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">Lập kế hoạch</td>
-<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">Theo Roadmap phát triển</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t48') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t49') }}</td>
+<td class="p-space-md align-top font-code-sm text-code-sm text-on-surface-variant">{{ $t('policy.sla.t50') }}</td>
 </tr>
 </tbody>
 </table>
@@ -166,45 +166,45 @@
 </div>
 <div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md">
 <div class="flex items-center justify-between">
-<span class="font-label-lg text-label-lg text-on-surface">Tiến trình phản ứng sự cố P1 (Khẩn cấp theo thời gian thực)</span>
-<span class="font-code-sm text-code-sm text-secondary font-medium">SOP Tiêu Chuẩn 24/7</span>
+<span class="font-label-lg text-label-lg text-on-surface">{{ $t('policy.sla.t51') }}</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">{{ $t('policy.sla.t52') }}</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
 <div class="flex flex-col gap-space-2xs bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
 <div class="flex items-center justify-between text-secondary">
-<span class="font-label-sm text-label-sm font-bold uppercase">Bước 1</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">{{ $t('policy.sla.t53') }}</span>
 <span class="material-symbols-outlined text-[18px]">crisis_alert</span>
 </div>
-<p class="font-label-md text-label-md text-on-surface">Phát hiện sự cố &amp; Cảnh báo</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Hệ thống giám sát APM tự động kích hoạt alert trực tiếp tới Trưởng nhóm Kỹ thuật (On-call Lead).</p>
-<span class="font-code-sm text-code-sm text-primary mt-space-2xs">0 - 5 phút</span>
+<p class="font-label-md text-label-md text-on-surface">{{ $t('policy.sla.t54') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t55') }}</p>
+<span class="font-code-sm text-code-sm text-primary mt-space-2xs">{{ $t('policy.sla.t56') }}</span>
 </div>
 <div class="flex flex-col gap-space-2xs bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
 <div class="flex items-center justify-between text-primary">
-<span class="font-label-sm text-label-sm font-bold uppercase">Bước 2</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">{{ $t('policy.sla.t57') }}</span>
 <span class="material-symbols-outlined text-[18px]">groups</span>
 </div>
-<p class="font-label-md text-label-md text-on-surface">Thành lập War-Room</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Kỹ sư hạ tầng, kỹ sư dữ liệu và DevOps phối hợp khoanh vùng module phát sinh lỗi.</p>
-<span class="font-code-sm text-code-sm text-primary mt-space-2xs">5 - 15 phút</span>
+<p class="font-label-md text-label-md text-on-surface">{{ $t('policy.sla.t58') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t59') }}</p>
+<span class="font-code-sm text-code-sm text-primary mt-space-2xs">{{ $t('policy.sla.t60') }}</span>
 </div>
 <div class="flex flex-col gap-space-2xs bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
 <div class="flex items-center justify-between text-tertiary">
-<span class="font-label-sm text-label-sm font-bold uppercase">Bước 3</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">{{ $t('policy.sla.t61') }}</span>
 <span class="material-symbols-outlined text-[18px]">healing</span>
 </div>
-<p class="font-label-md text-label-md text-on-surface">Giải pháp Phục hồi nhanh</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Triển khai dự phòng failover sang cụm máy chủ phụ (Multi-AZ), khôi phục lưu thông đơn hàng.</p>
-<span class="font-code-sm text-code-sm text-primary mt-space-2xs">&lt; 120 phút</span>
+<p class="font-label-md text-label-md text-on-surface">{{ $t('policy.sla.t62') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t63') }}</p>
+<span class="font-code-sm text-code-sm text-primary mt-space-2xs">{{ $t('policy.sla.t64') }}</span>
 </div>
 <div class="flex flex-col gap-space-2xs bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
 <div class="flex items-center justify-between text-secondary">
-<span class="font-label-sm text-label-sm font-bold uppercase">Bước 4</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">{{ $t('policy.sla.t65') }}</span>
 <span class="material-symbols-outlined text-[18px]">task_alt</span>
 </div>
-<p class="font-label-md text-label-md text-on-surface">Báo cáo Hậu kiểm (PIR)</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Gửi biên bản phân tích nguyên nhân gốc rễ (Root-Cause Analysis) và bồi hoàn theo cam kết.</p>
-<span class="font-code-sm text-code-sm text-primary mt-space-2xs">Trong vòng 24 giờ</span>
+<p class="font-label-md text-label-md text-on-surface">{{ $t('policy.sla.t66') }}</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t67') }}</p>
+<span class="font-code-sm text-code-sm text-primary mt-space-2xs">{{ $t('policy.sla.t68') }}</span>
 </div>
 </div>
 </div>
@@ -214,22 +214,22 @@
 <div>
 <div class="inline-flex items-center gap-space-2xs font-label-sm text-label-sm text-secondary tracking-widest uppercase">
 <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-            Mục 02 • Bồi Hoàn Dịch Vụ Minh Bạch
+            {{ $t('policy.sla.t69') }}
           </div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-2xs">
-            Cam Kết Uptime 99.98% &amp; Chính Sách Hoàn Tiền (Service Credit)
+            {{ $t('policy.sla.t70') }}
           </h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
-            Nếu tỉ lệ sẵn sàng của hệ thống ecor.vn trong bất kỳ tháng dương lịch nào giảm xuống dưới ngưỡng 99.98%, doanh nghiệp sẽ tự động được nhận Điểm bồi hoàn dịch vụ (Service Credits) khấu trừ trực tiếp vào hóa đơn kỳ tiếp theo.
+            {{ $t('policy.sla.t71') }}
           </p>
 </div>
 <div class="bg-surface-container-lowest rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] overflow-hidden">
 <table class="w-full text-left">
 <thead>
 <tr class="bg-surface-container-low">
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Tỷ lệ khả dụng hàng tháng (Monthly Uptime)</th>
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Mức Bồi hoàn Dịch vụ (Credit)</th>
-<th class="p-space-md font-label-md text-label-md text-on-surface-variant">Hình thức thanh toán</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t72') }}</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t73') }}</th>
+<th class="p-space-md font-label-md text-label-md text-on-surface-variant">{{ $t('policy.sla.t74') }}</th>
 </tr>
 </thead>
 <tbody class="divide-y-0">
@@ -237,31 +237,31 @@
 <td class="p-space-md">
 <div class="flex items-center gap-space-xs">
 <span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="font-body-md text-body-md text-on-surface font-semibold">99.0% - Dưới 99.98%</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">{{ $t('policy.sla.t75') }}</span>
 </div>
 </td>
-<td class="p-space-md font-label-lg text-label-lg text-primary">10% Cước dịch vụ tháng</td>
-<td class="p-space-md font-body-sm text-body-sm text-on-surface-variant">Khấu trừ tự động kỳ kế tiếp</td>
+<td class="p-space-md font-label-lg text-label-lg text-primary">{{ $t('policy.sla.t76') }}</td>
+<td class="p-space-md font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t77') }}</td>
 </tr>
 <tr class="hover:bg-surface-container-low/50 bg-surface/30">
 <td class="p-space-md">
 <div class="flex items-center gap-space-xs">
 <span class="w-2 h-2 rounded-full bg-tertiary"></span>
-<span class="font-body-md text-body-md text-on-surface font-semibold">95.0% - Dưới 99.0%</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">{{ $t('policy.sla.t78') }}</span>
 </div>
 </td>
-<td class="p-space-md font-label-lg text-label-lg text-tertiary">25% Cước dịch vụ tháng</td>
-<td class="p-space-md font-body-sm text-body-sm text-on-surface-variant">Khấu trừ tự động kỳ kế tiếp</td>
+<td class="p-space-md font-label-lg text-label-lg text-tertiary">{{ $t('policy.sla.t79') }}</td>
+<td class="p-space-md font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t80') }}</td>
 </tr>
 <tr class="hover:bg-surface-container-low/50">
 <td class="p-space-md">
 <div class="flex items-center gap-space-xs">
 <span class="w-2 h-2 rounded-full bg-error"></span>
-<span class="font-body-md text-body-md text-on-surface font-semibold">Dưới 95.0%</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">{{ $t('policy.sla.t81') }}</span>
 </div>
 </td>
-<td class="p-space-md font-label-lg text-label-lg text-error">50% Cước dịch vụ tháng</td>
-<td class="p-space-md font-body-sm text-body-sm text-on-surface-variant">Khấu trừ hoặc hoàn tiền tài khoản</td>
+<td class="p-space-md font-label-lg text-label-lg text-error">{{ $t('policy.sla.t82') }}</td>
+<td class="p-space-md font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t83') }}</td>
 </tr>
 </tbody>
 </table>
@@ -269,25 +269,25 @@
 <div class="p-space-md bg-secondary-fixed/30 rounded-xl flex items-start gap-space-sm text-on-secondary-fixed">
 <span class="material-symbols-outlined text-secondary text-[24px]">info</span>
 <p class="font-body-sm text-body-sm">
-<strong>Ghi chú:</strong> Tỷ lệ Uptime không bao gồm thời gian bảo trì định kỳ có thông báo trước ít nhất 07 ngày, hoặc các sự cố bắt nguồn từ nhà cung cấp dịch vụ viễn thông quốc tế (cáp quang biển) và sự cố thiên tai bất khả kháng.
+<strong>{{ $t('policy.sla.t84') }}</strong> {{ $t('policy.sla.t85') }}
           </p>
 </div>
 </div>
 <div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] p-space-lg flex flex-col gap-space-md">
 <div class="flex items-center justify-between pb-space-xs">
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Hệ thống đo lường minh bạch</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Uptime Trực Quan 90 Ngày Qua</h3>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">{{ $t('policy.sla.t86') }}</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t87') }}</h3>
 </div>
 <div class="flex items-center gap-1">
 <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
-<span class="font-code-sm text-code-sm text-secondary font-bold">ALL SYSTEMS OPERATIONAL</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">{{ $t('policy.sla.t88') }}</span>
 </div>
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex justify-between items-center font-body-sm text-body-sm">
-<span class="text-on-surface-variant">Core WMS API Gateway</span>
-<span class="font-code-sm text-code-sm text-secondary font-semibold">99.99%</span>
+<span class="text-on-surface-variant">{{ $t('policy.sla.t89') }}</span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">{{ $t('policy.sla.t90') }}</span>
 </div>
 <div class="w-full bg-surface-container-low h-3 rounded-full overflow-hidden flex gap-0.5 p-0.5">
 <div class="h-full bg-secondary-fixed-dim rounded-full flex-1"></div>
@@ -302,8 +302,8 @@
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex justify-between items-center font-body-sm text-body-sm">
-<span class="text-on-surface-variant">TMS Routing &amp; GPS Tracking</span>
-<span class="font-code-sm text-code-sm text-secondary font-semibold">99.98%</span>
+<span class="text-on-surface-variant">{{ $t('policy.sla.t91') }}</span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">{{ $t('policy.sla.t92') }}</span>
 </div>
 <div class="w-full bg-surface-container-low h-3 rounded-full overflow-hidden flex gap-0.5 p-0.5">
 <div class="h-full bg-secondary-fixed-dim rounded-full flex-1"></div>
@@ -318,8 +318,8 @@
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex justify-between items-center font-body-sm text-body-sm">
-<span class="text-on-surface-variant">OMS E-commerce Sync Engines</span>
-<span class="font-code-sm text-code-sm text-secondary font-semibold">99.97%</span>
+<span class="text-on-surface-variant">{{ $t('policy.sla.t93') }}</span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">{{ $t('policy.sla.t94') }}</span>
 </div>
 <div class="w-full bg-surface-container-low h-3 rounded-full overflow-hidden flex gap-0.5 p-0.5">
 <div class="h-full bg-secondary-fixed-dim rounded-full flex-1"></div>
@@ -334,11 +334,11 @@
 </div>
 <div class="mt-space-sm p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface-variant">Cổng tra cứu độc lập 24/7</span>
-<span class="font-code-sm text-code-sm text-primary font-bold">status.ecor.vn</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t95') }}</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">{{ $t('policy.sla.t96') }}</span>
 </div>
 <a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container transition-colors inline-flex items-center gap-1" href="#">
-<span>Kiểm tra Live</span>
+<span>{{ $t('policy.sla.t97') }}</span>
 <span class="material-symbols-outlined text-[16px]">open_in_new</span>
 </a>
 </div>
@@ -348,10 +348,10 @@
 <div>
 <div class="inline-flex items-center gap-space-2xs font-label-sm text-label-sm text-primary tracking-widest uppercase">
 <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-          Mục 03 • Trách Nhiệm Kỹ Thuật
+          {{ $t('policy.sla.t98') }}
         </div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-2xs">
-          Phạm Vi Bảo Hành Phần Mềm &amp; Lịch Trình Bảo Trì Hệ Thống
+          {{ $t('policy.sla.t99') }}
         </h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
@@ -360,24 +360,24 @@
 <div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
 <span class="material-symbols-outlined text-[28px]">security_update_good</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Bản Vá Lỗi &amp; Cập Nhật</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t100') }}</h3>
 <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Miễn phí 100% toàn bộ bản sửa lỗi logic (hotfixes).</span>
+<span>{{ $t('policy.sla.t101') }}</span>
 </li>
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Cập nhật bản vá bảo mật định kỳ tuân chuẩn ISO 27001.</span>
+<span>{{ $t('policy.sla.t102') }}</span>
 </li>
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Tự động nhận tính năng nâng cao không phát sinh phí ẩn.</span>
+<span>{{ $t('policy.sla.t103') }}</span>
 </li>
 </ul>
 </div>
 <div class="mt-space-lg pt-space-sm bg-surface-container-low rounded-lg p-space-sm">
-<span class="font-label-sm text-label-sm text-primary font-semibold">Tần suất: Phát hành mỗi thứ Ba hàng tuần</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">{{ $t('policy.sla.t104') }}</span>
 </div>
 </div>
 <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] flex flex-col justify-between">
@@ -385,24 +385,24 @@
 <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
 <span class="material-symbols-outlined text-[28px]">print</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Tương Thích Thiết Bị Ngoại Vi</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t105') }}</h3>
 <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Bảo hành tương thích trọn vẹn máy quét cầm tay PDA Android (Zebra, Honeywell, Urovo).</span>
+<span>{{ $t('policy.sla.t106') }}</span>
 </li>
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Driver tương thích trực tiếp các loại máy in bill, in mã vạch nhiệt (Xprinter, Godex).</span>
+<span>{{ $t('policy.sla.t107') }}</span>
 </li>
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Giao thức kết nối cảm biến cân điện tử tự động.</span>
+<span>{{ $t('policy.sla.t108') }}</span>
 </li>
 </ul>
 </div>
 <div class="mt-space-lg pt-space-sm bg-surface-container-low rounded-lg p-space-sm">
-<span class="font-label-sm text-label-sm text-secondary font-semibold">Hỗ trợ setup từ xa qua Teamviewer/Ultraview</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">{{ $t('policy.sla.t109') }}</span>
 </div>
 </div>
 <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] flex flex-col justify-between">
@@ -410,24 +410,24 @@
 <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
 <span class="material-symbols-outlined text-[28px]">schedule</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Bảo Trì Định Kỳ (Scheduled)</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t110') }}</h3>
 <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Khung giờ vàng bảo trì: 01:00 AM - 04:00 AM sáng Chủ Nhật.</span>
+<span>{{ $t('policy.sla.t111') }}</span>
 </li>
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Thông báo bằng văn bản / Email / Dashboard trước 07 ngày.</span>
+<span>{{ $t('policy.sla.t112') }}</span>
 </li>
 <li class="flex items-start gap-space-xs">
 <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
-<span>Áp dụng chiến lược Zero-Downtime Deployment hạn chế ngắt quãng.</span>
+<span>{{ $t('policy.sla.t113') }}</span>
 </li>
 </ul>
 </div>
 <div class="mt-space-lg pt-space-sm bg-surface-container-low rounded-lg p-space-sm">
-<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tối đa 120 phút bảo trì / quý dương lịch</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">{{ $t('policy.sla.t114') }}</span>
 </div>
 </div>
 </div>
@@ -437,14 +437,14 @@
 <div>
 <div class="inline-flex items-center gap-space-2xs font-label-sm text-label-sm text-primary tracking-widest uppercase">
 <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-            Mục 04 • Đa Dạng Kênh Tương Tác
+            {{ $t('policy.sla.t115') }}
           </div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-2xs">
-            Quy Trình Tiếp Nhận &amp; 4 Kênh Hỗ Trợ Kỹ Thuật Độc Lập
+            {{ $t('policy.sla.t116') }}
           </h2>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
-          Linh hoạt kết nối tới kỹ sư vận hành ecor.vn thông qua mọi phương thức phù hợp với đặc thù kho bãi và văn phòng điều hành của bạn.
+          {{ $t('policy.sla.t117') }}
         </p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
@@ -453,15 +453,15 @@
 <span class="material-symbols-outlined text-[28px]">phone_in_talk</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase">Kênh 01</span>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Hotline Khẩn Cấp</h4>
+<span class="font-label-sm text-label-sm text-outline uppercase">{{ $t('policy.sla.t118') }}</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t119') }}</h4>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Đường dây nóng kỹ thuật phục vụ 24/7/365 cho các sự cố gián đoạn vận hành khẩn cấp P1.
+            {{ $t('policy.sla.t120') }}
           </p>
 <div class="mt-auto pt-space-md">
-<a class="font-headline-sm text-headline-sm text-primary font-bold hover:underline block" href="tel:19006868">1900 6868</a>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Phím 2: Hỗ trợ Kỹ thuật &amp; Kho</span>
+<a class="font-headline-sm text-headline-sm text-primary font-bold hover:underline block" href="tel:19006868">{{ $t('policy.sla.t121') }}</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t122') }}</span>
 </div>
 </div>
 <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] flex flex-col gap-space-md transition-transform hover:-translate-y-1">
@@ -469,18 +469,18 @@
 <span class="material-symbols-outlined text-[28px]">confirmation_number</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase">Kênh 02</span>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Cổng Ticket Portal</h4>
+<span class="font-label-sm text-label-sm text-outline uppercase">{{ $t('policy.sla.t123') }}</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t124') }}</h4>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Gửi yêu cầu, đính kèm log lỗi, hình ảnh màn hình và theo dõi luồng xử lý của lập trình viên.
+            {{ $t('policy.sla.t125') }}
           </p>
 <div class="mt-auto pt-space-md">
 <a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 hover:underline" href="#">
-              Truy cập Ticket Hub
+              {{ $t('policy.sla.t126') }}
               <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Hỗ trợ tự động gắn mã SLA ID</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t127') }}</span>
 </div>
 </div>
 <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] flex flex-col gap-space-md transition-transform hover:-translate-y-1">
@@ -488,15 +488,15 @@
 <span class="material-symbols-outlined text-[28px]">forum</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase">Kênh 03</span>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Nhóm Hỗ Trợ VIP</h4>
+<span class="font-label-sm text-label-sm text-outline uppercase">{{ $t('policy.sla.t128') }}</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t129') }}</h4>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Kênh trao đổi trực tiếp Zalo VIP / Telegram chuyên trách riêng cho doanh nghiệp gói Enterprise.
+            {{ $t('policy.sla.t130') }}
           </p>
 <div class="mt-auto pt-space-md">
-<span class="font-label-md text-label-md text-secondary font-semibold block">Dành riêng cho Enterprise</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Dedicated Customer Success Lead</span>
+<span class="font-label-md text-label-md text-secondary font-semibold block">{{ $t('policy.sla.t131') }}</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t132') }}</span>
 </div>
 </div>
 <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] flex flex-col gap-space-md transition-transform hover:-translate-y-1">
@@ -504,35 +504,35 @@
 <span class="material-symbols-outlined text-[28px]">engineering</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase">Kênh 04</span>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Hỗ Trợ Trực Tiếp (Onsite)</h4>
+<span class="font-label-sm text-label-sm text-outline uppercase">{{ $t('policy.sla.t133') }}</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">{{ $t('policy.sla.t134') }}</h4>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Kỹ sư hiện trường có mặt tận kho, trung tâm phân phối và bến bãi để kiểm tra hạ tầng vật lý.
+            {{ $t('policy.sla.t135') }}
           </p>
 <div class="mt-auto pt-space-md">
-<span class="font-label-md text-label-md text-on-surface font-semibold block">Phủ sóng HN - ĐN - TP.HCM</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Có mặt trong 2-4h (nội thành)</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">{{ $t('policy.sla.t136') }}</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t137') }}</span>
 </div>
 </div>
 </div>
 </section>
 <div class="bg-gradient-to-r from-primary to-secondary rounded-xl p-space-lg md:p-space-2xl text-on-primary shadow-[0_10px_25px_-5px_rgba(24,119,242,0.25)] flex flex-col lg:flex-row items-center justify-between gap-space-xl">
 <div class="flex flex-col gap-space-xs max-w-2xl text-center lg:text-left">
-<span class="font-label-sm text-label-sm tracking-widest uppercase opacity-90">Theo dõi trực tiếp hoặc liên hệ kỹ sư</span>
-<h3 class="font-headline-lg text-headline-lg">Đảm Bảo Dòng Chảy Vận Hành Của Doanh Nghiệp Không Gián Đoạn</h3>
+<span class="font-label-sm text-label-sm tracking-widest uppercase opacity-90">{{ $t('policy.sla.t138') }}</span>
+<h3 class="font-headline-lg text-headline-lg">{{ $t('policy.sla.t139') }}</h3>
 <p class="font-body-md text-body-md opacity-90">
-          Hơn 1.200 kho vận và chuỗi phân phối tin tưởng vào sự bảo bọc kỹ thuật vững vàng từ ecor.vn. Chúng tôi luôn sẵn sàng hỗ trợ bạn.
+          {{ $t('policy.sla.t140') }}
         </p>
 </div>
 <div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto">
 <a class="w-full sm:w-auto px-space-lg py-space-sm bg-surface-container-lowest text-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-surface-bright transition-colors shadow-sm" href="#">
 <span class="material-symbols-outlined text-[20px]">monitor_heart</span>
-<span>Xem Trang Trạng Thái Hệ Thống</span>
+<span>{{ $t('policy.sla.t141') }}</span>
 </a>
 <a class="w-full sm:w-auto px-space-lg py-space-sm bg-primary-fixed/20 text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-fixed/30 transition-colors" href="#">
 <span class="material-symbols-outlined text-[20px]">support_agent</span>
-<span>Gửi Yêu Cầu Hỗ Trợ Kỹ Thuật</span>
+<span>{{ $t('policy.sla.t142') }}</span>
 </a>
 </div>
 </div>
@@ -542,8 +542,8 @@
 <span class="material-symbols-outlined text-[20px]">shield_lock</span>
 </div>
 <div>
-<h5 class="font-label-lg text-label-lg text-on-surface">Chứng nhận An Toàn ISO/IEC 27001</h5>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Dữ liệu đơn hàng, kho vận và lịch trình xe được mã hóa chuẩn TLS 1.3 và lưu trữ đa tầng tại Việt Nam.</p>
+<h5 class="font-label-lg text-label-lg text-on-surface">{{ $t('policy.sla.t143') }}</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t144') }}</p>
 </div>
 </div>
 <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
@@ -551,8 +551,8 @@
 <span class="material-symbols-outlined text-[20px]">contract</span>
 </div>
 <div>
-<h5 class="font-label-lg text-label-lg text-on-surface">Pháp Lý &amp; Hợp Đồng Dịch Vụ</h5>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Điều khoản SLA là phụ lục bắt buộc gắn liền với Hợp đồng cấp phép sử dụng phần mềm có giá trị pháp lý đầy đủ.</p>
+<h5 class="font-label-lg text-label-lg text-on-surface">{{ $t('policy.sla.t145') }}</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ $t('policy.sla.t146') }}</p>
 </div>
 </div>
 </div>
