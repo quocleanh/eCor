@@ -11,25 +11,25 @@ const routes = [
     path: '/wms',
     name: 'wms',
     component: () => import('@/views/WmsView.vue'),
-    meta: { title: 'ecor WMS — Giải Pháp Quản Trị Kho Thông Minh Chuẩn 4.0' }
+    meta: { title: 'ecor WMS — Giải Pháp Quản Trị Kho Thông Minh Chuẩn 4.0', description: 'Phân hệ eCor WMS thuộc Hệ Sinh Thái Lõi SaaS. Giải pháp quản trị kho thông minh tích hợp PDA/RFID, quản lý tồn kho real-time và loại trừ rủi ro lệch tồn.' }
   },
   {
     path: '/tms',
     name: 'tms',
     component: () => import('@/views/TmsView.vue'),
-    meta: { title: 'ecor TMS — Quản Lý & Điều Phối Vận Tải Real-Time' }
+    meta: { title: 'ecor TMS — Quản Lý & Điều Phối Vận Tải Real-Time', description: 'Phân hệ eCor TMS - Nền tảng điều phối vận tải tối ưu lộ trình, giám sát đội xe và tự động đồng bộ mã vận đơn đa kênh trên Lõi dữ liệu duy nhất (Single Source of Truth).' }
   },
   {
     path: '/pos',
     name: 'pos',
     component: () => import('@/views/PosView.vue'),
-    meta: { title: 'ecor POS — Bán Hàng Siêu Tốc & Quản Trị Điểm Bán Đa Chuỗi' }
+    meta: { title: 'ecor POS — Bán Hàng Siêu Tốc & Quản Trị Điểm Bán Đa Chuỗi', description: 'Phân hệ eCor POS bán hàng siêu tốc đa nền tảng. Kết nối chặt chẽ với WMS và CRM, xử lý hàng ngàn đơn hàng không độ trễ, tối ưu năng suất chuỗi bán lẻ.' }
   },
   {
     path: '/giai-phap',
     name: 'solutions',
     component: () => import('@/views/SolutionsView.vue'),
-    meta: { title: 'Giải Pháp Vận Hành Chuỗi Cung Ứng Theo Ngành — eCor' }
+    meta: { title: 'Giải Pháp Vận Hành Chuỗi Cung Ứng Theo Ngành — eCor', description: 'Các giải pháp chuyên sâu từ eCor SaaS dành cho FMCG, Bán Lẻ, Vận tải và 3PL Logistics. Khai thác sức mạnh từ Single Source of Truth.' }
   },
   {
     path: '/bang-gia',
@@ -102,7 +102,29 @@ const router = createRouter({
 
 router.afterEach((to) => {
   if (to.meta && to.meta.title) {
-    document.title = to.meta.title
+    document.title = to.meta.title;
+    
+    // Update OpenGraph Title
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', to.meta.title);
+    
+    // Update Twitter Title
+    let twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', to.meta.title);
+  }
+
+  if (to.meta && to.meta.description) {
+    // Update Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', to.meta.description);
+    
+    // Update OpenGraph Description
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', to.meta.description);
+    
+    // Update Twitter Description
+    let twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', to.meta.description);
   }
 })
 
