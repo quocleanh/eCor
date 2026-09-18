@@ -26,17 +26,16 @@
 
         <!-- Subtitle -->
         <p class="mt-5 text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal">
-          Giải pháp WMS đám mây chuyên sâu cho doanh nghiệp bán lẻ đa kênh, chuỗi phân phối FMCG và đơn vị 3PL
-          Logistics. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99.98%.
+          {{ $t('wms.desc.subtitle') }}
         </p>
 
         <!-- CTA Buttons -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'ecor WMS - Quản trị kho' })"
+          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'wms' })"
             class="px-8 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-base shadow-md hover:shadow-lg transition-all transform active:scale-95">
             {{ $t('wms.hero.demo') }}
           </button>
-          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'Video 3D Kho Vận WMS' })"
+          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'wms' })"
             class="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-700 font-semibold text-base border border-zinc-200 shadow-sm hover:shadow transition-all flex items-center gap-2">
             <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
               <svg class="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -89,7 +88,7 @@
 
             <!-- Interactive Floating Quick Actions Overlay -->
             <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center gap-2">
-              <button @click="$emit('open-modal', { type: 'demo', moduleName: 'ecor WMS - 3D Digital Twin Mega Hub' })"
+              <button @click="$emit('open-modal', { type: 'demo', moduleName: 'wms' })"
                 class="px-4 py-2 rounded-xl bg-zinc-900/85 hover:bg-zinc-900 text-white text-xs font-semibold backdrop-blur-md shadow-lg transition-all flex items-center gap-2 border border-white/20 hover:scale-105">
                 <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                 <span>{{ $t('wms.hero.digitalTwin') }}</span>
@@ -110,26 +109,22 @@
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">99.98%</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('wms.metrics.m1.title') }}</div>
-            <p class="text-xs text-zinc-500 mt-1">Khử triệt để thất thoát hàng hóa, sai lệch số liệu thực tế so với sổ
-              sách hệ thống kế toán.</p>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('wms.desc.m1') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('wms.metrics.m2.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('wms.metrics.m2.title') }}</div>
-            <p class="text-xs text-zinc-500 mt-1">Chiến lược Wave picking gom nhóm đơn hàng thông minh, tối ưu đường đi
-              chuyển ngắn nhất trong kho.</p>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('wms.desc.m2') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">-45%</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('wms.metrics.m3.title') }}</div>
-            <p class="text-xs text-zinc-500 mt-1">Giao diện PDA chuyên dụng với chỉ dẫn màu trực quan, công nhân kho mới
-              có thể làm việc ngay sau 30 phút.</p>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('wms.desc.m3') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('wms.metrics.m4.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('wms.metrics.m4.title') }}</div>
-            <p class="text-xs text-zinc-500 mt-1">Quy trình chuẩn hóa danh mục SKU và chuyển đổi dữ liệu kho bãi tự
-              động, không làm gián đoạn bán hàng.</p>
+            <p class="text-xs text-zinc-500 mt-1">{{ $t('wms.desc.m4') }}</p>
           </div>
         </div>
       </div>
@@ -143,8 +138,7 @@
           {{ $t('wms.pillars.title') }}
         </h2>
         <p class="mt-3 text-base text-zinc-500 max-w-2xl mx-auto">
-          Được thiết kế dựa trên tiêu chuẩn quản trị kho vận toàn cầu, giải phóng sức lao động thủ công và tự động hóa
-          quyết định điều phối.
+          {{ $t('wms.desc.pillarsSub') }}
         </p>
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
@@ -162,8 +156,7 @@
             <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('wms.pillars.p1.title') }}
             </h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Số hóa toàn diện sơ đồ kho thực tế lên không gian 3 chiều. Tự động tính toán tải trọng sàn, dung tích ô
-              chứa (CBM) và tỷ lệ lấp đầy theo thời gian thực.
+              {{ $t('wms.desc.p1') }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 mt-4 font-medium">
               <li class="flex items-center gap-2">
@@ -198,8 +191,7 @@
             </div>
             <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('wms.pillars.p2.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Thuật toán trí tuệ nhân tạo gom nhóm hàng trăm đơn lẻ thành từng đợt lấy hàng (Wave), tối ưu hóa lộ trình
-              ngắn nhất qua thuật toán TSP (Traveling Salesperson).
+              {{ $t('wms.desc.p2') }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 mt-4 font-medium">
               <li class="flex items-center gap-2">
@@ -234,8 +226,7 @@
             </div>
             <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('wms.pillars.p3.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Giải quyết bài toán cận date, hết date gây tổn thất hàng triệu USD cho chuỗi cung ứng FMCG, Dược phẩm và
-              {{ $t('wmsMisc.fresh') }}
+              {{ $t('wms.desc.p3', { fresh: $t('wmsMisc.fresh') }) }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 mt-4 font-medium">
               <li class="flex items-center gap-2">
@@ -270,8 +261,7 @@
             </div>
             <h3 class="text-xl font-bold text-zinc-900 mt-5">{{ $t('wms.pillars.p4.title') }}</h3>
             <p class="text-sm text-zinc-500 mt-2 leading-relaxed">
-              Kiểm kê định kỳ liên tục theo khu vực (Zone) hoặc nhóm SKU ABC mà không cần đóng cửa ngừng hoạt động trung
-              tâm phân phối dù chỉ 1 giờ.
+              {{ $t('wms.desc.p4') }}
             </p>
             <ul class="space-y-2 text-xs text-zinc-600 mt-4 font-medium">
               <li class="flex items-center gap-2">
@@ -304,8 +294,7 @@
           {{ $t('wms.steps.title') }}
         </h2>
         <p class="mt-3 text-base text-zinc-500 max-w-2xl mx-auto">
-          Kiểm soát chặt chẽ từng nhịp thở của dòng hàng từ cổng vào Inbound cho tới khi bàn giao hoàn tất cho đơn vị
-          vận tải Outbound.
+          {{ $t('wms.desc.stepsSub') }}
         </p>
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-5 gap-4 text-left">
@@ -314,8 +303,7 @@
             <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">↓
             </div>
             <h4 class="font-bold text-zinc-900 text-sm">{{ $t('wms.steps.s1.title') }}</h4>
-            <p class="text-xs text-zinc-500 leading-relaxed">Quét mã Barcode/QR đối soát với PO nhà cung cấp. Kiểm tra
-              sai lệch thừa/thiếu, ghi nhận Barcode lô sản xuất ngay tại dock cửa kho.</p>
+            <p class="text-xs text-zinc-500 leading-relaxed">{{ $t('wms.desc.s1') }}</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-2">
@@ -323,8 +311,7 @@
             <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">↗
             </div>
             <h4 class="font-bold text-zinc-900 text-sm">{{ $t('wms.steps.s2.title') }}</h4>
-            <p class="text-xs text-zinc-500 leading-relaxed">Thuật toán đề xuất chính xác vị trí kệ trống tối ưu dựa
-              theo kích thước, khối lượng, điều kiện bảo quản và tần suất xuất nhập.</p>
+            <p class="text-xs text-zinc-500 leading-relaxed">{{ $t('wms.desc.s2') }}</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-2">
@@ -332,8 +319,7 @@
             <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">⚙
             </div>
             <h4 class="font-bold text-zinc-900 text-sm">{{ $t('wms.steps.s3.title') }}</h4>
-            <p class="text-xs text-zinc-500 leading-relaxed">Theo dõi biến động tồn theo thời gian thực. Tự động thông
-              báo luân chuyển hàng hóa sang khu vực thanh lý hoặc đẩy date trước khi hết hạn.</p>
+            <p class="text-xs text-zinc-500 leading-relaxed">{{ $t('wms.desc.s3') }}</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-2">
@@ -341,8 +327,7 @@
             <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">🛒
             </div>
             <h4 class="font-bold text-zinc-900 text-sm">{{ $t('wms.steps.s4.title') }}</h4>
-            <p class="text-xs text-zinc-500 leading-relaxed">Phân bổ nhân sự nhặt hàng thông qua PDA theo lộ trình ngắn
-              nhất. Bàn đóng gói kiểm tra lại barcode lần cuối trước khi dán vận đơn vận chuyển.</p>
+            <p class="text-xs text-zinc-500 leading-relaxed">{{ $t('wms.desc.s4') }}</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-2">
@@ -350,8 +335,7 @@
             <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">🚚
             </div>
             <h4 class="font-bold text-zinc-900 text-sm">{{ $t('wms.steps.s5.title') }}</h4>
-            <p class="text-xs text-zinc-500 leading-relaxed">Bắn mã quét biên bản bàn giao cho shipper/xe tải. Tự động
-              ký số điện tử e-POD và đồng bộ trạng thái đơn hàng sang các kênh bán lẻ tức thì.</p>
+            <p class="text-xs text-zinc-500 leading-relaxed">{{ $t('wms.desc.s5') }}</p>
           </div>
         </div>
       </div>
@@ -365,8 +349,7 @@
           {{ $t('wms.models.title') }}
         </h2>
         <p class="mt-3 text-base text-zinc-500 max-w-2xl mx-auto">
-          Dù bạn vận hành kho thương mại điện tử tốc độ cao, chuỗi kho lạnh nhạy cảm hay kho 3PL đa chủ hàng, ecor WMS
-          đều có kịch bản xử lý chuyên biệt.
+          {{ $t('wms.desc.modelsSub') }}
         </p>
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -383,8 +366,7 @@
               <div class="p-6">
                 <h3 class="text-lg font-bold text-zinc-900">{{ $t('wms.models.m1.title') }}</h3>
                 <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
-                  Được xây dựng cho các chiến dịch Mega Sale lên đến 100.000+ đơn/ngày. Đồng bộ tồn kho tức thì 1 giây
-                  sang Shopee, TikTok Shop, Lazada, sàn TMĐT & Chuỗi cửa hàng offline.
+                  {{ $t('wms.desc.m1desc') }}
                 </p>
                 <div class="mt-4 space-y-1.5 text-xs text-zinc-600 font-medium">
                   <div class="flex items-center gap-2">✓ {{ $t('wms.models.m1.f1') }}</div>
@@ -394,8 +376,7 @@
               </div>
             </div>
             <div class="p-6 pt-0">
-              <span class="text-xs font-bold text-amber-600 block border-t border-zinc-100 pt-4">Xử lý cam kết: &lt; 2
-                phút / đơn hàng</span>
+              <span class="text-xs font-bold text-amber-600 block border-t border-zinc-100 pt-4">{{ $t('wms.desc.m1tag') }}</span>
             </div>
           </div>
 
@@ -412,8 +393,7 @@
               <div class="p-6">
                 <h3 class="text-lg font-bold text-zinc-900">{{ $t('wms.models.m2.title') }}</h3>
                 <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
-                  Quản lý nghiêm ngặt dải nhiệt độ, độ ẩm của từng zone chuyên biệt. Quản lý chặt chẽ date xuất khẩu,
-                  chuẩn HACCP, truy vết nguồn gốc lô hàng theo chuỗi cung ứng.
+                  {{ $t('wms.desc.m2desc') }}
                 </p>
                 <div class="mt-4 space-y-1.5 text-xs text-zinc-600 font-medium">
                   <div class="flex items-center gap-2">✓ {{ $t('wms.models.m2.f1') }}</div>
@@ -423,8 +403,7 @@
               </div>
             </div>
             <div class="p-6 pt-0">
-              <span class="text-xs font-bold text-amber-600 block border-t border-zinc-100 pt-4">Chuẩn an toàn thực phẩm
-                & Y tế</span>
+              <span class="text-xs font-bold text-amber-600 block border-t border-zinc-100 pt-4">{{ $t('wms.desc.m2tag') }}</span>
             </div>
           </div>
 
@@ -441,8 +420,7 @@
               <div class="p-6">
                 <h3 class="text-lg font-bold text-zinc-900">{{ $t('wms.models.m3.title') }}</h3>
                 <p class="text-xs text-zinc-500 mt-2 leading-relaxed">
-                  Kiến trúc Multi-tenant cho phép quản lý hàng trăm chủ hàng (Customers/Shippers) trên cùng một giao
-                  diện duy nhất. Tách biệt dữ liệu và cấu hình biểu phí lưu kho CBM tự động.
+                  {{ $t('wms.desc.m3desc') }}
                 </p>
                 <div class="mt-4 space-y-1.5 text-xs text-zinc-600 font-medium">
                   <div class="flex items-center gap-2">✓ {{ $t('wms.models.m3.f1') }}</div>
@@ -452,8 +430,7 @@
               </div>
             </div>
             <div class="p-6 pt-0">
-              <span class="text-xs font-bold text-amber-600 block border-t border-zinc-100 pt-4">Tiết kiệm 80% thời gian
-                chốt công nợ 3PL</span>
+              <span class="text-xs font-bold text-amber-600 block border-t border-zinc-100 pt-4">{{ $t('wms.desc.m3tag') }}</span>
             </div>
           </div>
         </div>
@@ -468,8 +445,7 @@
           {{ $t('wms.compare.title') }}
         </h2>
         <p class="mt-3 text-sm text-zinc-500 max-w-2xl mx-auto">
-          Xem sự chuyển dịch ngoạn mục từ vận hành kho thủ công truyền thống sang trung tâm xử lý dữ liệu số hóa thông
-          minh.
+          {{ $t('wms.desc.compSub') }}
         </p>
 
         <div class="mt-10 border border-zinc-200 rounded-3xl overflow-hidden shadow-md text-left text-xs sm:text-sm">
@@ -544,8 +520,7 @@
           {{ $t('wms.form.title') }}
         </h2>
         <p class="mt-3 text-sm text-zinc-500 leading-relaxed">
-          Đội ngũ kỹ sư giải pháp ecor sẽ đến khảo sát mặt bằng thực tế, lập mô phỏng ô kệ 3D và tư vấn phương án tinh
-          gọn luồng kho hoàn toàn miễn phí.
+          {{ $t('wms.desc.formSub') }}
         </p>
 
         <form @submit.prevent="handleWmsSubmit"

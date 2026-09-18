@@ -87,11 +87,11 @@
               v-model="form.module"
               class="w-full px-4 py-3 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 text-sm outline-none transition-all bg-white"
             >
-              <option value="Hệ thống ecor WMS - Quản lý kho thông minh">{{ $t('contactModal.sol1') }}</option>
-              <option value="Hệ thống ecor TMS - Điều phối vận tải">{{ $t('contactModal.sol2') }}</option>
-              <option value="ecor POS - Quản lý bán lẻ đa điểm">{{ $t('contactModal.sol3') }}</option>
-              <option value="Omnichannel Hub & Đồng bộ sàn">{{ $t('contactModal.sol4') }}</option>
-              <option value="Trọn gói giải pháp Hợp nhất chuỗi cung ứng">{{ $t('contactModal.sol5') }}</option>
+              <option value="wms">{{ $t('contactModal.sol1') }}</option>
+              <option value="tms">{{ $t('contactModal.sol2') }}</option>
+              <option value="pos">{{ $t('contactModal.sol3') }}</option>
+              <option value="omni">{{ $t('contactModal.sol4') }}</option>
+              <option value="all">{{ $t('contactModal.sol5') }}</option>
             </select>
           </div>
         </div>
@@ -153,7 +153,7 @@ const props = defineProps({
   },
   initialModule: {
     type: String,
-    default: 'Hệ sinh thái toàn diện'
+    default: 'all'
   }
 })
 

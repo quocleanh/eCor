@@ -173,6 +173,33 @@
     }
   },
   "wms": {
+    "desc": {
+      "subtitle": "Intensive cloud WMS solution for omnichannel retail, FMCG distribution chains, and 3PL Logistics. Automates from Inbound to Outbound with 99.98% inventory accuracy.",
+      "m1": "Thoroughly eliminate inventory loss and discrepancies between actual data and accounting system records.",
+      "m2": "Smart Wave picking strategy groups orders, optimizing the shortest travel path in the warehouse.",
+      "m3": "Specialized PDA interface with intuitive color-coded guidance, new warehouse workers can start working after just 30 minutes.",
+      "m4": "Standardized SKU directory process and automated warehouse data conversion without disrupting sales.",
+      "pillarsSub": "Designed based on global warehouse management standards, freeing up manual labor and automating dispatch decisions.",
+      "p1": "Comprehensive digitalization of the actual warehouse layout into 3D space. Automatically calculates floor load, storage capacity (CBM), and fill rate in real time.",
+      "p2": "Artificial intelligence algorithms group hundreds of single orders into picking waves, optimizing the shortest route via the TSP (Traveling Salesperson) algorithm.",
+      "p3": "Solves near-expiry and expired goods issues causing millions of USD in losses for FMCG, Pharmaceutical, and {fresh} supply chains.",
+      "p4": "Continuous cycle counting by Zone or ABC SKU group without closing or halting distribution center operations for even 1 hour.",
+      "stepsSub": "Strictly controls every heartbeat of the goods flow from the Inbound gate until final handover to the Outbound transport unit.",
+      "s1": "Scans Barcode/QR to reconcile with supplier PO. Checks for overage/shortage discrepancies, records production lot Barcode right at the warehouse dock.",
+      "s2": "Algorithm accurately recommends optimal empty shelf locations based on dimensions, weight, storage conditions, and entry/exit frequency.",
+      "s3": "Tracks inventory changes in real time. Automatically notifies transferring goods to clearance areas or pushing dates before expiration.",
+      "s4": "Allocates personnel for picking via PDA along the shortest route. Packing table verifies barcode one last time before attaching shipping label.",
+      "s5": "Scans handover receipt code for shipper/truck. Automatically signs electronic e-POD and syncs order status to retail channels instantly.",
+      "modelsSub": "Whether operating a high-speed e-commerce warehouse, a sensitive cold chain, or a multi-tenant 3PL warehouse, ecor WMS has a specialized processing scenario.",
+      "m1desc": "Built for Mega Sale campaigns of up to 100,000+ orders/day. Instant 1-second inventory sync to Shopee, TikTok Shop, Lazada, e-commerce platforms & offline store chains.",
+      "m1tag": "Commitment processing: < 2 minutes / order",
+      "m2desc": "Strictly manages temperature and humidity ranges of each specialized zone. Tightly controls export dates, HACCP standards, and traces shipment origins along the supply chain.",
+      "m2tag": "Food safety & Medical standards",
+      "m3desc": "Multi-tenant architecture allows managing hundreds of Customers/Shippers on a single interface. Separates data and configures automated CBM storage fee tariffs.",
+      "m3tag": "Saves 80% of 3PL debt reconciliation time",
+      "compSub": "See the spectacular shift from traditional manual warehouse operations to a smart digital data processing center.",
+      "formSub": "ecor's solution engineering team will survey the actual site, create 3D shelf simulations, and advise on lean warehouse flow plans completely free of charge."
+    },
     "hero": {
       "badge": "ECOR WMS 4.0 • NEXT-GEN WAREHOUSE PLATFORM",
       "title": "Optimize Every Square Meter, Pinpoint Accuracy & Cut 60% Operating Costs",
@@ -419,9 +446,28 @@
       }
     },
     "pipeline": {
-      "badge": "Operational Ecosystem Synchronization",
-      "title": "From WMS Packing to TMS Dispatch with 0 Latency",
-      "desc": "No more waiting to plan trucks after warehouse dispatch. When a parcel finishes packing at the ecor WMS Outbound Dock, the system instantly suggests the optimal truck based on item codes and departure schedules.",
+      "mock": {
+        "title": "Seamless Operation Flow (Live Pipeline)",
+        "tag": "No API Latency",
+        "s1": {
+          "title": "Step 1: Ecor WMS Warehouse Dock",
+          "desc": "Scan Barcode / QR code of cartons",
+          "status": "Done"
+        },
+        "s2": {
+          "title": "Step 2: Ecor TMS Algorithm",
+          "desc": "Group 42 single orders into 1 route-optimized trip",
+          "status": "0.8s Match"
+        },
+        "s3": {
+          "title": "Step 3: Driver App Receives Order",
+          "desc": "Driver activates navigation & delivers to points 1-5",
+          "status": "In Transit"
+        }
+      },
+      "badge": "Synchronize Operations Ecosystem",
+      "title": "From WMS Packing to TMS Dispatch with 0 Minute Latency",
+      "desc": "No more waiting for dispatch planning after goods issue. When packages finish packing at ecor WMS Outbound Dock, the system instantly proposes the optimal route based on SKUs and departure schedule.",
       "f1": {
         "title": "Comprehensive Omni-fulfillment",
         "desc": "Automatically identify wholesale orders (B2B Bulk) for truck fleets or e-commerce singles (B2C) for partner forwarding."

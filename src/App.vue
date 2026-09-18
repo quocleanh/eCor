@@ -32,9 +32,9 @@ import ContactModal from '@/components/ContactModal.vue'
 
 const isModalOpen = ref(false)
 const modalType = ref('demo')
-const modalModule = ref('Hệ sinh thái toàn diện 8 module')
+const modalModule = ref('all')
 
-function handleOpenModal({ type = 'demo', moduleName = 'Hệ sinh thái toàn diện 8 module' } = {}) {
+function handleOpenModal({ type = 'demo', moduleName = 'all' } = {}) {
   modalType.value = type
   modalModule.value = moduleName
   isModalOpen.value = true

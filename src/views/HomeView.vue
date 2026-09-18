@@ -31,7 +31,7 @@
 
             <!-- Action Buttons -->
             <div class="pt-2 flex flex-wrap items-center gap-4">
-              <button @click="$emit('open-modal', { type: 'demo', moduleName: 'Tổng quan eCor Hub' })"
+              <button @click="$emit('open-modal', { type: 'demo', moduleName: 'all' })"
                 class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-base shadow-md hover:shadow-lg transition-all transform active:scale-95">
                 <span>{{ $t('home.hero.register') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@
                 </svg>
               </button>
 
-              <button @click="$emit('open-modal', { type: 'demo', moduleName: 'Video Demo 2 phút' })"
+              <button @click="$emit('open-modal', { type: 'demo', moduleName: 'all' })"
                 class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-700 font-semibold text-base border border-zinc-200 shadow-sm hover:shadow transition-all">
                 <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
                   <svg class="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -399,8 +399,7 @@
                   <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
                   <span class="font-bold text-zinc-700 ml-1">{{ $t('mockWms.zone') }}</span>
                 </div>
-                <span class="text-[10px] font-bold text-amber-600 bg-amber-100 px-2 py-0.5 rounded">Đang xuất 42
-                  đơn</span>
+                <span class="text-[10px] font-bold text-amber-600 bg-amber-100 px-2 py-0.5 rounded">{{ $t('home.live.wmsTab.active') || 'Đang xuất 42 đơn' }}</span>
               </div>
 
               <!-- Shelf Slots Grid -->
@@ -663,7 +662,7 @@
         </p>
 
         <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
-          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'Tổng thể ecor Platform' })"
+          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'all' })"
             class="px-8 py-4 rounded-xl bg-white hover:bg-zinc-50 text-amber-700 font-extrabold text-base shadow-lg hover:shadow-xl transition-all transform active:scale-95">
             {{ $t('home.cta.btn') }}
           </button>

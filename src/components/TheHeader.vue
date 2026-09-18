@@ -41,8 +41,7 @@
                   <div
                     class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
                     ecor WMS
-                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">Kho
-                      4.0</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{ $t('header.wmsBadge') || 'Kho 4.0' }}</span>
                   </div>
                   <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.wmsDesc') }}</div>
                 </div>
@@ -61,8 +60,7 @@
                   <div
                     class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
                     ecor TMS
-                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">AI
-                      Route</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{ $t('header.tmsBadge') || 'AI Route' }}</span>
                   </div>
                   <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.tmsDesc') }}</div>
                 </div>
@@ -82,7 +80,7 @@
                     class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
                     ecor POS
                     <span
-                      class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">Offline-First</span>
+                      class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{ $t('header.posBadge') || 'Offline-First' }}</span>
                   </div>
                   <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.posDesc') }}</div>
                 </div>
@@ -134,7 +132,7 @@
         <!-- Right Actions -->
         <div class="flex items-center gap-3.5">
           <!-- CTA Button -->
-          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'Tổng thể ecor Platform' })"
+          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'all' })"
             class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-bold text-zinc-900 bg-amber-400 hover:bg-amber-500 shadow-sm hover:shadow transition-all transform active:scale-95 focus:outline-none">
             <span class="hidden sm:inline">{{ $t('header.register') }}</span>
             <span class="sm:hidden">{{ $t('header.registerMobile') }}</span>
@@ -148,6 +146,16 @@
                   class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
                 <span>VN</span>
               </template>
+              <template v-else-if="locale === 'zh'">
+                <img src="https://flagcdn.com/w40/cn.png" alt="CN"
+                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                <span>简</span>
+              </template>
+              <template v-else-if="locale === 'zh-TW'">
+                <img src="https://flagcdn.com/w40/tw.png" alt="TW"
+                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                <span>繁</span>
+              </template>
               <template v-else>
                 <img src="https://flagcdn.com/w40/us.png" alt="EN"
                   class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
@@ -158,7 +166,7 @@
               </svg>
             </button>
             <div v-show="isLangMenuOpen" class="absolute right-0 top-full pt-1 z-50">
-              <div class="w-32 bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-zinc-100 overflow-hidden transform origin-top-right transition-all">
+              <div class="w-36 bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-zinc-100 overflow-hidden transform origin-top-right transition-all">
                 <button @click="setLocale('vi')"
                 class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
                 :class="locale === 'vi' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
@@ -172,6 +180,20 @@
                 <img src="https://flagcdn.com/w40/us.png" alt="EN"
                   class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
                 English
+              </button>
+              <button @click="setLocale('zh')"
+                class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
+                :class="locale === 'zh' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
+                <img src="https://flagcdn.com/w40/cn.png" alt="CN"
+                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                简体中文
+              </button>
+              <button @click="setLocale('zh-TW')"
+                class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
+                :class="locale === 'zh-TW' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
+                <img src="https://flagcdn.com/w40/tw.png" alt="TW"
+                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                繁體中文
               </button>
             </div>
             </div>
@@ -206,14 +228,28 @@
             class="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-md transition-all">
             <img src="https://flagcdn.com/w40/vn.png" alt="VN"
               class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm">
-            Tiếng Việt
+            VN
           </button>
           <button @click="setLocale('en')"
             :class="locale === 'en' ? 'bg-white text-zinc-900 shadow-sm ring-1 ring-zinc-200' : 'text-zinc-500 hover:text-zinc-700 hover:bg-zinc-100'"
             class="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-md transition-all">
             <img src="https://flagcdn.com/w40/us.png" alt="EN"
               class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm">
-            English
+            EN
+          </button>
+          <button @click="setLocale('zh')"
+            :class="locale === 'zh' ? 'bg-white text-zinc-900 shadow-sm ring-1 ring-zinc-200' : 'text-zinc-500 hover:text-zinc-700 hover:bg-zinc-100'"
+            class="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-md transition-all">
+            <img src="https://flagcdn.com/w40/cn.png" alt="CN"
+              class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm">
+            简
+          </button>
+          <button @click="setLocale('zh-TW')"
+            :class="locale === 'zh-TW' ? 'bg-white text-zinc-900 shadow-sm ring-1 ring-zinc-200' : 'text-zinc-500 hover:text-zinc-700 hover:bg-zinc-100'"
+            class="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-md transition-all">
+            <img src="https://flagcdn.com/w40/tw.png" alt="TW"
+              class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm">
+            繁
           </button>
         </div>
       </div>
@@ -272,7 +308,7 @@
 
       <div class="pt-2 border-t border-zinc-100">
         <button
-          @click="isMobileMenuOpen = false; $emit('open-modal', { type: 'demo', moduleName: 'Tổng thể ecor Platform' })"
+          @click="isMobileMenuOpen = false; $emit('open-modal', { type: 'demo', moduleName: 'all' })"
           class="w-full py-3 rounded-xl bg-amber-400 text-zinc-900 font-bold font-semibold text-sm shadow-md">
           {{ $t('header.register') }}
         </button>

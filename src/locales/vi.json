@@ -12,7 +12,7 @@
     "resources": "Tài nguyên",
     "contact": "Liên hệ",
     "login": "Đăng nhập",
-    "register": "Đăng ký tư vấn / Thử miễn phí",
+    "register": "Dùng thử miễn phí",
     "registerMobile": "Dùng thử miễn phí",
     "mobileMenu": {
       "solutionsIndustry": "Giải pháp theo ngành",
@@ -173,6 +173,33 @@
     }
   },
   "wms": {
+    "desc": {
+      "subtitle": "Giải pháp WMS đám mây chuyên sâu cho doanh nghiệp bán lẻ đa kênh, chuỗi phân phối FMCG và đơn vị 3PL Logistics. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99.98%.",
+      "m1": "Khử triệt để thất thoát hàng hóa, sai lệch số liệu thực tế so với sổ sách hệ thống kế toán.",
+      "m2": "Chiến lược Wave picking gom nhóm đơn hàng thông minh, tối ưu đường đi chuyển ngắn nhất trong kho.",
+      "m3": "Giao diện PDA chuyên dụng với chỉ dẫn màu trực quan, công nhân kho mới có thể làm việc ngay sau 30 phút.",
+      "m4": "Quy trình chuẩn hóa danh mục SKU và chuyển đổi dữ liệu kho bãi tự động, không làm gián đoạn bán hàng.",
+      "pillarsSub": "Được thiết kế dựa trên tiêu chuẩn quản trị kho vận toàn cầu, giải phóng sức lao động thủ công và tự động hóa quyết định điều phối.",
+      "p1": "Số hóa toàn diện sơ đồ kho thực tế lên không gian 3 chiều. Tự động tính toán tải trọng sàn, dung tích ô chứa (CBM) và tỷ lệ lấp đầy theo thời gian thực.",
+      "p2": "Thuật toán trí tuệ nhân tạo gom nhóm hàng trăm đơn lẻ thành từng đợt lấy hàng (Wave), tối ưu hóa lộ trình ngắn nhất qua thuật toán TSP (Traveling Salesperson).",
+      "p3": "Giải quyết bài toán cận date, hết date gây tổn thất hàng triệu USD cho chuỗi cung ứng FMCG, Dược phẩm và {fresh}.",
+      "p4": "Kiểm kê định kỳ liên tục theo khu vực (Zone) hoặc nhóm SKU ABC mà không cần đóng cửa ngừng hoạt động trung tâm phân phối dù chỉ 1 giờ.",
+      "stepsSub": "Kiểm soát chặt chẽ từng nhịp thở của dòng hàng từ cổng vào Inbound cho tới khi bàn giao hoàn tất cho đơn vị vận tải Outbound.",
+      "s1": "Quét mã Barcode/QR đối soát với PO nhà cung cấp. Kiểm tra sai lệch thừa/thiếu, ghi nhận Barcode lô sản xuất ngay tại dock cửa kho.",
+      "s2": "Thuật toán đề xuất chính xác vị trí kệ trống tối ưu dựa theo kích thước, khối lượng, điều kiện bảo quản và tần suất xuất nhập.",
+      "s3": "Theo dõi biến động tồn theo thời gian thực. Tự động thông báo luân chuyển hàng hóa sang khu vực thanh lý hoặc đẩy date trước khi hết hạn.",
+      "s4": "Phân bổ nhân sự nhặt hàng thông qua PDA theo lộ trình ngắn nhất. Bàn đóng gói kiểm tra lại barcode lần cuối trước khi dán vận đơn vận chuyển.",
+      "s5": "Bắn mã quét biên bản bàn giao cho shipper/xe tải. Tự động ký số điện tử e-POD và đồng bộ trạng thái đơn hàng sang các kênh bán lẻ tức thì.",
+      "modelsSub": "Dù bạn vận hành kho thương mại điện tử tốc độ cao, chuỗi kho lạnh nhạy cảm hay kho 3PL đa chủ hàng, ecor WMS đều có kịch bản xử lý chuyên biệt.",
+      "m1desc": "Được xây dựng cho các chiến dịch Mega Sale lên đến 100.000+ đơn/ngày. Đồng bộ tồn kho tức thì 1 giây sang Shopee, TikTok Shop, Lazada, sàn TMĐT & Chuỗi cửa hàng offline.",
+      "m1tag": "Xử lý cam kết: < 2 phút / đơn hàng",
+      "m2desc": "Quản lý nghiêm ngặt dải nhiệt độ, độ ẩm của từng zone chuyên biệt. Quản lý chặt chẽ date xuất khẩu, chuẩn HACCP, truy vết nguồn gốc lô hàng theo chuỗi cung ứng.",
+      "m2tag": "Chuẩn an toàn thực phẩm & Y tế",
+      "m3desc": "Kiến trúc Multi-tenant cho phép quản lý hàng trăm chủ hàng (Customers/Shippers) trên cùng một giao diện duy nhất. Tách biệt dữ liệu và cấu hình biểu phí lưu kho CBM tự động.",
+      "m3tag": "Tiết kiệm 80% thời gian chốt công nợ 3PL",
+      "compSub": "Xem sự chuyển dịch ngoạn mục từ vận hành kho thủ công truyền thống sang trung tâm xử lý dữ liệu số hóa thông minh.",
+      "formSub": "Đội ngũ kỹ sư giải pháp ecor sẽ đến khảo sát mặt bằng thực tế, lập mô phỏng ô kệ 3D và tư vấn phương án tinh gọn luồng kho hoàn toàn miễn phí."
+    },
     "hero": {
       "badge": "ECOR WMS 4.0 • NỀN TẢNG KHO VẬN THẾ HỆ MỚI",
       "title": "Tối Ưu Hóa Từng Mét Vuông Kho Bãi, Chuẩn Xác Đến Từng Vị Trí Ô Kệ & Cắt Giảm 60% Chi Phí Vận Hành",
@@ -418,6 +445,25 @@
       }
     },
     "pipeline": {
+      "mock": {
+        "title": "Luồng Vận Hành Liền Mạch (Live Pipeline)",
+        "tag": "No API Latency",
+        "s1": {
+          "title": "Bước 1: Dock Kho Ecor WMS",
+          "desc": "Kiểm quét mã vạch Barcode / QR thùng hàng",
+          "status": "Done"
+        },
+        "s2": {
+          "title": "Bước 2: Thuật toán ecor TMS",
+          "desc": "Gom 42 đơn lẻ thành 1 chuyến tối ưu tuyến",
+          "status": "0.8s Match"
+        },
+        "s3": {
+          "title": "Bước 3: Driver App Nhận Lệnh",
+          "desc": "Tài xế kích hoạt dẫn đường & trả hàng điểm 1–5",
+          "status": "In Transit"
+        }
+      },
       "badge": "Đồng Bộ Hệ Sinh Thái Vận Hành",
       "title": "Từ Khâu Đóng Gói Kho WMS Sang Điều Xe TMS Chỉ 0 Phút Độ Trễ",
       "desc": "Không còn tình trạng xuất kho xong chờ lập kế hoạch xe. Khi kiện hàng hoàn tất đóng gói tại Dock xuất của ecor WMS, hệ thống lập tức đề xuất chuyến xe tối ưu theo mã hàng và lịch xuất bến.",

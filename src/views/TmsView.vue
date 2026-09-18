@@ -27,13 +27,13 @@
         <!-- CTA Buttons -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <button 
-            @click="$emit('open-modal', { type: 'demo', moduleName: 'ecor TMS - Điều phối vận tải' })"
+            @click="$emit('open-modal', { type: 'demo', moduleName: 'tms' })"
             class="px-8 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-base shadow-md hover:shadow-lg transition-all transform active:scale-95"
           >
             {{ $t('tms.hero.consult') }}
           </button>
           <button 
-            @click="$emit('open-modal', { type: 'demo', moduleName: 'Demo Tuyến Đường TMS' })"
+            @click="$emit('open-modal', { type: 'demo', moduleName: 'tms' })"
             class="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-700 font-semibold text-base border border-zinc-200 shadow-sm hover:shadow transition-all flex items-center gap-2"
           >
             <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
@@ -151,7 +151,7 @@
                   <div>{{ $t('mockTms.epodGps') }}</div>
                   <div class="pt-2 flex justify-between font-bold text-zinc-900">
                     <span>{{ $t('mockTms.epodCod') }}</span>
-                    <span class="text-amber-700">18.450.000 đ</span>
+                    <span class="text-amber-700">18,450,000 VND</span>
                   </div>
                 </div>
               </div>
@@ -308,29 +308,29 @@
 
           <div class="lg:col-span-6 bg-zinc-50 border border-zinc-200 rounded-3xl p-6 text-xs space-y-3">
             <div class="flex justify-between items-center pb-2 border-b border-zinc-200">
-              <strong class="text-zinc-800">Luồng Vận Hành Liền Mạch (Live Pipeline)</strong>
-              <span class="text-amber-700 font-bold">No API Latency</span>
+              <strong class="text-zinc-800">{{ $t('tms.pipeline.mock.title') }}</strong>
+              <span class="text-amber-700 font-bold">{{ $t('tms.pipeline.mock.tag') }}</span>
             </div>
             <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between">
               <div>
-                <strong>Bước 1: Dock Kho Ecor WMS</strong>
-                <div class="text-zinc-500 text-[11px]">Kiểm quét mã vạch Barcode / QR thùng hàng</div>
+                <strong>{{ $t('tms.pipeline.mock.s1.title') }}</strong>
+                <div class="text-zinc-500 text-[11px]">{{ $t('tms.pipeline.mock.s1.desc') }}</div>
               </div>
-              <span class="text-amber-600 font-bold">Done</span>
+              <span class="text-amber-600 font-bold">{{ $t('tms.pipeline.mock.s1.status') }}</span>
             </div>
             <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 flex items-center justify-between">
               <div>
-                <strong class="text-amber-900">Bước 2: Thuật toán ecor TMS</strong>
-                <div class="text-amber-700 text-[11px]">Gom 42 đơn lẻ thành 1 chuyến tối ưu tuyến</div>
+                <strong class="text-amber-900">{{ $t('tms.pipeline.mock.s2.title') }}</strong>
+                <div class="text-amber-700 text-[11px]">{{ $t('tms.pipeline.mock.s2.desc') }}</div>
               </div>
-              <span class="text-amber-700 font-bold">0.8s Match</span>
+              <span class="text-amber-700 font-bold">{{ $t('tms.pipeline.mock.s2.status') }}</span>
             </div>
             <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between">
               <div>
-                <strong>Bước 3: Driver App Nhận Lệnh</strong>
-                <div class="text-zinc-500 text-[11px]">Tài xế kích hoạt dẫn đường & trả hàng điểm 1–5</div>
+                <strong>{{ $t('tms.pipeline.mock.s3.title') }}</strong>
+                <div class="text-zinc-500 text-[11px]">{{ $t('tms.pipeline.mock.s3.desc') }}</div>
               </div>
-              <span class="text-amber-600 font-bold">In Transit</span>
+              <span class="text-amber-600 font-bold">{{ $t('tms.pipeline.mock.s3.status') }}</span>
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@
           <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div class="h-40 overflow-hidden bg-zinc-100">
-                <img src="/images/assets/tms-case-fmcg.png" alt="Doanh Nghiệp FMCG" class="w-full h-full object-cover" />
+                <img src="/images/assets/tms-case-fmcg.png" alt="FMCG Enterprise" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
                 <span class="text-[10px] font-bold text-amber-600 uppercase block">{{ $t('tms.models.m1.tag') }}</span>
@@ -370,7 +370,7 @@
           <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div class="h-40 overflow-hidden bg-zinc-100">
-                <img src="/images/assets/tms-case-construction.png" alt="Vật liệu & Xây dựng" class="w-full h-full object-cover" />
+                <img src="/images/assets/tms-case-construction.png" alt="Construction Materials" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
                 <span class="text-[10px] font-bold text-amber-600 uppercase block">{{ $t('tms.models.m2.tag') }}</span>
@@ -390,7 +390,7 @@
                 <img src="/images/assets/tms-case-cold.png" alt="{{ $t('tms.models.m3.tag') }}" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
-                <span class="text-[10px] font-bold text-amber-600 uppercase block">Cold Chain Logistics</span>
+                <span class="text-[10px] font-bold text-amber-600 uppercase block">{{ $t('tms.models.m3.tag') }}</span>
                 <h4 class="font-bold text-zinc-900 text-sm mt-1">{{ $t('tms.models.m3.title') }}</h4>
                 <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('tms.models.m3.desc') }}</p>
               </div>
@@ -407,7 +407,7 @@
                 <img src="/images/assets/solutions-3pl.png" alt="{{ $t('tms.models.m4.tag') }}" class="w-full h-full object-cover" />
               </div>
               <div class="p-5">
-                <span class="text-[10px] font-bold text-amber-600 uppercase block">3PL & 4PL Logistics</span>
+                <span class="text-[10px] font-bold text-amber-600 uppercase block">{{ $t('tms.models.m4.tag') }}</span>
                 <h4 class="font-bold text-zinc-900 text-sm mt-1">{{ $t('tms.models.m4.title') }}</h4>
                 <p class="text-xs text-zinc-500 mt-2 leading-relaxed">{{ $t('tms.models.m4.desc') }}</p>
               </div>
@@ -433,7 +433,7 @@
 
         <div class="pt-4 flex flex-wrap justify-center gap-4">
           <button 
-            @click="$emit('open-modal', { type: 'demo', moduleName: 'ecor TMS' })"
+            @click="$emit('open-modal', { type: 'demo', moduleName: 'tms' })"
             class="px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold text-sm shadow-lg transition-all"
           >
             {{ $t('tms.cta.btn') }}
