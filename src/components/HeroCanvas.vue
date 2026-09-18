@@ -10,7 +10,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue'
 const props = defineProps({
   colorScheme: {
     type: String,
-    default: 'sky' // 'sky', 'cyan', 'rose', 'indigo', 'emerald'
+    default: 'amber' // 'amber', 'sky', 'cyan', 'rose', 'indigo', 'emerald'
   },
   opacity: {
     type: Number,
@@ -35,6 +35,7 @@ let mouseLeaveHandler = null
 const mouse = { x: -9999, y: -9999, active: false }
 
 const paletteMap = {
+  amber: ['#fcd34d', '#fbbf24', '#f59e0b', '#d97706', '#b45309'],
   sky: ['#0284c7', '#2563eb', '#38bdf8', '#0ea5e9', '#60a5fa'],
   cyan: ['#0891b2', '#06b6d4', '#22d3ee', '#0ea5e9', '#14b8a6'],
   rose: ['#e11d48', '#f43f5e', '#fb7185', '#38bdf8', '#fb923c'],

@@ -4,7 +4,10 @@
     <section class="relative pt-12 pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[500px] bg-gradient-to-b from-amber-100/70 via-amber-50/40 to-transparent blur-3xl pointer-events-none -z-10"></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Animated Canvas Background -->
+      <HeroCanvas :opacity="0.65" :particleCount="52" />
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <!-- Tag -->
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-700 shadow-sm">
           <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
@@ -448,5 +451,6 @@
 </template>
 
 <script setup>
+import HeroCanvas from '@/components/HeroCanvas.vue'
 defineEmits(['open-modal'])
 </script>

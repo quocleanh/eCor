@@ -152,7 +152,8 @@
             @click="$emit('open-modal', { type: 'demo', moduleName: 'Tổng thể ecor Platform' })"
             class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-bold text-zinc-900 bg-amber-400 hover:bg-amber-500 shadow-sm hover:shadow transition-all transform active:scale-95 focus:outline-none"
           >
-            Đăng ký tư vấn / Thử miễn phí
+            <span class="hidden sm:inline">Đăng ký tư vấn / Thử miễn phí</span>
+            <span class="sm:hidden">Dùng thử miễn phí</span>
           </button>
 
           <!-- User Icon / Portal -->

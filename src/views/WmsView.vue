@@ -3,7 +3,7 @@
     <!-- 1. HERO SECTION -->
     <section class="relative pt-12 pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
       <!-- Animated Canvas Background -->
-      <HeroCanvas colorScheme="sky" :opacity="0.65" :particleCount="52" />
+      <HeroCanvas :opacity="0.65" :particleCount="52" />
 
       <!-- Glow -->
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[500px] bg-gradient-to-b from-amber-100/70 via-amber-50/40 to-transparent blur-3xl pointer-events-none -z-10"></div>
