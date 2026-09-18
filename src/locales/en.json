@@ -647,6 +647,7 @@
       },
       "m3": {
         "val": "0 Mins",
+        "unit": "Mins",
         "title": "Sync Latency",
         "desc": "Real-time API between e-commerce, POS, and central warehouse."
       },

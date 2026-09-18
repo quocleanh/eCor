@@ -82,7 +82,7 @@
             </ul>
           </div>
           <div class="pt-6 mt-6 border-t border-zinc-100">
-            <router-link to="/lien-he" class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1">
+            <router-link :to="$localeRoute('contact')" class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1">
               <span>{{ $t('resources.grid.b2Btn') }}</span>
               <span>→</span>
             </router-link>

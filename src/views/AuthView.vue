@@ -201,9 +201,9 @@
 
     <!-- Quick Footer Help Links -->
     <div class="mt-8 text-center text-xs text-zinc-500 space-x-4">
-      <router-link to="/tai-nguyen" class="hover:text-zinc-800">Trung tâm hỗ trợ vận hành</router-link>
+      <router-link :to="$localeRoute('resources')" class="hover:text-zinc-800">Trung tâm hỗ trợ vận hành</router-link>
       <span>•</span>
-      <router-link to="/tai-nguyen" class="hover:text-zinc-800">Tài liệu API & Kết nối ERP</router-link>
+      <router-link :to="$localeRoute('resources')" class="hover:text-zinc-800">Tài liệu API & Kết nối ERP</router-link>
       <span>•</span>
       <a href="tel:0822235858" class="hover:text-zinc-800">Tư vấn trực tiếp:  097 8673867</a>
     </div>

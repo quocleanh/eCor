@@ -91,7 +91,7 @@
             </li>
           </ul>
           <div class="pt-2">
-            <router-link to="/lien-he" class="inline-block bg-white text-zinc-900 font-bold text-xs px-5 py-2.5 rounded-xl hover:bg-zinc-100 transition-colors">
+            <router-link :to="$localeRoute('contact')" class="inline-block bg-white text-zinc-900 font-bold text-xs px-5 py-2.5 rounded-xl hover:bg-zinc-100 transition-colors">
               {{ $t('about.security.btn') }}
             </router-link>
           </div>

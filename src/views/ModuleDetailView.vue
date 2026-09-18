@@ -5,7 +5,7 @@
     <div class="border-b border-zinc-200 bg-zinc-50/70 py-4">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav class="flex items-center gap-2 text-xs text-zinc-500 font-medium">
-          <router-link to="/" class="hover:text-amber-700">Trang chủ</router-link>
+          <router-link :to="$localeRoute('home')" class="hover:text-amber-700">Trang chủ</router-link>
           <span>/</span>
           <span v-if="isCoreModule" class="text-amber-700 font-semibold">3 Trụ Cột Vận Hành Lõi</span>
           <span v-else class="text-zinc-600">Hệ Sinh Thái Mở Rộng</span>
@@ -36,7 +36,7 @@
             <button @click="openModal" class="px-6 py-3 text-sm font-bold text-zinc-900 font-bold bg-amber-400 hover:bg-amber-400 rounded-lg shadow-sm transition-colors">
               Đăng ký tư vấn demo {{ currentModule.code }}
             </button>
-            <router-link to="/bang-gia" class="px-5 py-3 text-sm font-semibold text-zinc-700 hover:text-amber-700 bg-white border border-zinc-300 rounded-lg transition-colors">
+            <router-link :to="$localeRoute('pricing')" class="px-5 py-3 text-sm font-semibold text-zinc-700 hover:text-amber-700 bg-white border border-zinc-300 rounded-lg transition-colors">
               Xem báo giá chi tiết
             </router-link>
           </div>
@@ -160,7 +160,7 @@
   
   <div v-else class="text-center py-32">
     <h2 class="text-2xl font-bold text-zinc-700">Không tìm thấy phân hệ này</h2>
-    <router-link to="/" class="mt-4 inline-block text-amber-600 font-bold">Quay lại Trang Chủ</router-link>
+    <router-link :to="$localeRoute('home')" class="mt-4 inline-block text-amber-600 font-bold">Quay lại Trang Chủ</router-link>
   </div>
 </template>
 

@@ -119,7 +119,7 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-zinc-200/60">
-              <router-link to="/wms"
+              <router-link :to="$localeRoute('wms')"
                 class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1 group-hover:translate-x-1 transition-all">
                 <span>{{ $t('home.core.wms.link') }}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,7 +161,7 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-zinc-200/60">
-              <router-link to="/tms"
+              <router-link :to="$localeRoute('tms')"
                 class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1 group-hover:translate-x-1 transition-all">
                 <span>{{ $t('home.core.tms.link') }}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -203,7 +203,7 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-zinc-200/60">
-              <router-link to="/pos"
+              <router-link :to="$localeRoute('pos')"
                 class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1 group-hover:translate-x-1 transition-all">
                 <span>{{ $t('home.core.omni.link') }}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,7 +247,7 @@
 
           <!-- Right 3 Orbiting Extension Bubbles -->
           <div class="lg:col-span-7 flex items-center justify-center sm:justify-end gap-6 sm:gap-8">
-            <router-link to="/pos" class="flex flex-col items-center group">
+            <router-link :to="$localeRoute('pos')" class="flex flex-col items-center group">
               <div
                 class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,7 +261,7 @@
 
             <div class="w-12 h-0.5 bg-zinc-200 hidden sm:block"></div>
 
-            <router-link to="/pos" class="flex flex-col items-center group">
+            <router-link :to="$localeRoute('pos')" class="flex flex-col items-center group">
               <div
                 class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -275,7 +275,7 @@
 
             <div class="w-12 h-0.5 bg-zinc-200 hidden sm:block"></div>
 
-            <router-link to="/giai-phap" class="flex flex-col items-center group">
+            <router-link :to="$localeRoute('solutions')" class="flex flex-col items-center group">
               <div
                 class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -380,7 +380,7 @@
               </ul>
 
               <div class="pt-2">
-                <router-link to="/wms"
+                <router-link :to="$localeRoute('wms')"
                   class="text-sm font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1.5">
                   <span>{{ $t('home.live.wmsTab.link') }}</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -479,7 +479,7 @@
                 </div>
               </div>
               <div class="pt-2">
-                <router-link to="/tms"
+                <router-link :to="$localeRoute('tms')"
                   class="text-sm font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1.5">
                   <span>{{ $t('home.live.tmsTab.link') }}</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -544,7 +544,7 @@
                 </div>
               </div>
               <div class="pt-2">
-                <router-link to="/pos"
+                <router-link :to="$localeRoute('pos')"
                   class="text-sm font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1.5">
                   <span>{{ $t('home.live.omniTab.link') }}</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -614,7 +614,7 @@
                 </div>
               </div>
               <div class="pt-2">
-                <router-link to="/pos"
+                <router-link :to="$localeRoute('pos')"
                   class="text-sm font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1.5">
                   <span>{{ $t('home.live.posTab.link') }}</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

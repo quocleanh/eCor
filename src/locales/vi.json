@@ -646,6 +646,7 @@
       },
       "m3": {
         "val": "0 Phút",
+        "unit": "Phút",
         "title": "Độ trễ đồng bộ",
         "desc": "Realtime API giữa sàn TMĐT, cửa hàng POS và kho tổng."
       },

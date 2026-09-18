@@ -3,8 +3,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <router-link to="/" class="flex items-center gap-3 group focus:outline-none">
-          <img src="@/assets/ecor-logo.png" alt="eCor Platform"
+        <router-link :to="$localeRoute('home')" class="flex items-center gap-3 group focus:outline-none">
+          <img src="/ecor-logo.png" alt="eCor Platform"
             class="h-8 w-auto object-contain transition-transform group-hover:scale-105" />
         </router-link>
 
@@ -28,7 +28,7 @@
               <div class="text-[11px] font-bold tracking-wider uppercase text-zinc-400 px-3 py-1.5">
                 {{ $t('header.coreModules') }}
               </div>
-              <router-link to="/wms"
+              <router-link :to="$localeRoute('wms')"
                 class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-amber-50/70 transition-colors group/item">
                 <div
                   class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold shrink-0 mt-0.5 group-hover/item:bg-amber-400 group-hover/item:text-zinc-900 font-bold transition-colors">
@@ -41,13 +41,14 @@
                   <div
                     class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
                     ecor WMS
-                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{ $t('header.wmsBadge') || 'Kho 4.0' }}</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{
+                      $t('header.wmsBadge') || 'Kho 4.0' }}</span>
                   </div>
                   <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.wmsDesc') }}</div>
                 </div>
               </router-link>
 
-              <router-link to="/tms"
+              <router-link :to="$localeRoute('tms')"
                 class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-amber-50/70 transition-colors group/item">
                 <div
                   class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold shrink-0 mt-0.5 group-hover/item:bg-amber-400 group-hover/item:text-zinc-900 font-bold transition-colors">
@@ -60,13 +61,14 @@
                   <div
                     class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
                     ecor TMS
-                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{ $t('header.tmsBadge') || 'AI Route' }}</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{
+                      $t('header.tmsBadge') || 'AI Route' }}</span>
                   </div>
                   <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.tmsDesc') }}</div>
                 </div>
               </router-link>
 
-              <router-link to="/pos"
+              <router-link :to="$localeRoute('pos')"
                 class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-amber-50/70 transition-colors group/item">
                 <div
                   class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold shrink-0 mt-0.5 group-hover/item:bg-amber-400 group-hover/item:text-zinc-900 font-bold transition-colors">
@@ -79,15 +81,15 @@
                   <div
                     class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
                     ecor POS
-                    <span
-                      class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{ $t('header.posBadge') || 'Offline-First' }}</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{
+                      $t('header.posBadge') || 'Offline-First' }}</span>
                   </div>
                   <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.posDesc') }}</div>
                 </div>
               </router-link>
 
               <div class="mt-2 pt-2 border-t border-zinc-100 px-3 py-1">
-                <router-link to="/giai-phap"
+                <router-link :to="$localeRoute('solutions')"
                   class="text-xs text-amber-600 hover:text-amber-700 font-semibold flex items-center justify-between">
                   <span>{{ $t('header.seeFlowchart') }}</span>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,31 +101,31 @@
           </div>
 
           <!-- Giải pháp -->
-          <router-link to="/giai-phap" class="transition-colors hover:text-amber-600"
+          <router-link :to="$localeRoute('solutions')" class="transition-colors hover:text-amber-600"
             :class="$route.path.startsWith('/giai-phap') ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
             {{ $t('header.solutions') }}
           </router-link>
 
           <!-- Bảng giá -->
-          <router-link to="/bang-gia" class="transition-colors hover:text-amber-600"
+          <router-link :to="$localeRoute('pricing')" class="transition-colors hover:text-amber-600"
             :class="$route.path === '/bang-gia' ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
             {{ $t('header.pricing') }}
           </router-link>
 
           <!-- Khách hàng -->
-          <router-link to="/khach-hang" class="transition-colors hover:text-amber-600"
+          <router-link :to="$localeRoute('customers')" class="transition-colors hover:text-amber-600"
             :class="$route.path === '/khach-hang' ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
             {{ $t('header.customers') }}
           </router-link>
 
           <!-- Tài nguyên -->
-          <router-link to="/tai-nguyen" class="transition-colors hover:text-amber-600"
+          <router-link :to="$localeRoute('resources')" class="transition-colors hover:text-amber-600"
             :class="$route.path === '/tai-nguyen' ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
             {{ $t('header.resources') }}
           </router-link>
 
           <!-- Liên hệ -->
-          <router-link to="/lien-he" class="transition-colors hover:text-amber-600"
+          <router-link :to="$localeRoute('contact')" class="transition-colors hover:text-amber-600"
             :class="$route.path === '/lien-he' ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
             {{ $t('header.contact') }}
           </router-link>
@@ -166,36 +168,37 @@
               </svg>
             </button>
             <div v-show="isLangMenuOpen" class="absolute right-0 top-full pt-1 z-50">
-              <div class="w-36 bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-zinc-100 overflow-hidden transform origin-top-right transition-all">
+              <div
+                class="w-36 bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-zinc-100 overflow-hidden transform origin-top-right transition-all">
                 <button @click="setLocale('vi')"
-                class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
-                :class="locale === 'vi' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
-                <img src="https://flagcdn.com/w40/vn.png" alt="VN"
-                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
-                Tiếng Việt
-              </button>
-              <button @click="setLocale('en')"
-                class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
-                :class="locale === 'en' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
-                <img src="https://flagcdn.com/w40/us.png" alt="EN"
-                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
-                English
-              </button>
-              <button @click="setLocale('zh')"
-                class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
-                :class="locale === 'zh' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
-                <img src="https://flagcdn.com/w40/cn.png" alt="CN"
-                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
-                简体中文
-              </button>
-              <button @click="setLocale('zh-TW')"
-                class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
-                :class="locale === 'zh-TW' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
-                <img src="https://flagcdn.com/w40/tw.png" alt="TW"
-                  class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
-                繁體中文
-              </button>
-            </div>
+                  class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
+                  :class="locale === 'vi' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
+                  <img src="https://flagcdn.com/w40/vn.png" alt="VN"
+                    class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                  Tiếng Việt
+                </button>
+                <button @click="setLocale('en')"
+                  class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
+                  :class="locale === 'en' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
+                  <img src="https://flagcdn.com/w40/us.png" alt="EN"
+                    class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                  English
+                </button>
+                <button @click="setLocale('zh')"
+                  class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
+                  :class="locale === 'zh' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
+                  <img src="https://flagcdn.com/w40/cn.png" alt="CN"
+                    class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                  简体中文
+                </button>
+                <button @click="setLocale('zh-TW')"
+                  class="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-semibold hover:bg-zinc-50 transition-colors"
+                  :class="locale === 'zh-TW' ? 'text-amber-600 bg-amber-50/50' : 'text-zinc-700'">
+                  <img src="https://flagcdn.com/w40/tw.png" alt="TW"
+                    class="w-[18px] h-[13px] rounded-[2px] object-cover shadow-sm border border-zinc-200/50">
+                  繁體中文
+                </button>
+              </div>
             </div>
           </div>
 
@@ -259,45 +262,45 @@
           {{ $t('header.products') }}
         </div>
         <div class="grid grid-cols-3 gap-2 px-2 pb-2">
-          <router-link to="/wms" @click="isMobileMenuOpen = false"
+          <router-link :to="$localeRoute('wms')" @click="isMobileMenuOpen = false"
             class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
             ecor WMS
           </router-link>
-          <router-link to="/tms" @click="isMobileMenuOpen = false"
+          <router-link :to="$localeRoute('tms')" @click="isMobileMenuOpen = false"
             class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
             ecor TMS
           </router-link>
-          <router-link to="/pos" @click="isMobileMenuOpen = false"
+          <router-link :to="$localeRoute('pos')" @click="isMobileMenuOpen = false"
             class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
             ecor POS
           </router-link>
         </div>
 
-        <router-link to="/giai-phap" @click="isMobileMenuOpen = false"
+        <router-link :to="$localeRoute('solutions')" @click="isMobileMenuOpen = false"
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
           :class="$route.path.startsWith('/giai-phap') ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.solutionsIndustry') }}
         </router-link>
 
-        <router-link to="/bang-gia" @click="isMobileMenuOpen = false"
+        <router-link :to="$localeRoute('pricing')" @click="isMobileMenuOpen = false"
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
           :class="$route.path === '/bang-gia' ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.pricingService') }}
         </router-link>
 
-        <router-link to="/khach-hang" @click="isMobileMenuOpen = false"
+        <router-link :to="$localeRoute('customers')" @click="isMobileMenuOpen = false"
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
           :class="$route.path === '/khach-hang' ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.customersTypical') }}
         </router-link>
 
-        <router-link to="/tai-nguyen" @click="isMobileMenuOpen = false"
+        <router-link :to="$localeRoute('resources')" @click="isMobileMenuOpen = false"
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
           :class="$route.path === '/tai-nguyen' ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.resourcesApi') }}
         </router-link>
 
-        <router-link to="/lien-he" @click="isMobileMenuOpen = false"
+        <router-link :to="$localeRoute('contact')" @click="isMobileMenuOpen = false"
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
           :class="$route.path === '/lien-he' ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.contactSurvey') }}
@@ -307,8 +310,7 @@
       </div>
 
       <div class="pt-2 border-t border-zinc-100">
-        <button
-          @click="isMobileMenuOpen = false; $emit('open-modal', { type: 'demo', moduleName: 'all' })"
+        <button @click="isMobileMenuOpen = false; $emit('open-modal', { type: 'demo', moduleName: 'all' })"
           class="w-full py-3 rounded-xl bg-amber-400 text-zinc-900 font-bold font-semibold text-sm shadow-md">
           {{ $t('header.register') }}
         </button>
@@ -319,20 +321,21 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 defineEmits(['open-modal'])
 
 const route = useRoute()
+const router = useRouter()
 const isMobileMenuOpen = ref(false)
 const isLangMenuOpen = ref(false)
 const { t, locale } = useI18n()
 
 const setLocale = (lang) => {
-  locale.value = lang
-  localStorage.setItem('ecor-lang', lang)
-  isLangMenuOpen.value = false
+  const baseName = route.meta.baseName || 'home';
+  router.push({ name: `${baseName}___${lang}` });
+  isLangMenuOpen.value = false;
 }
 
 const isProductActive = computed(() => {

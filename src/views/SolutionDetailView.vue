@@ -82,7 +82,7 @@
 
   <div v-else class="text-center py-32">
     <h2 class="text-2xl font-bold text-zinc-700">Không tìm thấy giải pháp này</h2>
-    <router-link to="/" class="mt-4 inline-block text-amber-600 font-bold">Quay lại Trang Chủ</router-link>
+    <router-link :to="$localeRoute('home')" class="mt-4 inline-block text-amber-600 font-bold">Quay lại Trang Chủ</router-link>
   </div>
 </template>
 

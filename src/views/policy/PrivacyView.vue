@@ -10,7 +10,7 @@
         <div class="w-full max-w-7xl mx-auto px-8 pt-space-xl pb-space-2xl relative z-10">
           <!-- Breadcrumb -->
           <nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
-            <router-link to="/" class="hover:text-primary transition-colors">{{ $t('policy.privacy.t1') }}</router-link>
+            <router-link :to="$localeRoute('home')" class="hover:text-primary transition-colors">{{ $t('policy.privacy.t1') }}</router-link>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span class="text-on-surface-variant">{{ $t('policy.privacy.t2') }}</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>

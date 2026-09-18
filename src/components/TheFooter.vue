@@ -4,8 +4,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
         <!-- Brand & Contact -->
         <div class="lg:col-span-2 space-y-4">
-          <router-link to="/" class="inline-block">
-            <img src="@/assets/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
+          <router-link :to="$localeRoute('home')" class="inline-block">
+            <img src="/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
           </router-link>
           <p class="text-zinc-500 text-sm leading-relaxed max-w-sm">
             {{ $t('footer.desc') }}
@@ -50,27 +50,27 @@
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link to="/wms" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('wms')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodWms') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/tms" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('tms')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodTms') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/pos" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('pos')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodPos') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/wms" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('wms')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodMulti') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('solutions')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodEcom') }}
               </router-link>
             </li>
@@ -84,27 +84,27 @@
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('solutions')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.solRetail') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('solutions')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.sol3pl') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('solutions')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.solEcom') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('solutions')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.solCold') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('solutions')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.solMfg') }}
               </router-link>
             </li>
@@ -118,27 +118,27 @@
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link to="/tai-nguyen" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('resources')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resApi') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/tai-nguyen" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('resources')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resGuide') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/bang-gia" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('pricing')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resPricing') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/khach-hang" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('customers')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resCustomers') }}
               </router-link>
             </li>
             <li>
-              <router-link to="/lien-he" class="hover:text-amber-600 transition-colors">
+              <router-link :to="$localeRoute('contact')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resContact') }}
               </router-link>
             </li>
@@ -155,10 +155,10 @@
         </div>
 
         <div class="flex items-center gap-6">
-          <router-link to="/chinh-sach-bao-mat" class="hover:text-zinc-600">{{ $t('footer.legalPrivacy')
+          <router-link :to="$localeRoute('privacy')" class="hover:text-zinc-600">{{ $t('footer.legalPrivacy')
           }}</router-link>
-          <router-link to="/dieu-khoan-su-dung" class="hover:text-zinc-600">{{ $t('footer.legalTerms') }}</router-link>
-          <router-link to="/cam-ket-sla"
+          <router-link :to="$localeRoute('terms')" class="hover:text-zinc-600">{{ $t('footer.legalTerms') }}</router-link>
+          <router-link :to="$localeRoute('sla')"
             class="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 transition-colors">
             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             {{ $t('footer.sla') }}

@@ -5,7 +5,7 @@
 <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
 <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
 <nav class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant flex-wrap">
-<router-link to="/" class="hover:text-primary transition-colors">{{ $t('policy.sla.t1') }}</router-link>
+<router-link :to="$localeRoute('home')" class="hover:text-primary transition-colors">{{ $t('policy.sla.t1') }}</router-link>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
 <span class="hover:text-primary transition-colors">{{ $t('policy.sla.t2') }}</span>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>

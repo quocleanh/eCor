@@ -9,4 +9,16 @@ const app = createApp(App)
 app.use(router)
 app.use(i18n)
 
+// Inject Global Route Helpers
+app.config.globalProperties.$localeRoute = (baseName) => {
+  const currentLocale = i18n.global.locale.value || 'vi';
+  return { name: `${baseName}___${currentLocale}` };
+};
+
+app.config.globalProperties.$switchLocaleRoute = (targetLang) => {
+  const currentRoute = router.currentRoute.value;
+  const baseName = currentRoute.meta.baseName || 'home';
+  return { name: `${baseName}___${targetLang}` };
+};
+
 app.mount('#app')
