@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+  <div class="min-h-screen flex flex-col bg-zinc-50 text-zinc-800 font-sans antialiased selection:bg-amber-400 selection:text-zinc-900 font-bold">
     <TheHeader @open-modal="handleOpenModal" />
 
     <main class="flex-grow">

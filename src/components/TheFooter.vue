@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white border-t border-slate-200 text-slate-600 text-sm">
+  <footer class="bg-white border-t border-zinc-200 text-zinc-600 text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
         <!-- Brand & Contact -->
@@ -7,65 +7,65 @@
           <router-link to="/" class="inline-block">
             <img src="/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
           </router-link>
-          <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+          <p class="text-zinc-500 text-sm leading-relaxed max-w-sm">
             Giải pháp SaaS chuyên biệt cho quản lý kho hàng (WMS), điều vận vận tải (TMS) và kết nối thương mại đa sàn. Tối ưu chi phí và bứt phá hiệu suất vận hành.
           </p>
-          <div class="space-y-2 pt-2 text-sm text-slate-700">
+          <div class="space-y-2 pt-2 text-sm text-zinc-700">
             <div class="flex items-center gap-2.5">
-              <div class="w-7 h-7 rounded-md bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+              <div class="w-7 h-7 rounded-md bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
-              <span>Hotline hỗ trợ: <strong class="text-slate-900 font-semibold"> 097 8673867</strong> (24/7)</span>
+              <span>Hotline hỗ trợ: <strong class="text-zinc-900 font-semibold"> 097 8673867</strong> (24/7)</span>
             </div>
             <div class="flex items-center gap-2.5">
-              <div class="w-7 h-7 rounded-md bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+              <div class="w-7 h-7 rounded-md bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <span>Email: <a href="mailto:contact@ecor.vn" class="text-sky-600 hover:underline">contact@ecor.vn</a></span>
+              <span>Email: <a href="mailto:contact@ecor.vn" class="text-amber-600 hover:underline">contact@ecor.vn</a></span>
             </div>
             <div class="flex items-center gap-2.5">
-              <div class="w-7 h-7 rounded-md bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+              <div class="w-7 h-7 rounded-md bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </div>
-              <span>Website: <strong class="text-slate-800">https://ecor.vn</strong></span>
+              <span>Website: <strong class="text-zinc-800">https://ecor.vn</strong></span>
             </div>
           </div>
         </div>
 
         <!-- Col 2: Sản Phẩm -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-900 mb-4">
             Sản Phẩm
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link to="/wms" class="hover:text-sky-600 transition-colors">
+              <router-link to="/wms" class="hover:text-amber-600 transition-colors">
                 Hệ thống WMS Thông minh
               </router-link>
             </li>
             <li>
-              <router-link to="/tms" class="hover:text-sky-600 transition-colors">
+              <router-link to="/tms" class="hover:text-amber-600 transition-colors">
                 Hệ thống TMS Vận tải
               </router-link>
             </li>
             <li>
-              <router-link to="/pos" class="hover:text-sky-600 transition-colors">
+              <router-link to="/pos" class="hover:text-amber-600 transition-colors">
                 ecor POS Bán hàng
               </router-link>
             </li>
             <li>
-              <router-link to="/wms" class="hover:text-sky-600 transition-colors">
+              <router-link to="/wms" class="hover:text-amber-600 transition-colors">
                 Quản lý kho đa điểm
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
                 Đồng bộ đa sàn E-com
               </router-link>
             </li>
@@ -74,32 +74,32 @@
 
         <!-- Col 3: Giải Pháp -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-900 mb-4">
             Giải Pháp
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
                 Chuỗi bán lẻ & FMCG
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
                 Doanh nghiệp Logistics 3PL
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
                 Thương mại điện tử E-commerce
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
                 Kho lạnh & Dược phẩm
               </router-link>
             </li>
             <li>
-              <router-link to="/giai-phap" class="hover:text-sky-600 transition-colors">
+              <router-link to="/giai-phap" class="hover:text-amber-600 transition-colors">
                 Sản xuất & Phân phối
               </router-link>
             </li>
@@ -108,32 +108,32 @@
 
         <!-- Col 4: Tài Nguyên & Hỗ Trợ -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-900 mb-4">
             Tài Nguyên
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link to="/tai-nguyen" class="hover:text-sky-600 transition-colors">
+              <router-link to="/tai-nguyen" class="hover:text-amber-600 transition-colors">
                 Tài liệu API & Webhook
               </router-link>
             </li>
             <li>
-              <router-link to="/tai-nguyen" class="hover:text-sky-600 transition-colors">
+              <router-link to="/tai-nguyen" class="hover:text-amber-600 transition-colors">
                 Trung tâm hướng dẫn
               </router-link>
             </li>
             <li>
-              <router-link to="/bang-gia" class="hover:text-sky-600 transition-colors">
+              <router-link to="/bang-gia" class="hover:text-amber-600 transition-colors">
                 Bảng giá dịch vụ
               </router-link>
             </li>
             <li>
-              <router-link to="/khach-hang" class="hover:text-sky-600 transition-colors">
+              <router-link to="/khach-hang" class="hover:text-amber-600 transition-colors">
                 Khách hàng tiêu biểu
               </router-link>
             </li>
             <li>
-              <router-link to="/lien-he" class="hover:text-sky-600 transition-colors">
+              <router-link to="/lien-he" class="hover:text-amber-600 transition-colors">
                 Liên hệ chuyên gia tư vấn
               </router-link>
             </li>
@@ -142,16 +142,16 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="mt-12 pt-8 border-t border-zinc-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
         <div class="flex items-center gap-2">
           <span>© 2025 eCor Platform. Tất cả các quyền được bảo lưu.</span>
         </div>
 
         <div class="flex items-center gap-6">
-          <router-link to="/tai-nguyen" class="hover:text-slate-600">Quyền riêng tư</router-link>
-          <router-link to="/tai-nguyen" class="hover:text-slate-600">Bảo mật hệ thống</router-link>
-          <span class="inline-flex items-center gap-1.5 text-emerald-600">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <router-link to="/tai-nguyen" class="hover:text-zinc-600">Quyền riêng tư</router-link>
+          <router-link to="/tai-nguyen" class="hover:text-zinc-600">Bảo mật hệ thống</router-link>
+          <span class="inline-flex items-center gap-1.5 text-amber-600">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             Hệ thống máy chủ vận hành 99.98% SLA
           </span>
         </div>
