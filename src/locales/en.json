@@ -197,7 +197,8 @@
       "m4": {
         "val": "3 – 5 Days",
         "title": "Rapid Go-live",
-        "desc": "Standardized SKU processes and automated warehouse data migration with zero sales disruption."
+        "desc": "Standardized SKU processes and automated warehouse data migration with zero sales disruption.",
+        "unít": "Minutes"
       }
     },
     "pillars": {

@@ -2,10 +2,11 @@
   <div class="overflow-hidden bg-[#fafcff]">
     <!-- 1. HERO SECTION -->
     <section class="relative pt-10 pb-20 lg:pt-16 lg:pb-28">
-      <!-- Ambient Glows -->
-      <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-amber-100/60 via-amber-50/30 to-transparent blur-3xl pointer-events-none -z-10">
-      </div>
+      <!-- Modern Background: Grid + Ambient Radial Glows -->
+      <div class="absolute inset-0 -z-10 h-full w-full bg-[#fafcff] bg-[linear-gradient(to_right,#f4f4f5_1px,transparent_1px),linear-gradient(to_bottom,#f4f4f5_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:linear-gradient(to_bottom,white,transparent_80%)]"></div>
+      <div class="absolute top-0 right-0 -z-10 h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_400px_at_100%_200px,#fef3c7,transparent)] opacity-60 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-20 left-0 -z-10 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_400px_at_0%_300px,#e0f2fe,transparent)] opacity-50 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-[500px] w-[800px] rounded-full bg-[radial-gradient(circle_400px_at_50%_0%,#fffbeb,transparent)] opacity-80 blur-3xl pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -67,7 +68,7 @@
           </div>
 
           <!-- Right Hero Interactive Diagram (Circular Hub) -->
-          <div class="lg:col-span-5 relative flex items-center justify-center">
+          <div class="lg:col-span-5 relative flex items-center justify-center mt-12 lg:mt-0">
             <HeroInteractiveCanvas />
           </div>
         </div>

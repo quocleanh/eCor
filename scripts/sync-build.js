@@ -47,6 +47,21 @@ if (fs.existsSync(distIndex)) {
   console.log('✅ Đã cập nhật index.html tại root với bundle production');
 }
 
+// 3.5 Copy ecor-logo.png and favicon.jpg if they exist
+const distLogo = path.join(distDir, 'ecor-logo.png');
+const rootLogo = path.join(rootDir, 'ecor-logo.png');
+if (fs.existsSync(distLogo)) {
+  fs.copyFileSync(distLogo, rootLogo);
+  console.log('✅ Đã đồng bộ ecor-logo.png ra root');
+}
+
+const distFavicon = path.join(distDir, 'favicon.jpg');
+const rootFavicon = path.join(rootDir, 'favicon.jpg');
+if (fs.existsSync(distFavicon)) {
+  fs.copyFileSync(distFavicon, rootFavicon);
+  console.log('✅ Đã đồng bộ favicon.jpg ra root');
+}
+
 // 4. Đảm bảo file 404.html và CNAME có ở root
 const public404 = path.join(rootDir, 'public', '404.html');
 const root404 = path.join(rootDir, '404.html');
