@@ -59,7 +59,7 @@ export default {
         "on-secondary-fixed": "#002022",
         "on-primary-fixed": "#001a41",
         "on-secondary-fixed-variant": "#004f53",
-        "secondary": "#00696e",
+        "secondary": "#000000ff",
         "surface-container-high": "#dce9ff",
         "secondary-container": "#61f4fd",
         "surface-tint": "#005bc0",
