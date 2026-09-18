@@ -533,7 +533,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('wms.form.nameLabel') }}</label>
-                <input v-model="wmsForm.name" required placeholder="{{ $t('wms.form.namePlaceholder') }}"
+                <input v-model="wmsForm.name" required :placeholder="$t('wms.form.namePlaceholder')"
                   class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-sm" />
               </div>
               <div>
@@ -546,7 +546,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-zinc-700 uppercase mb-1">{{ $t('wms.form.companyLabel') }}</label>
-                <input v-model="wmsForm.company" required placeholder="{{ $t('wms.form.companyPlaceholder') }}"
+                <input v-model="wmsForm.company" required :placeholder="$t('wms.form.companyPlaceholder')"
                   class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-sm" />
               </div>
               <div>
