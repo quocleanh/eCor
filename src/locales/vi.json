@@ -1428,7 +1428,7 @@
       "t29": "Đầu mối DPO & An ninh",
       "t30": "Data Protection Office",
       "t31": "Mọi yêu cầu xóa dữ liệu, thẩm định an toàn thông tin (Security Audit) hoặc phản hồi lỗ hổng, vui lòng\r\n                liên hệ trực tiếp:",
-      "t32": "security@ecor.vn",
+      "t32": "security{'@'}ecor.vn",
       "t33": "1900 6868 (Ext. 102)",
       "t34": "Trưởng ban An toàn: Nguyễn Tuấn Anh",
       "t35": "Thời gian phản hồi SLA:",
@@ -1721,7 +1721,7 @@
       "t162": "Phòng Pháp Chế & Hợp Đồng Doanh Nghiệp",
       "t163": "Cần điều chỉnh phụ lục SLA hoặc thỏa thuận bảo mật NDA riêng?",
       "t164": "Đối với các tập đoàn phân phối đa quốc gia, đơn vị logistics 3PL quy mô trên 50 đầu xe hoặc chuỗi kho vận trên 20.000m², đội ngũ luật sư chuyên trách của eCor sẵn sàng hỗ trợ rà soát và ký kết bộ hợp đồng tùy biến riêng biệt.",
-      "t165": "legal@ecor.vn / cskh@ecor.vn",
+      "t165": "legal{'@'}ecor.vn / cskh{'@'}ecor.vn",
       "t166": "Hotline Doanh Nghiệp: 1900 6868",
       "t167": "Yêu cầu ký kết NDA tùy chỉnh"
     },

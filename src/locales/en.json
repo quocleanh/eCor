@@ -1429,7 +1429,7 @@
       "t29": "DPO & Security Focal Point",
       "t30": "Data Protection Office",
       "t31": "Any requests to delete data, information security audit (Security Audit) or vulnerability feedback, please\r\n                contact directly:",
-      "t32": "security@ecor.vn",
+      "t32": "security{'@'}ecor.vn",
       "t33": "1900 6868 (Ext. 102)",
       "t34": "Head of Safety Committee: Nguyen Tuan Anh",
       "t35": "Response time SLA:",
@@ -1722,7 +1722,7 @@
       "t162": "Legal & Corporate Contract Department",
       "t163": "Need to adjust the SLA addendum or separate NDA confidentiality agreement?",
       "t164": "For multinational distribution corporations, 3PL logistics units with more than 50 vehicles or logistics chains with more than 20,000m², eCor's dedicated lawyers are ready to assist in reviewing and signing a separate set of customized contracts.",
-      "t165": "legal@ecor.vn / cskh@ecor.vn",
+      "t165": "legal{'@'}ecor.vn / cskh{'@'}ecor.vn",
       "t166": "Business Hotline: 1900 6868",
       "t167": "Custom NDA Signing Requirements"
     },
