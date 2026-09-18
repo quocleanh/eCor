@@ -5,7 +5,7 @@
         <!-- Brand & Contact -->
         <div class="lg:col-span-2 space-y-4">
           <router-link to="/" class="inline-block">
-            <img src="@/assets/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
+            <img src="/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
           </router-link>
           <p class="text-zinc-500 text-sm leading-relaxed max-w-sm">
             {{ $t('footer.desc') }}
