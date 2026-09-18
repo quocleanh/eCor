@@ -5,7 +5,7 @@
         <!-- Brand & Contact -->
         <div class="lg:col-span-2 space-y-4">
           <router-link to="/" class="inline-block">
-            <img src="/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
+            <img src="/images/ecor-logo.png" alt="eCor Platform" class="h-9 w-auto object-contain" />
           </router-link>
           <p class="text-zinc-500 text-sm leading-relaxed max-w-sm">
             {{ $t('footer.desc') }}
@@ -157,7 +157,8 @@
         <div class="flex items-center gap-6">
           <router-link to="/chinh-sach-bao-mat" class="hover:text-zinc-600">{{ $t('footer.privacy') }}</router-link>
           <router-link to="/dieu-khoan-su-dung" class="hover:text-zinc-600">{{ $t('footer.security') }}</router-link>
-          <router-link to="/cam-ket-sla" class="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 transition-colors">
+          <router-link to="/cam-ket-sla"
+            class="inline-flex items-center gap-1.5 text-amber-600 hover:text-amber-700 transition-colors">
             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             {{ $t('footer.sla') }}
           </router-link>
