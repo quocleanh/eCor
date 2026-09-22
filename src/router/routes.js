@@ -58,6 +58,20 @@ export const routeMappings = [
     }
   },
   {
+    name: 'account',
+    component: () => import('@/views/AccountView.vue'),
+    meta: {
+      title: 'ecor Account — Kế Toán Tự Động & Đối Soát COD Tức Thì',
+      description: 'Phân hệ eCor Account tự động hạch toán từ POS/WMS/TMS, đối soát tiền COD với đơn vị vận chuyển chỉ 1 chạm và xuất hóa đơn điện tử chuẩn Thông tư 78.'
+    },
+    paths: {
+      vi: '/ke-toan',
+      en: '/en/accounting',
+      zh: '/zh/accounting',
+      'zh-TW': '/zh-tw/accounting'
+    }
+  },
+  {
     name: 'solutions',
     component: () => import('@/views/SolutionsView.vue'),
     meta: { 

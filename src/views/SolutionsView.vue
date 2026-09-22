@@ -42,6 +42,31 @@
       </div>
     </section>
 
+    <!-- QUICK LINKS THEO PHÂN HỆ -->
+    <section class="pb-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-zinc-400 mr-1">{{ $t('solutions.quicklinks.badge') }}</span>
+          <router-link :to="$localeRoute('wms')"
+            class="px-4 py-2 rounded-full bg-white border border-zinc-200 hover:border-amber-300 hover:bg-amber-50 text-xs font-bold text-zinc-700 hover:text-amber-700 transition-all shadow-sm">
+            📦 {{ $t('solutions.quicklinks.wms') }}
+          </router-link>
+          <router-link :to="$localeRoute('tms')"
+            class="px-4 py-2 rounded-full bg-white border border-zinc-200 hover:border-amber-300 hover:bg-amber-50 text-xs font-bold text-zinc-700 hover:text-amber-700 transition-all shadow-sm">
+            🚚 {{ $t('solutions.quicklinks.tms') }}
+          </router-link>
+          <router-link :to="$localeRoute('pos')"
+            class="px-4 py-2 rounded-full bg-white border border-zinc-200 hover:border-amber-300 hover:bg-amber-50 text-xs font-bold text-zinc-700 hover:text-amber-700 transition-all shadow-sm">
+            🛒 {{ $t('solutions.quicklinks.pos') }}
+          </router-link>
+          <router-link :to="$localeRoute('account')"
+            class="px-4 py-2 rounded-full bg-white border border-zinc-200 hover:border-amber-300 hover:bg-amber-50 text-xs font-bold text-zinc-700 hover:text-amber-700 transition-all shadow-sm">
+            📑 {{ $t('solutions.quicklinks.account') }}
+          </router-link>
+        </div>
+      </div>
+    </section>
+
     <!-- 2. FOUR METRICS -->
     <section class="py-12 bg-white border-y border-zinc-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

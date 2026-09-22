@@ -5,6 +5,7 @@
     "wmsDesc": "Quản trị kho 3D, Wave Picking, hạn date",
     "tmsDesc": "Điều phối vận tải, giám sát GPS, e-POD",
     "posDesc": "Bán hàng 3s, VietQR động, kết nối WMS",
+    "accountDesc": "Tự động hạch toán, đối soát COD, xuất HĐĐT TT78",
     "seeFlowchart": "Xem sơ đồ dòng chảy khép kín",
     "solutions": "Giải pháp",
     "pricing": "Bảng giá",
@@ -26,6 +27,7 @@
   "footer": {
     "desc": "Giải pháp SaaS chuyên biệt cho quản lý kho hàng (WMS), điều vận vận tải (TMS) và kết nối thương mại đa sàn. Tối ưu chi phí và bứt phá hiệu suất vận hành.",
     "hotline": "Hotline hỗ trợ",
+    "prodAccount": "ecor Account Kế Toán",
     "products": "Sản Phẩm",
     "solutions": "Giải Pháp",
     "resources": "Tài Nguyên",
@@ -90,6 +92,14 @@
         "f2": "Xử lý đơn tập trung một chạm",
         "f3": "Đối soát tiền hàng & phí vận chuyển",
         "link": "Khám phá Đa Kênh"
+      },
+      "account": {
+        "title": "Account — Kế Toán Tự Động",
+        "desc": "Tự động hạch toán từ WMS/TMS/POS, đối soát COD tức thì và xuất hóa đơn điện tử chuẩn Thông tư 78 ngay tại điểm bán.",
+        "f1": "Bút toán tự động 100%, không nhập tay",
+        "f2": "Đối soát COD & sàn TMĐT trong 15 giây",
+        "f3": "Hóa đơn điện tử cấp mã cơ quan thuế tức thì",
+        "link": "Chi tiết ecor Account"
       }
     },
     "ecosystem": {
@@ -100,8 +110,8 @@
       "f2": "Triển khai plug-and-play trong 15 phút",
       "item1Title": "POS Thương Mại",
       "item1Desc": "Bán lẻ & Quầy thu ngân",
-      "item2Title": "Kế Toán Tự Động",
-      "item2Desc": "Xuất hóa đơn & Thuế",
+      "item2Title": "CRM & Loyalty 360°",
+      "item2Desc": "Tích điểm & Zalo ZNS",
       "item3Title": "Ecom Mở Rộng",
       "item3Desc": "TikTok, Shopee, Tiki"
     },
@@ -110,8 +120,8 @@
       "tabs": {
         "wms": "WMS - Quản Lý Kho Vận",
         "tms": "TMS - Điều Phối Vận Tải",
-        "omni": "Omnichannel - Đa Kênh",
-        "pos": "POS & Kế Toán Mở Rộng"
+        "pos": "POS & Đa Kênh Bán Hàng",
+        "account": "Account - Kế Toán Tự Động"
       },
       "wmsTab": {
         "badge": "Smart Warehouse Management",
@@ -140,29 +150,35 @@
         "stat2Sub": "Giám sát tài xế GPS",
         "link": "Chi tiết ecor TMS"
       },
-      "omniTab": {
-        "badge": "Omnichannel Commerce Hub",
-        "title": "Đồng bộ tồn kho & đơn hàng đa sàn 0 độ trễ",
-        "desc": "Tự động trừ kho ngay khi có đơn từ Shopee, TikTok Shop, Lazada hay Tiki. Ngăn chặn triệt để tình trạng cháy hàng hoặc phạt vi phạm tỷ lệ hủy đơn trên sàn.",
-        "stat1Label": "Tốc độ đồng bộ tồn",
-        "stat1Val": "< 0.12s",
-        "stat1Sub": "Webhook Real-time API",
-        "stat2Label": "Tỷ lệ hủy đơn quá hạn",
-        "stat2Val": "0.00%",
-        "stat2Sub": "Tự động khóa tồn an toàn",
-        "link": "Khám phá Đồng Bộ Đa Kênh"
-      },
       "posTab": {
-        "badge": "POS & Sổ Sách Tự Động",
-        "title": "Thanh toán 3 giây, VietQR động & vận hành offline 100%",
-        "desc": "Máy thu ngân hoạt động trơn tru ngay cả khi rớt mạng internet với kiến trúc Offline-first SQLite. Tự động đồng bộ ngược lên máy chủ khi có mạng và xuất hóa đơn điện tử hợp chuẩn.",
+        "badge": "POS & Đa Kênh Bán Hàng",
+        "title": "Thanh Toán 3 Giây, Vận Hành Offline 100% & Đồng Bộ Đa Sàn 0 Độ Trễ",
+        "desc": "Máy thu ngân hoạt động trơn tru ngay cả khi rớt mạng internet với kiến trúc Offline-first SQLite. Đồng thời tự động trừ kho và đồng bộ đơn hàng từ Shopee, TikTok Shop, Lazada về cùng 1 nơi.",
         "stat1Label": "Tốc độ thanh toán",
         "stat1Val": "3 Giây",
         "stat1Sub": "VietQR động ngân hàng",
         "stat2Label": "Hoạt động khi mất mạng",
         "stat2Val": "100%",
         "stat2Sub": "Không gián đoạn quầy thu",
+        "stat3Label": "Tốc độ đồng bộ tồn",
+        "stat3Val": "< 0.12s",
+        "stat3Sub": "Webhook Real-time API",
+        "stat4Label": "Tỷ lệ hủy đơn quá hạn",
+        "stat4Val": "0.00%",
+        "stat4Sub": "Tự động khóa tồn an toàn",
         "link": "Chi tiết ecor POS"
+      },
+      "accountTab": {
+        "badge": "Account & Sổ Sách Tự Động",
+        "title": "Hạch Toán Tự Động Từng Giây & Đối Soát COD Tức Thì",
+        "desc": "Bút toán tự động sinh từ mọi giao dịch bán hàng, đối soát tiền COD với đơn vị vận chuyển chỉ 1 chạm và xuất hóa đơn điện tử chuẩn Thông tư 78 ngay tại điểm bán.",
+        "stat1Label": "Tự động hóa bút toán",
+        "stat1Val": "100%",
+        "stat1Sub": "Không cần nhập tay",
+        "stat2Label": "Thời gian đối soát COD",
+        "stat2Val": "-85%",
+        "stat2Sub": "Từ vài ngày còn vài phút",
+        "link": "Chi tiết ecor Account"
       }
     },
     "cta": {
@@ -552,7 +568,7 @@
     },
     "pillars": {
       "badge": "Cốt Lõi Công Nghệ ecor POS",
-      "title": "4 Cột Trụ Vận Hành Bán Lẻ Khối Lượng Cao",
+      "title": "4 Lõi Vận Hành Bán Lẻ Khối Lượng Cao",
       "desc": "Thiết kế cho môi trường bán lẻ hiện đại đòi hỏi tốc độ xử lý lớn, dữ liệu minh bạch và độ tin cậy tuyệt đối.",
       "p1": {
         "tag": "Thanh Toán Thông Minh",
@@ -624,14 +640,227 @@
       "hotline": "Hotline:"
     }
   },
+  "account": {
+    "hero": {
+      "badge": "ecor Account 4.0 • Kế Toán Tự Động Cho Chuỗi Bán Lẻ & Logistics",
+      "title": "Hạch Toán Tự Động Từng Giây, Đối Soát COD Tức Thì & Xuất Hóa Đơn Điện Tử Chuẩn Thông Tư 78",
+      "desc": "Phân hệ kế toán tài chính thông minh liên kết chặt chẽ với POS, WMS và TMS. Sinh bút toán tự động từ mọi giao dịch bán hàng, đối soát tiền COD với đơn vị vận chuyển chỉ 1 chạm và xuất hóa đơn điện tử khởi tạo từ máy tính tiền đúng quy định.",
+      "demo": "Trải Nghiệm Demo Kế Toán →",
+      "doc": "Tải Tài Liệu Giải Pháp Kế Toán (PDF)",
+      "badge1": "Chuẩn Thông tư 133 & 200",
+      "badge2": "Tích hợp HĐĐT VNPT / Viettel / MISA",
+      "badge3": "Đồng bộ 1:1 với WMS, TMS, POS",
+      "panel": {
+        "title": "Bảng Điều Khiển Kế Toán ecor",
+        "live": "Đang hạch toán realtime",
+        "period": "Kỳ: T10/2024",
+        "k1Label": "Dòng Tiền COD Đã Đối Soát",
+        "k1Val": "14.825.920.000 đ",
+        "k1Sub": "Khớp 99.8% mã vận đơn",
+        "k2Label": "Thu Hồi Công Nợ (AR)",
+        "k2Val": "98.6%",
+        "k2Sub": "Giảm 6.4 ngày nợ tồn",
+        "k3Label": "Hóa Đơn Chuẩn TT78",
+        "k3Val": "28.412 HĐ",
+        "k3Sub": "100% cấp mã cơ quan thuế",
+        "k4Label": "Giá Vốn Xuất Kho (COGS)",
+        "k4Val": "FIFO Tức Thì",
+        "k4Sub": "0 lệch kho vật lý",
+        "journalTitle": "Bút Toán Tự Động Ghi Sổ Từ Hệ Sinh Thái ecor",
+        "j1": "Xuất kho 120 SKU đơn TikTok Shop #TT-8841 → Nợ 632 / Có 156 (28.400.000đ)",
+        "j1Status": "Thành công",
+        "j2": "Đối soát COD GHTK kỳ 24/10 → Nợ 1121 Vietcombank / Có 131 GHTK (184.200.000đ)",
+        "j2Status": "Khớp 100%",
+        "j3": "Phát hành HĐĐT TT78 qua MISA meInvoice → Nợ 131 / Có 5111, 33311 (52.800.000đ)",
+        "j3Status": "Đã cấp mã"
+      }
+    },
+    "metrics": {
+      "m1": {
+        "val": "100%",
+        "title": "Tự Động Hóa Bút Toán",
+        "desc": "Sinh bút toán nhập/xuất kho và hóa đơn bán hàng tự động từ mã vận đơn và phiếu kho, không cần gõ tay."
+      },
+      "m2": {
+        "val": "-85%",
+        "title": "Thời Gian Đối Soát COD",
+        "desc": "Rút ngắn đối chiếu tiền thu hộ từ hãng vận chuyển và sàn TMĐT từ nhiều ngày xuống còn vài phút."
+      },
+      "m3": {
+        "val": "0 Lệch",
+        "title": "Sổ Sách & Kho Vật Lý",
+        "desc": "Đồng bộ số liệu kế toán và kho theo thời gian thực 1:1, chặn đứng rủi ro thất thoát hàng hóa."
+      },
+      "m4": {
+        "val": "30 Giây",
+        "title": "Lập Báo Cáo Tài Chính",
+        "desc": "Tự động kết chuyển lãi lỗ, xuất báo cáo tài chính và bảng kê thuế chuẩn quy định."
+      }
+    },
+    "pillars": {
+      "badge": "Kiến Trúc Kế Toán Đột Phá",
+      "title": "4 Đột Phá Của ecor Account",
+      "desc": "Kiến trúc tài chính kế toán chuyên sâu đồng bộ hóa toàn diện từ kho bãi vật lý đến báo cáo quản trị.",
+      "p1": {
+        "tag": "01",
+        "title": "Hạch Toán Tự Động Từ Kho & Bán Hàng",
+        "desc": "Tự động sinh phiếu nhập/xuất kho và định khoản (TK 156, 632, 511, 131) ngay khi thủ kho quét mã hoàn tất đơn hàng, loại bỏ hoàn toàn nhập liệu thủ công.",
+        "f1": "Tự ghi sổ cái trong 0.2 giây sau khi quét mã đơn",
+        "f2": "Định khoản chuẩn theo chế độ kế toán TT133/TT200",
+        "f3": "Không còn sai lệch giữa thủ kho và kế toán"
+      },
+      "p2": {
+        "tag": "02",
+        "title": "Quản Trị Công Nợ & Đối Soát COD Vận Chuyển",
+        "desc": "Cảnh báo sớm công nợ theo hạn mức và tuổi nợ. Tự động đối soát tiền COD từ GHTK, GHN, Viettel Post, SPX chỉ bằng 1 cú click.",
+        "f1": "Auto-match hàng chục nghìn mã COD với bảng kê ngân hàng",
+        "f2": "Phát hiện lệch cước phí hoặc giữ tiền tức thì",
+        "f3": "Cảnh báo công nợ quá hạn theo từng khách hàng / NCC"
+      },
+      "p3": {
+        "tag": "03",
+        "title": "Hóa Đơn Điện Tử Tự Động Chuẩn Cục Thuế",
+        "desc": "Kết nối trực tiếp MISA meInvoice, VNPT, Viettel, BKAV. Tự động xuất HĐĐT theo từng đơn hoặc gom cuối ngày đúng Thông tư 78 / Nghị định 123.",
+        "f1": "API phát hành HĐĐT tự động, có mã cơ quan thuế",
+        "f2": "Gửi email & Zalo ZNS hóa đơn cho khách tức thì",
+        "f3": "Không bỏ sót đơn lẻ, không xuất trùng"
+      },
+      "p4": {
+        "tag": "04",
+        "title": "Báo Cáo Tài Chính & Phân Tích Lãi Lỗ Từng Đơn",
+        "desc": "Bảng cân đối phát sinh, lưu chuyển tiền tệ, biên lợi nhuận gộp theo ngành hàng, kênh bán và từng chi nhánh theo thời gian thực.",
+        "f1": "Biết chính xác lãi lỗ thuần sau phí sàn & vận chuyển",
+        "f2": "Báo cáo P&L realtime trên Mobile App & Web",
+        "f3": "Không cần chờ đến cuối tháng mới có số liệu"
+      }
+    },
+    "modules": {
+      "badge": "Phạm Vi Nghiệp Vụ Chuẩn Mực",
+      "title": "6 Phân Hệ Kế Toán Chuyên Sâu Khép Kín",
+      "desc": "Đáp ứng trọn vẹn từ kế toán tài chính pháp lý (Thông tư 133 & 200) đến kế toán quản trị dòng tiền chuỗi cung ứng.",
+      "h1": { "title": "Tiền Mặt & Tiền Gửi", "desc": "Kết nối Vietcombank, MB, Techcombank, BIDV. Tự động lấy sổ phụ và đối chiếu dòng tiền 24/7." },
+      "h2": { "title": "Kế Toán Bán Hàng & Công Nợ AR", "desc": "Tự động hạch toán doanh thu từ POS, sàn TMĐT và kênh sỉ B2B. Quản lý hạn mức nợ chặt chẽ." },
+      "h3": { "title": "Kho & Giá Vốn (COGS)", "desc": "Tính giá vốn theo bình quân gia quyền hoặc FIFO tức thời, tự động hạch toán chênh lệch kiểm kê." },
+      "h4": { "title": "Chi Phí Vận Chuyển & COD", "desc": "Tập hợp chi phí cước, đối soát tiền COD theo từng chuyến hàng và mã vận đơn." },
+      "h5": { "title": "Tài Sản & Khấu Hao", "desc": "Quản lý danh mục thiết bị, giá kệ kho, xe tải. Tự động trích khấu hao hàng tháng chuẩn quy định." },
+      "h6": { "title": "Kế Toán Thuế & Báo Cáo", "desc": "Lập tờ khai GTGT, TNCN, TNDN tạm tính. Xuất file XML nộp trực tiếp qua Thuế điện tử." },
+      "h7": { "title": "Kế Toán Tổng Hợp & Ngân Sách", "desc": "Lập dự toán ngân sách, kế toán tổng hợp toàn chuỗi và báo cáo quản trị dành riêng cho Hội đồng quản trị." },
+      "h8": { "title": "Đa Tiền Tệ & Khế Ước Vay", "desc": "Hạch toán đa tiền tệ cho hàng nhập khẩu, quản lý khế ước vay ngân hàng và lịch trả nợ tự động." },
+      "moreBadge": "Đầy đủ 8 phân hệ mở rộng khác:",
+      "moreDesc": "Kiểm toán Sổ cái • Tài sản Vô hình • Hợp nhất Báo cáo Đa công ty • Quản lý Dự án & Giá thành • Ngân sách theo Trung tâm Chi phí • Đối chiếu Thuế Nhà thầu",
+      "moreLink": "Xem tài liệu chi tiết các phân hệ →"
+    },
+    "compare": {
+      "badge": "Hiệu Quả Thực Chứng",
+      "title": "Kế Toán Thủ Công / Excel vs ecor Account 4.0",
+      "desc": "Nhìn thấy rõ sự khác biệt giữa cách làm kế toán rời rạc truyền thống và nền tảng tự động hóa thế hệ mới.",
+      "h1": "Tiêu chí đánh giá",
+      "h2": "Kế toán thủ công & Excel",
+      "h3": "ecor Account 4.0",
+      "r1": {
+        "title": "Nhập liệu chứng từ",
+        "before": "Gõ tay từng hóa đơn, phiếu kho. Mất 4-6 tiếng/ngày, sai sót số liệu lên tới 12%.",
+        "after": "100% tự động sinh bút toán từ mã vận đơn WMS và đơn bán sàn TMĐT."
+      },
+      "r2": {
+        "title": "Đối soát COD & sàn TMĐT",
+        "before": "Tải file Excel từng hãng vận chuyển rồi dò thủ công; chậm trễ dòng tiền 7-10 ngày.",
+        "after": "Đối soát 1-click qua API, phát hiện lệch tiền cước và đơn hoàn trong 15 giây."
+      },
+      "r4": {
+        "title": "Quản Trị Tồn Kho & Giá Vốn",
+        "before": "Số liệu kho và kế toán luôn lệch nhau; chỉ tính được giá vốn định kỳ cuối tháng.",
+        "after": "Đồng bộ 1:1 theo thời gian thực; tính giá vốn tức thì (realtime COGS) chuẩn xác."
+      },
+      "r5": {
+        "title": "Xuất Hóa Đơn Điện Tử (TT78)",
+        "before": "Xuất thủ công từng tờ trên cổng riêng lẻ, dễ bỏ sót đơn lẻ và mất thời gian nhập lại dữ liệu.",
+        "after": "Tích hợp trực tiếp MISA, VNPT, Viettel; xuất hàng loạt tự động theo luồng xuất kho."
+      },
+      "r3": {
+        "title": "Báo cáo tài chính cho Ban Giám Đốc",
+        "before": "Chậm 15-20 ngày sau khi kết thúc tháng; lãnh đạo ra quyết định dựa trên số liệu cũ.",
+        "after": "Báo cáo lãi lỗ thời gian thực (Live P&L), truy xuất tức thì trên Mobile App & Web."
+      }
+    },
+    "integrations": {
+      "badge": "Hệ Sinh Thái Kết Nối Sẵn Sàng 100%",
+      "title": "Tương Thích Mọi Nền Tảng Ngân Hàng & Thuế Điện Tử Hàng Đầu"
+    },
+    "testimonials": {
+      "badge": "Thực Chứng Khách Hàng",
+      "title": "Được Tin Dùng Bởi Các CFO & Kế Toán Trưởng Tiên Phong",
+      "desc": "Xem cách các doanh nghiệp logistics và chuỗi bán lẻ quy mô lớn giải phóng phòng kế toán với ecor Account.",
+      "t1": {
+        "quote": "Trước đây mỗi tháng chuỗi 35 chi nhánh của chúng tôi cần 6 kế toán ngồi nhập liệu và rà soát hóa đơn. Khi triển khai ecor Account kết nối thẳng WMS, 100% chứng từ xuất nhập được tự động hóa. Đội ngũ kế toán giảm được 70% áp lực và tập trung hoàn toàn vào kiểm soát chi phí.",
+        "name": "Bà Trần Thu Trang",
+        "role": "Kế Toán Trưởng • Chuỗi Bán Lẻ Tiêu Dùng Phúc Thịnh Retail"
+      },
+      "t2": {
+        "quote": "Nỗi ám ảnh lớn nhất của chúng tôi là đối soát COD với 4 đơn vị chuyển phát. Tiền tồn đọng hàng chục tỷ mà không biết đơn nào bị giữ. ecor Account giải quyết dứt điểm: đối soát hàng vạn đơn chỉ trong 15 phút, tỷ lệ khớp 99.8%. Ban Giám đốc xem được dòng tiền thực mọi lúc.",
+        "name": "Ông Nguyễn Văn Cường",
+        "role": "Giám Đốc Tài Chính (CFO) • Tập Đoàn Vận Tải An Phát Logistics"
+      }
+    },
+    "form": {
+      "badge": "Tư Vấn Chuyên Sâu 1-1",
+      "title": "Đăng Ký Tư Vấn & Nhận Demo Bản Quyền Kế Toán",
+      "desc": "Trải nghiệm toàn diện giải pháp tự động hóa kế toán chuỗi logistics. Chuyên viên tài chính eCor sẽ liên hệ hỗ trợ phân tích luồng hạch toán doanh nghiệp trong vòng 15 phút.",
+      "success": "✓ Đăng ký thành công! Chuyên viên eCor Account sẽ liên hệ trong vòng 15 phút để tư vấn.",
+      "nameLabel": "Họ & Tên Người Phụ Trách *",
+      "namePlaceholder": "Nguyễn Văn A",
+      "phoneLabel": "Số Điện Thoại Trực Tiếp *",
+      "companyLabel": "Tên Doanh Nghiệp *",
+      "companyPlaceholder": "Công ty CP Chuỗi Cung Ứng Á Châu",
+      "emailLabel": "Email Công Việc *",
+      "volumeLabel": "Số Lượng Chứng Từ / Tháng",
+      "vol1": "Dưới 1.000 chứng từ/tháng",
+      "vol2": "1.000 - 5.000 chứng từ/tháng",
+      "vol3": "5.000 - 20.000 chứng từ/tháng",
+      "vol4": "Trên 20.000 chứng từ/tháng (Enterprise)",
+      "regimeLabel": "Chế Độ Kế Toán Áp Dụng",
+      "regime1": "Thông tư 200/2014/TT-BTC (Doanh nghiệp vừa & lớn)",
+      "regime2": "Thông tư 133/2016/TT-BTC (Doanh nghiệp vừa & nhỏ)",
+      "regime3": "Cần chuyên gia eCor tư vấn lựa chọn",
+      "submit": "Nhận Demo Miễn Phí & Tư Vấn Chuyên Sâu 1-1 →"
+    },
+    "ecosystem": {
+      "badge": "Hệ Sinh Thái Dữ Liệu Hợp Nhất",
+      "title": "Kế Toán Là Mắt Xích Khép Kín Của Toàn Bộ 8 Phân Hệ ecor",
+      "desc": "Mọi giao dịch phát sinh từ các phân hệ còn lại đều tự động đổ về ecor Account để hạch toán, không nghiệp vụ nào bị bỏ sót hay phải nhập liệu hai lần.",
+      "current": "Bạn đang xem",
+      "pos": { "name": "ecor POS", "desc": "Mỗi hóa đơn quầy tự động sinh phiếu thu, sẵn sàng cấp mã HĐĐT." },
+      "wms": { "name": "ecor WMS", "desc": "Phiếu nhập/xuất kho tự động hạch toán giá vốn và công nợ NCC." },
+      "tms": { "name": "ecor TMS", "desc": "Tiền COD chuyển về ngân hàng được tự động gạch nợ đơn hàng." },
+      "ecom": { "name": "ecor ECOM", "desc": "Phí sàn, phí thanh toán được bóc tách tự động vào lợi nhuận ròng." },
+      "hrm": { "name": "ecor HRM", "desc": "Bảng lương đã duyệt tự động hạch toán chi phí nhân công." },
+      "crm": { "name": "ecor CRM", "desc": "Chi phí Zalo ZNS và khuyến mãi được hạch toán vào chi phí marketing." },
+      "mobileApp": { "name": "Mobile App", "desc": "Chủ shop duyệt phiếu chi và xem báo cáo lãi lỗ ngay trên điện thoại." },
+      "account": { "name": "ecor Account" }
+    },
+    "cta": {
+      "badge": "Dùng Thử 14 Ngày Miễn Phí Đầy Đủ Tính Năng",
+      "title": "Sẵn Sàng Giải Phóng Phòng Kế Toán Cùng ecor Account 4.0?",
+      "desc": "Trải nghiệm thực tế giải pháp hạch toán tự động và đối soát COD tức thì. Chuyên viên tài chính eCor sẽ trực tiếp demo và tư vấn phương án triển khai tối ưu cho doanh nghiệp bạn.",
+      "btn": "Đăng Ký Nhận Demo Kế Toán Ngay →",
+      "hotline": "Hotline:"
+    }
+  },
   "solutions": {
     "hero": {
       "badge": "HỆ SINH THÁI GIẢI PHÁP CHUYÊN SÂU THEO NGÀNH NGHỀ",
       "title": "Giải Quyết Bài Toán Vận Hành Chuỗi Cung Ứng",
       "titleHighlight": "May Đo Cho Doanh Nghiệp Bạn",
-      "desc": "Từ bán lẻ đa kênh, kho lạnh bán lẻ, đơn vị vận tải Chành xe đến chuỗi phân phối B2B lớn. ecor kết nối liền mạch từ kho bãi (WMS), vận tải (TMS) đến bán lẻ (POS) trên nền tảng Cloud duy nhất.",
+      "desc": "Từ bán lẻ đa kênh, kho lạnh bán lẻ, đơn vị vận tải Chành xe đến chuỗi phân phối B2B lớn. ecor kết nối liền mạch từ kho bãi (WMS), vận tải (TMS), bán lẻ (POS) đến kế toán tự động (Account) trên nền tảng Cloud duy nhất.",
       "discover": "Khám Phá Giải Pháp Theo Ngành ↓",
       "consult": "Đặt Lịch Khảo Sát Doanh Nghiệp (Miễn phí)"
+    },
+    "quicklinks": {
+      "badge": "Khám Phá Nhanh Theo Phân Hệ",
+      "wms": "ecor WMS",
+      "tms": "ecor TMS",
+      "pos": "ecor POS",
+      "account": "ecor Account"
     },
     "metrics": {
       "m1": {
@@ -727,7 +956,7 @@
         "title": "Sản Xuất & Phân Phối B2B Đa Chi Nhánh",
         "desc": "Hợp nhất kho nhà máy, kho trung chuyển vùng và các đại lý cấp 1 trên một bức tranh tồn kho duy nhất, kết nối thông suốt với hệ thống ERP lõi.",
         "challenge": "Luân chuyển hàng giữa các kho vệ tinh rườm rà, đối soát số liệu với kế toán ERP chậm trễ hàng tuần.",
-        "solution": "Luân chuyển liên kho 1 chạm bằng barcode, đồng bộ trực tiếp 2 chiều với SAP, Oracle NetSuite, Bravo, MISA AMIS.",
+        "solution": "Luân chuyển liên kho 1 chạm bằng barcode, tự động sinh bút toán sang ecor Account hoặc đồng bộ 2 chiều với SAP, Oracle NetSuite, MISA AMIS.",
         "resultTitle": "KẾT QUẢ THỰC TẾ: Tinh Gọn 60% Thời Gian Chứng Từ",
         "resultValue": "ERP Sync Realtime"
       }

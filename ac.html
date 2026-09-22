@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ecor Accounting - Quản Trị Kế Toán Doanh Nghiệp &amp; Chuỗi Logistics Chuyên Sâu</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Script -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#adc6ff",
+            "surface-tint": "#005bc0",
+            "background": "#f8f9ff",
+            "on-background": "#0b1c30",
+            "primary-fixed-dim": "#adc6ff",
+            "secondary-fixed-dim": "#3edae3",
+            "tertiary-container": "#c44e3e",
+            "primary": "#0058bc",
+            "secondary": "#00696e",
+            "on-tertiary-fixed-variant": "#862116",
+            "surface-container-low": "#eff4ff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#004f53",
+            "on-tertiary-fixed": "#410100",
+            "outline-variant": "#c1c6d6",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#eaf1ff",
+            "on-primary-container": "#fefcff",
+            "surface": "#f8f9ff",
+            "surface-container": "#e5eeff",
+            "tertiary": "#a33628",
+            "secondary-fixed": "#6bf6ff",
+            "secondary-container": "#61f4fd",
+            "on-secondary-fixed": "#002022",
+            "on-surface": "#0b1c30",
+            "on-secondary-container": "#006e73",
+            "outline": "#727785",
+            "surface-bright": "#f8f9ff",
+            "surface-container-high": "#dce9ff",
+            "primary-container": "#0070eb",
+            "on-primary-fixed-variant": "#004493",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffdad4",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#d3e4fe",
+            "surface-dim": "#cbdbf5",
+            "inverse-surface": "#213145",
+            "on-primary-fixed": "#001a41",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#414754",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#d8e2ff",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#ffb4a8",
+            "on-error": "#ffffff",
+            "surface-variant": "#d3e4fe",
+            "on-tertiary-container": "#fffbff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "sans": ["Plus Jakarta Sans", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 30%, rgba(97, 244, 253, 0.28) 0%, rgba(0, 112, 235, 0.12) 40%, rgba(248, 249, 255, 0) 70%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Header -->
+<header class="sticky top-0 z-50 glass-card border-b border-surface-container-high transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary-container flex items-center justify-center text-on-primary shadow-md shadow-primary/20">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 48 48">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tight text-on-surface">ecor <span class="text-primary font-extrabold">Accounting</span></span>
+<span class="text-[10px] tracking-wider uppercase font-semibold text-secondary">Logistics &amp; Enterprise ERP</span>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#tinh-nang">Tính Năng Cốt Lõi</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#phan-he">16 Phân Hệ</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#doi-soat">Đối Soát COD</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#so-sanh">Bảng So Sánh</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#khach-hang">Khách Hàng</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex text-sm font-semibold text-on-surface hover:text-primary px-4 py-2.5 rounded-xl transition-colors" href="#dang-ky">
+          Đăng Nhập
+        </a>
+<a class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container hover:opacity-95 text-on-primary text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-primary/25 transition-all duration-200 transform hover:-translate-y-0.5" href="#dang-ky">
+<span>Dùng Thử Miễn Phí</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- 1. Hero Section -->
+<section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden hero-glow">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Badge -->
+<div class="flex justify-center mb-6">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high/80 border border-outline-variant/40 shadow-sm backdrop-blur-md">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="text-xs sm:text-sm font-semibold text-on-surface-variant">
+            ecor Accounting 4.0 • Phần Mềm Kế Toán Chuyên Biệt Cho Doanh Nghiệp Thương Mại, Kho Vận &amp; Chuỗi Cung Ứng
+          </span>
+</div>
+</div>
+<!-- Main Headline & Subtitle -->
+<div class="max-w-4xl mx-auto text-center mb-10">
+<h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-on-surface tracking-tight leading-[1.15] mb-6">
+          Tự Động Hóa Kế Toán Doanh Nghiệp &amp; <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">Kiểm Soát Dòng Tiền Đa Điểm</span> Minh Bạch Từng Giây
+        </h1>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed font-normal">
+          Giải pháp kế toán tài chính thông minh tích hợp sâu với WMS, TMS, POS và sàn TMĐT. Tự động hóa hạch toán chứng từ, xuất hóa đơn điện tử chuẩn Thông tư 78/TT-BTC, quản trị công nợ tự động và đối soát dòng tiền đa kênh tức thì.
+        </p>
+<!-- CTA Buttons -->
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-8 py-4 rounded-2xl shadow-xl shadow-primary/30 hover:shadow-primary/45 hover:scale-[1.02] active:scale-[0.98] transition-all" href="#dang-ky">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+<span>Đăng Ký Trải Nghiệm Demo 14 Ngày</span>
+</a>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container-lowest/90 hover:bg-surface-container text-on-surface border border-outline-variant font-semibold px-6 py-4 rounded-2xl backdrop-blur-sm shadow-sm transition-all hover:scale-[1.02]" type="button">
+<span class="w-7 h-7 rounded-full bg-secondary-container/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</span>
+<span>Xem Video Quy Trình Hạch Toán (3 phút)</span>
+</button>
+</div>
+<!-- Trust Badges -->
+<div class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+            Đầy đủ nghiệp vụ Thông tư 133 &amp; 200
+          </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+            Tích hợp sẵn HĐĐT VNPT / Viettel / MISA
+          </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+            Tự động lập Báo cáo Tài chính
+          </span>
+</div>
+</div>
+<!-- Hero Mockup Dashboard UI -->
+<div class="relative max-w-5xl mx-auto mt-6">
+<div class="absolute -inset-1.5 bg-gradient-to-r from-primary-fixed to-secondary-container rounded-3xl blur-xl opacity-60"></div>
+<div class="relative bg-surface-container-lowest rounded-3xl border border-surface-container-high shadow-2xl overflow-hidden p-4 sm:p-6 lg:p-8">
+<!-- Mockup Top Bar -->
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="flex gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error/70"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400"></span>
+<span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+</div>
+<div class="hidden sm:flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded-lg text-xs font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">link</span>
+                ecor-wms://acc-sync-gateway.live
+              </div>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                Đang hạch toán realtime
+              </span>
+<span class="text-xs text-on-surface-variant font-mono">Kỳ: T10/2024</span>
+</div>
+</div>
+<!-- Mockup KPI Row inside UI -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30">
+<div class="flex items-center justify-between text-xs text-on-surface-variant mb-1 font-medium">
+<span>Dòng Tiền Đã Đối Soát COD</span>
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance_wallet</span>
+</div>
+<div class="text-xl sm:text-2xl font-black text-on-surface">14.825.920.000 đ</div>
+<div class="text-xs text-emerald-600 font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> Khớp 99.8% mã vận đơn
+              </div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30">
+<div class="flex items-center justify-between text-xs text-on-surface-variant mb-1 font-medium">
+<span>Thu Hồi Công Nợ (AR)</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">pie_chart</span>
+</div>
+<div class="text-xl sm:text-2xl font-black text-primary">98.6%</div>
+<div class="text-xs text-secondary font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span> Giảm 6.4 ngày nợ tồn
+              </div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30">
+<div class="flex items-center justify-between text-xs text-on-surface-variant mb-1 font-medium">
+<span>Hóa Đơn Chuẩn TT78</span>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">receipt_long</span>
+</div>
+<div class="text-xl sm:text-2xl font-black text-on-surface">28.412 HĐ</div>
+<div class="text-xs text-emerald-600 font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% Cấp mã Cục Thuế
+              </div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30">
+<div class="flex items-center justify-between text-xs text-on-surface-variant mb-1 font-medium">
+<span>Giá Vốn Xuất Kho (COGS)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">inventory_2</span>
+</div>
+<div class="text-xl sm:text-2xl font-black text-on-surface">FIFO Tức Thì</div>
+<div class="text-xs text-primary font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync_alt</span> 0 Lệch kho vật lý
+              </div>
+</div>
+</div>
+<!-- Mockup Live Journal Entries Stream -->
+<div class="bg-surface-container rounded-2xl p-4 sm:p-5 border border-surface-container-high">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2 text-sm font-bold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">sync</span>
+                Bút Toán Tự Động Ghi Sổ Realtime Từ Hệ Sinh Thái ecor
+              </div>
+<span class="text-xs text-on-surface-variant">Tự động định khoản TK 156 / 632 / 511 / 131</span>
+</div>
+<div class="space-y-2 font-mono text-xs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/20 gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-primary font-semibold">WMS-OUT #99482</span>
+<span class="text-on-surface">Xuất kho 120 SKU Đơn TikTok Shop #TT-8841</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span>Nợ 632 (28.400.000đ) / Có 156 (28.400.000đ)</span>
+<span class="text-emerald-600 font-bold">Thành công</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/20 gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-container font-semibold">TMS-COD #82103</span>
+<span class="text-on-surface">Đối soát tiền COD GHTK Kỳ 24/10</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span>Nợ 1121 Vietcombank / Có 131 GHTK (184.200.000đ)</span>
+<span class="text-emerald-600 font-bold">Khớp 100%</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/20 gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">INV-AUTO #7712</span>
+<span class="text-on-surface">Phát hành HĐĐT TT78 qua MISA meInvoice</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span>Nợ 131 / Có 5111, Có 33311 (52.800.000đ)</span>
+<span class="text-emerald-600 font-bold">Đã cấp mã</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Quantifiable Metric Bar -->
+<section class="py-12 bg-surface-container-lowest border-y border-surface-container-high">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+<div class="p-6 rounded-3xl bg-surface-container-low border border-surface-container-high hover:border-primary/40 transition-all">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-black text-primary mb-2">100%</div>
+<div class="text-base font-bold text-on-surface mb-1">Tự Động Hóa</div>
+<p class="text-xs sm:text-sm text-on-surface-variant">Hạch toán hóa đơn đầu vào/ra từ mã vận đơn và phiếu xuất kho chuẩn xác.</p>
+</div>
+<div class="p-6 rounded-3xl bg-surface-container-low border border-surface-container-high hover:border-secondary/40 transition-all">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-black text-secondary mb-2">-85%</div>
+<div class="text-base font-bold text-on-surface mb-1">Thời Gian Đối Soát</div>
+<p class="text-xs sm:text-sm text-on-surface-variant">Rút ngắn thời gian đối chiếu COD và đơn vị giao nhận từ 5 ngày xuống còn 15 phút.</p>
+</div>
+<div class="p-6 rounded-3xl bg-surface-container-low border border-surface-container-high hover:border-primary/40 transition-all">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-black text-on-surface mb-2">0 Lệch</div>
+<div class="text-base font-bold text-on-surface mb-1">Sổ Sách &amp; Kho</div>
+<p class="text-xs sm:text-sm text-on-surface-variant">Đồng bộ số liệu kho - kế toán 1:1 theo thời gian thực, dập tắt nguy cơ thất thoát hàng.</p>
+</div>
+<div class="p-6 rounded-3xl bg-surface-container-low border border-surface-container-high hover:border-primary/40 transition-all">
+<div class="text-3xl sm:text-4xl lg:text-5xl font-black text-primary-container mb-2">30 Giây</div>
+<div class="text-base font-bold text-on-surface mb-1">Lập BCTC Hoàn Chỉnh</div>
+<p class="text-xs sm:text-sm text-on-surface-variant">Tự động kết chuyển lãi lỗ, kết xuất báo cáo tài chính và báo cáo thuế chuẩn Cục Thuế.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Core Pillars Grid -->
+<section class="py-20 lg:py-28 bg-background" id="tinh-nang">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-wider text-secondary uppercase bg-secondary-fixed/50 px-3.5 py-1.5 rounded-full">
+          Kiến Trúc Kế Toán Đột Phá
+        </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface mt-4 mb-4 tracking-tight">
+          4 Cột Trụ Đột Phá Của ecor Accounting
+        </h2>
+<p class="text-base text-on-surface-variant">
+          Kiến trúc tài chính kế toán chuyên sâu đồng bộ hóa toàn diện từ kho bãi vật lý đến bảng cân đối kế toán quản trị.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Pillar 1 -->
+<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-lg hover:shadow-xl transition-all relative overflow-hidden group">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[30px]">precision_manufacturing</span>
+</div>
+<span class="text-xs font-bold text-primary tracking-wide uppercase">Cột trụ 01</span>
+<h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-1 mb-3">
+            Hạch Toán Tự Động Từ Kho &amp; Bán Hàng (WMS &amp; POS Auto-Posting)
+          </h3>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6">
+            Tự động sinh phiếu nhập/xuất kho, định khoản tài khoản (TK 156, TK 632, TK 511, TK 131) ngay khi thủ kho quét mã barcode hoàn tất đơn hàng, loại bỏ hoàn toàn việc gõ tay nhập liệu thủ công chậm trễ.
+          </p>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">barcode_scanner</span>
+<span class="text-xs font-mono text-on-surface">Scan mã đơn → Tự ghi sổ sổ cái Nợ 632 / Có 156 trong 0.2s</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-lg hover:shadow-xl transition-all relative overflow-hidden group">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[30px]">local_shipping</span>
+</div>
+<span class="text-xs font-bold text-secondary tracking-wide uppercase">Cột trụ 02</span>
+<h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-1 mb-3">
+            Quản Trị Công Nợ Đa Tầng &amp; Đối Soát COD Vận Chuyển (Aging Debt &amp; COD)
+          </h3>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6">
+            Cảnh báo sớm công nợ khách hàng theo hạn mức và tuổi nợ. Tự động đối soát tiền hàng COD từ các đơn vị vận chuyển (GHTK, GHN, Viettel Post, SPX) chỉ bằng 1 cú click chuột, tự động phát hiện lệch cước phí hay giữ tiền.
+          </p>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">rule</span>
+<span class="text-xs font-mono text-on-surface">Auto-match 50,000+ mã COD với bảng kê ngân hàng tức thì</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-lg hover:shadow-xl transition-all relative overflow-hidden group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[30px]">verified_user</span>
+</div>
+<span class="text-xs font-bold text-primary tracking-wide uppercase">Cột trụ 03</span>
+<h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-1 mb-3">
+            Hóa Đơn Điện Tử Tự Động Chuẩn Cục Thuế (Smart E-Invoice Automation)
+          </h3>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6">
+            Kết nối trực tiếp các nhà mạng HĐĐT lớn (MISA meInvoice, VNPT, Viettel, BKAV). Tự động xuất HĐĐT hàng loạt theo từng đơn thành công hoặc gom hóa đơn cuối ngày theo đúng tinh thần Thông tư 78 và Nghị định 123.
+          </p>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600 text-[22px]">cloud_done</span>
+<span class="text-xs font-mono text-on-surface">API phát hành HĐĐT tự động, gửi email &amp; Zalo ZNS cho khách hàng</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-lg hover:shadow-xl transition-all relative overflow-hidden group">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[30px]">insights</span>
+</div>
+<span class="text-xs font-bold text-primary tracking-wide uppercase">Cột trụ 04</span>
+<h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-1 mb-3">
+            Báo Cáo Tài Chính &amp; Phân Tích Lãi Lỗ Từng SKU (Deep P&amp;L Analytics)
+          </h3>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6">
+            Hệ thống báo cáo quản trị trực quan: Bảng cân đối phát sinh, Báo cáo lưu chuyển tiền tệ, Phân tích biên lợi nhuận gộp theo từng ngành hàng, kênh bán (Shopee, TikTok, Cửa hàng) và từng điểm kho bãi chi nhánh.
+          </p>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">query_stats</span>
+<span class="text-xs font-mono text-on-surface">Biết chính xác lãi lỗ thuần từng đơn sau khi trừ phí sàn &amp; vận chuyển</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. 16 Modules Breakdown -->
+<section class="py-20 bg-surface-container-low/60 border-t border-surface-container-high" id="phan-he">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-wider text-primary uppercase bg-primary-fixed/60 px-3.5 py-1.5 rounded-full">
+          Phạm Vi Nghiệp Vụ Chuẩn Mực
+        </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface mt-4 mb-4 tracking-tight">
+          16 Phân Hệ Kế Toán Chuyên Sâu Khép Kín
+        </h2>
+<p class="text-base text-on-surface-variant">
+          Đáp ứng trọn vẹn từ kế toán tài chính pháp lý (Thông tư 133 &amp; 200) đến kế toán quản trị dòng tiền chuỗi cung ứng phức tạp.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Module 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Tiền Mặt &amp; Tiền Gửi</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Kết nối trực tiếp Vietcombank, MB, Techcombank, BIDV. Tự động lấy sổ phụ ngân hàng và đối chiếu dòng tiền 24/7.
+          </p>
+</div>
+<!-- Module 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">point_of_sale</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Kế Toán Bán Hàng &amp; AR</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Tự động hạch toán doanh thu từ đơn hàng POS, sàn Shopee/Lazada/TikTok và các kênh sỉ B2B. Quản lý hạn mức nợ chặt chẽ.
+          </p>
+</div>
+<!-- Module 3 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">shopping_cart</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Mua Hàng &amp; Công Nợ AP</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Theo dõi đơn mua NCC, chi phí mua hàng phân bổ tự động, đối soát công nợ phải trả theo thời hạn thanh toán và chiết khấu.
+          </p>
+</div>
+<!-- Module 4 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">warehouse</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Kho &amp; Giá Vốn (COGS)</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Tính giá vốn theo Bình quân gia quyền hoặc FIFO tức thời. Tự động hạch toán chênh lệch kiểm kê và xuất kho sản xuất.
+          </p>
+</div>
+<!-- Module 5 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">local_shipping</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Chi Phí Dịch Vụ Vận Tải</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Tập hợp chi phí xăng dầu, cầu đường, tài xế theo từng chuyến xe, đầu kéo hoặc mã container (TMS Costing).
+          </p>
+</div>
+<!-- Module 6 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">domain</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Tài Sản &amp; CCDC</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Quản lý danh mục xe tải, pallet, giá kệ kho, máy móc. Tự động tính và trích khấu hao hàng tháng chuẩn quy định.
+          </p>
+</div>
+<!-- Module 7 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">badge</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Tiền Lương &amp; Nhân Sự</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Tính lương theo sản lượng đóng gói đơn hàng, lương tài xế theo chuyến xe, tự động trích BHXH, BHYT và thuế TNCN.
+          </p>
+</div>
+<!-- Module 8 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/50 transition-all hover:-translate-y-1 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">receipt</span>
+</div>
+<h4 class="text-base font-bold text-on-surface mb-2">Kế Toán Thuế &amp; HTKK</h4>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Lập tờ khai thuế GTGT, TNCN, TNDN tạm tính. Tự động kết xuất dữ liệu file XML nộp thẳng qua hệ thống Thuế điện tử.
+          </p>
+</div>
+</div>
+<!-- Feature Highlight Pills -->
+<div class="mt-10 p-6 rounded-3xl bg-surface-container border border-surface-container-high flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Đầy đủ 8 phân hệ mở rộng khác:</div>
+<div class="text-xs text-on-surface-variant">Kế toán Tổng hợp • Dự toán Ngân sách • Báo cáo Quản trị HĐQT • Kiểm toán Sổ cái • Đa tiền tệ • Quản lý Khế ước vay</div>
+</div>
+</div>
+<a class="text-xs font-bold text-primary hover:text-primary-container flex items-center gap-1" href="#dang-ky">
+          Xem tài liệu chi tiết 16 phân hệ <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 5. Comparison Matrix Section -->
+<section class="py-20 lg:py-28 bg-surface-container-lowest" id="so-sanh">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-wider text-secondary uppercase bg-secondary-fixed/50 px-3.5 py-1.5 rounded-full">
+          So Sánh Năng Lực
+        </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface mt-4 mb-4 tracking-tight">
+          Kế Toán Thủ Công / Excel vs ecor Accounting 4.0
+        </h2>
+<p class="text-base text-on-surface-variant">
+          Nhìn thấy rõ sự khác biệt giữa phương thức kế toán rời rạc truyền thống và nền tảng kế toán tự động thế hệ mới.
+        </p>
+</div>
+<!-- Comparison Table Container -->
+<div class="rounded-3xl border border-surface-container-high overflow-hidden shadow-xl bg-surface-container-lowest">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high bg-surface-container-low">
+<th class="py-5 px-6 text-sm font-bold text-on-surface uppercase w-1/3">Tiêu Chí Đánh Giá</th>
+<th class="py-5 px-6 text-sm font-bold text-on-surface-variant uppercase w-1/3">Kế Toán Thủ Công &amp; Excel</th>
+<th class="py-5 px-6 text-sm font-black text-primary uppercase w-1/3 bg-primary-fixed/20">ecor Accounting 4.0</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-sm">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-5 px-6 font-bold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+                    Nhập Liệu Chứng Từ
+                  </div>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+                  Gõ tay từng hóa đơn, phiếu kho. Mất 4 - 6 tiếng/ngày, sai sót số liệu lên tới 12%.
+                </td>
+<td class="py-5 px-6 font-semibold text-primary bg-primary-fixed/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+                    100% tự động sinh bút toán từ mã vận đơn WMS &amp; đơn bán sàn TMĐT.
+                  </div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-5 px-6 font-bold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">price_check</span>
+                    Đối Soát COD &amp; Sàn TMĐT
+                  </div>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+                  Tải file excel từng hãng (GHTK, Viettel Post, Shopee) rồi VLOOKUP thủ công; chậm trễ dòng tiền từ 7 - 10 ngày.
+                </td>
+<td class="py-5 px-6 font-semibold text-primary bg-primary-fixed/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+                    Đối soát 1-click qua API, phát hiện lệch tiền cước và đơn hoàn trả trong 15 giây.
+                  </div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-5 px-6 font-bold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory</span>
+                    Quản Trị Tồn Kho &amp; Giá Vốn
+                  </div>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+                  Số liệu kho và kế toán luôn lệch nhau; chỉ tính được giá vốn định kỳ cuối tháng.
+                </td>
+<td class="py-5 px-6 font-semibold text-primary bg-primary-fixed/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+                    Đồng bộ 1:1 theo thời gian thực; tính giá vốn tức thì (realtime COGS) chuẩn xác.
+                  </div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-5 px-6 font-bold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">document_scanner</span>
+                    Xuất Hóa Đơn Điện Tử (TT78)
+                  </div>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+                  Xuất thủ công từng tờ trên cổng riêng lẻ, dễ bỏ sót đơn lẻ và mất thời gian nhập lại dữ liệu.
+                </td>
+<td class="py-5 px-6 font-semibold text-primary bg-primary-fixed/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+                    Tích hợp trực tiếp MISA, VNPT, Viettel; xuất hàng loạt tự động theo luồng xuất kho.
+                  </div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-5 px-6 font-bold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">query_stats</span>
+                    Báo Cáo Tài Chính Cho Ban Giám Đốc
+                  </div>
+</td>
+<td class="py-5 px-6 text-on-surface-variant">
+                  Chậm từ 15 - 20 ngày sau khi kết thúc tháng; lãnh đạo ra quyết định dựa trên số liệu cũ.
+                </td>
+<td class="py-5 px-6 font-semibold text-primary bg-primary-fixed/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+                    Báo cáo lãi lỗ theo thời gian thực (Live P&amp;L), truy xuất tức thì trên Mobile App &amp; Web.
+                  </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Ecosystem & Integrations -->
+<section class="py-16 bg-surface border-t border-surface-container-high">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10">
+<span class="text-xs font-bold tracking-wider text-on-surface-variant uppercase">Hệ Sinh Thái Kết Nối Sẵn Sàng 100%</span>
+<h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-2">Tương Thích Mọi Nền Tảng Tài Chính &amp; Logistics Hàng Đầu</h3>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
+<div class="px-5 py-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2 text-sm font-bold text-on-surface shadow-sm">
+<span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+          Vietcombank Corporate
+        </div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2 text-sm font-bold text-on-surface shadow-sm">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+          MB Bank Open API
+        </div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2 text-sm font-bold text-on-surface shadow-sm">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+          Techcombank B2B
+        </div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2 text-sm font-bold text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance</span>
+          Cổng Thuế Điện Tử (gdt.gov.vn)
+        </div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2 text-sm font-bold text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+          MISA meInvoice / VNPT / Viettel
+        </div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2 text-sm font-bold text-on-surface shadow-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+          ecor WMS • TMS • POS • OMS
+        </div>
+</div>
+</div>
+</section>
+<!-- 7. Customer Testimonials & Case Study -->
+<section class="py-20 lg:py-28 bg-surface-container-low/50" id="khach-hang">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-wider text-secondary uppercase bg-secondary-fixed/50 px-3.5 py-1.5 rounded-full">
+          Thực Chứng Khách Hàng
+        </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface mt-4 mb-4 tracking-tight">
+          Được Tin Dùng Bởi Các CFO &amp; Kế Toán Trưởng Tiên Phong
+        </h2>
+<p class="text-base text-on-surface-variant">
+          Xem cách các doanh nghiệp logistics và chuỗi bán lẻ quy mô lớn giải phóng phòng kế toán với ecor Accounting.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Testimonial 1 -->
+<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-lg relative flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-6">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-base sm:text-lg text-on-surface italic leading-relaxed mb-6">
+              "Trước đây mỗi tháng chuỗi 35 chi nhánh của chúng tôi cần 6 kế toán chuyên ngồi nhập liệu và rà soát hóa đơn đối tác. Khi triển khai ecor Accounting kết nối thẳng WMS, 100% chứng từ xuất nhập được tự động hóa. Đội ngũ kế toán giảm được 70% áp lực và tập trung hoàn toàn vào kiểm soát chi phí."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container-high">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary text-base">
+              TT
+            </div>
+<div>
+<div class="text-base font-bold text-on-surface">Bà Trần Thu Trang</div>
+<div class="text-xs text-on-surface-variant">Kế Toán Trưởng • Chuỗi Bán Lẻ Tiêu Dùng Phúc Thịnh Retail</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-8 rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-lg relative flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-6">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-base sm:text-lg text-on-surface italic leading-relaxed mb-6">
+              "Nỗi ám ảnh lớn nhất của chúng tôi là đối soát COD với 4 đơn vị chuyển phát. Tiền tồn đọng hàng chục tỷ mà không biết đơn nào bị giữ. ecor Accounting giải quyết dứt điểm điều này: đối soát hàng vạn đơn chỉ trong 15 phút, tỷ lệ khớp 99.8%. Ban Giám đốc có thể xem dòng tiền thực mọi lúc."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container-high">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-container text-base">
+              NV
+            </div>
+<div>
+<div class="text-base font-bold text-on-surface">Ông Nguyễn Văn Cường</div>
+<div class="text-xs text-on-surface-variant">Giám Đốc Tài Chính (CFO) • Tập Đoàn Vận Tải An Phát Logistics</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Consultation & Demo Form -->
+<section class="py-20 lg:py-28 bg-surface-container-lowest relative overflow-hidden" id="dang-ky">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="relative bg-gradient-to-br from-surface-container-low via-surface-container-lowest to-surface-container rounded-3xl p-8 sm:p-12 lg:p-16 border border-surface-container-high shadow-2xl">
+<div class="max-w-2xl mx-auto text-center mb-10">
+<span class="text-xs font-bold tracking-wider text-primary uppercase bg-primary-fixed/60 px-3.5 py-1.5 rounded-full">
+            Tư Vấn Chuyên Sâu 1-1
+          </span>
+<h2 class="text-3xl sm:text-4xl font-black text-on-surface mt-4 mb-3 tracking-tight">
+            Đăng Ký Tư Vấn &amp; Nhận Demo Bản Quyền Kế Toán
+          </h2>
+<p class="text-sm sm:text-base text-on-surface-variant">
+            Trải nghiệm toàn diện giải pháp tự động hóa kế toán chuỗi logistics. Chuyên viên tài chính của ecor sẽ liên hệ hỗ trợ phân tích luồng hạch toán doanh nghiệp trong vòng 15 phút.
+          </p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Cảm ơn Quý doanh nghiệp! Đội ngũ ecor Accounting sẽ liên hệ tư vấn trong 15 phút làm việc.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-on-surface uppercase mb-2">Họ &amp; Tên Người Phụ Trách *</label>
+<input class="w-full px-4 py-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 focus:border-primary focus:ring-2 focus:ring-primary/20 text-on-surface text-sm transition-all" placeholder="Nguyễn Văn A" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface uppercase mb-2">Số Điện Thoại Trực Tiếp *</label>
+<input class="w-full px-4 py-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 focus:border-primary focus:ring-2 focus:ring-primary/20 text-on-surface text-sm transition-all" placeholder="0912 345 678" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface uppercase mb-2">Email Công Việc *</label>
+<input class="w-full px-4 py-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 focus:border-primary focus:ring-2 focus:ring-primary/20 text-on-surface text-sm transition-all" placeholder="ketoan@doanhnghiep.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface uppercase mb-2">Tên Doanh Nghiệp *</label>
+<input class="w-full px-4 py-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 focus:border-primary focus:ring-2 focus:ring-primary/20 text-on-surface text-sm transition-all" placeholder="Công ty CP Chuỗi Cung Ứng Á Châu" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface uppercase mb-2">Số Lượng Chứng Từ / Tháng</label>
+<select class="w-full px-4 py-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 focus:border-primary focus:ring-2 focus:ring-primary/20 text-on-surface text-sm transition-all">
+<option>Dưới 1.000 chứng từ/tháng</option>
+<option>1.000 - 5.000 chứng từ/tháng</option>
+<option>5.000 - 20.000 chứng từ/tháng</option>
+<option>Trên 20.000 chứng từ/tháng (Enterprise)</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface uppercase mb-2">Chế Độ Kế Toán Áp Dụng</label>
+<select class="w-full px-4 py-3.5 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 focus:border-primary focus:ring-2 focus:ring-primary/20 text-on-surface text-sm transition-all">
+<option>Thông tư 200/2014/TT-BTC (Doanh nghiệp vừa &amp; lớn)</option>
+<option>Thông tư 133/2016/TT-BTC (Doanh nghiệp vừa &amp; nhỏ)</option>
+<option>Cần chuyên gia ecor tư vấn lựa chọn</option>
+</select>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full py-4 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-base shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+<span>Nhận Demo Miễn Phí &amp; Tư Vấn Chuyên Sâu 1-1</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-2 text-xs text-on-surface-variant text-center">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span>Cam kết bảo mật dữ liệu doanh nghiệp và ký thỏa thuận bảo mật NDA 100%.</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Modern B2B Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface py-16 border-t border-surface-container-high/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-outline/30">
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">ecor Accounting</span>
+</div>
+<p class="text-xs text-outline-variant leading-relaxed mb-4">
+            Nền tảng kế toán tài chính &amp; quản trị dòng tiền chuyên biệt cho doanh nghiệp thương mại, chuỗi bán lẻ, kho vận logistics và thương mại điện tử.
+          </p>
+<div class="text-xs text-outline-variant">
+            Hotline Kỹ Thuật: <span class="text-white font-bold">1900 xxxx (24/7)</span>
+</div>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Giải Pháp Chuyên Sâu</h4>
+<ul class="space-y-2.5 text-xs text-outline-variant">
+<li><a class="hover:text-white transition-colors" href="#">Kế toán Chuỗi Kho Vận WMS</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Đối soát Tiền hàng COD &amp; TMS</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hóa đơn điện tử Thông tư 78</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Tự động kết chuyển Báo cáo Tài chính</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Hệ Sinh Thái ecor</h4>
+<ul class="space-y-2.5 text-xs text-outline-variant">
+<li><a class="hover:text-white transition-colors" href="#">ecor WMS - Quản lý Kho Vận</a></li>
+<li><a class="hover:text-white transition-colors" href="#">ecor TMS - Quản lý Vận Tải</a></li>
+<li><a class="hover:text-white transition-colors" href="#">ecor POS - Bán Lẻ Đa Điểm</a></li>
+<li><a class="hover:text-white transition-colors" href="#">ecor OMS - Xử Lý Đơn Đa Sàn</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Trụ Sở &amp; Pháp Lý</h4>
+<p class="text-xs text-outline-variant leading-relaxed mb-3">
+            Tầng 8, Tòa nhà Công Nghệ ecor Tower, Khu Đô Thị Mới Cầu Giấy, Hà Nội.
+          </p>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high/10 border border-outline/30 text-[11px] text-outline-variant">
+<span class="material-symbols-outlined text-[14px] text-emerald-400">shield</span>
+            Chứng chỉ bảo mật ISO/IEC 27001
+          </div>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-outline-variant gap-4">
+<div>
+          © 2024 ecor.vn. Tất cả các quyền được bảo lưu. Phần mềm kế toán quản trị chuỗi cung ứng hàng đầu Việt Nam.
+        </div>
+<div class="flex items-center gap-6">
+<a class="hover:text-white" href="#">Điều khoản dịch vụ</a>
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Quy chuẩn Thông tư 78/200</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

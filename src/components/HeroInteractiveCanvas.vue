@@ -7,12 +7,12 @@
         Seamless Integration
       </span>
       <span class="text-[11px] font-semibold text-zinc-400">
-        WMS - TMS - POS
+        WMS - TMS - POS - Account
       </span>
     </div>
 
-    <canvas 
-      ref="canvasRef" 
+    <canvas
+      ref="canvasRef"
       class="absolute inset-0 w-full h-full z-0"
     ></canvas>
 
@@ -39,6 +39,7 @@ let animationFrameId = null
 let width = 0
 let height = 0
 let time = 0
+let lastFrameAt = 0
 
 const resize = () => {
   if (!containerRef.value || !canvasRef.value) return
@@ -48,149 +49,217 @@ const resize = () => {
   const dpr = window.devicePixelRatio || 1
   canvasRef.value.width = width * dpr
   canvasRef.value.height = height * dpr
+  ctx.setTransform(1, 0, 0, 1, 0, 0)
   ctx.scale(dpr, dpr)
+  buildStars()
 }
 
-const draw = () => {
+const easeInOutSine = (t) => -(Math.cos(Math.PI * t) - 1) / 2
+
+// Orbit system: the 4 modules slowly revolve around the eCor core like a
+// pinwheel, always 90° apart so their paths never collide. Each one trails a
+// soft comet tail, which is what makes the motion the whole point rather
+// than a static diagram with moving dots on top of it.
+const MODULES = [
+  { id: 'pos', color: '#10b981', light: '#6ee7b7', shadow: 'rgba(16, 185, 129, 0.4)', title: 'POS', subtitle: 'Retail' },
+  { id: 'tms', color: '#0ea5e9', light: '#7dd3fc', shadow: 'rgba(14, 165, 233, 0.4)', title: 'TMS', subtitle: 'Transport' },
+  { id: 'account', color: '#fb7185', light: '#fda4af', shadow: 'rgba(244, 63, 94, 0.4)', title: 'Account', subtitle: 'Bookkeeping' },
+  { id: 'wms', color: '#f59e0b', light: '#fcd34d', shadow: 'rgba(245, 158, 11, 0.4)', title: 'WMS', subtitle: 'Warehouse' }
+]
+
+const getCore = () => ({ x: width * 0.5, y: height * 0.5 })
+const getOrbitRadius = () => Math.min(width, height) * 0.33
+
+// Background star field: a handful of fixed points that twinkle gently.
+// Regenerated whenever the canvas is (re)sized, using its actual pixel size.
+let stars = []
+const buildStars = () => {
+  const count = 22
+  const core = getCore()
+  const minSide = Math.min(width, height)
+  stars = Array.from({ length: count }, () => {
+    let x, y, dist
+    do {
+      x = Math.random() * width
+      y = Math.random() * height
+      dist = Math.hypot(x - core.x, y - core.y)
+    } while (dist < minSide * 0.16) // keep clear of the core label
+    return { x, y, r: 0.6 + Math.random() * 1.1, phase: Math.random() * Math.PI * 2, speed: 0.6 + Math.random() * 0.8 }
+  })
+}
+
+const drawStars = () => {
+  stars.forEach((s) => {
+    const alpha = 0.15 + (Math.sin(time * s.speed + s.phase) + 1) / 2 * 0.35
+    ctx.beginPath()
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2)
+    ctx.fillStyle = '#f59e0b'
+    ctx.globalAlpha = alpha
+    ctx.fill()
+  })
+  ctx.globalAlpha = 1
+}
+
+// A plain, thin guide ring — used for the auxiliary rings that just add depth.
+const drawAuxRing = (core, radius, alpha, lineWidth = 0.75) => {
+  ctx.beginPath()
+  ctx.arc(core.x, core.y, radius, 0, Math.PI * 2)
+  ctx.strokeStyle = `rgba(203, 213, 225, ${alpha})`
+  ctx.lineWidth = lineWidth
+  ctx.setLineDash([2, 6])
+  ctx.stroke()
+  ctx.setLineDash([])
+}
+
+// The main orbit ring the 4 modules actually travel on — thin, like the
+// auxiliary rings, just slightly more solid so it still reads as the path.
+const drawOrbitRing = (core, radius) => {
+  ctx.beginPath()
+  ctx.arc(core.x, core.y, radius, 0, Math.PI * 2)
+  ctx.strokeStyle = '#eef2f7'
+  ctx.lineWidth = 1.5
+  ctx.setLineDash([3, 7])
+  ctx.stroke()
+  ctx.setLineDash([])
+}
+
+// A bright dot gliding along the main orbit's circumference, weaving past the
+// 4 modules — this is what visually "links" them to each other, separate
+// from the spokes that link each one back to the core.
+const drawRingPulse = (core, radius, angle, color) => {
+  const px = core.x + Math.cos(angle) * radius
+  const py = core.y + Math.sin(angle) * radius
+  ctx.beginPath()
+  ctx.arc(px, py, 2.4, 0, Math.PI * 2)
+  ctx.fillStyle = color
+  ctx.shadowColor = color
+  ctx.shadowBlur = 10
+  ctx.fill()
+  ctx.shadowBlur = 0
+}
+
+const drawSpoke = (core, x, y) => {
+  ctx.beginPath()
+  ctx.moveTo(core.x, core.y)
+  ctx.lineTo(x, y)
+  ctx.strokeStyle = '#e2e8f0'
+  ctx.lineWidth = 1.5
+  ctx.stroke()
+}
+
+// A short trail of fading, shrinking dots behind the module, following the
+// same circular path — the "comet tail".
+const drawTrail = (core, radius, angle, color) => {
+  const trailCount = 7
+  const step = 0.055
+  for (let k = 1; k <= trailCount; k++) {
+    const a = angle - k * step
+    const tx = core.x + Math.cos(a) * radius
+    const ty = core.y + Math.sin(a) * radius
+    const fade = 1 - k / (trailCount + 1)
+    ctx.beginPath()
+    ctx.arc(tx, ty, 3.2 * fade, 0, Math.PI * 2)
+    ctx.fillStyle = color
+    ctx.globalAlpha = fade * 0.35
+    ctx.fill()
+  }
+  ctx.globalAlpha = 1
+}
+
+// A glowing pulse traveling inward/outward along the spoke, in sync with the
+// module's own orbit so the whole thing reads as one continuous current.
+const drawSpokePulse = (core, x, y, color, t) => {
+  const px = core.x + (x - core.x) * t
+  const py = core.y + (y - core.y) * t
+  const pulse = easeInOutSine(Math.sin(t * Math.PI))
+
+  ctx.beginPath()
+  ctx.arc(px, py, 2 + pulse * 1.2, 0, Math.PI * 2)
+  ctx.fillStyle = color
+  ctx.globalAlpha = 0.55 + pulse * 0.45
+  ctx.shadowColor = color
+  ctx.shadowBlur = 9
+  ctx.fill()
+  ctx.shadowBlur = 0
+  ctx.globalAlpha = 1
+}
+
+const drawNode = (x, y, colorCode, shadowColor, title, subtitle, size) => {
+  ctx.save()
+  ctx.shadowColor = shadowColor
+  ctx.shadowBlur = 18
+  ctx.fillStyle = '#18181b'
+  ctx.beginPath()
+  ctx.roundRect(x - size / 2, y - size / 2, size, size, 16)
+  ctx.fill()
+
+  ctx.shadowBlur = 0
+  ctx.fillStyle = '#ffffff'
+  ctx.font = `bold ${size >= 70 ? 14 : 13}px system-ui`
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.fillText(title, x, y - 6)
+  ctx.fillStyle = colorCode
+  ctx.font = '500 8px system-ui'
+  ctx.fillText(subtitle, x, y + 9)
+  ctx.restore()
+}
+
+const draw = (now) => {
   if (!ctx) return
+
+  // Frame-rate independent timing so the motion feels the same on 60Hz and
+  // 120Hz screens, with no jump after the tab has been backgrounded.
+  const dt = lastFrameAt ? Math.min((now - lastFrameAt) / 1000, 1 / 30) : 1 / 60
+  lastFrameAt = now
+  time += dt
+
   ctx.clearRect(0, 0, width, height)
-  
-  const centerX = width / 2
-  
-  const wmsX = width * 0.28
-  const wmsY = height * 0.65
-  
-  const tmsX = width * 0.72
-  const tmsY = height * 0.65
-  
-  const posX = width * 0.5
-  const posY = height * 0.28
-  
-  time += 0.005
-  
-  // Draw connection lines
-  const drawConnection = (x1, y1, x2, y2) => {
-    ctx.beginPath()
-    ctx.moveTo(x1, y1)
-    ctx.lineTo(x2, y2)
-    ctx.strokeStyle = '#e2e8f0'
-    ctx.lineWidth = 2
-    ctx.setLineDash([5, 5])
-    ctx.stroke()
-    ctx.setLineDash([])
-  }
-  
-  drawConnection(wmsX, wmsY, tmsX, tmsY) // WMS-TMS
-  drawConnection(wmsX, wmsY, posX, posY) // WMS-POS
-  drawConnection(tmsX, tmsY, posX, posY) // TMS-POS
-  
-  // Draw glowing data particles flowing both ways
-  const drawParticles = (x1, y1, x2, y2, color, offsetTime) => {
-    for (let i = 0; i < 2; i++) {
-      const t = (time + offsetTime + i * 0.5) % 1
-      const px = x1 + (x2 - x1) * t
-      const py = y1 + (y2 - y1) * t
-      
-      const angle = Math.atan2(y2 - y1, x2 - x1)
-      const perpAngle = angle + Math.PI / 2
-      const ox = Math.cos(perpAngle) * 4
-      const oy = Math.sin(perpAngle) * 4
-      
-      ctx.beginPath()
-      ctx.arc(px + ox, py + oy, 2, 0, Math.PI * 2)
-      ctx.fillStyle = color
-      ctx.shadowColor = color
-      ctx.shadowBlur = 8
-      ctx.fill()
-      ctx.shadowBlur = 0
-    }
-  }
 
-  // WMS (Amber) to TMS
-  drawParticles(wmsX, wmsY, tmsX, tmsY, '#f59e0b', 0)
-  // TMS (Sky) to WMS
-  drawParticles(tmsX, tmsY, wmsX, wmsY, '#0ea5e9', 0.1)
-  
-  // WMS (Amber) to POS
-  drawParticles(wmsX, wmsY, posX, posY, '#f59e0b', 0.2)
-  // POS (Emerald) to WMS
-  drawParticles(posX, posY, wmsX, wmsY, '#10b981', 0.3)
-  
-  // TMS (Sky) to POS
-  drawParticles(tmsX, tmsY, posX, posY, '#0ea5e9', 0.4)
-  // POS (Emerald) to TMS
-  drawParticles(posX, posY, tmsX, tmsY, '#10b981', 0.5)
-  
-  // Orbiting subnodes
-  const drawSubnode = (cx, cy, angleOffset, color, label) => {
-    const radius = 65
-    const angle = time * 0.5 + angleOffset
-    const nx = cx + Math.cos(angle) * radius
-    const ny = cy + Math.sin(angle) * radius
-    
-    // Line to parent
-    ctx.beginPath()
-    ctx.moveTo(cx, cy)
-    ctx.lineTo(nx, ny)
-    ctx.strokeStyle = color + '40'
-    ctx.lineWidth = 1
-    ctx.stroke()
-    
-    // Subnode bg
-    ctx.beginPath()
-    ctx.roundRect(nx - 35, ny - 10, 70, 20, 10)
-    ctx.fillStyle = '#ffffff'
-    ctx.fill()
-    ctx.strokeStyle = color + '60'
-    ctx.lineWidth = 1
-    ctx.stroke()
-    
-    // Subnode text
-    ctx.fillStyle = '#334155'
-    ctx.font = '500 9px system-ui'
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-    ctx.fillText(label, nx, ny)
-  }
-  
-  // WMS Subnodes
-  drawSubnode(wmsX, wmsY, Math.PI, '#f59e0b', 'Inventory')
-  drawSubnode(wmsX, wmsY, Math.PI * 0.5, '#f59e0b', 'Pick & Pack')
-  
-  // TMS Subnodes
-  drawSubnode(tmsX, tmsY, 0, '#0ea5e9', 'AI Routing')
-  drawSubnode(tmsX, tmsY, Math.PI * 0.5, '#0ea5e9', 'e-POD')
+  const core = getCore()
+  const radius = getOrbitRadius()
+  const rotation = time * 0.18 // ~35s per full revolution — slow and calm
 
-  // POS Subnodes
-  drawSubnode(posX, posY, Math.PI * 1.25, '#10b981', 'Checkout')
-  drawSubnode(posX, posY, Math.PI * 1.75, '#10b981', 'Offline Sync')
+  drawStars()
 
-  // Function to draw main node
-  const drawMainNode = (x, y, colorCode, shadowColor, title, subtitle) => {
-    ctx.save()
-    const size = 64
-    ctx.shadowColor = shadowColor
-    ctx.shadowBlur = 20
-    ctx.fillStyle = '#18181b'
-    ctx.beginPath()
-    ctx.roundRect(x - size/2, y - size/2, size, size, 16)
-    ctx.fill()
-    
-    ctx.shadowBlur = 0
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 16px system-ui'
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-    ctx.fillText(title, x, y - 6)
-    ctx.fillStyle = colorCode
-    ctx.font = '500 9px system-ui'
-    ctx.fillText(subtitle, x, y + 10)
-    ctx.restore()
-  }
+  // Soft ambient glow that breathes gently behind the core
+  const breathe = 0.14 + easeInOutSine((Math.sin(time * 0.6) + 1) / 2) * 0.06
+  const glow = ctx.createRadialGradient(core.x, core.y, 4, core.x, core.y, radius + 20)
+  glow.addColorStop(0, `rgba(245, 158, 11, ${breathe})`)
+  glow.addColorStop(1, 'rgba(245, 158, 11, 0)')
+  ctx.fillStyle = glow
+  ctx.beginPath()
+  ctx.arc(core.x, core.y, radius + 20, 0, Math.PI * 2)
+  ctx.fill()
 
-  drawMainNode(wmsX, wmsY, '#fcd34d', 'rgba(245, 158, 11, 0.4)', 'WMS', 'Warehouse')
-  drawMainNode(tmsX, tmsY, '#7dd3fc', 'rgba(14, 165, 233, 0.4)', 'TMS', 'Transport')
-  drawMainNode(posX, posY, '#6ee7b7', 'rgba(16, 185, 129, 0.4)', 'POS', 'Retail')
+  // A handful of thin auxiliary rings purely for depth, plus the bolder main
+  // orbit ring that the 4 modules actually travel on.
+  drawAuxRing(core, radius * 0.42, 0.35, 0.5)
+  drawAuxRing(core, radius * 0.68, 0.55, 0.6)
+  drawOrbitRing(core, radius)
+  drawAuxRing(core, radius * 1.16, 0.5, 0.6)
+  drawAuxRing(core, radius * 1.34, 0.3, 0.5)
+
+  const positions = MODULES.map((m, i) => {
+    const angle = -Math.PI / 2 + i * (Math.PI / 2) + rotation
+    return { ...m, angle, x: core.x + Math.cos(angle) * radius, y: core.y + Math.sin(angle) * radius }
+  })
+
+  positions.forEach((n) => drawSpoke(core, n.x, n.y))
+  positions.forEach((n) => drawTrail(core, radius, n.angle, n.color))
+
+  positions.forEach((n, i) => {
+    const tOut = (time * 0.4 + i * 0.22) % 1
+    drawSpokePulse(core, n.x, n.y, n.color, tOut)
+  })
+
+  // Two bright pulses weaving around the ring itself, linking the 4 modules
+  // to each other (as opposed to the spokes, which link them to the core).
+  drawRingPulse(core, radius, rotation * -2.4, '#fde68a')
+  drawRingPulse(core, radius, rotation * -2.4 + Math.PI, '#bae6fd')
+
+  positions.forEach((n) => drawNode(n.x, n.y, n.light, n.shadow, n.title, n.subtitle, 54))
+  drawNode(core.x, core.y, '#fbbf24', 'rgba(245, 158, 11, 0.45)', 'eCor', 'Cloud Core', 68)
 
   animationFrameId = requestAnimationFrame(draw)
 }
@@ -200,7 +269,7 @@ onMounted(() => {
     ctx = canvasRef.value.getContext('2d')
     resize()
     window.addEventListener('resize', resize)
-    draw()
+    animationFrameId = requestAnimationFrame(draw)
   }
 })
 

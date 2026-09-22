@@ -88,6 +88,26 @@
                 </div>
               </router-link>
 
+              <router-link :to="$localeRoute('account')"
+                class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-amber-50/70 transition-colors group/item">
+                <div
+                  class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold shrink-0 mt-0.5 group-hover/item:bg-amber-400 group-hover/item:text-zinc-900 font-bold transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 7h6m-6 4h6m-7 8h8a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v10a2 2 0 002 2zm-2-4h.01M7 12h.01" />
+                  </svg>
+                </div>
+                <div>
+                  <div
+                    class="text-sm font-semibold text-zinc-900 group-hover/item:text-amber-700 flex items-center gap-1.5">
+                    ecor Account
+                    <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">{{
+                      $t('header.accountBadge') || 'TT78 HĐĐT' }}</span>
+                  </div>
+                  <div class="text-xs text-zinc-500 mt-0.5">{{ $t('header.accountDesc') }}</div>
+                </div>
+              </router-link>
+
               <div class="mt-2 pt-2 border-t border-zinc-100 px-3 py-1">
                 <router-link :to="$localeRoute('solutions')"
                   class="text-xs text-amber-600 hover:text-amber-700 font-semibold flex items-center justify-between">
@@ -261,7 +281,7 @@
         <div class="px-3 py-2 text-xs font-bold text-zinc-400 uppercase tracking-wider">
           {{ $t('header.products') }}
         </div>
-        <div class="grid grid-cols-3 gap-2 px-2 pb-2">
+        <div class="grid grid-cols-2 gap-2 px-2 pb-2">
           <router-link :to="$localeRoute('wms')" @click="isMobileMenuOpen = false"
             class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
             ecor WMS
@@ -273,6 +293,10 @@
           <router-link :to="$localeRoute('pos')" @click="isMobileMenuOpen = false"
             class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
             ecor POS
+          </router-link>
+          <router-link :to="$localeRoute('account')" @click="isMobileMenuOpen = false"
+            class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
+            ecor Account
           </router-link>
         </div>
 
@@ -339,6 +363,6 @@ const setLocale = (lang) => {
 }
 
 const isProductActive = computed(() => {
-  return ['/wms', '/tms', '/pos'].some(path => route.path.startsWith(path))
+  return ['/wms', '/tms', '/pos', '/ke-toan', '/accounting'].some(path => route.path.startsWith(path))
 })
 </script>

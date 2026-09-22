@@ -5,6 +5,7 @@
     "wmsDesc": "3D Warehouse, Wave Picking, Expiry Control",
     "tmsDesc": "Transport Coordination, GPS Tracking, e-POD",
     "posDesc": "Fast Checkout, Dynamic VietQR, WMS Integration",
+    "accountDesc": "Auto-posting, COD reconciliation, e-Invoice",
     "seeFlowchart": "View Full System Flowchart",
     "solutions": "Solutions",
     "pricing": "Pricing",
@@ -26,6 +27,7 @@
   "footer": {
     "desc": "Specialized SaaS solutions for Warehouse Management (WMS), Transport Management (TMS), and Multi-channel Commerce. Optimize costs and break through operational performance.",
     "hotline": "Support Hotline",
+    "prodAccount": "ecor Account Accounting",
     "products": "Products",
     "solutions": "Solutions",
     "resources": "Resources",
@@ -90,6 +92,14 @@
         "f2": "One-touch centralized order processing",
         "f3": "Reconciliation of COD & shipping fees",
         "link": "Explore Omnichannel"
+      },
+      "account": {
+        "title": "Account — Automated Accounting",
+        "desc": "Auto-posts entries from WMS/TMS/POS, reconciles COD instantly, and issues Circular-78-compliant e-invoices right at the point of sale.",
+        "f1": "100% automated journal entries, no manual typing",
+        "f2": "COD & marketplace reconciliation in 15 seconds",
+        "f3": "E-invoices instantly coded by the tax authority",
+        "link": "See ecor Account Details"
       }
     },
     "ecosystem": {
@@ -100,8 +110,8 @@
       "f2": "Plug-and-play deployment in 15 mins",
       "item1Title": "Commerce POS",
       "item1Desc": "Retail & Cashier",
-      "item2Title": "Automated Accounting",
-      "item2Desc": "Invoicing & Tax",
+      "item2Title": "CRM & Loyalty 360°",
+      "item2Desc": "Points & Zalo ZNS",
       "item3Title": "Ecom Extension",
       "item3Desc": "TikTok, Shopee, Amazon"
     },
@@ -110,8 +120,8 @@
       "tabs": {
         "wms": "WMS - Warehouse Mgt",
         "tms": "TMS - Transport Dispatch",
-        "omni": "Omnichannel - Multi-channel",
-        "pos": "POS & Accounting"
+        "pos": "POS & Omnichannel",
+        "account": "Account - Automated Bookkeeping"
       },
       "wmsTab": {
         "badge": "Smart Warehouse Management",
@@ -140,29 +150,35 @@
         "stat2Sub": "GPS Driver tracking",
         "link": "ecor TMS Details"
       },
-      "omniTab": {
-        "badge": "Omnichannel Commerce Hub",
-        "title": "Zero-latency multi-platform inventory & order sync",
-        "desc": "Automatically deduct inventory immediately upon order from Shopee, TikTok Shop, Lazada. Completely prevent stockouts or high cancellation rate penalties.",
-        "stat1Label": "Inventory Sync Speed",
-        "stat1Val": "< 0.12s",
-        "stat1Sub": "Real-time API Webhook",
-        "stat2Label": "Overdue Cancellation Rate",
-        "stat2Val": "0.00%",
-        "stat2Sub": "Auto safe-stock locking",
-        "link": "Explore Omnichannel"
-      },
       "posTab": {
-        "badge": "POS & Automated Books",
-        "title": "3-second checkout, Dynamic VietQR & 100% offline op",
-        "desc": "Cash register runs smoothly even when internet drops with Offline-first SQLite architecture. Auto syncs back to server when online and issues standard e-invoices.",
+        "badge": "POS & Omnichannel",
+        "title": "3-Second Checkout, 100% Offline Operation & Zero-Latency Multi-Channel Sync",
+        "desc": "Cash register runs smoothly even when internet drops with Offline-first SQLite architecture. At the same time, inventory and orders from Shopee, TikTok Shop and Lazada sync into one place automatically.",
         "stat1Label": "Checkout Speed",
         "stat1Val": "3 Seconds",
         "stat1Sub": "Dynamic bank VietQR",
         "stat2Label": "Offline Operation",
         "stat2Val": "100%",
         "stat2Sub": "No cashier interruption",
+        "stat3Label": "Inventory Sync Speed",
+        "stat3Val": "< 0.12s",
+        "stat3Sub": "Real-time API Webhook",
+        "stat4Label": "Overdue Cancellation Rate",
+        "stat4Val": "0.00%",
+        "stat4Sub": "Auto safe-stock locking",
         "link": "ecor POS Details"
+      },
+      "accountTab": {
+        "badge": "Account & Automated Bookkeeping",
+        "title": "Real-Time Auto-Posting & Instant COD Reconciliation",
+        "desc": "Journal entries are auto-generated from every sales transaction, COD cash is reconciled with shipping partners in one tap, and Circular-78-compliant e-invoices are issued right at the point of sale.",
+        "stat1Label": "Journal Entry Automation",
+        "stat1Val": "100%",
+        "stat1Sub": "No manual typing",
+        "stat2Label": "COD Reconciliation Time",
+        "stat2Val": "-85%",
+        "stat2Sub": "From days down to minutes",
+        "link": "ecor Account Details"
       }
     },
     "cta": {
@@ -625,14 +641,227 @@
       "hotline": "Hotline:"
     }
   },
+  "account": {
+    "hero": {
+      "badge": "ecor Account 4.0 • Automated Accounting for Retail Chains & Logistics",
+      "title": "Real-Time Auto-Posting, Instant COD Reconciliation & Point-of-Sale E-Invoicing",
+      "desc": "A smart financial accounting module tightly linked to POS, WMS and TMS. Auto-generates journal entries from every sales transaction, reconciles COD cash with shipping partners in one click, and issues point-of-sale e-invoices fully compliant with regulations.",
+      "demo": "Experience Accounting Demo →",
+      "doc": "Download Accounting Solution Brief (PDF)",
+      "badge1": "Compliant with Circular 133 & 200",
+      "badge2": "Integrated with VNPT / Viettel / MISA e-Invoice",
+      "badge3": "1:1 Synced with WMS, TMS, POS",
+      "panel": {
+        "title": "ecor Accounting Dashboard",
+        "live": "Posting in realtime",
+        "period": "Period: Oct 2024",
+        "k1Label": "COD Cash Reconciled",
+        "k1Val": "14,825,920,000 đ",
+        "k1Sub": "99.8% waybills matched",
+        "k2Label": "Receivables Collected (AR)",
+        "k2Val": "98.6%",
+        "k2Sub": "6.4 fewer days outstanding",
+        "k3Label": "Circular 78 Compliant Invoices",
+        "k3Val": "28,412 invoices",
+        "k3Sub": "100% tax-authority coded",
+        "k4Label": "Cost of Goods Sold (COGS)",
+        "k4Val": "Real-time FIFO",
+        "k4Sub": "0 physical stock variance",
+        "journalTitle": "Auto-Posted Journal Entries From the ecor Ecosystem",
+        "j1": "Shipped 120 SKUs for TikTok Shop order #TT-8841 → Dr 632 / Cr 156 (28,400,000đ)",
+        "j1Status": "Success",
+        "j2": "GHTK COD reconciliation, period 24/10 → Dr 1121 Vietcombank / Cr 131 GHTK (184,200,000đ)",
+        "j2Status": "100% matched",
+        "j3": "Issued Circular 78 e-invoice via MISA meInvoice → Dr 131 / Cr 5111, 33311 (52,800,000đ)",
+        "j3Status": "Coded"
+      }
+    },
+    "metrics": {
+      "m1": {
+        "val": "100%",
+        "title": "Journal Entry Automation",
+        "desc": "Auto-generates inbound/outbound stock and sales invoice entries from waybills and stock slips, no manual typing."
+      },
+      "m2": {
+        "val": "-85%",
+        "title": "COD Reconciliation Time",
+        "desc": "Cuts reconciliation of cash collected by shippers and marketplaces from several days down to minutes."
+      },
+      "m3": {
+        "val": "0 Variance",
+        "title": "Books vs. Physical Stock",
+        "desc": "Syncs accounting and warehouse data 1:1 in real time, shutting down the risk of inventory loss."
+      },
+      "m4": {
+        "val": "30 Seconds",
+        "title": "Financial Statement Generation",
+        "desc": "Auto-closes profit & loss and exports financial statements and tax schedules per regulation."
+      }
+    },
+    "pillars": {
+      "badge": "Breakthrough Accounting Architecture",
+      "title": "4 Breakthrough Pillars of ecor Account",
+      "desc": "A deep financial accounting architecture that fully synchronizes physical warehousing with management reporting.",
+      "p1": {
+        "tag": "Pillar 01",
+        "title": "Auto-Posting From Warehouse & Sales",
+        "desc": "Auto-generates inbound/outbound stock slips and journal entries (accounts 156, 632, 511, 131) the moment a warehouse staff scans an order complete, eliminating manual data entry entirely.",
+        "f1": "Auto-posts to the general ledger within 0.2 seconds of scanning",
+        "f2": "Correct account coding under Circular 133/200",
+        "f3": "No more mismatch between warehouse staff and accountants"
+      },
+      "p2": {
+        "tag": "Pillar 02",
+        "title": "Multi-Tier Debt Management & COD Reconciliation",
+        "desc": "Early warnings on receivables by credit limit and aging. Auto-reconciles COD cash from GHTK, GHN, Viettel Post, SPX in a single click.",
+        "f1": "Auto-matches tens of thousands of COD codes against bank statements",
+        "f2": "Instantly detects shipping-fee discrepancies or withheld cash",
+        "f3": "Overdue debt alerts per customer / supplier"
+      },
+      "p3": {
+        "tag": "Pillar 03",
+        "title": "Tax-Authority-Compliant Automated E-Invoicing",
+        "desc": "Direct integration with MISA meInvoice, VNPT, Viettel, BKAV. Auto-issues e-invoices per order or batched at day-end, fully compliant with Circular 78 / Decree 123.",
+        "f1": "Automated e-invoice issuance API with tax-authority code",
+        "f2": "Instant invoice delivery to customers via email & Zalo ZNS",
+        "f3": "No missed orders, no duplicate issuance"
+      },
+      "p4": {
+        "tag": "Pillar 04",
+        "title": "Financial Reporting & Per-Order P&L Analytics",
+        "desc": "Real-time trial balance, cash flow statement, and gross margin analysis by product category, sales channel and branch.",
+        "f1": "Know the exact net profit after marketplace & shipping fees",
+        "f2": "Real-time P&L reporting on Mobile App & Web",
+        "f3": "No more waiting until month-end for the numbers"
+      }
+    },
+    "modules": {
+      "badge": "Standardized Business Scope",
+      "title": "6 Comprehensive Accounting Modules",
+      "desc": "Fully covers everything from statutory financial accounting (Circular 133 & 200) to management accounting for complex supply chain cash flow.",
+      "h1": { "title": "Cash & Bank", "desc": "Connects to Vietcombank, MB, Techcombank, BIDV. Auto-pulls bank statements and reconciles cash flow 24/7." },
+      "h2": { "title": "Sales Accounting & Receivables (AR)", "desc": "Auto-posts revenue from POS, marketplaces and B2B wholesale channels. Strict credit-limit management." },
+      "h3": { "title": "Inventory & Cost of Goods (COGS)", "desc": "Computes cost via weighted average or real-time FIFO, auto-posts stock-count variances." },
+      "h4": { "title": "Shipping Cost & COD", "desc": "Aggregates freight costs and reconciles COD cash per shipment and waybill." },
+      "h5": { "title": "Fixed Assets & Depreciation", "desc": "Manages equipment, warehouse racking, trucks. Auto-computes monthly depreciation per regulation." },
+      "h6": { "title": "Tax Accounting & Filing", "desc": "Prepares provisional VAT, PIT, CIT returns. Exports XML files for direct e-Tax filing." },
+      "h7": { "title": "General Ledger & Budgeting", "desc": "Prepares budgets, chain-wide general ledger consolidation, and board-level management reports." },
+      "h8": { "title": "Multi-Currency & Loan Covenants", "desc": "Multi-currency posting for imports, bank loan covenant management, and automated repayment schedules." },
+      "moreBadge": "Plus 8 more extended modules:",
+      "moreDesc": "General Ledger Audit • Intangible Assets • Multi-Entity Consolidation • Project & Job Costing • Cost-Center Budgeting • Contractor Tax Reconciliation",
+      "moreLink": "See detailed module documentation →"
+    },
+    "compare": {
+      "badge": "Proven Impact",
+      "title": "Manual / Excel Accounting vs. ecor Account 4.0",
+      "desc": "See the clear difference between fragmented traditional bookkeeping and a next-generation automated platform.",
+      "h1": "Evaluation Criteria",
+      "h2": "Manual & Excel Accounting",
+      "h3": "ecor Account 4.0",
+      "r1": {
+        "title": "Voucher Data Entry",
+        "before": "Manually typing every invoice and stock slip. Takes 4-6 hours/day, up to 12% data error rate.",
+        "after": "100% auto-generated entries from WMS waybills and marketplace orders."
+      },
+      "r2": {
+        "title": "COD & Marketplace Reconciliation",
+        "before": "Downloading Excel files per carrier and cross-checking manually; cash delayed 7-10 days.",
+        "after": "1-click API reconciliation, detects fee discrepancies and returns within 15 seconds."
+      },
+      "r4": {
+        "title": "Inventory & Cost of Goods Control",
+        "before": "Warehouse and accounting figures never match; cost of goods only computed once a month.",
+        "after": "1:1 real-time sync; accurate real-time cost of goods (COGS) computation."
+      },
+      "r5": {
+        "title": "E-Invoice Issuance (Circular 78)",
+        "before": "Manually issued one by one on a separate portal; missed orders and re-typed data.",
+        "after": "Direct integration with MISA, VNPT, Viettel; automated batch issuance from the outbound flow."
+      },
+      "r3": {
+        "title": "Financial Reporting for Leadership",
+        "before": "Delayed 15-20 days after month-end; leadership decides based on stale numbers.",
+        "after": "Real-time Live P&L, instantly accessible on Mobile App & Web."
+      }
+    },
+    "integrations": {
+      "badge": "100% Ready-to-Connect Ecosystem",
+      "title": "Compatible With Leading Banking & E-Tax Platforms"
+    },
+    "testimonials": {
+      "badge": "Proven Customer Impact",
+      "title": "Trusted by Pioneering CFOs & Chief Accountants",
+      "desc": "See how large-scale logistics and retail chain businesses freed up their accounting department with ecor Account.",
+      "t1": {
+        "quote": "Our 35-branch chain used to need 6 accountants every month just for data entry and invoice review. After rolling out ecor Account connected directly to WMS, 100% of inbound/outbound vouchers are automated. Our accounting team cut 70% of the workload and now focuses entirely on cost control.",
+        "name": "Ms. Tran Thu Trang",
+        "role": "Chief Accountant • Phuc Thinh Retail Consumer Chain"
+      },
+      "t2": {
+        "quote": "Our biggest headache was reconciling COD with 4 delivery partners. Tens of billions in cash sat in limbo with no way to know which orders were being withheld. ecor Account solved it completely: reconciling tens of thousands of orders in just 15 minutes, at a 99.8% match rate. Leadership can now see real cash flow at any time.",
+        "name": "Mr. Nguyen Van Cuong",
+        "role": "Chief Financial Officer (CFO) • An Phat Transport Logistics Group"
+      }
+    },
+    "form": {
+      "badge": "1-on-1 In-Depth Consultation",
+      "title": "Register for a Consultation & Get an Accounting Demo License",
+      "desc": "Fully experience the automated accounting solution for logistics chains. An eCor financial specialist will contact you to help analyze your posting workflow within 15 minutes.",
+      "success": "✓ Registration successful! An eCor Account specialist will contact you within 15 minutes for a consultation.",
+      "nameLabel": "Contact Person Full Name *",
+      "namePlaceholder": "Nguyen Van A",
+      "phoneLabel": "Direct Phone Number *",
+      "companyLabel": "Company Name *",
+      "companyPlaceholder": "Asia Supply Chain JSC",
+      "emailLabel": "Work Email *",
+      "volumeLabel": "Vouchers per Month",
+      "vol1": "Under 1,000 vouchers/month",
+      "vol2": "1,000 - 5,000 vouchers/month",
+      "vol3": "5,000 - 20,000 vouchers/month",
+      "vol4": "Over 20,000 vouchers/month (Enterprise)",
+      "regimeLabel": "Applicable Accounting Regime",
+      "regime1": "Circular 200/2014/TT-BTC (Medium & large enterprises)",
+      "regime2": "Circular 133/2016/TT-BTC (Small & medium enterprises)",
+      "regime3": "Need an eCor expert to advise",
+      "submit": "Get Free Demo & 1-on-1 Consultation →"
+    },
+    "ecosystem": {
+      "badge": "One Unified Data Ecosystem",
+      "title": "Accounting Is the Closing Link of All 8 ecor Modules",
+      "desc": "Every transaction from the other modules automatically flows into ecor Account for posting — nothing is missed, and nothing is ever entered twice.",
+      "current": "You're viewing",
+      "pos": { "name": "ecor POS", "desc": "Every counter invoice auto-generates a receipt voucher, ready for e-invoice coding." },
+      "wms": { "name": "ecor WMS", "desc": "Stock in/out slips auto-post cost of goods and supplier payables." },
+      "tms": { "name": "ecor TMS", "desc": "COD cash deposited to the bank is auto-matched against outstanding orders." },
+      "ecom": { "name": "ecor ECOM", "desc": "Marketplace and payment gateway fees are auto-broken down into net profit." },
+      "hrm": { "name": "ecor HRM", "desc": "Approved payroll is auto-posted as a labor cost entry." },
+      "crm": { "name": "ecor CRM", "desc": "Zalo ZNS and promotion costs are auto-posted as marketing expense." },
+      "mobileApp": { "name": "Mobile App", "desc": "Owners approve payment vouchers and view P&L reports right from their phone." },
+      "account": { "name": "ecor Account" }
+    },
+    "cta": {
+      "badge": "Try 14 Days Free, Full Features",
+      "title": "Ready to Free Your Accounting Team With ecor Account 4.0?",
+      "desc": "Experience the automated posting and instant COD reconciliation solution firsthand. eCor financial specialists will demo live and consult on the optimal rollout plan for your business.",
+      "btn": "Register for an Accounting Demo Now →",
+      "hotline": "Hotline:"
+    }
+  },
   "solutions": {
     "hero": {
       "badge": "INDUSTRY-SPECIFIC DEEP SOLUTION ECOSYSTEM",
       "title": "Solving Supply Chain Operations",
       "titleHighlight": "Tailored for Your Business",
-      "desc": "From omnichannel retail, Small Retail cold storage, Owner-operator transport to large B2B distribution chains. ecor seamlessly connects warehousing (WMS), transport (TMS), and retail (POS) on a single Cloud platform.",
+      "desc": "From omnichannel retail, Small Retail cold storage, Owner-operator transport to large B2B distribution chains. ecor seamlessly connects warehousing (WMS), transport (TMS), retail (POS) and automated accounting (Account) on a single Cloud platform.",
       "discover": "Discover Industry Solutions ↓",
       "consult": "Book a Business Survey (Free)"
+    },
+    "quicklinks": {
+      "badge": "Quick Access by Module",
+      "wms": "ecor WMS",
+      "tms": "ecor TMS",
+      "pos": "ecor POS",
+      "account": "ecor Account"
     },
     "metrics": {
       "m1": {
@@ -728,7 +957,7 @@
         "title": "Manufacturing & Multi-branch B2B Distribution",
         "desc": "Consolidate factory warehouses, regional transit hubs, and Tier 1 dealers into a single inventory view, seamlessly connecting with core ERPs.",
         "challenge": "Cumbersome inter-warehouse transfers, weeks-late data reconciliation with ERP accounting.",
-        "solution": "1-touch inter-warehouse transfers via barcode, direct 2-way sync with SAP, Oracle NetSuite, Bravo, MISA AMIS.",
+        "solution": "1-touch inter-warehouse transfers via barcode, auto-posts entries to ecor Account or syncs 2-way with SAP, Oracle NetSuite, MISA AMIS.",
         "resultTitle": "REAL RESULT: Streamline 60% Document Time",
         "resultValue": "Realtime ERP Sync"
       }

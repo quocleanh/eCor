@@ -86,7 +86,7 @@
           {{ $t('home.core.subtitle') }}
         </p>
 
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
           <!-- {{ $t('home.core.wms.title') }} -->
           <div
             class="p-8 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 hover:border-amber-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
@@ -212,6 +212,48 @@
               </router-link>
             </div>
           </div>
+
+          <!-- {{ $t('home.core.account.title') }} -->
+          <div
+            class="p-8 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 hover:border-amber-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 7h6m-6 4h6m-7 8h8a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-zinc-900 group-hover:text-amber-600 transition-colors">
+                {{ $t('home.core.account.title') }}
+              </h3>
+              <p class="text-sm text-zinc-500 leading-relaxed">
+                {{ $t('home.core.account.desc') }}
+              </p>
+              <ul class="space-y-2 text-sm text-zinc-600 pt-2">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  <span>{{ $t('home.core.account.f1') }}</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  <span>{{ $t('home.core.account.f2') }}</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  <span>{{ $t('home.core.account.f3') }}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-zinc-200/60">
+              <router-link :to="$localeRoute('account')"
+                class="text-sm font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                <span>{{ $t('home.core.account.link') }}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </router-link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -261,12 +303,12 @@
 
             <div class="w-12 h-0.5 bg-zinc-200 hidden sm:block"></div>
 
-            <router-link :to="$localeRoute('pos')" class="flex flex-col items-center group">
+            <router-link :to="$localeRoute('solutions')" class="flex flex-col items-center group">
               <div
                 class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
               <span class="mt-3 text-xs sm:text-sm font-bold text-zinc-800">{{ $t('home.ecosystem.item2Title') }}</span>
@@ -517,77 +559,7 @@
             </div>
           </div>
 
-          <!-- TAB 3: OMNICHANNEL -->
-          <div v-else-if="activeTab === 'omni'" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-6 space-y-4">
-              <span
-                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                {{ $t('home.live.omniTab.badge') }}
-              </span>
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
-                {{ $t('home.live.omniTab.title') }}
-              </h3>
-              <p class="text-sm text-zinc-600 leading-relaxed">
-                {{ $t('home.live.omniTab.desc') }}
-              </p>
-              <div class="grid grid-cols-2 gap-4 pt-2">
-                <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80">
-                  <div class="text-xs text-zinc-500">{{ $t('home.live.omniTab.stat1Label') }}</div>
-                  <div class="text-xl font-black text-amber-600 mt-0.5">&lt; 0.12s</div>
-                  <div class="text-[11px] text-zinc-400">{{ $t('home.live.omniTab.stat1Sub') }}</div>
-                </div>
-                <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80">
-                  <div class="text-xs text-zinc-500">{{ $t('home.live.omniTab.stat2Label') }}</div>
-                  <div class="text-xl font-black text-amber-600 mt-0.5">{{ $t('home.live.omniTab.stat2Val') }}</div>
-                  <div class="text-[11px] text-zinc-400">{{ $t('home.live.omniTab.stat2Sub') }}</div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <router-link :to="$localeRoute('pos')"
-                  class="text-sm font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1.5">
-                  <span>{{ $t('home.live.omniTab.link') }}</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </router-link>
-              </div>
-            </div>
-
-            <div class="lg:col-span-6 bg-zinc-50 border border-zinc-200 rounded-2xl p-5 shadow-inner">
-              <div class="flex items-center justify-between pb-3 border-b border-zinc-200 text-xs">
-                <span class="font-bold text-zinc-800">{{ $t('mockOmni.sync') }}</span>
-                <span class="text-amber-600 font-bold bg-amber-100 px-2 py-0.5 rounded">{{ $t('mockOmni.mega') }}</span>
-              </div>
-              <div class="space-y-3 my-4">
-                <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between text-xs">
-                  <div class="flex items-center gap-2.5">
-                    <span
-                      class="w-7 h-7 rounded-lg bg-amber-100 text-amber-600 font-black flex items-center justify-center">S</span>
-                    <div>
-                      <strong class="text-zinc-800">{{ $t('mockOmni.sp') }}</strong>
-                      <div class="text-zinc-400 text-[11px]">{{ $t('mockOmni.spOrder') }}</div>
-                    </div>
-                  </div>
-                  <span class="text-amber-600 font-bold text-[11px]">{{ $t('mockOmni.spStat') }}</span>
-                </div>
-
-                <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between text-xs">
-                  <div class="flex items-center gap-2.5">
-                    <span
-                      class="w-7 h-7 rounded-lg bg-zinc-900 text-white font-black flex items-center justify-center">TT</span>
-                    <div>
-                      <strong class="text-zinc-800">{{ $t('mockOmni.tt') }}</strong>
-                      <div class="text-zinc-400 text-[11px]">{{ $t('mockOmni.ttOrder') }}</div>
-                    </div>
-                  </div>
-                  <span class="text-amber-600 font-bold text-[11px]">{{ $t('mockOmni.ttStat') }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 4: POS & ACCOUNTING -->
+          <!-- TAB 3: POS & OMNICHANNEL (merged) -->
           <div v-else-if="activeTab === 'pos'" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-6 space-y-4">
               <span
@@ -611,6 +583,16 @@
                   <div class="text-xs text-zinc-500">{{ $t('home.live.posTab.stat2Label') }}</div>
                   <div class="text-xl font-black text-amber-600 mt-0.5">{{ $t('home.live.posTab.stat2Val') }}</div>
                   <div class="text-[11px] text-zinc-400">{{ $t('home.live.posTab.stat2Sub') }}</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80">
+                  <div class="text-xs text-zinc-500">{{ $t('home.live.posTab.stat3Label') }}</div>
+                  <div class="text-xl font-black text-amber-600 mt-0.5">{{ $t('home.live.posTab.stat3Val') }}</div>
+                  <div class="text-[11px] text-zinc-400">{{ $t('home.live.posTab.stat3Sub') }}</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80">
+                  <div class="text-xs text-zinc-500">{{ $t('home.live.posTab.stat4Label') }}</div>
+                  <div class="text-xl font-black text-amber-600 mt-0.5">{{ $t('home.live.posTab.stat4Val') }}</div>
+                  <div class="text-[11px] text-zinc-400">{{ $t('home.live.posTab.stat4Sub') }}</div>
                 </div>
               </div>
               <div class="pt-2">
@@ -642,6 +624,74 @@
                       clip-rule="evenodd" />
                   </svg>
                   {{ $t('mockPos.qr') }}
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2.5">
+                    <span
+                      class="w-7 h-7 rounded-lg bg-amber-100 text-amber-600 font-black flex items-center justify-center">S</span>
+                    <div>
+                      <strong class="text-zinc-800">{{ $t('mockOmni.sp') }}</strong>
+                      <div class="text-zinc-400 text-[11px]">{{ $t('mockOmni.spOrder') }}</div>
+                    </div>
+                  </div>
+                  <span class="text-amber-600 font-bold text-[11px]">{{ $t('mockOmni.spStat') }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: ACCOUNTING -->
+          <div v-else-if="activeTab === 'account'" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <span
+                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                {{ $t('home.live.accountTab.badge') }}
+              </span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
+                {{ $t('home.live.accountTab.title') }}
+              </h3>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                {{ $t('home.live.accountTab.desc') }}
+              </p>
+              <div class="grid grid-cols-2 gap-4 pt-2">
+                <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80">
+                  <div class="text-xs text-zinc-500">{{ $t('home.live.accountTab.stat1Label') }}</div>
+                  <div class="text-xl font-black text-amber-600 mt-0.5">{{ $t('home.live.accountTab.stat1Val') }}</div>
+                  <div class="text-[11px] text-zinc-400">{{ $t('home.live.accountTab.stat1Sub') }}</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80">
+                  <div class="text-xs text-zinc-500">{{ $t('home.live.accountTab.stat2Label') }}</div>
+                  <div class="text-xl font-black text-amber-600 mt-0.5">{{ $t('home.live.accountTab.stat2Val') }}</div>
+                  <div class="text-[11px] text-zinc-400">{{ $t('home.live.accountTab.stat2Sub') }}</div>
+                </div>
+              </div>
+              <div class="pt-2">
+                <router-link :to="$localeRoute('account')"
+                  class="text-sm font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1.5">
+                  <span>{{ $t('home.live.accountTab.link') }}</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </router-link>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-zinc-50 border border-zinc-200 rounded-2xl p-5 shadow-inner">
+              <div class="flex items-center justify-between pb-3 border-b border-zinc-200 text-xs">
+                <span class="font-bold text-zinc-800">{{ $t('account.hero.panel.title') }}</span>
+                <span class="text-amber-600 font-bold bg-amber-100 px-2 py-0.5 rounded">{{ $t('account.hero.panel.live') }}</span>
+              </div>
+              <div class="space-y-2 my-4 font-mono text-[11px]">
+                <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between gap-2">
+                  <span class="text-zinc-600 truncate">{{ $t('account.hero.panel.j1') }}</span>
+                  <span class="text-emerald-600 font-bold shrink-0">{{ $t('account.hero.panel.j1Status') }}</span>
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-zinc-200 flex items-center justify-between gap-2">
+                  <span class="text-zinc-600 truncate">{{ $t('account.hero.panel.j2') }}</span>
+                  <span class="text-emerald-600 font-bold shrink-0">{{ $t('account.hero.panel.j2Status') }}</span>
                 </div>
               </div>
             </div>
@@ -689,7 +739,7 @@ const activeTab = ref('wms')
 const liveTabs = computed(() => [
   { id: 'wms', label: t('home.live.tabs.wms'), icon: '📦' },
   { id: 'tms', label: t('home.live.tabs.tms'), icon: '🚚' },
-  { id: 'omni', label: t('home.live.tabs.omni'), icon: '🛍️' },
-  { id: 'pos', label: t('home.live.tabs.pos'), icon: '💳' }
+  { id: 'pos', label: t('home.live.tabs.pos'), icon: '💳' },
+  { id: 'account', label: t('home.live.tabs.account'), icon: '📑' }
 ])
 </script>
