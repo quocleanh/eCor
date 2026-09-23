@@ -1,0 +1,20 @@
+name = "ecor-zalo-notify"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Tạo KV namespace bằng lệnh:
+#   wrangler kv namespace create ZALO_KV
+# rồi dán "id" nó trả về vào đây.
+[[kv_namespaces]]
+binding = "ZALO_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Các secret KHÔNG khai báo ở đây, set bằng lệnh (xem README.md):
+#   wrangler secret put ZALO_APP_ID
+#   wrangler secret put ZALO_APP_SECRET
+#   wrangler secret put ZALO_UID
+#   wrangler secret put ZALO_INITIAL_REFRESH_TOKEN
+
+[vars]
+# Domain được phép gọi tới Worker (CORS). Đổi lại nếu domain khác.
+ALLOWED_ORIGIN = "https://ecor.vn"

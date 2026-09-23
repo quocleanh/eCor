@@ -404,7 +404,28 @@ const form = reactive({
   notes: ''
 })
 
-function handleSubmit() {
+async function handleSubmit() {
+  const notifyUrl = import.meta.env.VITE_ZALO_NOTIFY_URL
+  if (notifyUrl) {
+    try {
+      await fetch(notifyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          company: form.company,
+          notes: form.notes,
+          modules: selectedModules.value,
+          scale: scale.value
+        })
+      })
+    } catch (err) {
+      // Không chặn trải nghiệm người dùng nếu gửi thông báo Zalo thất bại
+      console.error('zalo notify failed', err)
+    }
+  }
   submitted.value = true
 }
 

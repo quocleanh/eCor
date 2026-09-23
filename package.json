@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node -e \"import('fs').then(fs => { if (fs.existsSync('index.dev.html')) fs.copyFileSync('index.dev.html', 'index.html'); })\" && vite",
     "build": "vite build && node scripts/sync-build.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "wrangler pages deploy dist --project-name=ecor-saas-platform"
   },
   "dependencies": {
     "@vitalets/google-translate-api": "^9.2.1",
