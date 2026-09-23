@@ -1,5 +1,15 @@
 # Zalo OA notify — hướng dẫn setup
 
+> **Trạng thái (2026-09-23): TẠM DỪNG.** OA "CyberCorp" đang ở gói FREE — đã lấy được
+> App ID/Secret/access_token/refresh_token đầy đủ (xem `cloudflare/zalo-notify/.env.local`,
+> file này KHÔNG commit git), nhưng gọi Message API bị Zalo chặn với lỗi:
+> `{"error":-224,"message":"The OA needs to upgrade OA Tier Package to use this feature."}`
+> ZNS API của app đã được duyệt sẵn (Gửi ZNS, Gửi ZNS RSA, Journey Token) nhưng chưa tạo/duyệt
+> Template nên cũng chưa gửi được. Quyết định: giữ nguyên cấu hình đã có, chưa làm tiếp phần
+> gửi tin — sẽ quay lại khi triển khai chiến lược **omnichannel notification** (Zalo OA
+> premium / ZNS template / email / Telegram...). Code Worker bên dưới đã sẵn sàng, chỉ cần
+> một trong các hướng trên hoạt động là cắm vào dùng ngay.
+
 Worker này nhận dữ liệu từ form liên hệ trên website, rồi gửi tin nhắn Zalo tới OA của bạn
 mỗi khi có khách hàng điền form.
 

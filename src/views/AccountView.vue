@@ -652,8 +652,8 @@
               </div>
             </div>
 
-            <button type="submit"
-              class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold text-sm shadow-md transition-all">
+            <button type="submit" :disabled="accountSubmitting"
+              class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 disabled:opacity-60 disabled:cursor-not-allowed text-zinc-900 font-bold text-sm shadow-md transition-all">
               {{ $t('account.form.submit') }}
             </button>
           </div>
@@ -671,6 +671,7 @@ import HeroCanvas from '@/components/HeroCanvas.vue'
 defineEmits(['open-modal'])
 
 const accountSuccess = ref(false)
+const accountSubmitting = ref(false)
 const accountForm = reactive({
   name: '',
   phone: '',
@@ -680,7 +681,30 @@ const accountForm = reactive({
   regime: 'Thông tư 200/2014/TT-BTC (Doanh nghiệp vừa & lớn)'
 })
 
-function handleAccountSubmit() {
+async function handleAccountSubmit() {
+  if (accountSubmitting.value) return
+  accountSubmitting.value = true
+
+  const notifyUrl = import.meta.env.VITE_CONTACT_NOTIFY_URL
+  if (notifyUrl) {
+    try {
+      await fetch(notifyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: accountForm.name,
+          phone: accountForm.phone,
+          email: accountForm.email,
+          company: accountForm.company,
+          notes: `Chế độ kế toán: ${accountForm.regime}`,
+          modules: ['account'],
+          scale: accountForm.volume
+        })
+      })
+    } catch (err) {
+      console.error('contact notify failed', err)
+    }
+  }
   accountSuccess.value = true
 }
 

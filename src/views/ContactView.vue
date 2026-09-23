@@ -280,7 +280,7 @@
               <textarea v-model="form.notes" rows="2" :placeholder="$t('contact.form.notePl')" class="w-full px-4 py-2.5 rounded-xl border border-zinc-200 focus:ring-2 focus:ring-amber-500 outline-none text-xs resize-none"></textarea>
             </div>
 
-            <button type="submit" class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+            <button type="submit" :disabled="isSubmitting" class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 disabled:opacity-60 disabled:cursor-not-allowed text-zinc-900 font-bold font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2">
               <span>🚀</span>
               <span>{{ $t('contact.form.submitBtn') }}</span>
             </button>
@@ -390,6 +390,7 @@ defineEmits(['open-modal'])
 
 const { t } = useI18n()
 const submitted = ref(false)
+const isSubmitting = ref(false)
 const selectedVol = ref('')
 import { onMounted } from 'vue'
 onMounted(() => { selectedVol.value = t('contact.calc.v1') })
@@ -405,7 +406,10 @@ const form = reactive({
 })
 
 async function handleSubmit() {
-  const notifyUrl = import.meta.env.VITE_ZALO_NOTIFY_URL
+  if (isSubmitting.value) return
+  isSubmitting.value = true
+
+  const notifyUrl = import.meta.env.VITE_CONTACT_NOTIFY_URL
   if (notifyUrl) {
     try {
       await fetch(notifyUrl, {
@@ -422,8 +426,8 @@ async function handleSubmit() {
         })
       })
     } catch (err) {
-      // Không chặn trải nghiệm người dùng nếu gửi thông báo Zalo thất bại
-      console.error('zalo notify failed', err)
+      // Không chặn trải nghiệm người dùng nếu gửi thông báo thất bại
+      console.error('contact notify failed', err)
     }
   }
   submitted.value = true

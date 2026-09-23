@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ecor.vn - Email Xác Nhận & Cảm Ơn Đã Để Lại Thông Tin Tư Vấn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F5B800',
+              yellowHover: '#E0A700',
+              yellowLight: '#FFF8E1',
+              ink: '#111827'
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-zinc-100 text-zinc-800 min-h-screen py-10 px-4 flex justify-center font-sans antialiased selection:bg-[#F5B800] selection:text-black">
+
+  <div class="max-w-2xl w-full mx-auto space-y-6">
+
+    <!-- Meta Context Bar (Mô phỏng Email Client Header) -->
+    <div class="bg-white border border-zinc-200 rounded-xl px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs text-zinc-500 shadow-sm">
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-600 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5"></span>
+          Tự Động Gửi Đến Khách Hàng (Auto-Responder)
+        </span>
+        <span class="text-zinc-300">|</span>
+        <span>Mã yêu cầu: <strong class="text-zinc-700">#REQ-2025-08942</strong></span>
+      </div>
+      <div class="text-right">
+        Từ: <span class="text-zinc-600 font-medium">tuvan@ecor.vn</span> ➔ Gửi: <span class="text-amber-600 font-medium">hoang.tran@asialogistics.vn</span>
+      </div>
+    </div>
+
+    <!-- Email Container Card -->
+    <div class="bg-white border border-zinc-200 rounded-2xl overflow-hidden shadow-xl">
+
+      <!-- Brand Top Accent Header -->
+      <div class="h-2 w-full bg-gradient-to-r from-[#F5B800] via-[#FFD043] to-[#F5B800]"></div>
+
+      <!-- Header Section -->
+      <div class="p-8 pb-6 border-b border-zinc-100 bg-gradient-to-b from-amber-50/50 to-white">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <!-- Logo -->
+          <div class="flex items-center gap-3">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHURA8JULfIjdtft_4MLCad9m4wI1IS6CcyB2c-Wr8ih3GLubkCVbwN8vQJlvzo8tK0D0v9vkvc4iYtyo6InQcMnKOxTXOIpzCl-GP_Zw8Y0i8gYnezhwxxyiVqHmiR2JfVP_hVTAKBJOTCXNVuIsoGnuIPdu4OjxkYYVmNTm57mR-aFZUmJxizOORYOU-IgaL_K9Z0iPkH6fEgNS5GYSK_jjcYY8-bDCd8EEdSQacvX7RZxrU5GYco7HK3_3hP0F8owM" alt="ecor logo" class="h-10 w-auto object-contain">
+            <div class="h-6 w-px bg-zinc-200"></div>
+            <span class="text-xs uppercase tracking-wider font-semibold text-zinc-400">Cổng Dịch Vụ Khách Hàng</span>
+          </div>
+
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Xác nhận tiếp nhận thành công
+          </div>
+        </div>
+
+        <div class="mt-8 space-y-2">
+          <div class="text-xs font-semibold text-amber-600 uppercase tracking-widest font-heading">
+            Cảm Ơn Quý Doanh Nghiệp Đã Quan Tâm Đến ecor
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 font-heading tracking-tight">
+            Yêu cầu tư vấn & khảo sát giải pháp của bạn đã được ghi nhận!
+          </h1>
+          <p class="text-sm text-zinc-600 leading-relaxed pt-1">
+            Kính chào <strong class="text-zinc-900">Anh Trần Minh Hoàng</strong> (Công Ty Cổ Phần Chuỗi Cung Ứng & Phân Phối Á Châu), đội ngũ chuyên gia tư vấn giải pháp chuyển đổi số chuỗi cung ứng của <strong>ecor</strong> đã nhận được đầy đủ phiếu yêu cầu từ quý công ty.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Body -->
+      <div class="p-8 space-y-8">
+
+        <!-- Cam Kết Thời Gian Phản Hồi (SLA Box) -->
+        <div class="relative overflow-hidden rounded-xl bg-amber-50 border border-amber-200 p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center shrink-0 text-amber-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <h2 class="text-base font-bold text-zinc-900 font-heading">Cam Kết Phản Hồi Trong Vòng 15 Phút</h2>
+                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-brand-yellow text-zinc-900 font-heading">SLA 15 Phút</span>
+              </div>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Chuyên viên tư vấn phụ trách mảng <strong>Smart Warehouse (WMS) & Điều Phối Vận Tải (TMS)</strong> sẽ liên hệ trực tiếp qua số điện thoại <span class="text-amber-700 font-semibold">0912 345 678</span> hoặc kết nối Zalo trong vòng <strong>15 phút làm việc</strong> (08:00 - 18:00) để trao đổi sơ bộ và sắp xếp lịch khảo sát thực tế.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tóm Tắt Thông Tin Đã Gửi (Receipt Summary) -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs uppercase tracking-wider font-semibold text-zinc-400 font-heading">
+              Tóm Tắt Phiếu Khảo Sát Đã Đăng Ký
+            </h3>
+            <span class="text-[11px] text-zinc-400">Mã yêu cầu: #REQ-2025-08942</span>
+          </div>
+
+          <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-5 divide-y divide-zinc-200">
+            <!-- Row 1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
+              <div>
+                <span class="text-xs text-zinc-400 block mb-0.5">Người liên hệ & chức vụ</span>
+                <span class="text-sm font-semibold text-zinc-900">Trần Minh Hoàng</span>
+                <span class="text-zinc-500 ml-1.5 px-2 py-0.5 bg-zinc-200/70 rounded text-[11px]">Giám Đốc Vận Hành (COO)</span>
+              </div>
+              <div>
+                <span class="text-xs text-zinc-400 block mb-0.5">Doanh nghiệp</span>
+                <span class="text-sm font-semibold text-zinc-900">Công Ty Cổ Phần Chuỗi Cung Ứng & Phân Phối Á Châu</span>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4">
+              <div>
+                <span class="text-xs text-zinc-400 block mb-0.5">Số điện thoại / Zalo</span>
+                <span class="text-sm font-semibold text-amber-700">0912 345 678</span>
+              </div>
+              <div>
+                <span class="text-xs text-zinc-400 block mb-0.5">Email công việc</span>
+                <span class="text-sm font-medium text-zinc-700">hoang.tran@asialogistics.vn</span>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="py-4 space-y-2">
+              <span class="text-xs text-zinc-400 block">Bộ giải pháp doanh nghiệp quan tâm</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+                  ecor WMS (Quản Trị Kho 3D)
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-zinc-600 border border-zinc-200">
+                  ecor TMS (Điều Phối Vận Tải)
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-zinc-600 border border-zinc-200">
+                  Tích hợp ERP & POS Bán Hàng
+                </span>
+              </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="pt-4 space-y-1.5">
+              <span class="text-xs text-zinc-400 block">Nhu cầu & bài toán cần giải quyết</span>
+              <div class="p-3.5 bg-white rounded-lg text-xs text-zinc-600 italic border-l-2 border-brand-yellow leading-relaxed shadow-sm">
+                "Hiện tại công ty đang vận hành kho phân phối kết hợp đơn sàn Shopee/TikTok Shop bằng phần mềm cũ hay bị treo khi flash sale. Cần ecor demo trực tiếp thuật toán Wave Picking, kiểm soát date lô hạn FEFO và khả năng đồng bộ tức thì với 45 máy quét PDA Zebra và cân điện tử RS232. Yêu cầu khảo sát mặt bằng tại kho Bình Dương vào thứ 5 tuần này."
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Bước Tiếp Theo Trong Quy Trình Hỗ Trợ -->
+        <div class="space-y-3">
+          <h3 class="text-xs uppercase tracking-wider font-semibold text-zinc-400 font-heading">
+            Quy Trình Triển Khai & Khảo Sát Của ecor
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="bg-white border border-zinc-200 rounded-xl p-4 text-center space-y-2 shadow-sm">
+              <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-700 font-bold text-sm flex items-center justify-center mx-auto border border-amber-200">
+                1
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 font-heading">Xác Nhận Nhu Cầu</h4>
+              <p class="text-[11px] text-zinc-500 leading-normal">
+                Chuyên viên gọi điện xác nhận chi tiết mặt bằng kho và kịch bản demo cần thử nghiệm.
+              </p>
+            </div>
+
+            <div class="bg-white border border-zinc-200 rounded-xl p-4 text-center space-y-2 shadow-sm">
+              <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-700 font-bold text-sm flex items-center justify-center mx-auto border border-amber-200">
+                2
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 font-heading">Khảo Sát & Demo Onsite</h4>
+              <p class="text-[11px] text-zinc-500 leading-normal">
+                Đội ngũ kỹ thuật đến tận kho Bình Dương test trực tiếp thiết bị PDA và máy in.
+              </p>
+            </div>
+
+            <div class="bg-white border border-zinc-200 rounded-xl p-4 text-center space-y-2 shadow-sm">
+              <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-700 font-bold text-sm flex items-center justify-center mx-auto border border-amber-200">
+                3
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 font-heading">Lập Bảng Tính ROI</h4>
+              <p class="text-[11px] text-zinc-500 leading-normal">
+                Gửi phương án bài toán đầu tư, thời gian hoàn vốn và cấp tài khoản Sandbox 14 ngày.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tài Liệu Đính Kèm Tải Nhanh (Instant Resources Download) -->
+        <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-zinc-900 uppercase tracking-wider font-heading flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+              Tài Liệu Đính Kèm Dành Cho Doanh Nghiệp
+            </span>
+            <span class="text-[11px] text-zinc-400">PDF • 14.8 MB</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg bg-white hover:bg-amber-50/50 border border-zinc-200 hover:border-amber-300 transition group shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded bg-red-50 text-red-500 flex items-center justify-center font-bold text-xs">
+                  PDF
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-zinc-800 group-hover:text-amber-700 transition">ecor WMS Overview 2025</div>
+                  <div class="text-[10px] text-zinc-400">Hồ sơ năng lực & Kiến trúc thuật toán</div>
+                </div>
+              </div>
+              <svg class="w-4 h-4 text-zinc-300 group-hover:text-amber-600 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+
+            <a href="#" class="flex items-center justify-between p-3 rounded-lg bg-white hover:bg-amber-50/50 border border-zinc-200 hover:border-amber-300 transition group shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs">
+                  PDF
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-zinc-800 group-hover:text-amber-700 transition">Bảng So Sánh Chi Phí & ROI</div>
+                  <div class="text-[10px] text-zinc-400">Tối ưu vận hành kho & đội xe</div>
+                </div>
+              </div>
+              <svg class="w-4 h-4 text-zinc-300 group-hover:text-amber-600 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cần Hỗ Trợ Gấp / Direct Contact Box -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-bold text-white font-heading">Bạn có thắc mắc cần trao đổi ngay lập tức?</div>
+            <div class="text-xs text-zinc-400">Hotline Giám Đốc Giải Pháp (24/7): <strong class="text-brand-yellow text-sm">0822 235 858</strong></div>
+          </div>
+          <div class="flex gap-2">
+            <a href="tel:0822235858" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg bg-brand-yellow hover:bg-brand-yellowHover text-zinc-900 font-heading transition shadow-lg shadow-amber-900/20">
+              Gọi Hotline Ngay
+            </a>
+            <a href="https://zalo.me/0822235858" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700 transition">
+              Chat Zalo 1-1
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Email Footer -->
+      <div class="bg-zinc-50 border-t border-zinc-200 px-8 py-6 text-center space-y-3">
+        <div class="text-xs text-zinc-500">
+          <strong>ecor.vn</strong> • Hệ Sinh Thái Số Hóa Chuỗi Cung Ứng & Logistics Toàn Diện (WMS • TMS • POS • OMS)
+        </div>
+        <p class="text-[11px] text-zinc-400 max-w-lg mx-auto leading-relaxed">
+          Trụ sở chính: Tòa nhà Tech Innovation, Khu Công Nghệ Cao, TP. Thủ Đức, TP. Hồ Chí Minh.<br>
+          Email này được gửi tự động để xác nhận lượt đăng ký của bạn tại website ecor.vn. Cam kết bảo mật thông tin theo tiêu chuẩn ISO/IEC 27001 & thỏa thuận NDA.
+        </p>
+        <div class="flex justify-center items-center gap-4 text-[11px] text-zinc-400 pt-2 border-t border-zinc-200">
+          <a href="#" class="hover:text-amber-600 transition">Chính sách bảo mật</a>
+          <span>•</span>
+          <a href="#" class="hover:text-amber-600 transition">Điều khoản sử dụng</a>
+          <span>•</span>
+          <a href="#" class="hover:text-amber-600 transition">Hỗ trợ kỹ thuật</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Client Help Note -->
+    <div class="text-center text-xs text-zinc-400">
+      Mẫu email giao dịch gửi khách hàng (Transactional Auto-Responder Email Template) • Tối ưu hiển thị đa thiết bị (Desktop & Mobile)
+    </div>
+
+  </div>
+
+</body>
+</html>

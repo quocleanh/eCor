@@ -1,0 +1,19 @@
+name = "ecor-contact-notify"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Domain được phép gọi Worker (CORS)
+ALLOWED_ORIGIN = "https://ecor.vn"
+
+# Thông tin SMTP mail.ecor.vn
+SMTP_HOST = "mail.ecor.vn"
+SMTP_PORT = "465"
+# "true" = kết nối TLS ngay (port 465). Đổi thành "false" + SMTP_PORT="587" nếu muốn dùng STARTTLS.
+SMTP_SECURE = "true"
+MAIL_FROM = "contact@ecor.vn"
+MAIL_TO = "anhquoc.apt@gmail.com"
+
+# Secret KHÔNG khai báo ở đây, set bằng lệnh (xem README.md):
+#   wrangler secret put SMTP_USER
+#   wrangler secret put SMTP_PASS

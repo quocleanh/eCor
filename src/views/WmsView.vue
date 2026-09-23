@@ -579,8 +579,8 @@
               </div>
             </div>
 
-            <button type="submit"
-              class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-bold text-sm shadow-md transition-all">
+            <button type="submit" :disabled="wmsSubmitting"
+              class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 disabled:opacity-60 disabled:cursor-not-allowed text-zinc-900 font-bold font-bold text-sm shadow-md transition-all">
               {{ $t('wms.form.submit') }}
             </button>
           </div>
@@ -599,6 +599,7 @@ import HeroCanvas from '@/components/HeroCanvas.vue'
 defineEmits(['open-modal'])
 
 const wmsSuccess = ref(false)
+const wmsSubmitting = ref(false)
 const wmsForm = reactive({
   name: '',
   phone: '',
@@ -608,7 +609,30 @@ const wmsForm = reactive({
   area: '1,000 – 5,000 m²'
 })
 
-function handleWmsSubmit() {
+async function handleWmsSubmit() {
+  if (wmsSubmitting.value) return
+  wmsSubmitting.value = true
+
+  const notifyUrl = import.meta.env.VITE_CONTACT_NOTIFY_URL
+  if (notifyUrl) {
+    try {
+      await fetch(notifyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: wmsForm.name,
+          phone: wmsForm.phone,
+          email: wmsForm.email,
+          company: wmsForm.company,
+          notes: `Loại kho: ${wmsForm.type}`,
+          modules: ['wms'],
+          scale: wmsForm.area
+        })
+      })
+    } catch (err) {
+      console.error('contact notify failed', err)
+    }
+  }
   wmsSuccess.value = true
 }
 

@@ -189,8 +189,29 @@ function close() {
 
 async function handleSubmit() {
   isSubmitting.value = true
-  // Mock API call
-  await new Promise(resolve => setTimeout(resolve, 800))
+
+  const notifyUrl = import.meta.env.VITE_CONTACT_NOTIFY_URL
+  if (notifyUrl) {
+    try {
+      await fetch(notifyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          company: form.company,
+          notes: form.message,
+          modules: [form.module],
+          scale: props.initialType
+        })
+      })
+    } catch (err) {
+      // Không chặn trải nghiệm người dùng nếu gửi thông báo thất bại
+      console.error('contact notify failed', err)
+    }
+  }
+
   isSubmitting.value = false
   submitted.value = true
 }
