@@ -1,8 +1,8 @@
 const BRAND_YELLOW = '#F5B800';
 const LOGO_URL = 'https://ecor.vn/ecor-logo.png';
 const SITE_URL = 'https://ecor.vn';
-const HOTLINE = '0822 235 858';
-const HOTLINE_TEL = '0822235858';
+const HOTLINE = '097 867 3 867';
+const HOTLINE_TEL = '0978673867';
 
 function escapeHtml(str) {
   return String(str ?? '')

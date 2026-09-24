@@ -82,7 +82,7 @@
             <div>
               <div class="flex justify-between items-center mb-1">
                 <label class="font-bold text-zinc-700">Mật khẩu bảo mật *</label>
-                <a v-if="mode === 'login'" href="#" class="text-[11px] text-amber-600 hover:underline">Quên mật khẩu?</a>
+                <a v-if="mode === 'login'" href="mailto:contact@ecor.vn?subject=Yêu%20cầu%20đặt%20lại%20mật%20khẩu" class="text-[11px] text-amber-600 hover:underline">Quên mật khẩu?</a>
               </div>
               <div class="relative">
                 <input 

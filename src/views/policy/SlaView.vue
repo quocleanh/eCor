@@ -337,10 +337,10 @@
 <span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t95') }}</span>
 <span class="font-code-sm text-code-sm text-primary font-bold">{{ $t('policy.sla.t96') }}</span>
 </div>
-<a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container transition-colors inline-flex items-center gap-1" href="#">
+<router-link class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container transition-colors inline-flex items-center gap-1" to="/contact">
 <span>{{ $t('policy.sla.t97') }}</span>
 <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-</a>
+</router-link>
 </div>
 </div>
 </div>
@@ -476,10 +476,10 @@
             {{ $t('policy.sla.t125') }}
           </p>
 <div class="mt-auto pt-space-md">
-<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 hover:underline" href="#">
+<router-link class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 hover:underline" to="/contact">
               {{ $t('policy.sla.t126') }}
               <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
+</router-link>
 <span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t127') }}</span>
 </div>
 </div>
@@ -526,14 +526,14 @@
         </p>
 </div>
 <div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto">
-<a class="w-full sm:w-auto px-space-lg py-space-sm bg-surface-container-lowest text-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-surface-bright transition-colors shadow-sm" href="#">
+<router-link class="w-full sm:w-auto px-space-lg py-space-sm bg-surface-container-lowest text-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-surface-bright transition-colors shadow-sm" to="/contact">
 <span class="material-symbols-outlined text-[20px]">monitor_heart</span>
 <span>{{ $t('policy.sla.t141') }}</span>
-</a>
-<a class="w-full sm:w-auto px-space-lg py-space-sm bg-primary-fixed/20 text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-fixed/30 transition-colors" href="#">
+</router-link>
+<router-link class="w-full sm:w-auto px-space-lg py-space-sm bg-primary-fixed/20 text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-fixed/30 transition-colors" to="/contact">
 <span class="material-symbols-outlined text-[20px]">support_agent</span>
 <span>{{ $t('policy.sla.t142') }}</span>
-</a>
+</router-link>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">

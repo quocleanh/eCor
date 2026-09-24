@@ -11,7 +11,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <!-- Left Hero Content -->
-          <div class="lg:col-span-7 space-y-6 text-left">
+          <div class="lg:col-span-5 space-y-6 text-left">
             <!-- Badge -->
             <div
               class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-xs font-semibold text-amber-700 shadow-sm">
@@ -68,8 +68,8 @@
           </div>
 
           <!-- Right Hero Interactive Diagram (Circular Hub) -->
-          <div class="lg:col-span-5 relative flex items-center justify-center mt-12 lg:mt-0">
-            <HeroInteractiveCanvas />
+          <div class="lg:col-span-7 relative hidden md:flex items-center justify-end mt-12 lg:mt-0">
+            <HeroInteractiveCanvas @open-modal="$emit('open-modal', $event)" />
           </div>
         </div>
       </div>

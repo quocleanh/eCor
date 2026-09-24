@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ecor Logistics Ecosystem - Interactive Vector Canvas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              yellow: '#F5B800',
+              yellowHover: '#D97706',
+              dark: '#0F172A',
+              slate: '#1E293B',
+              muted: '#64748B',
+              bgLight: '#F8FAFC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 25px rgba(245, 184, 0, 0.6)); }
+    }
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotateReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes flowDash {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .anim-pulse-glow { animation: pulseGlow 4s ease-in-out infinite; }
+    .anim-rotate-slow { transform-origin: center; animation: rotateSlow 45s linear infinite; }
+    .anim-rotate-rev { transform-origin: center; animation: rotateReverse 35s linear infinite; }
+    .anim-flow { stroke-dasharray: 8 8; animation: flowDash 2.5s linear infinite; }
+    .float-card-1 { animation: floatCard 5s ease-in-out infinite; }
+    .float-card-2 { animation: floatCard 6s ease-in-out infinite 1s; }
+    .float-card-3 { animation: floatCard 5.5s ease-in-out infinite 2s; }
+    .float-card-4 { animation: floatCard 6.2s ease-in-out infinite 1.5s; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-6 antialiased font-sans">
+
+  <!-- Main Canvas Card Container -->
+  <div class="w-full max-w-6xl bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden relative p-8 md:p-12">
+    
+    <!-- Top Bar Control & Legend -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8 border-b border-slate-100">
+      <div class="flex items-center gap-3">
+        <div class="w-3.5 h-3.5 rounded-full bg-amber-400 animate-ping"></div>
+        <div>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+            Hệ Sinh Thái ecor Core
+            <span class="text-xs uppercase font-mono px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold tracking-wider">Vector Canvas 4K</span>
+          </h2>
+          <p class="text-sm text-slate-500 mt-0.5">Sơ đồ luồng kết nối dữ liệu thời gian thực không độ trễ (Zero-Latency Sync)</p>
+        </div>
+      </div>
+      
+      <!-- Stats Pills -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Đồng Bộ 100% Khép Kín
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-800 font-mono">
+          <span>Tốc độ: 0.1s</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Workspace (Vector Canvas Diagram) -->
+    <div class="relative w-full aspect-[16/10] min-h-[580px] max-h-[750px] flex items-center justify-center overflow-visible my-4 select-none">
+      
+      <!-- SVG Connectors & Background Orbital Rings (Always sharp vector, scale 100%) -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1000 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F5B800" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#0F172A" stop-opacity="0.1"/>
+          </linearGradient>
+          <linearGradient id="lineWms" x1="500" y1="325" x2="240" y2="135">
+            <stop offset="0%" stop-color="#F5B800" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#F5B800" stop-opacity="0.2"/>
+          </linearGradient>
+          <linearGradient id="lineTms" x1="500" y1="325" x2="760" y2="135">
+            <stop offset="0%" stop-color="#0F172A" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#0F172A" stop-opacity="0.2"/>
+          </linearGradient>
+          <linearGradient id="lineOms" x1="500" y1="325" x2="240" y2="515">
+            <stop offset="0%" stop-color="#0F172A" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#0F172A" stop-opacity="0.2"/>
+          </linearGradient>
+          <linearGradient id="linePos" x1="500" y1="325" x2="760" y2="515">
+            <stop offset="0%" stop-color="#F5B800" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#F5B800" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Outer Dynamic Orbital Rings -->
+        <g class="anim-rotate-slow" style="transform-origin: 500px 325px;">
+          <ellipse cx="500" cy="325" rx="380" ry="240" stroke="url(#orbitGrad)" stroke-width="1.5" stroke-dasharray="10 8"/>
+          <circle cx="880" cy="325" r="4" fill="#F5B800"/>
+          <circle cx="120" cy="325" r="4" fill="#0F172A"/>
+        </g>
+        
+        <g class="anim-rotate-rev" style="transform-origin: 500px 325px;">
+          <ellipse cx="500" cy="325" rx="270" ry="170" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <circle cx="500" cy="155" r="3.5" fill="#F5B800"/>
+          <circle cx="500" cy="495" r="3.5" fill="#0F172A"/>
+        </g>
+
+        <!-- Connecting Curved Arteries from Core (500,325) to Modules -->
+        <!-- Path 1: to WMS (240, 140) -->
+        <path d="M 500 325 C 440 230, 340 160, 240 140" stroke="url(#lineWms)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path class="anim-flow" d="M 500 325 C 440 230, 340 160, 240 140" stroke="#F5B800" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Path 2: to TMS (760, 140) -->
+        <path d="M 500 325 C 570 230, 660 160, 760 140" stroke="url(#lineTms)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path class="anim-flow" d="M 500 325 C 570 230, 660 160, 760 140" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Path 3: to OMS (240, 510) -->
+        <path d="M 500 325 C 430 420, 340 480, 240 510" stroke="url(#lineOms)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path class="anim-flow" d="M 500 325 C 430 420, 340 480, 240 510" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Path 4: to POS (760, 510) -->
+        <path d="M 500 325 C 570 420, 660 480, 760 510" stroke="url(#linePos)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path class="anim-flow" d="M 500 325 C 570 420, 660 480, 760 510" stroke="#F5B800" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+
+      <!-- ================= CENTER: ecor Core Hub ================= -->
+      <div class="relative z-20 flex flex-col items-center">
+        <!-- Glow Aura -->
+        <div class="absolute -inset-6 rounded-full bg-gradient-to-r from-amber-400/30 to-amber-500/20 blur-xl anim-pulse-glow"></div>
+        
+        <!-- Outer Golden Hub Ring -->
+        <div class="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 p-1.5 shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer">
+          <!-- Inner Slate Core -->
+          <div class="w-full h-full rounded-full bg-slate-900 border-2 border-amber-300/40 flex flex-col items-center justify-center p-3 text-center shadow-inner">
+            <!-- Infinity Symbol Vector -->
+            <div class="w-10 h-7 mb-1 flex items-center justify-center">
+              <svg viewBox="0 0 48 24" fill="none" class="w-full h-full">
+                <path d="M12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.8 20 20.2 15 24 12C27.8 9 31.2 4 36 4C40.42 4 44 7.58 44 12C44 16.42 40.42 20 36 20C31.2 20 27.8 15 24 12C20.2 9 16.8 4 12 4Z" stroke="#F5B800" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="2.5" fill="#FFFFFF"/>
+                <circle cx="36" cy="12" r="2.5" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <span class="text-xs md:text-sm font-extrabold tracking-wider text-white font-mono uppercase">ecor CORE</span>
+            <span class="text-[10px] text-amber-300/90 font-medium">Realtime Hub</span>
+          </div>
+        </div>
+
+        <!-- Center Status Tag -->
+        <div class="mt-3 px-3 py-1 rounded-full bg-slate-900 text-amber-400 border border-amber-400/40 text-[11px] font-semibold tracking-wide shadow-md flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Atomic Lock Protocol
+        </div>
+      </div>
+
+      <!-- ================= NODE 1: KHO WMS (Top Left) ================= -->
+      <div class="absolute left-2 sm:left-6 md:left-12 top-6 sm:top-10 z-20 float-card-1">
+        <div class="w-64 sm:w-72 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-slate-200 hover:border-amber-400 shadow-lg hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 group cursor-pointer">
+          <div class="flex items-start gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0 group-hover:bg-amber-400 group-hover:border-amber-400 transition-colors">
+              <!-- Warehouse Icon -->
+              <svg class="w-6 h-6 text-amber-700 group-hover:text-slate-950 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10l9-7 9 7v11H3V10z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Kho WMS</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold">99.98% CHUẨN</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1">Sơ đồ kho 3D • Lô/Hạn FIFO • Wave Picking</p>
+              <div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-600">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Tích hợp Zebra, cân điện tử RS232
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= NODE 2: VẬN TẢI TMS (Top Right) ================= -->
+      <div class="absolute right-2 sm:right-6 md:right-12 top-6 sm:top-10 z-20 float-card-2">
+        <div class="w-64 sm:w-72 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-slate-200 hover:border-slate-800 shadow-lg hover:shadow-2xl hover:shadow-slate-800/10 transition-all duration-300 group cursor-pointer">
+          <div class="flex items-start gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:border-slate-900 transition-colors">
+              <!-- Truck Icon -->
+              <svg class="w-6 h-6 text-slate-800 group-hover:text-amber-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-900 group-hover:text-slate-800 transition-colors">Vận Tải TMS</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-amber-400 font-bold">GPS REALTIME</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1">AI định tuyến VRP • App tài xế • e-POD</p>
+              <div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-600">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-slate-800"></span>
+                Giảm 35% chi phí nhiên liệu & rỗng xe
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= NODE 3: ĐA SÀN OMS (Bottom Left) ================= -->
+      <div class="absolute left-2 sm:left-6 md:left-12 bottom-6 sm:bottom-10 z-20 float-card-3">
+        <div class="w-64 sm:w-72 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-slate-200 hover:border-slate-800 shadow-lg hover:shadow-2xl hover:shadow-slate-800/10 transition-all duration-300 group cursor-pointer">
+          <div class="flex items-start gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:border-slate-900 transition-colors">
+              <!-- Shopping Cart Icon -->
+              <svg class="w-6 h-6 text-slate-800 group-hover:text-amber-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-900 group-hover:text-slate-800 transition-colors">Đa Sàn OMS</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-amber-400 font-bold">ĐỒNG BỘ 0.5S</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1">Shopee, TikTok, Tiki, Lazada, Web</p>
+              <div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-600">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Triệt tiêu rủi ro bán vượt (Atomic Lock)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= NODE 4: POS BÁN LẺ (Bottom Right) ================= -->
+      <div class="absolute right-2 sm:right-6 md:right-12 bottom-6 sm:bottom-10 z-20 float-card-4">
+        <div class="w-64 sm:w-72 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-slate-200 hover:border-amber-400 shadow-lg hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 group cursor-pointer">
+          <div class="flex items-start gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0 group-hover:bg-amber-400 group-hover:border-amber-400 transition-colors">
+              <!-- Cash Register / POS Icon -->
+              <svg class="w-6 h-6 text-amber-700 group-hover:text-slate-950 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-900 group-hover:text-amber-600 transition-colors">POS Bán Lẻ</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold">3S / ĐƠN HÀNG</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1">Quét mã QR • Chạy Offline • Loyalty chuỗi</p>
+              <div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-600">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Trừ kho tức thì, không độ lệch dữ liệu
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Action & Integration Bar -->
+    <div class="pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-6 text-xs text-slate-500">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Sẵn sàng kết nối RESTful API & Webhook
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          Thời gian thiết lập: Dưới 48 Giờ
+        </span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="px-4 py-2 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all">
+          Xem Kịch Bản Luồng Dữ Liệu
+        </button>
+        <button class="px-4 py-2 text-xs font-bold text-slate-900 bg-amber-400 hover:bg-amber-300 rounded-xl shadow-md transition-all flex items-center gap-1.5">
+          Khảo Sát & Demo Hệ Thống
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

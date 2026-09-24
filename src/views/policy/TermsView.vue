@@ -7,10 +7,10 @@
 <div class="w-full max-w-7xl mx-auto px-8 pt-space-xl">
 <!-- Breadcrumb -->
 <nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
-<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="trang-chu" href="#">
+<router-link class="hover:text-primary transition-colors flex items-center gap-1" to="/">
 <span class="material-symbols-outlined text-[16px]">home</span>
 <span>{{ $t('policy.terms.t1') }}</span>
-</a>
+</router-link>
 <span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
 <span class="text-on-surface-variant">{{ $t('policy.terms.t2') }}</span>
 <span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
@@ -155,10 +155,10 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">
             {{ $t('policy.terms.t40') }}
           </p>
-<a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container shadow-sm transition-all hover:-translate-y-[1px]" href="#">
+<router-link class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container shadow-sm transition-all hover:-translate-y-[1px]" to="/contact">
 <span class="material-symbols-outlined text-[18px]">download</span>
 <span>{{ $t('policy.terms.t41') }}</span>
-</a>
+</router-link>
 </div>
 <!-- Operational Status Indicator -->
 <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center justify-between">
@@ -520,10 +520,10 @@
 <span class="font-label-md text-label-md font-bold">{{ $t('policy.terms.t166') }}</span>
 </div>
 </div>
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-xl font-label-md text-label-md text-on-surface bg-surface-container-lowest hover:bg-surface-bright shadow-md transition-all hover:-translate-y-[1px]" data-path="lien-he" href="#">
+<router-link class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-xl font-label-md text-label-md text-on-surface bg-surface-container-lowest hover:bg-surface-bright shadow-md transition-all hover:-translate-y-[1px]" to="/contact">
 <span class="material-symbols-outlined text-[18px] text-primary">edit_document</span>
 <span>{{ $t('policy.terms.t167') }}</span>
-</a>
+</router-link>
 </div>
 </div>
 </div>

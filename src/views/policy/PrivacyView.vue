@@ -685,16 +685,16 @@
               </p>
             </div>
             <div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto shrink-0">
-              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl font-label-md text-label-md text-primary bg-surface-container-lowest shadow-md hover:bg-surface transition-all"
-                href="#">
+              <router-link class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl font-label-md text-label-md text-primary bg-surface-container-lowest shadow-md hover:bg-surface transition-all"
+                to="/contact">
                 <span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
                 <span>{{ $t('policy.privacy.t157') }}</span>
-              </a>
-              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl font-label-md text-label-md text-on-primary bg-white/15 backdrop-blur-md hover:bg-white/25 transition-all"
-                data-path="lien-he" href="#">
+              </router-link>
+              <router-link class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl font-label-md text-label-md text-on-primary bg-white/15 backdrop-blur-md hover:bg-white/25 transition-all"
+                to="/contact">
                 <span class="material-symbols-outlined text-[20px]">support_agent</span>
                 <span>{{ $t('policy.privacy.t158') }}</span>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

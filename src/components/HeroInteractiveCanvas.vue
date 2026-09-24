@@ -1,282 +1,249 @@
 <template>
-  <div class="relative w-full aspect-square max-w-[480px] mx-auto rounded-3xl bg-white border border-zinc-100 shadow-xl overflow-hidden" ref="containerRef">
-    <!-- Overlay texts -->
-    <div class="absolute top-0 left-0 w-full p-5 flex items-center justify-between text-xs z-10 pointer-events-none">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 font-medium border border-amber-200/60 shadow-sm">
-        <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"></span>
-        Seamless Integration
-      </span>
-      <span class="text-[11px] font-semibold text-zinc-400">
-        WMS - TMS - POS - Account
-      </span>
-    </div>
+  <div class="hc-root relative w-full max-w-[720px] lg:max-w-none ml-auto mr-auto lg:mr-0 select-none">
+    <div class="relative w-full rounded-3xl bg-white border border-zinc-100 shadow-xl p-5 sm:p-6 flex flex-col gap-4">
+      <!-- Header bar -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-zinc-100">
+        <div class="flex items-center gap-3">
+          <div class="w-3 h-3 rounded-full bg-amber-400 animate-ping shrink-0"></div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold text-zinc-900 tracking-tight flex items-center gap-2 flex-wrap">
+              {{ $t('home.hero.canvas.title') }}
+              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold tracking-wider">{{ $t('home.hero.canvas.tag') }}</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-500 mt-0.5">{{ $t('home.hero.canvas.subtitle') }}</p>
+          </div>
+        </div>
 
-    <canvas
-      ref="canvasRef"
-      class="absolute inset-0 w-full h-full z-0"
-    ></canvas>
+        <div class="flex items-center gap-2 flex-wrap">
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-50 border border-zinc-200 text-[11px] font-semibold text-zinc-700">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            {{ $t('home.hero.canvas.sync') }}
+          </div>
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-[11px] font-bold text-amber-800 font-mono">
+            {{ $t('home.hero.canvas.speed') }}
+          </div>
+        </div>
+      </div>
 
-    <div class="absolute bottom-0 left-0 w-full p-5 flex items-center justify-between text-[11px] text-zinc-500 border-t border-zinc-100/50 bg-white/50 backdrop-blur-sm z-10 pointer-events-none">
-      <span class="flex items-center gap-1 text-sky-600 font-medium">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <!-- Diagram workspace -->
+      <div class="relative w-full aspect-[1000/650]">
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1000 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="hc-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F5B800" stop-opacity="0.28" />
+              <stop offset="100%" stop-color="#F5B800" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="hc-line-wms" x1="500" y1="325" x2="240" y2="140">
+              <stop offset="0%" stop-color="#F5B800" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#F5B800" stop-opacity="0.15" />
+            </linearGradient>
+            <linearGradient id="hc-line-tms" x1="500" y1="325" x2="760" y2="140">
+              <stop offset="0%" stop-color="#18181b" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#18181b" stop-opacity="0.15" />
+            </linearGradient>
+            <linearGradient id="hc-line-oms" x1="500" y1="325" x2="240" y2="510">
+              <stop offset="0%" stop-color="#18181b" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#18181b" stop-opacity="0.15" />
+            </linearGradient>
+            <linearGradient id="hc-line-pos" x1="500" y1="325" x2="760" y2="510">
+              <stop offset="0%" stop-color="#F5B800" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#F5B800" stop-opacity="0.15" />
+            </linearGradient>
+          </defs>
+
+          <circle cx="500" cy="325" r="320" fill="url(#hc-glow)" />
+
+          <!-- Orbit rings -->
+          <g class="hc-anim-rotate-slow" style="transform-origin: 500px 325px;">
+            <ellipse cx="500" cy="325" rx="380" ry="240" stroke="#F5B800" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="10 8" />
+          </g>
+          <g class="hc-anim-rotate-rev" style="transform-origin: 500px 325px;">
+            <ellipse cx="500" cy="325" rx="270" ry="170" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 6" />
+          </g>
+
+          <!-- Curved arteries: core -> each module -->
+          <path d="M 500 325 C 440 230, 340 160, 240 140" stroke="url(#hc-line-wms)" stroke-width="3" stroke-linecap="round" />
+          <path class="hc-anim-flow" d="M 500 325 C 440 230, 340 160, 240 140" stroke="#F5B800" stroke-width="2.5" stroke-linecap="round" />
+
+          <path d="M 500 325 C 570 230, 660 160, 760 140" stroke="url(#hc-line-tms)" stroke-width="3" stroke-linecap="round" />
+          <path class="hc-anim-flow" d="M 500 325 C 570 230, 660 160, 760 140" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" />
+
+          <path d="M 500 325 C 430 420, 340 480, 240 510" stroke="url(#hc-line-oms)" stroke-width="3" stroke-linecap="round" />
+          <path class="hc-anim-flow" d="M 500 325 C 430 420, 340 480, 240 510" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" />
+
+          <path d="M 500 325 C 570 420, 660 480, 760 510" stroke="url(#hc-line-pos)" stroke-width="3" stroke-linecap="round" />
+          <path class="hc-anim-flow" d="M 500 325 C 570 420, 660 480, 760 510" stroke="#F5B800" stroke-width="2.5" stroke-linecap="round" />
         </svg>
-        Real-time API
-      </span>
-      <span class="font-bold text-zinc-700">Latency < 0.1s</span>
+
+        <!-- Center eCor Core hub -->
+        <div class="absolute z-20 flex flex-col items-center" style="left: 50%; top: 50%; transform: translate(-50%, -50%);">
+          <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-amber-300 via-amber-400 to-[#F5B800] p-1.5 shadow-2xl flex items-center justify-center">
+            <div class="w-full h-full rounded-full bg-zinc-900 border-2 border-amber-300/40 flex flex-col items-center justify-center text-center p-2">
+              <svg viewBox="0 0 48 24" fill="none" class="w-8 h-4 sm:w-10 sm:h-5 mb-0.5">
+                <path d="M12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.8 20 20.2 15 24 12C27.8 9 31.2 4 36 4C40.42 4 44 7.58 44 12C44 16.42 40.42 20 36 20C31.2 20 27.8 15 24 12C20.2 9 16.8 4 12 4Z" stroke="#F5B800" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="2.5" fill="#FFFFFF" />
+                <circle cx="36" cy="12" r="2.5" fill="#FFFFFF" />
+              </svg>
+              <span class="text-[9px] sm:text-xs font-extrabold tracking-wider text-white font-mono uppercase">eCor Core</span>
+              <span class="hidden sm:block text-[9px] text-amber-300/90 font-medium">{{ $t('home.hero.canvas.hubSub') }}</span>
+            </div>
+          </div>
+          <div class="hidden md:flex mt-3 px-2.5 py-1 rounded-full bg-zinc-900 text-amber-400 border border-amber-400/40 text-[11px] font-semibold tracking-wide shadow-md items-center gap-1.5 whitespace-nowrap">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            {{ $t('home.hero.canvas.atomic') }}
+          </div>
+        </div>
+
+        <!-- Module card: WMS (top-left) -->
+        <div class="absolute z-10 hc-float-1 w-[42%] sm:w-[41%]" style="left: 24%; top: 21.5%; transform: translate(-50%, -50%);">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-zinc-200 shadow-lg">
+            <div class="flex items-start gap-2 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10l9-7 9 7v11H3V10z" />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-1.5 flex-wrap">
+                  <h4 class="text-xs sm:text-sm font-bold text-zinc-900">{{ $t('home.hero.canvas.wmsTitle') }}</h4>
+                  <span class="text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 font-bold whitespace-nowrap">{{ $t('home.hero.canvas.wmsBadge') }}</span>
+                </div>
+                <p class="text-[9px] sm:text-[11px] text-zinc-500 mt-0.5 leading-snug">{{ $t('home.hero.canvas.wmsDesc') }}</p>
+                <div class="hidden sm:flex items-center gap-1.5 mt-2 pt-2 border-t border-zinc-100 text-[10px] text-zinc-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                  {{ $t('home.hero.canvas.wmsPoint') }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module card: TMS (top-right) -->
+        <div class="absolute z-10 hc-float-2 w-[42%] sm:w-[41%]" style="left: 76%; top: 21.5%; transform: translate(-50%, -50%);">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-zinc-200 shadow-lg">
+            <div class="flex items-start gap-2 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-zinc-100 border border-zinc-300 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-zinc-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1M5 17a2 2 0 104 0m6 0a2 2 0 104 0" />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-1.5 flex-wrap">
+                  <h4 class="text-xs sm:text-sm font-bold text-zinc-900">{{ $t('home.hero.canvas.tmsTitle') }}</h4>
+                  <span class="text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-900 text-amber-400 font-bold whitespace-nowrap">{{ $t('home.hero.canvas.tmsBadge') }}</span>
+                </div>
+                <p class="text-[9px] sm:text-[11px] text-zinc-500 mt-0.5 leading-snug">{{ $t('home.hero.canvas.tmsDesc') }}</p>
+                <div class="hidden sm:flex items-center gap-1.5 mt-2 pt-2 border-t border-zinc-100 text-[10px] text-zinc-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-zinc-800 shrink-0"></span>
+                  {{ $t('home.hero.canvas.tmsPoint') }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module card: OMS (bottom-left) -->
+        <div class="absolute z-10 hc-float-3 w-[42%] sm:w-[41%]" style="left: 24%; top: 78.5%; transform: translate(-50%, -50%);">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-zinc-200 shadow-lg">
+            <div class="flex items-start gap-2 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-zinc-100 border border-zinc-300 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-zinc-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-1.5 flex-wrap">
+                  <h4 class="text-xs sm:text-sm font-bold text-zinc-900">{{ $t('home.hero.canvas.omsTitle') }}</h4>
+                  <span class="text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-900 text-amber-400 font-bold whitespace-nowrap">{{ $t('home.hero.canvas.omsBadge') }}</span>
+                </div>
+                <p class="text-[9px] sm:text-[11px] text-zinc-500 mt-0.5 leading-snug">{{ $t('home.hero.canvas.omsDesc') }}</p>
+                <div class="hidden sm:flex items-center gap-1.5 mt-2 pt-2 border-t border-zinc-100 text-[10px] text-zinc-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                  {{ $t('home.hero.canvas.omsPoint') }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module card: POS (bottom-right) -->
+        <div class="absolute z-10 hc-float-4 w-[42%] sm:w-[41%]" style="left: 76%; top: 78.5%; transform: translate(-50%, -50%);">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-zinc-200 shadow-lg">
+            <div class="flex items-start gap-2 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-1.5 flex-wrap">
+                  <h4 class="text-xs sm:text-sm font-bold text-zinc-900">{{ $t('home.hero.canvas.posTitle') }}</h4>
+                  <span class="text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 font-bold whitespace-nowrap">{{ $t('home.hero.canvas.posBadge') }}</span>
+                </div>
+                <p class="text-[9px] sm:text-[11px] text-zinc-500 mt-0.5 leading-snug">{{ $t('home.hero.canvas.posDesc') }}</p>
+                <div class="hidden sm:flex items-center gap-1.5 mt-2 pt-2 border-t border-zinc-100 text-[10px] text-zinc-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                  {{ $t('home.hero.canvas.posPoint') }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bar -->
+      <div class="pt-4 border-t border-zinc-100 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-4 text-[11px] sm:text-xs text-zinc-500">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+            {{ $t('home.hero.canvas.api') }}
+          </span>
+          <span class="hidden sm:flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" /></svg>
+            {{ $t('home.hero.canvas.setup') }}
+          </span>
+        </div>
+
+        <button @click="$emit('open-modal', { type: 'demo', moduleName: 'all' })"
+          class="px-3.5 py-2 text-[11px] sm:text-xs font-bold text-zinc-900 bg-amber-400 hover:bg-amber-300 rounded-xl shadow-md transition-all flex items-center gap-1.5">
+          {{ $t('home.hero.canvas.cta') }}
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-
-const containerRef = ref(null)
-const canvasRef = ref(null)
-
-let ctx = null
-let animationFrameId = null
-let width = 0
-let height = 0
-let time = 0
-let lastFrameAt = 0
-
-const resize = () => {
-  if (!containerRef.value || !canvasRef.value) return
-  const rect = containerRef.value.getBoundingClientRect()
-  width = rect.width
-  height = rect.height
-  const dpr = window.devicePixelRatio || 1
-  canvasRef.value.width = width * dpr
-  canvasRef.value.height = height * dpr
-  ctx.setTransform(1, 0, 0, 1, 0, 0)
-  ctx.scale(dpr, dpr)
-  buildStars()
-}
-
-const easeInOutSine = (t) => -(Math.cos(Math.PI * t) - 1) / 2
-
-// Orbit system: the 4 modules slowly revolve around the eCor core like a
-// pinwheel, always 90° apart so their paths never collide. Each one trails a
-// soft comet tail, which is what makes the motion the whole point rather
-// than a static diagram with moving dots on top of it.
-const MODULES = [
-  { id: 'pos', color: '#10b981', light: '#6ee7b7', shadow: 'rgba(16, 185, 129, 0.4)', title: 'POS', subtitle: 'Retail' },
-  { id: 'tms', color: '#0ea5e9', light: '#7dd3fc', shadow: 'rgba(14, 165, 233, 0.4)', title: 'TMS', subtitle: 'Transport' },
-  { id: 'account', color: '#fb7185', light: '#fda4af', shadow: 'rgba(244, 63, 94, 0.4)', title: 'Account', subtitle: 'Bookkeeping' },
-  { id: 'wms', color: '#f59e0b', light: '#fcd34d', shadow: 'rgba(245, 158, 11, 0.4)', title: 'WMS', subtitle: 'Warehouse' }
-]
-
-const getCore = () => ({ x: width * 0.5, y: height * 0.5 })
-const getOrbitRadius = () => Math.min(width, height) * 0.33
-
-// Background star field: a handful of fixed points that twinkle gently.
-// Regenerated whenever the canvas is (re)sized, using its actual pixel size.
-let stars = []
-const buildStars = () => {
-  const count = 22
-  const core = getCore()
-  const minSide = Math.min(width, height)
-  stars = Array.from({ length: count }, () => {
-    let x, y, dist
-    do {
-      x = Math.random() * width
-      y = Math.random() * height
-      dist = Math.hypot(x - core.x, y - core.y)
-    } while (dist < minSide * 0.16) // keep clear of the core label
-    return { x, y, r: 0.6 + Math.random() * 1.1, phase: Math.random() * Math.PI * 2, speed: 0.6 + Math.random() * 0.8 }
-  })
-}
-
-const drawStars = () => {
-  stars.forEach((s) => {
-    const alpha = 0.15 + (Math.sin(time * s.speed + s.phase) + 1) / 2 * 0.35
-    ctx.beginPath()
-    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2)
-    ctx.fillStyle = '#f59e0b'
-    ctx.globalAlpha = alpha
-    ctx.fill()
-  })
-  ctx.globalAlpha = 1
-}
-
-// A plain, thin guide ring — used for the auxiliary rings that just add depth.
-const drawAuxRing = (core, radius, alpha, lineWidth = 0.75) => {
-  ctx.beginPath()
-  ctx.arc(core.x, core.y, radius, 0, Math.PI * 2)
-  ctx.strokeStyle = `rgba(203, 213, 225, ${alpha})`
-  ctx.lineWidth = lineWidth
-  ctx.setLineDash([2, 6])
-  ctx.stroke()
-  ctx.setLineDash([])
-}
-
-// The main orbit ring the 4 modules actually travel on — thin, like the
-// auxiliary rings, just slightly more solid so it still reads as the path.
-const drawOrbitRing = (core, radius) => {
-  ctx.beginPath()
-  ctx.arc(core.x, core.y, radius, 0, Math.PI * 2)
-  ctx.strokeStyle = '#eef2f7'
-  ctx.lineWidth = 1.5
-  ctx.setLineDash([3, 7])
-  ctx.stroke()
-  ctx.setLineDash([])
-}
-
-// A bright dot gliding along the main orbit's circumference, weaving past the
-// 4 modules — this is what visually "links" them to each other, separate
-// from the spokes that link each one back to the core.
-const drawRingPulse = (core, radius, angle, color) => {
-  const px = core.x + Math.cos(angle) * radius
-  const py = core.y + Math.sin(angle) * radius
-  ctx.beginPath()
-  ctx.arc(px, py, 2.4, 0, Math.PI * 2)
-  ctx.fillStyle = color
-  ctx.shadowColor = color
-  ctx.shadowBlur = 10
-  ctx.fill()
-  ctx.shadowBlur = 0
-}
-
-const drawSpoke = (core, x, y) => {
-  ctx.beginPath()
-  ctx.moveTo(core.x, core.y)
-  ctx.lineTo(x, y)
-  ctx.strokeStyle = '#e2e8f0'
-  ctx.lineWidth = 1.5
-  ctx.stroke()
-}
-
-// A short trail of fading, shrinking dots behind the module, following the
-// same circular path — the "comet tail".
-const drawTrail = (core, radius, angle, color) => {
-  const trailCount = 7
-  const step = 0.055
-  for (let k = 1; k <= trailCount; k++) {
-    const a = angle - k * step
-    const tx = core.x + Math.cos(a) * radius
-    const ty = core.y + Math.sin(a) * radius
-    const fade = 1 - k / (trailCount + 1)
-    ctx.beginPath()
-    ctx.arc(tx, ty, 3.2 * fade, 0, Math.PI * 2)
-    ctx.fillStyle = color
-    ctx.globalAlpha = fade * 0.35
-    ctx.fill()
-  }
-  ctx.globalAlpha = 1
-}
-
-// A glowing pulse traveling inward/outward along the spoke, in sync with the
-// module's own orbit so the whole thing reads as one continuous current.
-const drawSpokePulse = (core, x, y, color, t) => {
-  const px = core.x + (x - core.x) * t
-  const py = core.y + (y - core.y) * t
-  const pulse = easeInOutSine(Math.sin(t * Math.PI))
-
-  ctx.beginPath()
-  ctx.arc(px, py, 2 + pulse * 1.2, 0, Math.PI * 2)
-  ctx.fillStyle = color
-  ctx.globalAlpha = 0.55 + pulse * 0.45
-  ctx.shadowColor = color
-  ctx.shadowBlur = 9
-  ctx.fill()
-  ctx.shadowBlur = 0
-  ctx.globalAlpha = 1
-}
-
-const drawNode = (x, y, colorCode, shadowColor, title, subtitle, size) => {
-  ctx.save()
-  ctx.shadowColor = shadowColor
-  ctx.shadowBlur = 18
-  ctx.fillStyle = '#18181b'
-  ctx.beginPath()
-  ctx.roundRect(x - size / 2, y - size / 2, size, size, 16)
-  ctx.fill()
-
-  ctx.shadowBlur = 0
-  ctx.fillStyle = '#ffffff'
-  ctx.font = `bold ${size >= 70 ? 14 : 13}px system-ui`
-  ctx.textAlign = 'center'
-  ctx.textBaseline = 'middle'
-  ctx.fillText(title, x, y - 6)
-  ctx.fillStyle = colorCode
-  ctx.font = '500 8px system-ui'
-  ctx.fillText(subtitle, x, y + 9)
-  ctx.restore()
-}
-
-const draw = (now) => {
-  if (!ctx) return
-
-  // Frame-rate independent timing so the motion feels the same on 60Hz and
-  // 120Hz screens, with no jump after the tab has been backgrounded.
-  const dt = lastFrameAt ? Math.min((now - lastFrameAt) / 1000, 1 / 30) : 1 / 60
-  lastFrameAt = now
-  time += dt
-
-  ctx.clearRect(0, 0, width, height)
-
-  const core = getCore()
-  const radius = getOrbitRadius()
-  const rotation = time * 0.18 // ~35s per full revolution — slow and calm
-
-  drawStars()
-
-  // Soft ambient glow that breathes gently behind the core
-  const breathe = 0.14 + easeInOutSine((Math.sin(time * 0.6) + 1) / 2) * 0.06
-  const glow = ctx.createRadialGradient(core.x, core.y, 4, core.x, core.y, radius + 20)
-  glow.addColorStop(0, `rgba(245, 158, 11, ${breathe})`)
-  glow.addColorStop(1, 'rgba(245, 158, 11, 0)')
-  ctx.fillStyle = glow
-  ctx.beginPath()
-  ctx.arc(core.x, core.y, radius + 20, 0, Math.PI * 2)
-  ctx.fill()
-
-  // A handful of thin auxiliary rings purely for depth, plus the bolder main
-  // orbit ring that the 4 modules actually travel on.
-  drawAuxRing(core, radius * 0.42, 0.35, 0.5)
-  drawAuxRing(core, radius * 0.68, 0.55, 0.6)
-  drawOrbitRing(core, radius)
-  drawAuxRing(core, radius * 1.16, 0.5, 0.6)
-  drawAuxRing(core, radius * 1.34, 0.3, 0.5)
-
-  const positions = MODULES.map((m, i) => {
-    const angle = -Math.PI / 2 + i * (Math.PI / 2) + rotation
-    return { ...m, angle, x: core.x + Math.cos(angle) * radius, y: core.y + Math.sin(angle) * radius }
-  })
-
-  positions.forEach((n) => drawSpoke(core, n.x, n.y))
-  positions.forEach((n) => drawTrail(core, radius, n.angle, n.color))
-
-  positions.forEach((n, i) => {
-    const tOut = (time * 0.4 + i * 0.22) % 1
-    drawSpokePulse(core, n.x, n.y, n.color, tOut)
-  })
-
-  // Two bright pulses weaving around the ring itself, linking the 4 modules
-  // to each other (as opposed to the spokes, which link them to the core).
-  drawRingPulse(core, radius, rotation * -2.4, '#fde68a')
-  drawRingPulse(core, radius, rotation * -2.4 + Math.PI, '#bae6fd')
-
-  positions.forEach((n) => drawNode(n.x, n.y, n.light, n.shadow, n.title, n.subtitle, 54))
-  drawNode(core.x, core.y, '#fbbf24', 'rgba(245, 158, 11, 0.45)', 'eCor', 'Cloud Core', 68)
-
-  animationFrameId = requestAnimationFrame(draw)
-}
-
-onMounted(() => {
-  if (canvasRef.value) {
-    ctx = canvasRef.value.getContext('2d')
-    resize()
-    window.addEventListener('resize', resize)
-    animationFrameId = requestAnimationFrame(draw)
-  }
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', resize)
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId)
-  }
-})
+defineEmits(['open-modal'])
 </script>
+
+<style scoped>
+@media (min-width: 1024px) {
+  .hc-root { zoom: 0.75; }
+}
+
+@keyframes hc-rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes hc-rotate-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes hc-flow-dash {
+  to { stroke-dashoffset: -40; }
+}
+@keyframes hc-float-card {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+  50% { transform: translate(-50%, -50%) translateY(-6px); }
+}
+
+.hc-anim-rotate-slow { animation: hc-rotate-slow 45s linear infinite; }
+.hc-anim-rotate-rev { animation: hc-rotate-reverse 35s linear infinite; }
+.hc-anim-flow { stroke-dasharray: 8 8; animation: hc-flow-dash 2.5s linear infinite; }
+.hc-float-1 { animation: hc-float-card 5s ease-in-out infinite; }
+.hc-float-2 { animation: hc-float-card 6s ease-in-out infinite 1s; }
+.hc-float-3 { animation: hc-float-card 5.5s ease-in-out infinite 2s; }
+.hc-float-4 { animation: hc-float-card 6.2s ease-in-out infinite 1.5s; }
+</style>
