@@ -8,7 +8,6 @@
           <div>
             <h3 class="text-lg sm:text-xl font-bold text-zinc-900 tracking-tight flex items-center gap-2 flex-wrap">
               {{ $t('home.hero.canvas.title') }}
-              <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold tracking-wider">{{ $t('home.hero.canvas.tag') }}</span>
             </h3>
             <p class="text-xs sm:text-sm text-zinc-500 mt-0.5">{{ $t('home.hero.canvas.subtitle') }}</p>
           </div>
@@ -148,18 +147,18 @@
             <div class="flex items-start gap-2 sm:gap-3">
               <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-zinc-100 border border-zinc-300 flex items-center justify-center shrink-0">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5 text-zinc-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m-6 4h6m-6 4h2m-5 6h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
               <div class="flex-1 min-w-0">
                 <div class="flex items-center justify-between gap-1.5 flex-wrap">
-                  <h4 class="text-xs sm:text-sm font-bold text-zinc-900">{{ $t('home.hero.canvas.omsTitle') }}</h4>
-                  <span class="text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-900 text-amber-400 font-bold whitespace-nowrap">{{ $t('home.hero.canvas.omsBadge') }}</span>
+                  <h4 class="text-xs sm:text-sm font-bold text-zinc-900">{{ $t('home.hero.canvas.accTitle') }}</h4>
+                  <span class="text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-900 text-amber-400 font-bold whitespace-nowrap">{{ $t('home.hero.canvas.accBadge') }}</span>
                 </div>
-                <p class="text-[9px] sm:text-[11px] text-zinc-500 mt-0.5 leading-snug">{{ $t('home.hero.canvas.omsDesc') }}</p>
+                <p class="text-[9px] sm:text-[11px] text-zinc-500 mt-0.5 leading-snug">{{ $t('home.hero.canvas.accDesc') }}</p>
                 <div class="hidden sm:flex items-center gap-1.5 mt-2 pt-2 border-t border-zinc-100 text-[10px] text-zinc-600">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-                  {{ $t('home.hero.canvas.omsPoint') }}
+                  {{ $t('home.hero.canvas.accPoint') }}
                 </div>
               </div>
             </div>
