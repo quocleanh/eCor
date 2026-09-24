@@ -25,7 +25,7 @@ export default {
 
     const admin = buildAdminEmail(data);
     try {
-      await sendMail(env, { to: env.MAIL_TO, ...admin });
+      await sendMail(env, { to: env.MAIL_TO, from: env.MAIL_FROM_SYSTEM, ...admin });
     } catch (err) {
       // Log for `wrangler tail`, nhưng không chặn trải nghiệm người dùng
       // chỉ vì gửi email nội bộ thất bại.
@@ -35,7 +35,7 @@ export default {
     if (data.email) {
       const customer = buildCustomerEmail(data);
       try {
-        await sendMail(env, { to: data.email, ...customer });
+        await sendMail(env, { to: data.email, from: env.MAIL_FROM_CUSTOMER, ...customer });
       } catch (err) {
         console.error('smtp_send_customer_failed', err && err.message);
       }
@@ -72,7 +72,7 @@ function json(obj, status, cors) {
 const enc = new TextEncoder();
 const dec = new TextDecoder();
 
-async function sendMail(env, { to, subject, text, html }) {
+async function sendMail(env, { to, from, subject, text, html }) {
   const port = Number(env.SMTP_PORT || 465);
   const implicitTls = String(env.SMTP_SECURE) !== 'false';
 
@@ -111,7 +111,7 @@ async function sendMail(env, { to, subject, text, html }) {
   resp = await cmd(writer, reader, btoa(env.SMTP_PASS));
   assertCode(resp, '235', 'auth_pass_failed');
 
-  resp = await cmd(writer, reader, `MAIL FROM:<${env.MAIL_FROM}>`);
+  resp = await cmd(writer, reader, `MAIL FROM:<${from}>`);
   assertCode(resp, '250', 'mail_from_failed');
 
   resp = await cmd(writer, reader, `RCPT TO:<${to}>`);
@@ -120,7 +120,7 @@ async function sendMail(env, { to, subject, text, html }) {
   resp = await cmd(writer, reader, 'DATA');
   assertCode(resp, '354', 'data_failed');
 
-  const message = buildMime(env, to, subject, text, html);
+  const message = buildMime(from, to, subject, text, html);
   resp = await cmd(writer, reader, message + '\r\n.');
   assertCode(resp, '250', 'send_failed');
 
@@ -161,10 +161,10 @@ function assertCode(resp, code, errName) {
   }
 }
 
-function buildMime(env, to, subject, text, html) {
+function buildMime(from, to, subject, text, html) {
   const encodedSubject = `=?UTF-8?B?${b64(subject)}?=`;
   const headers = [
-    `From: ${env.MAIL_FROM}`,
+    `From: ${from}`,
     `To: ${to}`,
     `Subject: ${encodedSubject}`,
     'MIME-Version: 1.0'

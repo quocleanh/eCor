@@ -191,7 +191,10 @@ const isCoreModule = computed(() => {
   return code === 'POS' || code === 'WMS' || code === 'ACCOUNT' || currentModule.value.slug === 'ke-toan' || currentModule.value.slug === 'pos' || currentModule.value.slug === 'wms'
 })
 
+const emit = defineEmits(['open-modal'])
+
 function openModal() {
-  window.dispatchEvent(new CustomEvent('open-demo-modal'))
+  const code = (currentModule.value?.code || '').toLowerCase()
+  emit('open-modal', { type: 'demo', moduleName: ['wms', 'tms', 'pos'].includes(code) ? code : 'all' })
 }
 </script>
