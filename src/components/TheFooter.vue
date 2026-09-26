@@ -70,11 +70,6 @@
               </router-link>
             </li>
             <li>
-              <router-link :to="$localeRoute('tiles')" class="hover:text-amber-600 transition-colors">
-                {{ $t('footer.prodTiles') }}
-              </router-link>
-            </li>
-            <li>
               <router-link :to="$localeRoute('wms')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodMulti') }}
               </router-link>
@@ -118,6 +113,11 @@
                 {{ $t('footer.solMfg') }}
               </router-link>
             </li>
+            <li>
+              <router-link :to="$localeRoute('tiles')" class="hover:text-amber-600 transition-colors">
+                {{ $t('footer.solTiles') }}
+              </router-link>
+            </li>
           </ul>
         </div>
 
@@ -128,14 +128,14 @@
           </h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <router-link :to="$localeRoute('resources')" class="hover:text-amber-600 transition-colors">
+              <a :href="$links.docs" target="_blank" rel="noopener" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resApi') }}
-              </router-link>
+              </a>
             </li>
             <li>
-              <router-link :to="$localeRoute('resources')" class="hover:text-amber-600 transition-colors">
+              <a :href="$links.docs" target="_blank" rel="noopener" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resGuide') }}
-              </router-link>
+              </a>
             </li>
             <li>
               <router-link :to="$localeRoute('pricing')" class="hover:text-amber-600 transition-colors">

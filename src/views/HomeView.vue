@@ -288,10 +288,10 @@
           </div>
 
           <!-- Right 3 Orbiting Extension Bubbles -->
-          <div class="lg:col-span-7 flex items-center justify-center sm:justify-end gap-6 sm:gap-8">
+          <div class="lg:col-span-7 flex flex-wrap items-center justify-center sm:justify-end gap-4">
             <router-link :to="$localeRoute('pos')" class="flex flex-col items-center group">
               <div
-                class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
+                class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -301,11 +301,11 @@
               <span class="text-[11px] text-zinc-500">{{ $t('home.ecosystem.item1Desc') }}</span>
             </router-link>
 
-            <div class="w-12 h-0.5 bg-zinc-200 hidden sm:block"></div>
+            <div class="w-6 h-0.5 bg-zinc-200 hidden sm:block"></div>
 
             <router-link :to="$localeRoute('solutions')" class="flex flex-col items-center group">
               <div
-                class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
+                class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -315,11 +315,11 @@
               <span class="text-[11px] text-zinc-500">{{ $t('home.ecosystem.item2Desc') }}</span>
             </router-link>
 
-            <div class="w-12 h-0.5 bg-zinc-200 hidden sm:block"></div>
+            <div class="w-6 h-0.5 bg-zinc-200 hidden sm:block"></div>
 
             <router-link :to="$localeRoute('solutions')" class="flex flex-col items-center group">
               <div
-                class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
+                class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-amber-100/60 border border-amber-200 flex items-center justify-center text-amber-600 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -327,6 +327,20 @@
               </div>
               <span class="mt-3 text-xs sm:text-sm font-bold text-zinc-800">{{ $t('home.ecosystem.item3Title') }}</span>
               <span class="text-[11px] text-zinc-500">{{ $t('home.ecosystem.item3Desc') }}</span>
+            </router-link>
+
+            <div class="w-6 h-0.5 bg-zinc-200 hidden sm:block"></div>
+
+            <router-link :to="$localeRoute('tiles')" class="flex flex-col items-center group">
+              <div
+                class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-zinc-100 border border-zinc-200 flex items-center justify-center text-zinc-700 group-hover:scale-105 group-hover:bg-amber-400 group-hover:text-zinc-900 font-bold transition-all shadow-sm">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 5a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm9 0a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1V5zM4 14a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5zm9 0a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1v-5z" />
+                </svg>
+              </div>
+              <span class="mt-3 text-xs sm:text-sm font-bold text-zinc-800">{{ $t('home.ecosystem.item4Title') }}</span>
+              <span class="text-[11px] text-zinc-500">{{ $t('home.ecosystem.item4Desc') }}</span>
             </router-link>
           </div>
         </div>

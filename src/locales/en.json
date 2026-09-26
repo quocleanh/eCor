@@ -6,6 +6,12 @@
     "tmsDesc": "Transport Coordination, GPS Tracking, e-POD",
     "posDesc": "Fast Checkout, Dynamic VietQR, WMS Integration",
     "accountDesc": "Auto-posting, COD reconciliation, e-Invoice",
+    "wmsBadge": "Warehouse 4.0",
+    "tmsBadge": "Transport 4.0",
+    "posBadge": "Retail 3s",
+    "accountBadge": "E-Invoice",
+    "extensions": "Extensions",
+    "tilesDesc": "AI pattern scan & AR LiDAR for the tiles industry",
     "seeFlowchart": "View Full System Flowchart",
     "solutions": "Solutions",
     "pricing": "Pricing",
@@ -36,7 +42,7 @@
     "prodPos": "eCor POS Sales",
     "prodMulti": "Multi-point Warehouse",
     "prodEcom": "Multi-platform E-com Sync",
-    "prodTiles": "Tiles & Building Materials",
+    "solTiles": "Tiles & Building Materials",
     "solRetail": "Retail & Small Retail Chains",
     "sol3pl": "Small Transporters Small Chains",
     "solEcom": "E-commerce",
@@ -141,7 +147,9 @@
       "item2Title": "CRM & Loyalty 360°",
       "item2Desc": "Points & Zalo ZNS",
       "item3Title": "Ecom Extension",
-      "item3Desc": "TikTok, Shopee, Amazon"
+      "item3Desc": "TikTok, Shopee, Amazon",
+      "item4Title": "Tiles Industry",
+      "item4Desc": "AI patterns & AR LiDAR"
     },
     "live": {
       "trusted": "Trusted by leading logistics units & retail chains",
@@ -883,6 +891,12 @@
       "desc": "From omnichannel retail, Small Retail cold storage, Owner-operator transport to large B2B distribution chains. ecor seamlessly connects warehousing (WMS), transport (TMS), retail (POS) and automated accounting (Account) on a single Cloud platform.",
       "discover": "Discover Industry Solutions ↓",
       "consult": "Book a Business Survey (Free)"
+    },
+    "tilesBanner": {
+      "badge": "Industry Solution",
+      "title": "Tiles & Building Materials Industry",
+      "desc": "0.5-second AI pattern recognition, instant 3D staging and AR LiDAR floor measuring at 1:1 — connected directly to WMS and TMS for factories, showrooms and dealers.",
+      "cta": "Explore the tiles solution"
     },
     "quicklinks": {
       "badge": "Quick Access by Module",

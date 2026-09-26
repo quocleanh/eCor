@@ -55,13 +55,13 @@
             </ul>
           </div>
           <div class="pt-6 mt-6 border-t border-zinc-100">
-            <button 
-              @click="$emit('open-modal', { type: 'demo', moduleName: 'Tài Liệu API eCor' })"
+            <a
+              :href="$links.docs" target="_blank" rel="noopener"
               class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1"
             >
               <span>{{ $t('resources.grid.b1Btn') }}</span>
               <span>→</span>
-            </button>
+            </a>
           </div>
         </div>
 

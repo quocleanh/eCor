@@ -6,6 +6,12 @@
     "tmsDesc": "Điều phối vận tải, giám sát GPS, e-POD",
     "posDesc": "Bán hàng 3s, VietQR động, kết nối WMS",
     "accountDesc": "Tự động hạch toán, đối soát COD, xuất HĐĐT TT78",
+    "wmsBadge": "Kho 4.0",
+    "tmsBadge": "Vận tải 4.0",
+    "posBadge": "Bán lẻ 3s",
+    "accountBadge": "TT78 HĐĐT",
+    "extensions": "Mở rộng",
+    "tilesDesc": "AI quét vân & AR LiDAR cho ngành gạch",
     "seeFlowchart": "Xem sơ đồ dòng chảy khép kín",
     "solutions": "Giải pháp",
     "pricing": "Bảng giá",
@@ -36,7 +42,7 @@
     "prodPos": "ecor POS Bán hàng",
     "prodMulti": "Quản lý kho đa điểm",
     "prodEcom": "Đồng bộ đa sàn E-com",
-    "prodTiles": "Giải pháp ngành gạch ốp lát",
+    "solTiles": "Ngành gạch ốp lát & VLXD",
     "solRetail": "Chuỗi bán lẻ & bán lẻ",
     "sol3pl": "Đơn vị vận chuyển vừa và nhỏ",
     "solEcom": "Thương mại điện tử E-commerce",
@@ -141,7 +147,9 @@
       "item2Title": "CRM & Loyalty 360°",
       "item2Desc": "Tích điểm & Zalo ZNS",
       "item3Title": "Ecom Mở Rộng",
-      "item3Desc": "TikTok, Shopee, Tiki"
+      "item3Desc": "TikTok, Shopee, Tiki",
+      "item4Title": "Ngành Gạch",
+      "item4Desc": "AI vân gạch & AR LiDAR"
     },
     "live": {
       "trusted": "Được tin cậy bởi các đơn vị logistics & chuỗi bán lẻ hàng đầu",
@@ -882,6 +890,12 @@
       "desc": "Từ bán lẻ đa kênh, kho lạnh bán lẻ, đơn vị vận tải Chành xe đến chuỗi phân phối B2B lớn. ecor kết nối liền mạch từ kho bãi (WMS), vận tải (TMS), bán lẻ (POS) đến kế toán tự động (Account) trên nền tảng Cloud duy nhất.",
       "discover": "Khám Phá Giải Pháp Theo Ngành ↓",
       "consult": "Đặt Lịch Khảo Sát Doanh Nghiệp (Miễn phí)"
+    },
+    "tilesBanner": {
+      "badge": "Giải Pháp Chuyên Ngành",
+      "title": "Ngành Gạch Ốp Lát & Vật Liệu Xây Dựng",
+      "desc": "AI nhận diện vân gạch 0.5 giây, phối cảnh 3D tức thì, quét AR LiDAR đo sàn tường 1:1 — kết nối trực tiếp kho WMS và vận tải TMS cho nhà máy, showroom và đại lý.",
+      "cta": "Xem giải pháp ngành gạch"
     },
     "quicklinks": {
       "badge": "Khám Phá Nhanh Theo Phân Hệ",

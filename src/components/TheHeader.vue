@@ -108,6 +108,8 @@
                 </div>
               </router-link>
 
+               
+
               <div class="mt-2 pt-2 border-t border-zinc-100 px-3 py-1">
                 <router-link :to="$localeRoute('solutions')"
                   class="text-xs text-amber-600 hover:text-amber-700 font-semibold flex items-center justify-between">
@@ -154,11 +156,11 @@
         <!-- Right Actions -->
         <div class="flex items-center gap-3.5">
           <!-- CTA Button -->
-          <button @click="$emit('open-modal', { type: 'demo', moduleName: 'all' })"
+          <a :href="$links.dashboard" target="_blank" rel="noopener"
             class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-bold text-zinc-900 bg-amber-400 hover:bg-amber-500 shadow-sm hover:shadow transition-all transform active:scale-95 focus:outline-none">
             <span class="hidden sm:inline">{{ $t('header.register') }}</span>
             <span class="sm:hidden">{{ $t('header.registerMobile') }}</span>
-          </button>
+          </a>
           <!-- Language Dropdown -->
           <div class="relative hidden sm:block" @mouseleave="isLangMenuOpen = false">
             <button @mouseenter="isLangMenuOpen = true" @click="isLangMenuOpen = !isLangMenuOpen"
@@ -298,6 +300,10 @@
             class="p-2.5 rounded-lg bg-amber-50 text-center text-xs font-semibold text-amber-800">
             ecor Account
           </router-link>
+          <router-link :to="$localeRoute('tiles')" @click="isMobileMenuOpen = false"
+            class="col-span-2 p-2.5 rounded-lg bg-zinc-100 text-center text-xs font-semibold text-zinc-700">
+            {{ $t('header.extensions') }}: ecor Tiles AI &amp; AR
+          </router-link>
         </div>
 
         <router-link :to="$localeRoute('solutions')" @click="isMobileMenuOpen = false"
@@ -334,10 +340,10 @@
       </div>
 
       <div class="pt-2 border-t border-zinc-100">
-        <button @click="isMobileMenuOpen = false; $emit('open-modal', { type: 'demo', moduleName: 'all' })"
-          class="w-full py-3 rounded-xl bg-amber-400 text-zinc-900 font-bold font-semibold text-sm shadow-md">
+        <a :href="$links.dashboard" target="_blank" rel="noopener" @click="isMobileMenuOpen = false"
+          class="block w-full py-3 rounded-xl bg-amber-400 text-zinc-900 font-bold text-center text-sm shadow-md">
           {{ $t('header.register') }}
-        </button>
+        </a>
       </div>
     </div>
   </header>

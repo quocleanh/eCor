@@ -315,6 +315,27 @@
           </div>
         </div>
       </div>
+
+      <!-- Giải pháp chuyên ngành: Gạch ốp lát -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        <router-link :to="$localeRoute('tiles')"
+          class="group block rounded-3xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-8 lg:p-10 transition-colors relative overflow-hidden">
+          <div class="absolute -right-16 -bottom-16 w-72 h-72 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="relative flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="max-w-2xl space-y-2">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-400 text-[11px] font-bold uppercase tracking-wider">
+                {{ $t('solutions.tilesBanner.badge') }}
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-white">{{ $t('solutions.tilesBanner.title') }}</h3>
+              <p class="text-sm text-zinc-300 leading-relaxed">{{ $t('solutions.tilesBanner.desc') }}</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-400 group-hover:bg-amber-300 text-zinc-900 font-bold text-sm transition-colors">
+              {{ $t('solutions.tilesBanner.cta') }}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </span>
+          </div>
+        </router-link>
+      </div>
     </section>
 
     <!-- 5. TESTIMONIALS -->

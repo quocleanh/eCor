@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { routeMappings } from './routes'
 import i18n from '@/i18n'
+import { DASHBOARD_URL } from '@/config/links'
 
 const routes = []
 
@@ -47,6 +48,10 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  if (['login', 'register'].includes(to.meta.baseName)) {
+    window.location.replace(DASHBOARD_URL);
+    return next(false);
+  }
   const targetLocale = to.meta.locale;
   if (targetLocale) {
     // Sync i18n

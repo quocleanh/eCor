@@ -27,6 +27,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
+  <url>
+    <loc>https://ecor.vn/giai-phap-nganh-gach</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- 5 Module Mở Rộng Hệ Sinh Thái -->
   <url>

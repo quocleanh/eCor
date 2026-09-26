@@ -6,6 +6,12 @@
     "tmsDesc": "运输调度、GPS实时监控、电子签收e-POD",
     "posDesc": "3秒极速收银、动态VietQR、无缝对接WMS",
     "accountDesc": "自动记账、COD代收对账、电子发票TT78",
+    "wmsBadge": "仓储4.0",
+    "tmsBadge": "运输4.0",
+    "posBadge": "零售3秒",
+    "accountBadge": "电子发票",
+    "extensions": "扩展",
+    "tilesDesc": "面向瓷砖行业的AI花纹识别与AR LiDAR",
     "seeFlowchart": "查看全链路闭环业务流程图",
     "solutions": "解决方案",
     "pricing": "价格方案",
@@ -36,7 +42,7 @@
     "prodPos": "ecor POS智慧零售收银",
     "prodMulti": "多仓协同管理系统",
     "prodEcom": "多平台电商库存同步",
-    "prodTiles": "瓷砖建材行业方案",
+    "solTiles": "瓷砖建材行业",
     "solRetail": "连锁零售与实体门店",
     "sol3pl": "中小型物流专线与车队",
     "solEcom": "跨境与电商行业",
@@ -141,7 +147,9 @@
       "item2Title": "CRM会员忠诚度360°",
       "item2Desc": "积分体系与Zalo ZNS",
       "item3Title": "全网电商扩展",
-      "item3Desc": "TikTok、Shopee、Tiki"
+      "item3Desc": "TikTok、Shopee、Tiki",
+      "item4Title": "瓷砖行业",
+      "item4Desc": "AI花纹识别与AR LiDAR"
     },
     "live": {
       "trusted": "深受行业领先物流服务商与连锁零售巨头的信赖",
@@ -882,6 +890,12 @@
       "desc": "从全渠道零售、生鲜医药冷链、中转专线物流到大型B2B工贸分销网络，ecor 在同一个云端基座上无缝打通仓储 (WMS)、运输 (TMS)、收银零售 (POS) 与自动化财务会计 (Account)。",
       "discover": "查看各行业专属解决方案 ↓",
       "consult": "预约企业免费实地调研诊断"
+    },
+    "tilesBanner": {
+      "badge": "行业专属方案",
+      "title": "瓷砖与建筑材料行业",
+      "desc": "0.5秒AI花纹识别、即时3D效果图、AR LiDAR 1:1测量地面墙面，并直连WMS仓储与TMS运输，服务工厂、展厅与经销商。",
+      "cta": "查看瓷砖行业方案"
     },
     "quicklinks": {
       "badge": "按模块快速查看",
