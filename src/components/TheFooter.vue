@@ -70,6 +70,11 @@
               </router-link>
             </li>
             <li>
+              <router-link :to="$localeRoute('tiles')" class="hover:text-amber-600 transition-colors">
+                {{ $t('footer.prodTiles') }}
+              </router-link>
+            </li>
+            <li>
               <router-link :to="$localeRoute('wms')" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.prodMulti') }}
               </router-link>

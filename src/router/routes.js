@@ -86,6 +86,20 @@ export const routeMappings = [
     }
   },
   {
+    name: 'tiles',
+    component: () => import('@/views/TilesView.vue'),
+    meta: {
+      title: 'ecor Tiles AI & AR — Giải Pháp Số Hóa Ngành Gạch Ốp Lát & VLXD',
+      description: 'ecor Tiles: AI nhận diện vân gạch 0.5 giây, phối cảnh 3D tức thì, quét AR LiDAR đo sàn tường 1:1, kết nối kho WMS và vận tải TMS cho nhà máy, showroom và đại lý gạch.'
+    },
+    paths: {
+      vi: '/gach-op-lat',
+      en: '/en/tiles',
+      zh: '/zh/tiles',
+      'zh-TW': '/zh-tw/tiles'
+    }
+  },
+  {
     name: 'pricing',
     component: () => import('@/views/PricingView.vue'),
     meta: { title: 'Bảng Giá Dịch Vụ & Gói Bản Quyền — eCor' },
