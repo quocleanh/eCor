@@ -24,6 +24,7 @@ routes.push(
   { path: '/ecom', redirect: '/pos' },
   { path: '/mo-rong/:pathMatch(.*)*', redirect: '/wms' },
   { path: '/giai-phap/:pathMatch(.*)*', redirect: '/giai-phap' },
+  { path: '/gach-op-lat', redirect: '/giai-phap-nganh-gach' },
   { path: '/ve-chung-toi', redirect: '/khach-hang' },
   {
     path: '/:pathMatch(.*)*',

@@ -93,7 +93,7 @@ export const routeMappings = [
       description: 'ecor Tiles: AI nhận diện vân gạch 0.5 giây, phối cảnh 3D tức thì, quét AR LiDAR đo sàn tường 1:1, kết nối kho WMS và vận tải TMS cho nhà máy, showroom và đại lý gạch.'
     },
     paths: {
-      vi: '/gach-op-lat',
+      vi: '/giai-phap-nganh-gach',
       en: '/en/tiles',
       zh: '/zh/tiles',
       'zh-TW': '/zh-tw/tiles'
