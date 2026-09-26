@@ -19,7 +19,7 @@
                 </svg>
               </div>
               <span>{{ $t('footer.hotline') }}: <strong class="text-zinc-900 font-semibold"> 097 8673867</strong>
-                (24/7)</span>
+                {{ $t('footer.hotlineHours') }}</span>
             </div>
             <div class="flex items-center gap-2.5">
               <div class="w-7 h-7 rounded-md bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">

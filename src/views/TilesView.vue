@@ -15,7 +15,7 @@
 
           <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-extrabold text-slate-900 tracking-tight uppercase leading-[1.12]">
             Kỷ Nguyên AI Cho Ngành Gạch:
-            <span class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-400 bg-clip-text text-transparent">Nhận Diện Vân 0.5 Giây</span>,
+            <span class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-400 bg-clip-text text-transparent">Nhận Diện Vân Trong Vài Giây</span>,
             Phối Cảnh 3D &amp; Quét AR LiDAR Thời Gian Thực
           </h1>
 
@@ -67,7 +67,7 @@
               <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
               <span class="font-mono text-xs text-slate-500 ml-2">pipeline://ecor-tile-vision-onnx-v4.8</span>
             </div>
-            <span class="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 font-mono text-xs font-bold text-amber-800">REAL-TIME PIPELINE • 0.42s</span>
+            <span class="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 font-mono text-xs font-bold text-amber-800">DEMO • DỮ LIỆU MINH HỌA</span>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pt-5 items-stretch">
@@ -90,7 +90,7 @@
                     <span class="material-symbols-outlined text-amber-700 text-[20px]">filter_center_focus</span>
                     <span class="font-mono text-xs text-amber-900 uppercase tracking-wider font-bold">2. AI Vision Scan &amp; WMS</span>
                   </div>
-                  <span class="font-mono text-xs px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 font-extrabold">KHỚP 99.4%</span>
+                  <span class="font-mono text-xs px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 font-extrabold">KHỚP &gt; 95%</span>
                 </div>
                 <div class="flex flex-col gap-2 font-mono text-xs pt-3">
                   <div v-for="row in scanRows" :key="row.k" class="flex justify-between gap-2 py-1.5 px-2 rounded bg-white border border-slate-200">
@@ -110,7 +110,7 @@
 
             <div class="lg:col-span-5 flex flex-col gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
               <div class="flex items-center justify-between">
-                <span class="font-mono text-xs uppercase tracking-wider text-amber-800 font-bold">3. Phối Cảnh 3D Tức Thì (3 Giây)</span>
+                <span class="font-mono text-xs uppercase tracking-wider text-amber-800 font-bold">3. Phối Cảnh 3D Nhanh (Vài Giây)</span>
                 <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-700 font-mono text-[10px] font-semibold">4K Photorealistic</span>
               </div>
               <div class="relative w-full h-44 rounded-lg overflow-hidden border border-slate-200 group">
@@ -253,7 +253,7 @@
               Công Nghệ Đột Phá • Module Trọng Tâm
             </div>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 uppercase tracking-tight">Bộ Giải Pháp AI &amp; AR Chuyên Biệt Ngành Gạch &amp; VLXD</h2>
-            <p class="text-sm sm:text-base text-slate-600">Huấn luyện chuyên sâu trên dữ liệu hơn 500.000 mẫu vân gạch men, đá tự nhiên và hàng trăm ngàn không gian công trình thực tế tại Việt Nam.</p>
+            <p class="text-sm sm:text-base text-slate-600">Được phát triển cho đặc thù vân gạch men, đá tự nhiên và không gian công trình tại Việt Nam, và sẽ tiếp tục hoàn thiện cùng các showroom thử nghiệm.</p>
           </div>
           <div class="flex items-center gap-2 font-mono text-xs text-slate-700 bg-white px-4 py-2 rounded-full border border-slate-200">
             <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -300,7 +300,7 @@
         <div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
           <span class="font-mono text-xs text-amber-800 font-bold uppercase tracking-widest bg-amber-50 border border-amber-200 px-3 py-1 rounded-full self-center">Trải Nghiệm Live Demo Trực Quan</span>
           <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 uppercase tracking-tight">Mô Phỏng Trực Quan Bộ Giải Pháp AI &amp; AR</h2>
-          <p class="text-sm sm:text-base text-slate-600">Trực tiếp tương tác với các tính năng thực tế được showroom và nhà thầu ứng dụng để rút ngắn chu kỳ chốt đơn từ vài ngày xuống vài phút.</p>
+          <p class="text-sm sm:text-base text-slate-600">Tương tác thử với các tính năng dự kiến giúp showroom và nhà thầu rút ngắn chu kỳ chốt đơn. Dữ liệu trong phần này là minh họa.</p>
         </div>
 
         <div class="p-6 lg:p-8 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm">
@@ -402,7 +402,7 @@
           <div class="lg:col-span-7 p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-xl">
             <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-800">
               <div class="font-mono text-xs text-slate-400 truncate">architecture-mesh://ecor-enterprise-bus.svg</div>
-              <span class="font-mono text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-bold whitespace-nowrap">API CONNECTED (99.99%)</span>
+              <span class="font-mono text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-bold whitespace-nowrap">API READY</span>
             </div>
             <div class="w-full bg-slate-950 rounded-xl p-6 flex flex-col gap-6 mt-4 border border-slate-800/80">
               <div class="flex items-center justify-center">
@@ -422,8 +422,8 @@
                 </div>
               </div>
               <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-400">
-                <span>Đồng bộ 2 chiều: <strong class="text-white">SAP / Bravo / MISA / Odoo</strong></span>
-                <span class="text-amber-400 font-bold">Webhook latency &lt; 45ms</span>
+                <span>Kết nối theo yêu cầu: <strong class="text-white">MISA / Bravo / Odoo</strong></span>
+                <span class="text-amber-400 font-bold">Webhook thời gian thực</span>
               </div>
             </div>
           </div>
@@ -476,7 +476,7 @@
               <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white leading-tight">
                 Nâng Tầm Showroom Gạch Của Bạn Với <span class="text-amber-400">AI &amp; LiDAR AR</span> Ngay Hôm Nay
               </h2>
-              <p class="text-sm sm:text-base text-slate-300 leading-relaxed">Đội ngũ kỹ sư ecor sẽ trực tiếp demo số hóa mẫu gạch thực tế tại showroom hoặc công trình của bạn, cài đặt ứng dụng AR LiDAR trên iPad và kết nối WMS trong vòng 48 giờ.</p>
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed">Đội ngũ ecor sẽ trực tiếp demo số hóa mẫu gạch thực tế tại showroom hoặc công trình của bạn, cài đặt ứng dụng AR LiDAR trên iPad và kết nối WMS trong vài ngày.</p>
               <div class="flex flex-col gap-3 pt-1 text-xs sm:text-sm font-mono text-slate-300">
                 <div v-for="p in pitchPoints" :key="p.text" class="flex items-center gap-2.5">
                   <span class="material-symbols-outlined text-amber-400 text-[20px]">{{ p.icon }}</span>
@@ -491,7 +491,7 @@
                   <span class="material-symbols-outlined text-[30px]">check_circle</span>
                 </div>
                 <h3 class="text-xl font-extrabold">Cảm ơn bạn!</h3>
-                <p class="text-sm text-slate-600 max-w-xs">Chuyên gia ecor sẽ liên hệ tư vấn trong vòng 15 phút trong giờ hành chính.</p>
+                <p class="text-sm text-slate-600 max-w-xs">Chuyên viên ecor sẽ liên hệ tư vấn trong vòng 30 phút trong giờ làm việc.</p>
                 <button type="button" @click="submitted = false" class="mt-2 px-5 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-bold">Gửi yêu cầu khác</button>
               </div>
 
@@ -567,9 +567,9 @@ function openDemo(moduleName = 'all') {
 }
 
 const heroMetrics = [
-  { icon: 'storefront', value: '1.200+', label: 'Showroom & Kho Bãi' },
-  { icon: 'trending_up', value: '+45%', label: 'Tỷ Lệ Chốt Tại Quầy', accent: true },
-  { icon: 'speed', value: '0.5s & 3s', label: 'Quét Vân & Render 3D' }
+  { icon: 'storefront', value: 'Beta', label: 'Đang nhận showroom thử nghiệm' },
+  { icon: 'trending_up', value: 'Tăng', label: 'Tỷ Lệ Chốt Tại Quầy (mục tiêu)', accent: true },
+  { icon: 'speed', value: '< 2s & ~10s', label: 'Quét Vân & Render 3D (mục tiêu)' }
 ]
 
 const scanRows = [
@@ -585,7 +585,7 @@ const arFeatures = [
     icon: 'view_in_ar',
     title: 'Quét Lưới Không Gian 3D Bằng Cảm Biến LiDAR',
     desc: 'Cảm biến LiDAR trên iPad Pro / iPhone quét bề mặt sàn và các mặt tường chỉ trong vài giây, tự động đo kích thước m², bóc tách và loại trừ cửa sổ, cửa đi, cột góc bo chuẩn xác đến từng milimét.',
-    checks: ['Sai số < 0.2%', 'Tự nhận diện mặt đứng/mặt sàn']
+    checks: ['Sai số thấp', 'Tự nhận diện mặt đứng/mặt sàn']
   },
   {
     icon: 'texture',
@@ -618,23 +618,23 @@ const solutions = [
     title: 'Visual Search: AI Quét & Nhận Diện Vân Gạch',
     tag: 'Quét ảnh đối soát hàng vạn SKU tức thì',
     desc: 'Khách chỉ cần gửi ảnh qua Zalo hoặc chụp tại công trình. AI bóc tách chính xác loại vân (Marble, Terrazzo, Vân gỗ, Xi măng), bề mặt men và kích thước.',
-    points: ['Đối soát kho 10.000+ SKU trong 0.5s', 'Khóa chính xác Tone/Shade & Lô Batch', 'Gợi ý mẫu thay thế tương đồng khi hết'],
-    footLabel: 'Độ chính xác:', footValue: '99.4%', footIcon: 'troubleshoot'
+    points: ['Đối soát kho SKU trong vài giây', 'Khóa chính xác Tone/Shade & Lô Batch', 'Gợi ý mẫu thay thế tương đồng khi hết'],
+    footLabel: 'Độ chính xác mục tiêu:', footValue: '> 95%', footIcon: 'troubleshoot'
   },
   {
     no: '02', icon: 'living',
-    title: 'Generative 3D Room Staging Tức Thì (3 Giây)',
+    title: 'Generative 3D Room Staging Nhanh (Vài Giây)',
     tag: 'Render photoreal 4K không cần dựng 3D',
     desc: 'Biến ảnh phòng khách, phòng tắm, phòng bếp thô thành phối cảnh hoàn thiện chỉ 1 cú chạm. Khách tận mắt thấy mẫu gạch trên sàn nhà mình trước khi cọc.',
     points: ['Cân chỉnh phối cảnh & ánh sáng tự nhiên', 'Đổi kiểu lát xương cá, so le 1/3 tức thì', 'Mô phỏng màu keo chà ron chuẩn 100%'],
-    footLabel: 'Tốc độ render:', footValue: '3.2 Giây', footIcon: 'timer'
+    footLabel: 'Tốc độ render mục tiêu:', footValue: '5–10 Giây', footIcon: 'timer'
   },
   {
     no: '03', icon: 'view_in_ar', isNew: true,
     title: 'ecor Tiles AR LiDAR Mobile App',
     tag: 'Quét sàn tường & ốp AR 1:1 tại hiện trường',
     desc: 'Ứng dụng di động cho đội ngũ hiện trường: quét LiDAR đo diện tích, loại trừ cửa cột, ốp thử gạch trực tiếp trên sàn bê tông và xuất đơn cọc.',
-    points: ['LiDAR 3D Meshing đo m² chuẩn milimét', 'Kiểm tra bóng đổ ánh sáng thực tế', 'Đẩy đơn hàng WMS ngay tại công trình'],
+    points: ['LiDAR 3D Meshing đo diện tích nhanh', 'Kiểm tra bóng đổ ánh sáng thực tế', 'Đẩy đơn hàng WMS ngay tại công trình'],
     footLabel: 'Nền tảng:', footValue: 'iOS / iPadOS / Android', footIcon: 'smartphone'
   },
   {
@@ -663,7 +663,7 @@ const audiences = [
   {
     icon: 'store', title: 'Chuỗi Showroom & Cửa Hàng VLXD', tag: 'Tư vấn đỉnh cao không cần nhớ mã', featured: true,
     desc: 'Nhân viên mới nhận việc có thể tư vấn chuyên nghiệp như chuyên gia. Dùng iPad hoặc Kiosk cảm ứng để quét ảnh mẫu gạch khách đưa, xem ngay tồn kho thực tế và xuất ảnh 3D tại chỗ.',
-    bullets: ['Tăng gấp 2.5 lần tốc độ tư vấn và chốt đơn mỗi ca', 'Tích hợp màn hình cảm ứng tương tác VR 360° tại quầy']
+    bullets: ['Tăng tốc độ tư vấn và chốt đơn mỗi ca', 'Tích hợp màn hình cảm ứng tương tác VR 360° tại quầy']
   },
   {
     icon: 'architecture', title: 'Kiến Trúc Sư & Tổng Thầu Xây Dựng', tag: 'AR LiDAR hiện trường & Texture 4K',
@@ -685,18 +685,18 @@ const busNodes = [
 ]
 
 const comparison = [
-  { k: 'Thời gian tìm kiếm mẫu gạch', old: '15 - 30 phút (lục tìm hàng trăm kệ mẫu hoặc lật catalogue dày)', now: '1 Giây (chụp ảnh và AI quét tự động)' },
-  { k: 'Thời gian lên phối cảnh 3D', old: '2 - 3 ngày (chờ thiết kế dựng hình, khách dễ mất hứng mua)', now: '3 Giây (hiển thị ngay trên màn hình trước mặt khách)' },
+  { k: 'Thời gian tìm kiếm mẫu gạch', old: 'Thường mất nhiều phút để lục tìm kệ mẫu hoặc lật catalogue dày', now: 'Vài giây (chụp ảnh và AI quét tự động)' },
+  { k: 'Thời gian lên phối cảnh 3D', old: 'Thường mất vài ngày chờ thiết kế dựng hình, khách dễ mất hứng mua', now: 'Vài giây (hiển thị ngay trên màn hình trước mặt khách)' },
   { k: 'Khảo sát & ướm gạch tại công trình', old: 'Kéo thước dây thủ công, chở mẫu gạch nặng đến thử, dễ nhầm m²', now: 'AR LiDAR Mobile: quét 3D phòng & ốp ảo tỉ lệ 1:1 tức thì' },
-  { k: 'Nhân sự trực tư vấn khách hàng', old: 'Giới hạn giờ hành chính (8h/ngày). Bỏ lỡ khách nhắn tin đêm & cuối tuần.', now: '24/7 tự động (AI trả lời & báo giá trong 10 giây)' },
-  { k: 'Sự cố giao lệch Tone/Shade màu', old: 'Chiếm 8 - 12% số đơn (nhân viên lấy nhầm lô nung khác tone màu)', now: 'Triệt tiêu 99% (WMS khóa cứng mã theo Batch)' },
-  { k: 'Tỷ lệ chốt đơn (Conversion Rate)', old: 'Trung bình 18% khách ghé showroom', now: 'Đạt 42% (tăng gấp 2.3 lần nhờ trải nghiệm trực quan AR/3D)' }
+  { k: 'Nhân sự trực tư vấn khách hàng', old: 'Giới hạn giờ hành chính (8h/ngày). Bỏ lỡ khách nhắn tin đêm & cuối tuần.', now: 'Tự động 24/7 (AI trả lời & báo giá trong vài giây)' },
+  { k: 'Sự cố giao lệch Tone/Shade màu', old: 'Thường gặp khi nhân viên lấy nhầm lô nung khác tone màu', now: 'Giảm mạnh (WMS khóa cứng mã theo Batch)' },
+  { k: 'Tỷ lệ chốt đơn (Conversion Rate)', old: 'Phụ thuộc kinh nghiệm nhân viên tư vấn', now: 'Mục tiêu tăng nhờ trải nghiệm trực quan AR/3D' }
 ]
 
 const pitchPoints = [
   { icon: 'verified_user', text: 'Bảo mật tuyệt đối 100% dữ liệu mẫu mã và chính sách giá đại lý' },
-  { icon: 'headset_mic', text: 'Kỹ sư triển khai trực tiếp tại Hà Nội, Đà Nẵng, TP.HCM & các tỉnh thành' },
-  { icon: 'verified', text: 'Tặng 30 ngày trải nghiệm toàn bộ tính năng AI & LiDAR AR không giới hạn SKU' }
+  { icon: 'headset_mic', text: 'Hỗ trợ triển khai trực tiếp hoặc từ xa tại các tỉnh thành' },
+  { icon: 'verified', text: 'Dùng thử 14 ngày các tính năng của bản thử nghiệm AI & LiDAR AR' }
 ]
 
 const provinces = ['TP. Hồ Chí Minh', 'Hà Nội', 'Đà Nẵng', 'Bình Dương / Đồng Nai', 'Tỉnh thành khác']

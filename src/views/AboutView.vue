@@ -19,22 +19,22 @@
       <!-- SỐ LIỆU CHỨNG MINH (E-E-A-T) -->
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
         <div class="bg-white p-6 rounded-3xl border border-zinc-200/90 text-center shadow-sm hover-lift">
-          <div class="text-4xl font-extrabold text-amber-600">10,000+</div>
+          <div class="text-4xl font-extrabold text-amber-600">{{ $t('about.metrics.m1.val') }}</div>
           <div class="text-sm font-semibold text-zinc-800 mt-1">{{ $t('about.metrics.m1.title') }}</div>
           <p class="text-xs text-zinc-500 mt-1">{{ $t('about.metrics.m1.desc') }}</p>
         </div>
         <div class="bg-white p-6 rounded-3xl border border-zinc-200/90 text-center shadow-sm hover-lift">
-          <div class="text-4xl font-extrabold text-amber-600">99.98%</div>
+          <div class="text-4xl font-extrabold text-amber-600">{{ $t('about.metrics.m2.val') }}</div>
           <div class="text-sm font-semibold text-zinc-800 mt-1">{{ $t('about.metrics.m2.title') }}</div>
           <p class="text-xs text-zinc-500 mt-1">{{ $t('about.metrics.m2.desc') }}</p>
         </div>
         <div class="bg-white p-6 rounded-3xl border border-zinc-200/90 text-center shadow-sm hover-lift">
-          <div class="text-4xl font-extrabold text-amber-600">5+ Năm</div>
+          <div class="text-4xl font-extrabold text-amber-600">{{ $t('about.metrics.m3.val') }}</div>
           <div class="text-sm font-semibold text-zinc-800 mt-1">{{ $t('about.metrics.m3.title') }}</div>
           <p class="text-xs text-zinc-500 mt-1">{{ $t('about.metrics.m3.desc') }}</p>
         </div>
         <div class="bg-white p-6 rounded-3xl border border-zinc-200/90 text-center shadow-sm hover-lift">
-          <div class="text-4xl font-extrabold text-amber-600">24/7</div>
+          <div class="text-4xl font-extrabold text-amber-600">{{ $t('about.metrics.m4.val') }}</div>
           <div class="text-sm font-semibold text-zinc-800 mt-1">{{ $t('about.metrics.m4.title') }}</div>
           <p class="text-xs text-zinc-500 mt-1">{{ $t('about.metrics.m4.desc') }}</p>
         </div>

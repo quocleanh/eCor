@@ -4,11 +4,11 @@
     "coreModules": "Các Module Trọng Tâm",
     "wmsDesc": "Quản trị kho 3D, Wave Picking, hạn date",
     "tmsDesc": "Điều phối vận tải, giám sát GPS, e-POD",
-    "posDesc": "Bán hàng 3s, VietQR động, kết nối WMS",
+    "posDesc": "Bán hàng 5s, VietQR động, kết nối WMS",
     "accountDesc": "Tự động hạch toán, đối soát COD, xuất HĐĐT TT78",
     "wmsBadge": "Kho 4.0",
     "tmsBadge": "Vận tải 4.0",
-    "posBadge": "Bán lẻ 3s",
+    "posBadge": "Bán lẻ 5s",
     "accountBadge": "TT78 HĐĐT",
     "extensions": "Mở rộng",
     "tilesDesc": "AI quét vân & AR LiDAR cho ngành gạch",
@@ -56,11 +56,12 @@
     "copyright": "© 2025 eCor Platform. Tất cả các quyền được bảo lưu.",
     "privacy": "Quyền riêng tư",
     "security": "Bảo mật hệ thống",
-    "sla": "Hệ thống máy chủ vận hành 99.98% SLA",
+    "sla": "Mục tiêu uptime 99.5%",
     "legal": "Pháp lý",
     "legalPrivacy": "Chính sách bảo mật",
     "legalTerms": "Điều khoản sử dụng",
-    "legalRefund": "Chính sách đổi trả"
+    "legalRefund": "Chính sách đổi trả",
+    "hotlineHours": "(giờ làm việc)"
   },
   "home": {
     "hero": {
@@ -69,33 +70,33 @@
       "subtitle": "Nền tảng SaaS tối ưu cho WMS (Quản lý kho), TMS (Quản lý vận tải) và tích hợp thương mại đa kênh. Tự động hoá chính xác dòng chảy hàng hóa từ nhà cung cấp đến tay khách hàng.",
       "register": "Đăng ký trải nghiệm",
       "demo": "Xem demo 2 phút",
-      "proof": "tin dùng trên toàn quốc",
-      "proofNum": "Hàng nghìn shop & nhà xe",
+      "proof": "— đang mở đăng ký dùng thử sớm",
+      "proofNum": "Nền tảng mới",
       "canvas": {
         "title": "Hệ Sinh Thái eCor Core",
         "subtitle": "Sơ đồ luồng kết nối dữ liệu thời gian thực (Zero-Latency Sync)",
-        "sync": "Đồng Bộ 100%",
-        "speed": "Tốc độ: 0.1s",
+        "sync": "Đồng bộ thời gian thực",
+        "speed": "Tốc độ: 1s",
         "hubSub": "Realtime Hub",
         "atomic": "Atomic Lock Protocol",
         "wmsTitle": "Kho WMS",
-        "wmsBadge": "99.98% CHUẨN",
+        "wmsBadge": "CHÍNH XÁC CAO",
         "wmsDesc": "FIFO • Wave Picking",
         "wmsPoint": "Tích hợp Zebra, cân điện tử",
         "tmsTitle": "Vận Tải TMS",
         "tmsBadge": "GPS REALTIME",
         "tmsDesc": "AI định tuyến • App tài xế",
-        "tmsPoint": "Giảm 35% chi phí nhiên liệu",
+        "tmsPoint": "Giảm 10–20% chi phí nhiên liệu",
         "accTitle": "Kế Toán",
         "accBadge": "HĐĐT TT78",
         "accDesc": "Tự động hạch toán • COD",
         "accPoint": "Đối soát COD tự động",
         "posTitle": "POS Bán Lẻ",
-        "posBadge": "3S / ĐƠN HÀNG",
+        "posBadge": "5S / ĐƠN HÀNG",
         "posDesc": "Quét QR • Chạy Offline",
         "posPoint": "Trừ kho tức thì, không lệch",
         "api": "RESTful API & Webhook",
-        "setup": "Thiết lập dưới 48 giờ",
+        "setup": "Triển khai trong vài ngày",
         "cta": "Khảo Sát & Demo Hệ Thống"
       }
     },
@@ -130,8 +131,8 @@
       "account": {
         "title": "Account — Kế Toán Tự Động",
         "desc": "Tự động hạch toán từ WMS/TMS/POS, đối soát COD tức thì và xuất hóa đơn điện tử chuẩn Thông tư 78 ngay tại điểm bán.",
-        "f1": "Bút toán tự động 100%, không nhập tay",
-        "f2": "Đối soát COD & sàn TMĐT trong 15 giây",
+        "f1": "Tự động sinh bút toán từ giao dịch, hạn chế nhập tay",
+        "f2": "Đối soát COD & sàn TMĐT nhanh chóng",
         "f3": "Hóa đơn điện tử cấp mã cơ quan thuế tức thì",
         "link": "Chi tiết ecor Account"
       }
@@ -152,7 +153,7 @@
       "item4Desc": "AI vân gạch & AR LiDAR"
     },
     "live": {
-      "trusted": "Được tin cậy bởi các đơn vị logistics & chuỗi bán lẻ hàng đầu",
+      "trusted": "Hướng tới tích hợp với các đơn vị vận chuyển & sàn thương mại điện tử phổ biến",
       "tabs": {
         "wms": "WMS - Quản Lý Kho Vận",
         "tms": "TMS - Điều Phối Vận Tải",
@@ -161,46 +162,47 @@
       },
       "wmsTab": {
         "badge": "Smart Warehouse Management",
-        "title": "Kiểm soát chính xác 99.9% vị trí & dòng luân chuyển hàng",
+        "title": "Kiểm soát chính xác 99% vị trí & dòng luân chuyển hàng",
         "desc": "Quản lý theo thời gian thực sơ đồ kệ đa tầng (Bin/Shelf/Zone), quy hoạch đường đi lấy hàng ngắn nhất (Wave/Batch Picking) và tự động nhận cảnh báo hạn sử dụng FIFO/FEFO.",
         "stat1Label": "Tốc độ Pick & Pack",
-        "stat1Val": "x2.5 lần",
+        "stat1Val": "x2 lần",
         "stat1Sub": "Giảm lãng phí di chuyển",
         "stat2Label": "Độ chính xác tồn kho",
-        "stat2Val": "99.92%",
+        "stat2Val": "99%",
         "stat2Sub": "Quét mã QR/Barcode",
         "f1": "Sơ đồ kho 3D định vị chính xác vị trí tầng kệ theo thời gian thực",
         "f2": "Tự động phân bổ lô hàng theo nguyên tắc FIFO, FEFO và LIFO",
         "f3": "Tích hợp trực tiếp máy quét cầm tay PDA & cân điện tử",
-        "link": "Chi tiết ecor WMS"
+        "link": "Chi tiết ecor WMS",
+        "active": "đang hoạt động"
       },
       "tmsTab": {
         "badge": "AI Fleet & Dispatching",
-        "title": "Tối ưu hóa mọi tuyến đường, lấp đầy 94.5% tải trọng xe",
+        "title": "Tối ưu hóa mọi tuyến đường, lấp đầy 85% tải trọng xe",
         "desc": "Thuật toán định tuyến AI tự động gom đơn theo cụm địa lý, tính toán thể tích CBM, hạn chế tối đa xe chạy rỗng và số hóa chứng từ giao hàng qua e-POD.",
         "stat1Label": "Giảm chi phí xăng dầu",
-        "stat1Val": "-22%",
+        "stat1Val": "-15%",
         "stat1Sub": "Tránh tắc đường & kẹt xe",
         "stat2Label": "Giao đúng hẹn (OTD)",
-        "stat2Val": "98.2%",
+        "stat2Val": "95%",
         "stat2Sub": "Giám sát tài xế GPS",
         "link": "Chi tiết ecor TMS"
       },
       "posTab": {
         "badge": "POS & Đa Kênh Bán Hàng",
-        "title": "Thanh Toán 3 Giây, Vận Hành Offline 100% & Đồng Bộ Đa Sàn 0 Độ Trễ",
+        "title": "Thanh Toán Nhanh, Vận Hành Offline & Đồng Bộ Đa Sàn Gần Như Tức Thì",
         "desc": "Máy thu ngân hoạt động trơn tru ngay cả khi rớt mạng internet với kiến trúc Offline-first SQLite. Đồng thời tự động trừ kho và đồng bộ đơn hàng từ Shopee, TikTok Shop, Lazada về cùng 1 nơi.",
         "stat1Label": "Tốc độ thanh toán",
-        "stat1Val": "3 Giây",
+        "stat1Val": "5 Giây",
         "stat1Sub": "VietQR động ngân hàng",
         "stat2Label": "Hoạt động khi mất mạng",
         "stat2Val": "100%",
         "stat2Sub": "Không gián đoạn quầy thu",
         "stat3Label": "Tốc độ đồng bộ tồn",
-        "stat3Val": "< 0.12s",
+        "stat3Val": "< 1s",
         "stat3Sub": "Webhook Real-time API",
         "stat4Label": "Tỷ lệ hủy đơn quá hạn",
-        "stat4Val": "0.00%",
+        "stat4Val": "< 0.5%",
         "stat4Sub": "Tự động khóa tồn an toàn",
         "link": "Chi tiết ecor POS"
       },
@@ -209,10 +211,10 @@
         "title": "Hạch Toán Tự Động Từng Giây & Đối Soát COD Tức Thì",
         "desc": "Bút toán tự động sinh từ mọi giao dịch bán hàng, đối soát tiền COD với đơn vị vận chuyển chỉ 1 chạm và xuất hóa đơn điện tử chuẩn Thông tư 78 ngay tại điểm bán.",
         "stat1Label": "Tự động hóa bút toán",
-        "stat1Val": "100%",
+        "stat1Val": "90%+",
         "stat1Sub": "Không cần nhập tay",
         "stat2Label": "Thời gian đối soát COD",
-        "stat2Val": "-85%",
+        "stat2Val": "-50%",
         "stat2Sub": "Từ vài ngày còn vài phút",
         "link": "Chi tiết ecor Account"
       }
@@ -226,7 +228,7 @@
   },
   "wms": {
     "desc": {
-      "subtitle": "Giải pháp WMS đám mây chuyên sâu cho doanh nghiệp bán lẻ đa kênh, chuỗi phân phối FMCG và đơn vị 3PL Logistics. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99.98%.",
+      "subtitle": "Giải pháp WMS đám mây chuyên sâu cho doanh nghiệp bán lẻ đa kênh, chuỗi phân phối FMCG và đơn vị 3PL Logistics. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99%.",
       "m1": "Khử triệt để thất thoát hàng hóa, sai lệch số liệu thực tế so với sổ sách hệ thống kế toán.",
       "m2": "Chiến lược Wave picking gom nhóm đơn hàng thông minh, tối ưu đường đi chuyển ngắn nhất trong kho.",
       "m3": "Giao diện PDA chuyên dụng với chỉ dẫn màu trực quan, công nhân kho mới có thể làm việc ngay sau 30 phút.",
@@ -243,22 +245,22 @@
       "s4": "Phân bổ nhân sự nhặt hàng thông qua PDA theo lộ trình ngắn nhất. Bàn đóng gói kiểm tra lại barcode lần cuối trước khi dán vận đơn vận chuyển.",
       "s5": "Bắn mã quét biên bản bàn giao cho shipper/xe tải. Tự động ký số điện tử e-POD và đồng bộ trạng thái đơn hàng sang các kênh bán lẻ tức thì.",
       "modelsSub": "Dù bạn vận hành kho thương mại điện tử tốc độ cao, chuỗi kho lạnh nhạy cảm hay kho 3PL đa chủ hàng, ecor WMS đều có kịch bản xử lý chuyên biệt.",
-      "m1desc": "Được xây dựng cho các chiến dịch Mega Sale lên đến 100.000+ đơn/ngày. Đồng bộ tồn kho tức thì 1 giây sang Shopee, TikTok Shop, Lazada, sàn TMĐT & Chuỗi cửa hàng offline.",
+      "m1desc": "Được xây dựng cho các chiến dịch Mega Sale với lượng đơn tăng đột biến. Đồng bộ tồn kho gần như tức thì sang Shopee, TikTok Shop, Lazada, sàn TMĐT & chuỗi cửa hàng offline.",
       "m1tag": "Xử lý cam kết: < 2 phút / đơn hàng",
       "m2desc": "Quản lý nghiêm ngặt dải nhiệt độ, độ ẩm của từng zone chuyên biệt. Quản lý chặt chẽ date xuất khẩu, chuẩn HACCP, truy vết nguồn gốc lô hàng theo chuỗi cung ứng.",
       "m2tag": "Chuẩn an toàn thực phẩm & Y tế",
       "m3desc": "Kiến trúc Multi-tenant cho phép quản lý hàng trăm chủ hàng (Customers/Shippers) trên cùng một giao diện duy nhất. Tách biệt dữ liệu và cấu hình biểu phí lưu kho CBM tự động.",
-      "m3tag": "Tiết kiệm 80% thời gian chốt công nợ 3PL",
+      "m3tag": "Tiết kiệm 50% thời gian chốt công nợ 3PL",
       "compSub": "Xem sự chuyển dịch ngoạn mục từ vận hành kho thủ công truyền thống sang trung tâm xử lý dữ liệu số hóa thông minh.",
       "formSub": "Đội ngũ kỹ sư giải pháp ecor sẽ đến khảo sát mặt bằng thực tế, lập mô phỏng ô kệ 3D và tư vấn phương án tinh gọn luồng kho hoàn toàn miễn phí."
     },
     "hero": {
       "badge": "ECOR WMS 4.0 • NỀN TẢNG KHO VẬN THẾ HỆ MỚI",
-      "title": "Tối Ưu Hóa Từng Mét Vuông Kho Bãi, Chuẩn Xác Đến Từng Vị Trí Ô Kệ & Cắt Giảm 60% Chi Phí Vận Hành",
-      "desc": "Giải pháp WMS đám mây chuyên sâu cho shop bán hàng online, kho bãi nhỏ lẻ và nhà xe độc lập. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99.98%.",
+      "title": "Tối Ưu Hóa Từng Mét Vuông Kho Bãi, Chuẩn Xác Đến Từng Vị Trí Ô Kệ & Cắt Giảm 20–30% Chi Phí Vận Hành",
+      "desc": "Giải pháp WMS đám mây chuyên sâu cho shop bán hàng online, kho bãi nhỏ lẻ và nhà xe độc lập. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99%.",
       "demo": "Trải Nghiệm Live Demo WMS →",
       "video": "Xem Video Mô Phỏng 3D",
-      "trust1": "HƠN 250+ TRUNG TÂM LOGISTICS TIN DÙNG",
+      "trust1": "DÀNH CHO KHO BÃI QUY MÔ NHỎ VÀ VỪA",
       "trust2": "CHUẨN GS1 BARCODE QUỐC TẾ",
       "trust3": "TÍCH HỢP ERP & TMS SẴN SÀNG",
       "digitalTwin": "Trải nghiệm Digital Twin 3D"
@@ -269,7 +271,7 @@
         "desc": "Khử triệt để thất thoát hàng hóa, sai lệch số liệu thực tế so với sổ sách hệ thống kế toán."
       },
       "m2": {
-        "val": "x2.8 Lần",
+        "val": "x2 Lần",
         "title": "Tốc độ Pick & Pack",
         "desc": "Chiến lược Wave picking gom nhóm đơn hàng thông minh, tối ưu đường đi chuyển ngắn nhất trong kho."
       },
@@ -297,7 +299,7 @@
         "title": "Chiến Lược Gom Đơn Wave & Batch Picking Thông Minh",
         "desc": "Thuật toán trí tuệ nhân tạo gom nhóm hàng trăm đơn lẻ thành từng đợt lấy hàng (Wave), tối ưu hóa lộ trình ngắn nhất qua thuật toán TSP (Traveling Salesperson).",
         "f1": "Hỗ trợ linh hoạt: Single order picking, Multi-order batching, Zone picking",
-        "f2": "Rút ngắn đến 60% quãng đường di chuyển và thời gian tìm kiếm hàng"
+        "f2": "Rút ngắn đến 30% quãng đường di chuyển và thời gian tìm kiếm hàng"
       },
       "p3": {
         "title": "Kiểm Soát Lô Hạn & Date Chặt Chẽ (FIFO / FEFO / LEFO)",
@@ -344,7 +346,7 @@
       "m1": {
         "tag": "Bán Lẻ & E-Commerce",
         "title": "Kho Bán Lẻ Đa Kênh & Sàn TMĐT",
-        "desc": "Được xây dựng cho các chiến dịch Mega Sale lên đến 100.000+ đơn/ngày. Đồng bộ tồn kho tức thì 1 giây sang Shopee, TikTok Shop, Lazada, sàn TMĐT & Chuỗi cửa hàng offline.",
+        "desc": "Được xây dựng cho các chiến dịch Mega Sale với lượng đơn tăng đột biến. Đồng bộ tồn kho gần như tức thì sang Shopee, TikTok Shop, Lazada, sàn TMĐT & chuỗi cửa hàng offline.",
         "f1": "Máy quét PDA Android",
         "f2": "Xử lý hoàn hàng thông minh",
         "f3": "In nhãn đa đơn vị vận chuyển",
@@ -366,7 +368,7 @@
         "f1": "Cổng Portal riêng cho chủ hàng",
         "f2": "Tính cước lưu kho CBM / Ngày",
         "f3": "Tự động xuất bảng kê Billing",
-        "commit": "Tiết kiệm 80% thời gian chốt công nợ Chành xe"
+        "commit": "Tiết kiệm 50% thời gian chốt công nợ Chành xe"
       }
     },
     "compare": {
@@ -384,7 +386,7 @@
       "r2": {
         "title": "Kiểm đếm & Đối soát tồn",
         "before": "Phải dừng hoạt động kho cả ngày, sai lệch tồn kho 3 – 5%",
-        "after": "Kiểm kê luân chuyển liên tục, độ chuẩn xác 99.98%"
+        "after": "Kiểm kê luân chuyển liên tục, độ chuẩn xác 99%"
       },
       "r3": {
         "title": "Kiểm soát hạn sử dụng (Date)",
@@ -394,7 +396,7 @@
       "r4": {
         "title": "Quy trình Soạn hàng (Picking)",
         "before": "Nhặt từng đơn lẻ (Single pick), di chuyển chồng chéo lãng phí sức",
-        "after": "Wave & Batch Picking tối ưu lộ trình, tốc độ gom đơn tăng 2.8 lần"
+        "after": "Wave & Batch Picking tối ưu lộ trình, tốc độ gom đơn tăng 2 lần"
       },
       "r5": {
         "title": "Phụ thuộc vào nhân sự cũ",
@@ -406,7 +408,7 @@
       "badge": "Tư Vấn Chuyên Gia Miễn Phí",
       "title": "Đăng Ký Khảo Sát Kho & Nhận Kịch Bản Demo Trực Tiếp",
       "desc": "Đội ngũ kỹ sư giải pháp ecor sẽ đến khảo sát mặt bằng thực tế, lập mô phỏng ô kệ 3D và tư vấn phương án tinh gọn luồng kho hoàn toàn miễn phí.",
-      "success": "✓ Đăng ký thành công! Kỹ sư eCor WMS sẽ liên hệ trong vòng 10 phút để khảo sát kho.",
+      "success": "✓ Đăng ký thành công! Kỹ sư eCor WMS sẽ liên hệ trong vòng 30 phút để khảo sát kho.",
       "nameLabel": "Họ và tên người đại diện *",
       "namePlaceholder": "Ví dụ: Trần Minh Hoàng",
       "phoneLabel": "Số điện thoại liên hệ *",
@@ -433,23 +435,23 @@
       "desc": "Thuật toán gom đơn đa điểm thông minh, tự động phân bổ tải trọng xe, kiểm soát chi phí nhiên liệu và ứng dụng tài xế e-POD trên một nền tảng đồng bộ duy nhất.",
       "consult": "Đăng Ký Tư Vấn Giải Pháp TMS →",
       "demo": "Xem Demo Điều Phối Tuyến Đường",
-      "badge1": "Cắt giảm 22% chi phí vận hành xe",
-      "badge2": "Lập chuyến tự động dưới 3 giây",
+      "badge1": "Cắt giảm 15% chi phí vận hành xe",
+      "badge2": "Lập chuyến tự động dưới 10 giây",
       "badge3": "Chuẩn kết nối Vận tải 4.0"
     },
     "metrics": {
       "m1": {
-        "val": "94.5%",
+        "val": "85%",
         "title": "Hệ Số Lắp Đầy Tải Trọng",
         "desc": "Triệt tiêu tình trạng xe chạy rỗng chiều về nhờ gom đơn liên vùng và thuật toán xếp dỡ 3D tối ưu không gian sàn."
       },
       "m2": {
-        "val": "-22%",
+        "val": "-15%",
         "title": "Chi Phí Nhiên Liệu & Cước",
         "desc": "Thuật toán định tuyến đa điểm chọn cung đường tối ưu km thực tế, giảm hao mòn động cơ và chi phí cầu đường BOT."
       },
       "m3": {
-        "val": "98.2%",
+        "val": "95%",
         "title": "Tỷ Lệ Giao Đúng Hạn (OTD)",
         "desc": "Hệ thống đối soát kẹt xe, cảnh báo sớm nguy cơ trễ hẹn điểm giao giúp điều phối viên chủ động chuyển hướng tức thì."
       },
@@ -469,7 +471,7 @@
         "desc": "Tự động gom đơn đa điểm theo thuật toán thông minh, giải quyết đồng thời bài toán trọng tải xe, thể tích (CBM), khung giờ mở cửa của điểm nhận và khung giờ giới nghiêm cấm tải tại các đô thị loại I.",
         "f1": "Cân đối CBM & Tấn",
         "f2": "Cảnh báo giờ cấm tải",
-        "f3": "Giảm 35% thời gian lập chuyến"
+        "f3": "Giảm 30% thời gian lập chuyến"
       },
       "p2": {
         "tag": "02 • Fleet Hub",
@@ -517,7 +519,7 @@
         }
       },
       "badge": "Đồng Bộ Hệ Sinh Thái Vận Hành",
-      "title": "Từ Khâu Đóng Gói Kho WMS Sang Điều Xe TMS Chỉ 0 Phút Độ Trễ",
+      "title": "Từ Khâu Đóng Gói Kho WMS Sang Điều Xe TMS Gần Như Tức Thì",
       "desc": "Không còn tình trạng xuất kho xong chờ lập kế hoạch xe. Khi kiện hàng hoàn tất đóng gói tại Dock xuất của ecor WMS, hệ thống lập tức đề xuất chuyến xe tối ưu theo mã hàng và lịch xuất bến.",
       "f1": {
         "title": "Quản Trị Đa Kênh Toàn Diện (Omni-fulfillment)",
@@ -536,30 +538,30 @@
         "tag": "bán lẻ & Bán Lẻ",
         "title": "Doanh Nghiệp Phân Phối Tiêu Dùng Nhanh",
         "desc": "Gom hàng nghìn đơn nhỏ lẻ đến các tiệm tạp hóa, siêu thị theo khung giờ mở cửa nghiêm ngặt và hạn chế kẹt xe nội ô.",
-        "commit": "Giảm 25% thời gian giao hàng"
+        "commit": "Giảm 15% thời gian giao hàng"
       },
       "m2": {
         "tag": "Vật Liệu & Xây Dựng",
         "title": "Đội Xe Vận Chuyển Công Trình",
         "desc": "Kiểm soát trọng tải xe nặng, cung đường cho phép lưu thông cầu đường và lịch bàn giao chuẩn khớp tiến độ thi công.",
-        "commit": "100% tuân thủ tải trọng cầu đường"
+        "commit": "Cảnh báo tải trọng cầu đường tự động"
       },
       "m3": {
         "tag": "Cold Chain Logistics",
         "title": "Đơn Vị Vận Tải Hàng Lạnh",
         "desc": "Theo dõi biến thiên nhiệt độ thùng đông lạnh liên tục. Cảnh báo mở cửa thùng lâu bất thường bảo toàn độ tươi thực phẩm.",
-        "commit": "Hao hụt nhiệt độ dưới 0.1%"
+        "commit": "Hao hụt nhiệt độ dưới 1%"
       },
       "m4": {
         "tag": "Chành xe & 4PL Logistics",
         "title": "Nhà Cung Cấp Dịch Vụ Vận Tải",
         "desc": "Phân quyền đa đối tác (Multi-tenant), cấp tài khoản tra cứu riêng cho từng chủ hàng và tự động tính cước thầu phụ đa dạng.",
-        "commit": "Tăng 300% năng lực nhận cuốc"
+        "commit": "Tăng 30% năng lực nhận cuốc"
       }
     },
     "cta": {
       "badge": "Đồng Hành Chuyển Đổi Số Vận Tải",
-      "title": "Sẵn Sàng Cắt Giảm 20%+ Chi Phí Vận Tải Cho Doanh Nghiệp?",
+      "title": "Sẵn Sàng Cắt Giảm 10–15% Chi Phí Vận Tải Cho Doanh Nghiệp?",
       "desc": "Đội ngũ chuyên gia supply chain của ecor sẵn sàng khảo sát thực tế đội xe và thiết lập lộ trình số hóa tối ưu nhất cho quý chủ kinh doanh.",
       "btn": "Gửi Yêu Cầu Tư Vấn TMS 4.0 →",
       "hotline": "Hotline:"
@@ -568,7 +570,7 @@
   "pos": {
     "hero": {
       "badge": "ecor POS 4.0 • Trạm Bán Hàng Siêu Tốc",
-      "title": "Bán Hàng Siêu Tốc 3 Giây, Đồng Bộ Tồn Kho Đa Điểm & Kết Nối Liền Mạch WMS",
+      "title": "Bán Hàng Siêu Tốc 5 Giây, Đồng Bộ Tồn Kho Đa Điểm & Kết Nối Liền Mạch WMS",
       "desc": "Giải pháp POS chuyên sâu cho chuỗi bán lẻ, F&B và điểm bán đa kênh. Tự động trừ tồn kho theo thời gian thực tới kho tổng WMS, hoạt động mượt mà cả khi mất internet.",
       "demo": "Trải Nghiệm Bản Demo POS →",
       "doc": "Tải Tài Liệu Giải Pháp POS (PDF)",
@@ -578,7 +580,7 @@
     },
     "metrics": {
       "m1": {
-        "val": "3 Giây",
+        "val": "5 Giây",
         "sub": "/ Hóa đơn",
         "title": "Tốc độ thanh toán siêu tốc",
         "desc": "Tối ưu từng micro-second thao tác phím tắt, quét mã vạch và VietQR tự khớp tiền. Giảm tối đa tình trạng nghẽn hàng giờ cao điểm."
@@ -610,7 +612,7 @@
         "tag": "Thanh Toán Thông Minh",
         "title": "Thanh toán đa phương thức & Tạo mã VietQR động",
         "desc": "Không cần nhập tay số tiền. Màn hình phụ hoặc bill tự động sinh mã VietQR động chứa chính xác số tiền và mã hóa đơn đơn hàng.",
-        "f1": "Đối soát tự động qua Open API của 30+ ngân hàng tại Việt Nam",
+        "f1": "Đối soát tự động qua Open API của các ngân hàng hỗ trợ VietQR",
         "f2": "Tích hợp thẻ tín dụng, ví điện tử (MoMo, ZaloPay, ShopeePay) và tiền mặt trên cùng 1 đơn hàng",
         "f3": "Loại bỏ hoàn toàn rủi ro chuyển khoản giả mạo (fake bill)"
       },
@@ -627,7 +629,7 @@
         "title": "Chăm sóc khách hàng thân thiết & Thẻ thành viên",
         "desc": "Nhận diện khách hàng tức thì qua số điện thoại hoặc mã QR thành viên trên Zalo Mini App. Đưa toàn bộ chính sách ưu đãi từ Online xuống Offline mượt mà.",
         "f1": "Tích điểm, thăng hạng thẻ (Silver, Gold, Diamond) theo thời gian thực đồng nhất tại mọi chi nhánh",
-        "f2": "Gửi hóa đơn điện tử và thông báo điểm tích lũy tự động qua Zalo ZNS tiết kiệm 80% chi phí SMS",
+        "f2": "Gửi hóa đơn điện tử và thông báo điểm tích lũy tự động qua Zalo ZNS tiết kiệm 50% chi phí SMS",
         "f3": "Cá nhân hóa voucher sinh nhật, gợi ý sản phẩm phù hợp dựa trên lịch sử mua hàng đa kênh"
       },
       "p4": {
@@ -671,7 +673,7 @@
     "cta": {
       "badge": "Dùng Thử 14 Ngày Miễn Phí Đầy Đủ Tính Năng",
       "title": "Sẵn Sàng Đột Phá Doanh Số Chuỗi Điểm Bán Cùng ecor POS 4.0?",
-      "desc": "Trải nghiệm thực tế giải pháp bán hàng siêu tốc 3 giây và kết nối kho tổng thông minh. Đội ngũ chuyên gia eCor sẽ trực tiếp demo và tư vấn phương án triển khai tối ưu cho chuỗi của bạn.",
+      "desc": "Trải nghiệm thực tế giải pháp bán hàng siêu tốc 5 giây và kết nối kho tổng thông minh. Đội ngũ chuyên gia eCor sẽ trực tiếp demo và tư vấn phương án triển khai tối ưu cho chuỗi của bạn.",
       "btn": "Đăng Ký Nhận Bản Quyền Demo Ngay →",
       "hotline": "Hotline:"
     }
@@ -692,7 +694,7 @@
         "period": "Kỳ: T10/2024",
         "k1Label": "Dòng Tiền COD Đã Đối Soát",
         "k1Val": "14.825.920.000 đ",
-        "k1Sub": "Khớp 99.8% mã vận đơn",
+        "k1Sub": "Khớp 98% mã vận đơn",
         "k2Label": "Thu Hồi Công Nợ (AR)",
         "k2Val": "98.6%",
         "k2Sub": "Giảm 6.4 ngày nợ tồn",
@@ -713,12 +715,12 @@
     },
     "metrics": {
       "m1": {
-        "val": "100%",
+        "val": "90%+",
         "title": "Tự Động Hóa Bút Toán",
         "desc": "Sinh bút toán nhập/xuất kho và hóa đơn bán hàng tự động từ mã vận đơn và phiếu kho, không cần gõ tay."
       },
       "m2": {
-        "val": "-85%",
+        "val": "-50%",
         "title": "Thời Gian Đối Soát COD",
         "desc": "Rút ngắn đối chiếu tiền thu hộ từ hãng vận chuyển và sàn TMĐT từ nhiều ngày xuống còn vài phút."
       },
@@ -728,7 +730,7 @@
         "desc": "Đồng bộ số liệu kế toán và kho theo thời gian thực 1:1, chặn đứng rủi ro thất thoát hàng hóa."
       },
       "m4": {
-        "val": "30 Giây",
+        "val": "5 Phút",
         "title": "Lập Báo Cáo Tài Chính",
         "desc": "Tự động kết chuyển lãi lỗ, xuất báo cáo tài chính và bảng kê thuế chuẩn quy định."
       }
@@ -741,7 +743,7 @@
         "tag": "01",
         "title": "Hạch Toán Tự Động Từ Kho & Bán Hàng",
         "desc": "Tự động sinh phiếu nhập/xuất kho và định khoản (TK 156, 632, 511, 131) ngay khi thủ kho quét mã hoàn tất đơn hàng, loại bỏ hoàn toàn nhập liệu thủ công.",
-        "f1": "Tự ghi sổ cái trong 0.2 giây sau khi quét mã đơn",
+        "f1": "Tự ghi sổ cái trong vài giây sau khi quét mã đơn",
         "f2": "Định khoản chuẩn theo chế độ kế toán TT133/TT200",
         "f3": "Không còn sai lệch giữa thủ kho và kế toán"
       },
@@ -774,14 +776,38 @@
       "badge": "Phạm Vi Nghiệp Vụ Chuẩn Mực",
       "title": "6 Phân Hệ Kế Toán Chuyên Sâu Khép Kín",
       "desc": "Đáp ứng trọn vẹn từ kế toán tài chính pháp lý (Thông tư 133 & 200) đến kế toán quản trị dòng tiền chuỗi cung ứng.",
-      "h1": { "title": "Tiền Mặt & Tiền Gửi", "desc": "Kết nối Vietcombank, MB, Techcombank, BIDV. Tự động lấy sổ phụ và đối chiếu dòng tiền 24/7." },
-      "h2": { "title": "Kế Toán Bán Hàng & Công Nợ AR", "desc": "Tự động hạch toán doanh thu từ POS, sàn TMĐT và kênh sỉ B2B. Quản lý hạn mức nợ chặt chẽ." },
-      "h3": { "title": "Kho & Giá Vốn (COGS)", "desc": "Tính giá vốn theo bình quân gia quyền hoặc FIFO tức thời, tự động hạch toán chênh lệch kiểm kê." },
-      "h4": { "title": "Chi Phí Vận Chuyển & COD", "desc": "Tập hợp chi phí cước, đối soát tiền COD theo từng chuyến hàng và mã vận đơn." },
-      "h5": { "title": "Tài Sản & Khấu Hao", "desc": "Quản lý danh mục thiết bị, giá kệ kho, xe tải. Tự động trích khấu hao hàng tháng chuẩn quy định." },
-      "h6": { "title": "Kế Toán Thuế & Báo Cáo", "desc": "Lập tờ khai GTGT, TNCN, TNDN tạm tính. Xuất file XML nộp trực tiếp qua Thuế điện tử." },
-      "h7": { "title": "Kế Toán Tổng Hợp & Ngân Sách", "desc": "Lập dự toán ngân sách, kế toán tổng hợp toàn chuỗi và báo cáo quản trị dành riêng cho Hội đồng quản trị." },
-      "h8": { "title": "Đa Tiền Tệ & Khế Ước Vay", "desc": "Hạch toán đa tiền tệ cho hàng nhập khẩu, quản lý khế ước vay ngân hàng và lịch trả nợ tự động." },
+      "h1": {
+        "title": "Tiền Mặt & Tiền Gửi",
+        "desc": "Kết nối Vietcombank, MB, Techcombank, BIDV. Tự động lấy sổ phụ và đối chiếu dòng tiền 24/7."
+      },
+      "h2": {
+        "title": "Kế Toán Bán Hàng & Công Nợ AR",
+        "desc": "Tự động hạch toán doanh thu từ POS, sàn TMĐT và kênh sỉ B2B. Quản lý hạn mức nợ chặt chẽ."
+      },
+      "h3": {
+        "title": "Kho & Giá Vốn (COGS)",
+        "desc": "Tính giá vốn theo bình quân gia quyền hoặc FIFO tức thời, tự động hạch toán chênh lệch kiểm kê."
+      },
+      "h4": {
+        "title": "Chi Phí Vận Chuyển & COD",
+        "desc": "Tập hợp chi phí cước, đối soát tiền COD theo từng chuyến hàng và mã vận đơn."
+      },
+      "h5": {
+        "title": "Tài Sản & Khấu Hao",
+        "desc": "Quản lý danh mục thiết bị, giá kệ kho, xe tải. Tự động trích khấu hao hàng tháng chuẩn quy định."
+      },
+      "h6": {
+        "title": "Kế Toán Thuế & Báo Cáo",
+        "desc": "Lập tờ khai GTGT, TNCN, TNDN tạm tính. Xuất file XML nộp trực tiếp qua Thuế điện tử."
+      },
+      "h7": {
+        "title": "Kế Toán Tổng Hợp & Ngân Sách",
+        "desc": "Lập dự toán ngân sách, kế toán tổng hợp toàn chuỗi và báo cáo quản trị dành riêng cho Hội đồng quản trị."
+      },
+      "h8": {
+        "title": "Đa Tiền Tệ & Khế Ước Vay",
+        "desc": "Hạch toán đa tiền tệ cho hàng nhập khẩu, quản lý khế ước vay ngân hàng và lịch trả nợ tự động."
+      },
       "moreBadge": "Đầy đủ 8 phân hệ mở rộng khác:",
       "moreDesc": "Kiểm toán Sổ cái • Tài sản Vô hình • Hợp nhất Báo cáo Đa công ty • Quản lý Dự án & Giá thành • Ngân sách theo Trung tâm Chi phí • Đối chiếu Thuế Nhà thầu",
       "moreLink": "Xem tài liệu chi tiết các phân hệ →"
@@ -801,7 +827,7 @@
       "r2": {
         "title": "Đối soát COD & sàn TMĐT",
         "before": "Tải file Excel từng hãng vận chuyển rồi dò thủ công; chậm trễ dòng tiền 7-10 ngày.",
-        "after": "Đối soát 1-click qua API, phát hiện lệch tiền cước và đơn hoàn trong 15 giây."
+        "after": "Đối soát 1-click qua API, phát hiện lệch tiền cước và đơn hoàn trong vài phút."
       },
       "r4": {
         "title": "Quản Trị Tồn Kho & Giá Vốn",
@@ -824,25 +850,25 @@
       "title": "Tương Thích Mọi Nền Tảng Ngân Hàng & Thuế Điện Tử Hàng Đầu"
     },
     "testimonials": {
-      "badge": "Thực Chứng Khách Hàng",
-      "title": "Được Tin Dùng Bởi Các CFO & Kế Toán Trưởng Tiên Phong",
-      "desc": "Xem cách các doanh nghiệp logistics và chuỗi bán lẻ quy mô lớn giải phóng phòng kế toán với ecor Account.",
+      "badge": "Kịch Bản Ứng Dụng",
+      "title": "Nhu Cầu Điển Hình Của Kế Toán Chuỗi Bán Lẻ & Logistics",
+      "desc": "Hai tình huống thường gặp mà ecor Account được thiết kế để giải quyết. Đây là kịch bản minh họa, chưa phải phản hồi từ khách hàng thực tế.",
       "t1": {
-        "quote": "Trước đây mỗi tháng chuỗi 35 chi nhánh của chúng tôi cần 6 kế toán ngồi nhập liệu và rà soát hóa đơn. Khi triển khai ecor Account kết nối thẳng WMS, 100% chứng từ xuất nhập được tự động hóa. Đội ngũ kế toán giảm được 70% áp lực và tập trung hoàn toàn vào kiểm soát chi phí.",
-        "name": "Bà Trần Thu Trang",
-        "role": "Kế Toán Trưởng • Chuỗi Bán Lẻ Tiêu Dùng Phúc Thịnh Retail"
+        "quote": "Kịch bản: chuỗi nhiều chi nhánh mất nhiều công sức nhập liệu và rà soát hóa đơn mỗi tháng. Khi kết nối thẳng với WMS, chứng từ xuất nhập được tự động sinh bút toán để kế toán tập trung vào kiểm soát chi phí.",
+        "name": "Chuỗi bán lẻ nhiều chi nhánh",
+        "role": "Kịch bản minh họa"
       },
       "t2": {
-        "quote": "Nỗi ám ảnh lớn nhất của chúng tôi là đối soát COD với 4 đơn vị chuyển phát. Tiền tồn đọng hàng chục tỷ mà không biết đơn nào bị giữ. ecor Account giải quyết dứt điểm: đối soát hàng vạn đơn chỉ trong 15 phút, tỷ lệ khớp 99.8%. Ban Giám đốc xem được dòng tiền thực mọi lúc.",
-        "name": "Ông Nguyễn Văn Cường",
-        "role": "Giám Đốc Tài Chính (CFO) • Tập Đoàn Vận Tải An Phát Logistics"
+        "quote": "Kịch bản: doanh nghiệp làm việc với nhiều đơn vị chuyển phát khó biết đơn COD nào đang bị giữ tiền. Đối soát qua hệ thống giúp thấy dòng tiền thực tế nhanh hơn.",
+        "name": "Doanh nghiệp bán hàng đa kênh",
+        "role": "Kịch bản minh họa"
       }
     },
     "form": {
       "badge": "Tư Vấn Chuyên Sâu 1-1",
       "title": "Đăng Ký Tư Vấn & Nhận Demo Bản Quyền Kế Toán",
       "desc": "Trải nghiệm toàn diện giải pháp tự động hóa kế toán chuỗi logistics. Chuyên viên tài chính eCor sẽ liên hệ hỗ trợ phân tích luồng hạch toán doanh nghiệp trong vòng 15 phút.",
-      "success": "✓ Đăng ký thành công! Chuyên viên eCor Account sẽ liên hệ trong vòng 15 phút để tư vấn.",
+      "success": "✓ Đăng ký thành công! Chuyên viên eCor Account sẽ liên hệ trong vòng 30 phút để tư vấn.",
       "nameLabel": "Họ & Tên Người Phụ Trách *",
       "namePlaceholder": "Nguyễn Văn A",
       "phoneLabel": "Số Điện Thoại Trực Tiếp *",
@@ -865,14 +891,37 @@
       "title": "Kế Toán Là Mắt Xích Khép Kín Của Toàn Bộ 8 Phân Hệ ecor",
       "desc": "Mọi giao dịch phát sinh từ các phân hệ còn lại đều tự động đổ về ecor Account để hạch toán, không nghiệp vụ nào bị bỏ sót hay phải nhập liệu hai lần.",
       "current": "Bạn đang xem",
-      "pos": { "name": "ecor POS", "desc": "Mỗi hóa đơn quầy tự động sinh phiếu thu, sẵn sàng cấp mã HĐĐT." },
-      "wms": { "name": "ecor WMS", "desc": "Phiếu nhập/xuất kho tự động hạch toán giá vốn và công nợ NCC." },
-      "tms": { "name": "ecor TMS", "desc": "Tiền COD chuyển về ngân hàng được tự động gạch nợ đơn hàng." },
-      "ecom": { "name": "ecor ECOM", "desc": "Phí sàn, phí thanh toán được bóc tách tự động vào lợi nhuận ròng." },
-      "hrm": { "name": "ecor HRM", "desc": "Bảng lương đã duyệt tự động hạch toán chi phí nhân công." },
-      "crm": { "name": "ecor CRM", "desc": "Chi phí Zalo ZNS và khuyến mãi được hạch toán vào chi phí marketing." },
-      "mobileApp": { "name": "Mobile App", "desc": "Chủ shop duyệt phiếu chi và xem báo cáo lãi lỗ ngay trên điện thoại." },
-      "account": { "name": "ecor Account" }
+      "pos": {
+        "name": "ecor POS",
+        "desc": "Mỗi hóa đơn quầy tự động sinh phiếu thu, sẵn sàng cấp mã HĐĐT."
+      },
+      "wms": {
+        "name": "ecor WMS",
+        "desc": "Phiếu nhập/xuất kho tự động hạch toán giá vốn và công nợ NCC."
+      },
+      "tms": {
+        "name": "ecor TMS",
+        "desc": "Tiền COD chuyển về ngân hàng được tự động gạch nợ đơn hàng."
+      },
+      "ecom": {
+        "name": "ecor ECOM",
+        "desc": "Phí sàn, phí thanh toán được bóc tách tự động vào lợi nhuận ròng."
+      },
+      "hrm": {
+        "name": "ecor HRM",
+        "desc": "Bảng lương đã duyệt tự động hạch toán chi phí nhân công."
+      },
+      "crm": {
+        "name": "ecor CRM",
+        "desc": "Chi phí Zalo ZNS và khuyến mãi được hạch toán vào chi phí marketing."
+      },
+      "mobileApp": {
+        "name": "Mobile App",
+        "desc": "Chủ shop duyệt phiếu chi và xem báo cáo lãi lỗ ngay trên điện thoại."
+      },
+      "account": {
+        "name": "ecor Account"
+      }
     },
     "cta": {
       "badge": "Dùng Thử 14 Ngày Miễn Phí Đầy Đủ Tính Năng",
@@ -894,7 +943,7 @@
     "tilesBanner": {
       "badge": "Giải Pháp Chuyên Ngành",
       "title": "Ngành Gạch Ốp Lát & Vật Liệu Xây Dựng",
-      "desc": "AI nhận diện vân gạch 0.5 giây, phối cảnh 3D tức thì, quét AR LiDAR đo sàn tường 1:1 — kết nối trực tiếp kho WMS và vận tải TMS cho nhà máy, showroom và đại lý.",
+      "desc": "AI nhận diện vân gạch, phối cảnh 3D nhanh, quét AR LiDAR đo sàn tường — kết nối trực tiếp kho WMS và vận tải TMS cho nhà máy, showroom và đại lý.",
       "cta": "Xem giải pháp ngành gạch"
     },
     "quicklinks": {
@@ -906,23 +955,23 @@
     },
     "metrics": {
       "m1": {
-        "val": "+35%",
+        "val": "10–20%",
         "title": "Tối ưu chi phí logistics",
         "desc": "Giảm rò rỉ cước phụ phí và định mức hao hụt kho bãi."
       },
       "m2": {
-        "val": "99.98%",
+        "val": "99%",
         "title": "Chuẩn xác tồn kho",
         "desc": "Kiểm đếm mã QR/Barcode quét thực tế tại rack vị trí."
       },
       "m3": {
-        "val": "0 Phút",
+        "val": "< 1 Phút",
         "unit": "Phút",
         "title": "Độ trễ đồng bộ",
         "desc": "Realtime API giữa sàn TMĐT, cửa hàng POS và kho tổng."
       },
       "m4": {
-        "val": "x2.5",
+        "val": "x2",
         "title": "Tốc độ hoàn tất đơn hàng",
         "desc": "Tối ưu lộ trình nhặt hàng (Pick-path) thông minh."
       }
@@ -959,7 +1008,7 @@
         "tag": "05 • Trải nghiệm vượt trội",
         "title": "Khách Hàng Cuối (End-user)",
         "desc": "Nhận hàng chính xác chuẩn giờ, theo dõi hành trình đơn minh bạch, bảo hành đổi trả tiện lợi.",
-        "commit": "Đánh giá hài lòng 99.4%"
+        "commit": "Theo dõi mức độ hài lòng khách hàng"
       }
     },
     "maps": {
@@ -972,8 +1021,8 @@
         "desc": "Giải quyết triệt để cơn ác mộng nghẽn đơn mùa Mega Sale ngày đôi và tình trạng bán vượt tồn kho (overselling) trên các sàn thương mại điện tử.",
         "challenge": "Xử lý hàng nghìn đơn/giờ, nhặt nhầm sản phẩm, lệch tồn giữa TikTok Shop/Shopee với kho thực tế.",
         "solution": "Liên kết WMS + POS + Open API TMĐT. Tự động gom wave nhặt hàng gom đợt, in mã vận đơn hàng loạt 45s/đơn.",
-        "resultTitle": "KẾT QUẢ THỰC TẾ: 15,000+ Đơn/Ngày Hoàn Tất",
-        "resultValue": "-90% Khiếu nại giao trễ"
+        "resultTitle": "MỤC TIÊU THIẾT KẾ: Xử lý hàng nghìn đơn mỗi ngày",
+        "resultValue": "Giảm khiếu nại giao trễ"
       },
       "m2": {
         "tag": "Kho Lạnh & Thực Phẩm • Cold Chain & Fresh",
@@ -981,7 +1030,7 @@
         "desc": "Chuẩn hóa quản trị theo nhiệt độ phòng/đông/mát, cơ chế FEFO (hàng hết hạn trước xuất trước) tự động bảo vệ giá trị hạn dùng của từng lô hàng.",
         "challenge": "Quản lý hạn sử dụng khắt khe, chênh lệch nhiệt độ gây hư hại hàng đông lạnh.",
         "solution": "Tự động chọn lô FEFO/FIFO, cảnh báo cận date 30-60 ngày, kết nối cảm biến IoT nhiệt độ 24/7.",
-        "resultTitle": "KẾT QUẢ THỰC TẾ: Giảm 40% Hao Hụt Do Hết Hạn",
+        "resultTitle": "MỤC TIÊU THIẾT KẾ: Giảm hao hụt do hết hạn",
         "resultValue": "100% Truy xuất nguồn gốc"
       },
       "m3": {
@@ -989,8 +1038,8 @@
         "title": "Đơn Vị Vận Tải & Dịch Vụ Logistics Chành xe / 4PL",
         "desc": "Nền tảng đa chủ hàng (Multi-client) với cổng portal chuyên biệt cho từng đối tác kiểm tra hàng tồn, biểu phí tính tiền lưu kho và vận tải minh bạch.",
         "challenge": "Trộn lẫn tồn kho nhiều chủ hàng, đội xe thầu phụ cồng kềnh khó kiểm soát, rủi ro mất biên bản giấy.",
-        "solution": "Phân quyền Multi-tenant, thuật toán gom đơn tối ưu trọng tải xe 94.5%, ký biên bản điện tử e-POD qua mobile app.",
-        "resultTitle": "KẾT QUẢ THỰC TẾ: +300% Khách Hàng Phục Vụ",
+        "solution": "Phân quyền Multi-tenant, thuật toán gom đơn tối ưu trọng tải xe 85%, ký biên bản điện tử e-POD qua mobile app.",
+        "resultTitle": "MỤC TIÊU THIẾT KẾ: Phục vụ nhiều chủ hàng hơn với cùng nhân sự",
         "resultValue": "0 Tăng nhân sự điều phối"
       },
       "m4": {
@@ -999,28 +1048,28 @@
         "desc": "Hợp nhất kho nhà máy, kho trung chuyển vùng và các đại lý cấp 1 trên một bức tranh tồn kho duy nhất, kết nối thông suốt với hệ thống ERP lõi.",
         "challenge": "Luân chuyển hàng giữa các kho vệ tinh rườm rà, đối soát số liệu với kế toán ERP chậm trễ hàng tuần.",
         "solution": "Luân chuyển liên kho 1 chạm bằng barcode, tự động sinh bút toán sang ecor Account hoặc đồng bộ 2 chiều với SAP, Oracle NetSuite, MISA AMIS.",
-        "resultTitle": "KẾT QUẢ THỰC TẾ: Tinh Gọn 60% Thời Gian Chứng Từ",
+        "resultTitle": "MỤC TIÊU THIẾT KẾ: Rút ngắn thời gian xử lý chứng từ",
         "resultValue": "ERP Sync Realtime"
       }
     },
     "testimonials": {
-      "badge": "Khách Hàng Nói Về ecor",
-      "title": "Doanh Nghiệp Đầu Ngành Tin Cậy Vận Hành",
-      "desc": "Hơn 450+ chủ kinh doanh phân phối và bán lẻ tại Việt Nam đang vận hành chuỗi cung ứng mỗi ngày trên ecor.",
+      "badge": "Kịch Bản Vận Hành",
+      "title": "Nhu Cầu Điển Hình Của Từng Ngành",
+      "desc": "Ba tình huống thường gặp mà eCor được thiết kế để giải quyết. Đây là kịch bản minh họa, chưa phải phản hồi từ khách hàng thực tế.",
       "t1": {
-        "quote": "\"ecor WMS giúp chúng tôi vượt qua đợt Black Friday với kỷ lục 22.000 đơn mà không hề bị nghẽn hay sót đơn trên sàn TikTok Shop. Hệ thống pick hàng wave giúp nhân viên kho đi lại ít hơn 40%.\"",
-        "name": "Trần Nhật Nam",
-        "role": "Giám đốc Vận hành - Chuỗi Thời trang Routine"
+        "quote": "Kịch bản: đợt Sale lớn khiến đơn dồn về từ nhiều sàn cùng lúc. Cần đồng bộ tồn kho nhanh để không bán vượt và cần gom đơn theo wave để nhân viên kho đi lại ít hơn.",
+        "name": "Bán lẻ & thời trang",
+        "role": "Kịch bản minh họa"
       },
       "t2": {
-        "quote": "\"Hạn date sữa và chế phẩm lạnh là vấn đề sống còn. Tính năng tự động định tuyến FEFO của ecor đã cứu chuỗi chúng tôi khỏi việc hủy hàng cận hạn trị giá hàng trăm triệu mỗi quý.\"",
-        "name": "Nguyễn Mai Linh",
-        "role": "Head of Supply Chain - Dairy Milk Corp"
+        "quote": "Kịch bản: hàng cận hạn là vấn đề sống còn với thực phẩm và hàng lạnh. Cần xuất theo FEFO và cảnh báo sớm để hạn chế hủy hàng.",
+        "name": "Thực phẩm & hàng lạnh",
+        "role": "Kịch bản minh họa"
       },
       "t3": {
-        "quote": "\"Khách hàng Chành xe của chúng tôi cực kỳ hài lòng vì có thể tự tra cứu tồn kho qua portal riêng. Điều phối xe TMS giúp giảm 18% quãng đường chạy rỗng, nâng hiệu suất toàn đội xe.\"",
-        "name": "Võ Hoàng Quân",
-        "role": "Phó Tổng Giám Đốc - VinaTrans Chành xe"
+        "quote": "Kịch bản: đơn vị Chành xe muốn khách hàng tự tra cứu tồn kho qua cổng riêng, đồng thời điều phối xe hợp lý để giảm quãng đường chạy rỗng.",
+        "name": "Chành xe & vận tải",
+        "role": "Kịch bản minh họa"
       }
     },
     "cta": {
@@ -1040,24 +1089,24 @@
     },
     "metrics": {
       "m1": {
-        "val": "10,000+",
-        "title": "Điểm bán & Kho hàng",
-        "desc": "Đang vận hành mỗi ngày"
+        "val": "4",
+        "title": "Phân hệ liên thông",
+        "desc": "WMS, TMS, POS, Account trên một lõi dữ liệu"
       },
       "m2": {
-        "val": "99.98%",
-        "title": "Thời gian Uptime máy chủ",
-        "desc": "Hạ tầng Cloud bảo mật cao"
+        "val": "99.5%",
+        "title": "Mục tiêu uptime hệ thống",
+        "desc": "Hạ tầng đám mây, sao lưu định kỳ"
       },
       "m3": {
-        "val": "5+ Năm",
-        "title": "Kinh nghiệm phát triển SaaS",
-        "desc": "Thấu hiểu thị trường Việt Nam"
+        "val": "Startup",
+        "title": "Đội ngũ trẻ, mới thành lập",
+        "desc": "Tập trung lắng nghe và phát triển cùng khách hàng đầu tiên"
       },
       "m4": {
-        "val": "24/7",
+        "val": "T2–T7",
         "title": "Hỗ trợ kỹ thuật trực tiếp",
-        "desc": "Đồng hành trong mọi ca làm việc"
+        "desc": "Trong giờ hành chính (8:00–18:00)"
       }
     },
     "philosophy": {
@@ -1073,7 +1122,7 @@
     "security": {
       "title": "Cam Kết Bảo Mật & Toàn Vẹn Dữ Liệu",
       "desc": "Dữ liệu khách hàng, doanh thu và sổ sách kế toán là tài sản tối mật của chủ kinh doanh. eCor cam kết:",
-      "f1": "Mã hóa đường truyền SSL/TLS 256-bit và sao lưu tự động hàng giờ.",
+      "f1": "Mã hóa đường truyền SSL/TLS và sao lưu tự động định kỳ.",
       "f2": "Không bao giờ chia sẻ hay thương mại hóa dữ liệu khách hàng cho bên thứ ba.",
       "f3": "Cung cấp tùy chọn triển khai Cloud riêng (Private Cloud) cho đơn vị vận tải nhỏ.",
       "btn": "Liên Hệ Bộ Phận Kỹ Thuật & Bảo Mật →"
@@ -1081,15 +1130,15 @@
   },
   "pricing": {
     "hero": {
-      "badge": "● Bảng Giá Minh Bạch • Không Chi Phí Ẩn • Cam Kết SLA 99.98%",
+      "badge": "● Bảng Giá Minh Bạch • Không Chi Phí Ẩn • Cam Kết SLA 99.5%",
       "title": "Đầu Tư Thông Minh, Tối Ưu Chi Phí Cho Mọi Quy Mô Vận Hành",
       "desc": "Lựa chọn gói giải pháp linh hoạt từ mô hình khởi nghiệp, chuỗi bán lẻ tăng trưởng nhanh đến công ty logistics lớn. Tiết kiệm ngay 20% khi thanh toán theo năm.",
       "monthly": "Thanh toán theo tháng",
       "annual": "Thanh toán theo năm",
       "annualTag": "TIẾT KIỆM 20% + MIỄN PHÍ SETUP",
       "trust1": "Dùng thử 14 ngày không rủi ro",
-      "trust2": "Bảo mật chuẩn ISO 27001",
-      "trust3": "Hỗ trợ kỹ thuật chuyên gia 24/7"
+      "trust2": "Bảo mật dữ liệu theo chuẩn ngành",
+      "trust3": "Hỗ trợ kỹ thuật trong giờ làm việc"
     },
     "tiers": {
       "t1": {
@@ -1125,7 +1174,7 @@
         "f5": "Kiểm soát lô/hạn theo chuẩn FIFO & FEFO tuyệt đối",
         "f6": "Module điều phối vận tải ecor TMS (50 chuyến/tháng)",
         "f7": "Đồng bộ 2 chiều sàn: Shopee, TikTok Shop, Lazada",
-        "f8": "Hỗ trợ kỹ thuật 24/7 qua Hotline & Kênh riêng Zalo",
+        "f8": "Hỗ trợ kỹ thuật qua Hotline & Zalo trong giờ làm việc",
         "btn": "Đăng ký gói Tăng Trưởng →"
       },
       "t3": {
@@ -1140,7 +1189,7 @@
         "f3": "Tạo lệnh giao hàng ngay trên điện thoại TMS đa điểm giao tự động",
         "f4": "Open API & Webhook tích hợp ERP: SAP, Oracle, MISA, Bravo",
         "f5": "Tùy chọn hạ tầng Private Cloud hoặc On-premise",
-        "f6": "Cam kết SLA 99.98% uptime kèm bồi thường tài chính",
+        "f6": "Cam kết SLA 99.5% uptime kèm bồi thường tài chính",
         "f7": "Kỹ sư giải pháp chuyên trách 1-1 đồng hành triển khai onsite",
         "btn": "Tư vấn giải pháp Chành xe lớn"
       }
@@ -1176,7 +1225,7 @@
       "q3": "ecor có tương thích với các máy quét Barcode / PDA cầm tay có sẵn không?",
       "a3": "Có. Ứng dụng ecor WMS và POS hỗ trợ toàn bộ các thiết bị chạy Android (Zebra, Honeywell, Datalogic, Sunmi, Urovo...) cũng như máy quét mã vạch không dây Bluetooth hoặc có dây USB kết nối trực tiếp với máy tính.",
       "q4": "Dữ liệu kho vận và khách hàng của chúng tôi được bảo mật như thế nào?",
-      "a4": "Dữ liệu của quý chủ kinh doanh được mã hóa AES-256 ở trạng thái lưu trữ và TLS 1.3 trong truyền tải, lưu trữ trên hạ tầng đám mây đạt tiêu chuẩn ISO/IEC 27001 với cơ chế sao lưu tự động hàng ngày và cam kết không chia sẻ cho bên thứ ba."
+      "a4": "Dữ liệu của quý chủ kinh doanh được mã hóa khi truyền tải (TLS) và khi lưu trữ, đặt trên hạ tầng đám mây của nhà cung cấp uy tín với cơ chế sao lưu tự động định kỳ, và không chia sẻ cho bên thứ ba khi chưa có sự đồng ý."
     },
     "cta": {
       "title": "Chưa Chắc Chắn Gói Nào Phù Hợp Cho Mô Hình Doanh Nghiệp?",
@@ -1192,36 +1241,36 @@
       "titleHighlight": "ecor.vn",
       "desc": "Dù bạn đang vận hành một kho hàng đơn lẻ hay chuỗi cung ứng đa kênh phức tạp, đội ngũ chuyên gia của chúng tôi sẽ cùng bạn phân tích và thiết kế mô hình vận hành tối ưu nhất.",
       "b1Title": "Phản hồi trung bình",
-      "b1Val": "< 10 Phút",
+      "b1Val": "< 30 Phút",
       "b2Title": "Thời gian Go-Live",
       "b2Val": "3 – 7 Ngày",
       "b3Title": "Dùng thử trải nghiệm",
       "b3Val": "14 Ngày",
-      "b4Title": "Cam kết SLA uptime",
-      "b4Val": "99.9%"
+      "b4Title": "Mục tiêu uptime",
+      "b4Val": "99.5%"
     },
     "channels": {
       "title": "Kênh Liên Hệ Nhanh",
       "status": "Trực tuyến",
-      "phoneTitle": "Hotline tư vấn giải pháp 24/7",
+      "phoneTitle": "Hotline tư vấn giải pháp (giờ làm việc)",
       "mailTitle": "Hòm thư chuyên gia kỹ thuật",
       "officeTitle": "Hệ Thống Văn Phòng Đại Diện",
       "officeName": "🏢 Văn phòng TP. Hồ Chí Minh",
       "officeAddress": "891 Nguyễn Kiệm, Hạnh Thông, TP HCM",
       "bookingTitle": "Đặt lịch trao đổi 1–1 riêng",
       "bookingTag": "30 phút Demo",
-      "bookingDesc": "Trao đổi trực tiếp qua Google Meet với Kỹ sư Trưởng kiến trúc kho vận.",
+      "bookingDesc": "Trao đổi trực tiếp qua Google Meet với chuyên viên giải pháp.",
       "bookingBtn": "Chọn lịch →"
     },
     "experts": {
-      "title": "Đội Ngũ Chuyên Gia Trực Tiếp Tư Vấn",
+      "title": "Đội Ngũ Tư Vấn Trực Tiếp",
       "loc": "Hà Nội & Sài Gòn",
-      "e1Role": "Trưởng phòng Giải Pháp WMS",
-      "e1Desc": "8+ năm triển khai hệ thống chuỗi bán lẻ & Chành xe",
-      "e2Role": "Chuyên viên Cấp Cao TMS",
+      "e1Role": "Tư vấn Giải Pháp WMS",
+      "e1Desc": "Tư vấn triển khai kho cho bán lẻ & Chành xe",
+      "e2Role": "Tư vấn TMS",
       "e2Desc": "Tối ưu lộ trình và định tuyến vận tải đa kênh",
-      "e3Role": "Kỹ Sư Trưởng ERP & API",
-      "e3Desc": "Chuyên gia đồng bộ SAP, Oracle, MISA, KiotViet"
+      "e3Role": "Kỹ Sư Tích Hợp & API",
+      "e3Desc": "Kết nối với MISA, KiotViet và hệ thống hiện có của bạn"
     },
     "form": {
       "badge": "Khảo Sát Nhu Cầu Vận Hành",
@@ -1229,7 +1278,7 @@
       "desc": "Điền thông tin để ecor.vn cấu hình mô hình bản quyền và kịch bản demo sát với ngành hàng của bạn nhất.",
       "successTitle": "Gửi Yêu Cầu Thành Công!",
       "successDesc1": "Chuyên gia giải pháp eCor sẽ liên hệ lại trực tiếp qua số điện thoại của bạn trong vòng",
-      "successDesc2": "10 phút",
+      "successDesc2": "30 phút",
       "successBtn": "Gửi yêu cầu khác",
       "fName": "Họ và tên người liên hệ *",
       "fNamePl": "Ví dụ: Nguyễn Văn An",
@@ -1287,7 +1336,7 @@
       "formLabel": "Hình thức:",
       "formVal": "Online & Onsite 1 ngày",
       "roiLabel": "HIỆU QUẢ KỲ VỌNG ĐO LƯỜNG",
-      "roiTitle": "Giảm 75% Sai Sót Nhặt Hàng",
+      "roiTitle": "Giảm Sai Sót Nhặt Hàng",
       "roiDesc": "Tối ưu hóa hành trình nhặt (Pick & Pack), tự động in phiếu gửi đơn vận chuyển không cần nhập tay.",
       "roiRes": "Độ trễ xử lý đơn: < 3 Phút / Đơn"
     },
@@ -1302,143 +1351,144 @@
       "q3": "ecor có hỗ trợ tích hợp với phần mềm ERP / Kế toán hiện tại của chủ kinh doanh không?",
       "a3": "Có. ecor cung cấp cổng Open API và hệ thống Webhook chuẩn RESTful cho phép đồng bộ tự động 2 chiều với SAP, Oracle NetSuite, Microsoft Dynamics, MISA AMIS, Fast, Bravo và các phần mềm nội bộ.",
       "q4": "Chính sách hỗ trợ kỹ thuật và bảo hành vận hành ra sao?",
-      "a4": "Chúng tôi duy trì cam kết hỗ trợ kỹ thuật 24/7/365 qua kênh riêng Zalo/Hotline cho các sự cố khẩn cấp. Mỗi khách hàng đều có kỹ sư giải pháp đồng hành trực tiếp trong suốt quá trình vận hành."
+      "a4": "Chúng tôi hỗ trợ kỹ thuật trong giờ làm việc (Thứ Hai – Thứ Bảy, 8:00 – 18:00) qua Hotline, Zalo và email; các sự cố khẩn cấp ngoài giờ có thể liên hệ hotline để được ưu tiên xử lý. Mỗi khách hàng có một chuyên viên đồng hành trong quá trình triển khai."
     }
   },
   "customers": {
     "hero": {
-      "badge": "● Được Tin Dùng Bởi Hơn 450+ Doanh Nghiệp Hàng Đầu",
-      "title": "Đồng Hành Cùng Những Thương Hiệu",
-      "titleHighlight": "Bứt Phá Vận Hành Chuỗi Cung Ứng",
-      "desc": "Khám phá cách các chủ kinh doanh bán lẻ, kho vận Chành xe và chuỗi phân phối hàng đầu Việt Nam tối ưu hóa chi phí, tăng tốc độ xử lý đơn hàng và số hóa toàn diện cùng ecor.",
-      "discover": "Khám phá 3 câu chuyện điển hình ↓",
+      "badge": "● Nền tảng mới • Đang nhận khách hàng dùng thử sớm",
+      "title": "Kịch Bản Ứng Dụng",
+      "titleHighlight": "Cho Từng Mô Hình Kinh Doanh",
+      "desc": "Ba kịch bản minh họa cách eCor có thể hỗ trợ chuỗi bán lẻ, kho lạnh và đơn vị kho vận. Các con số là mục tiêu thiết kế, chưa phải kết quả từ khách hàng thực tế — chúng tôi sẽ cập nhật câu chuyện thật khi có.",
+      "discover": "Xem 3 kịch bản minh họa ↓",
       "consult": "Đặt lịch tư vấn giải pháp"
     },
     "metrics": {
       "m1": {
-        "val": "450+",
-        "title": "Chủ kinh doanh quy mô lớn",
-        "desc": "Triển khai thành công trên toàn quốc."
+        "val": "3",
+        "title": "Mô hình kinh doanh hỗ trợ",
+        "desc": "Bán lẻ, kho lạnh, kho vận & Chành xe."
       },
       "m2": {
-        "val": "1,200,000+",
-        "title": "Kiện hàng xử lý / ngày",
-        "desc": "Vận hành mượt mà qua đám mây."
+        "val": "4",
+        "title": "Phân hệ liên thông",
+        "desc": "WMS, TMS, POS, Account trên một nền tảng."
       },
       "m3": {
-        "val": "99.98%",
-        "title": "Tỷ lệ giao hàng chuẩn xác",
-        "desc": "Loại bỏ sai lệch đơn & hoàn hàng."
+        "val": "14",
+        "title": "Ngày dùng thử miễn phí",
+        "desc": "Không cần thẻ tín dụng."
       },
       "m4": {
-        "val": "35% – 60%",
-        "title": "Chi phí kho & xe giảm tải",
-        "desc": "Tối ưu lộ trình và nhân sự kho."
+        "val": "10–20%",
+        "title": "Mục tiêu tối ưu chi phí",
+        "desc": "Thiết kế hướng tới giảm chi phí kho & xe."
       }
     },
     "cases": {
-      "badge": "Danh Mục Thực Chiến",
-      "title": "Trường Hợp Ứng Dụng Thực Tế",
-      "filterAll": "Tất cả câu chuyện",
+      "badge": "Kịch Bản Minh Họa",
+      "title": "Ứng Dụng Cho Từng Mô Hình",
+      "filterAll": "Tất cả kịch bản",
       "filterRetail": "Bán lẻ & E-Commerce",
       "filterCold": "Kho lạnh & bán lẻ",
       "filterChành xe": "Logistics & Chành xe",
       "c1": {
         "tag": "Bán lẻ & E-Commerce",
-        "code": "CS-2024-08",
-        "title": "Chuỗi Bán Lẻ Thời Trang & Mỹ Phẩm Y-Style",
-        "infra": "Hạ tầng: 45 cửa hàng bán lẻ toàn quốc & 2 tổng kho trung tâm (Hà Nội, TP.HCM)",
+        "code": "KB-01",
+        "title": "Chuỗi Bán Lẻ Thời Trang & Mỹ Phẩm",
+        "infra": "Giả định: chuỗi 10–20 cửa hàng và 1 kho tổng",
         "challengeLabel": "Thách thức ban đầu:",
-        "challengeDesc": "Lệch tồn kho nặng giữa sàn thương mại điện tử và cửa hàng vật lý; nhân viên thu ngân mất trung bình 45 giây cho mỗi đơn quầy POS; thường xuyên tắc nghẽn giao hàng trong các dịp Siêu Sale.",
+        "challengeDesc": "Lệch tồn kho giữa sàn thương mại điện tử và cửa hàng vật lý; thu ngân xử lý đơn chậm ở quầy; dễ nghẽn giao hàng trong các dịp Siêu Sale.",
         "solutionLabel": "Giải pháp từ ecor:",
-        "solutionDesc": "Triển khai nền tảng ecor WMS tích hợp thời gian thực với ecor POS tại 45 điểm bán lẻ. Kích hoạt phân vùng lấy hàng Wave Picking bằng PDA và cổng thanh toán VietQR động trực tiếp.",
-        "quote": "\"ecor đã giúp chúng tôi giải phóng hoàn toàn nỗi lo lệch tồn kho giữa sàn online và 45 cửa hàng thực tế. Tốc độ thu ngân và đóng gói đơn hàng tăng gấp 3 lần ngay trong mùa Tết vừa qua.\"",
-        "author": "Nguyễn Thanh Hương — Giám Đốc Vận Hành (COO) - Y-Style Vietnam",
+        "solutionDesc": "Kết nối ecor WMS với ecor POS theo thời gian thực. Dùng Wave Picking bằng PDA và thanh toán VietQR động tại quầy.",
+        "quote": "Mục tiêu: đồng bộ tồn kho giữa online và cửa hàng, rút ngắn thời gian thanh toán tại quầy và vận hành ổn định trong mùa Sale.",
+        "author": "Kịch bản minh họa — chưa phải khách hàng thực tế",
         "r1Title": "THỜI GIAN POS",
-        "r1Val": "3 Giây",
-        "r1Desc": "Giảm từ 45s",
+        "r1Val": "< 5 s",
+        "r1Desc": "Mục tiêu thời gian thanh toán",
         "r2Title": "CHÍNH XÁC KHO",
-        "r2Val": "99.9%",
-        "r2Desc": "Triệt tiêu lệch tồn",
+        "r2Val": "> 99%",
+        "r2Desc": "Mục tiêu độ chính xác tồn",
         "r3Title": "TĂNG TRƯỞNG SALE",
-        "r3Val": "+40%",
-        "r3Desc": "Mega Sale an toàn",
+        "r3Val": "Ổn định",
+        "r3Desc": "Hạn chế bán vượt tồn",
         "imgNote1": "Đồng bộ Omnichannel 100% thời gian thực",
-        "imgNote2": "45 chi nhánh kết nối"
+        "imgNote2": "Nhiều chi nhánh kết nối"
       },
       "c2": {
         "tag": "Kho lạnh & bán lẻ",
-        "code": "CS-2024-11",
-        "title": "Chuỗi Cung Ứng Thực Phẩm Sạch GreenFarm",
-        "infra": "Quy mô: Hệ thống 3 cụm kho lạnh đa nhiệt độ & Đội xe chuyên dụng 25 xe tải",
+        "code": "KB-02",
+        "title": "Chuỗi Cung Ứng Thực Phẩm Sạch",
+        "infra": "Giả định: vài cụm kho lạnh và đội xe chuyên dụng cỡ nhỏ",
         "challengeLabel": "Thách thức ban đầu:",
-        "challengeDesc": "Tỷ lệ hàng thực phẩm tươi sống hư hỏng cận date cao; xe tải điều phối thủ công thường trễ hẹn giờ vàng của hệ thống siêu thị; chi phí xăng dầu tăng đột biến 18% so với định mức.",
+        "challengeDesc": "Hàng tươi sống dễ hư hỏng khi cận date; xe tải điều phối thủ công thường trễ khung giờ giao vào siêu thị; chi phí nhiên liệu khó kiểm soát.",
         "solutionLabel": "Giải pháp từ ecor:",
         "solutionDesc": "Kết hợp ecor WMS với thuật toán kiểm soát hạn sử dụng FEFO tự động và ecor TMS để tối ưu thuật toán gom đơn, xếp tuyến đa điểm giao và ứng dụng xác thực điện tử e-POD cho tài xế.",
-        "quote": "\"Nhờ ecor TMS, đội xe nhà của chúng tôi đã nâng hệ số lắp đầy từ 65% lên 93% mỗi chuyến. Điều phối viên giám sát nhiệt độ và trạng thái giao theo thời gian thực 24/7.\"",
-        "author": "Lê Hoàng Nam — Trưởng Ban Logistics & Chuỗi Cung Ứng - GreenFarm",
+        "quote": "Mục tiêu: kiểm soát hạn dùng theo FEFO, xếp tuyến hợp lý và theo dõi trạng thái giao hàng theo thời gian thực.",
+        "author": "Kịch bản minh họa — chưa phải khách hàng thực tế",
         "r1Title": "TỒN THẤT HẠN DATE",
-        "r1Val": "-42%",
-        "r1Desc": "Giảm thiểu rủi ro",
+        "r1Val": "Giảm",
+        "r1Desc": "Hạn chế tồn thất hạn date",
         "r2Title": "CHI PHÍ XĂNG DẦU",
-        "r2Val": "-21%",
-        "r2Desc": "Tối ưu cung đường",
+        "r2Val": "10–20%",
+        "r2Desc": "Mục tiêu tiết kiệm nhiên liệu",
         "r3Title": "ĐÚNG HẸN SIÊU THỊ",
-        "r3Val": "98.6%",
-        "r3Desc": "Chuẩn On-Time (OTIF)",
+        "r3Val": "> 95%",
+        "r3Desc": "Mục tiêu giao đúng hẹn",
         "imgNote1": "Kiểm soát FEFO & Nhiệt độ thời gian thực",
-        "imgNote2": "25 xe giám sát GPS/e-POD"
+        "imgNote2": "Xe giám sát GPS/e-POD"
       },
       "c3": {
         "tag": "Logistics & Chành xe",
-        "code": "CS-2024-03",
-        "title": "Hãng Hậu Cần Dịch Vụ Kho Vận VinaLogistics",
-        "infra": "Mặt bằng: Trung tâm phân phối 18,000 m² • Phục vụ hơn 80+ đối tác chủ hàng",
+        "code": "KB-03",
+        "title": "Đơn Vị Kho Vận Cho Thuê (3PL)",
+        "infra": "Giả định: một trung tâm phân phối phục vụ nhiều chủ hàng",
         "challengeLabel": "Thách thức ban đầu:",
-        "challengeDesc": "Quản lý phân tán nhiều chủ hàng (Multi-client) với quy tắc lưu kho khác nhau; đội ngũ kế toán mất từ 3–4 ngày cuối tháng để chốt biểu phí lưu kho và bốc xếp thủ công bằng bảng Excel.",
+        "challengeDesc": "Quản lý nhiều chủ hàng với quy tắc lưu kho khác nhau; cuối tháng kế toán mất nhiều ngày chốt phí lưu kho và bốc xếp thủ công bằng Excel.",
         "solutionLabel": "Giải pháp từ ecor:",
         "solutionDesc": "Áp dụng kiến trúc đa chủ hàng ecor Multi-Tenant WMS, trang bị máy quét PDA cầm tay mã hóa vị trí pallet; cung cấp Customer Portal để chủ hàng chủ động tạo lệnh nhập/xuất và tra cứu phí.",
-        "quote": "\"Từ khi chuyển sang ecor, khách hàng Chành xe của chúng tôi có thể tự xem tồn kho và chi phí dịch vụ tức thì. Đội ngũ không còn tình trạng tăng ca thâu đêm mỗi kỳ chốt đối soát tháng.\"",
-        "author": "Đoàn Văn Thịnh — Tổng Giám Đốc Điều Hành - VinaLogistics",
+        "quote": "Mục tiêu: chủ hàng tự tra cứu tồn kho và chi phí qua cổng riêng, giúp rút ngắn công đoạn chốt đối soát cuối tháng.",
+        "author": "Kịch bản minh họa — chưa phải khách hàng thực tế",
         "r1Title": "XUẤT BIÊN BẢN PHÍ",
-        "r1Val": "5 Phút",
-        "r1Desc": "Rút ngắn từ 3 ngày",
+        "r1Val": "Nhanh hơn",
+        "r1Desc": "Rút ngắn chốt phí cuối tháng",
         "r2Title": "ĐỐI TÁC TIẾP NHẬN",
-        "r2Val": "+60 Đối tác",
-        "r2Desc": "Không thêm nhân sự",
+        "r2Val": "Nhiều chủ hàng",
+        "r2Desc": "Quản lý trên cùng nền tảng",
         "r3Title": "TỶ LỆ KHÁCH HÀI LÒNG",
-        "r3Val": "99.4%",
-        "r3Desc": "Nhờ cổng tra cứu",
+        "r3Val": "Portal",
+        "r3Desc": "Chủ hàng tự tra cứu",
         "imgNote1": "Kiến trúc Đa Chủ Hàng (Multi-Tenant WMS)",
-        "imgNote2": "18,000 m² Kho Vận"
-      }
+        "imgNote2": "Kho vận nhiều chủ hàng"
+      },
+      "filter3PL": "Logistics & Chành xe"
     },
     "video": {
-      "badge": "Video Phỏng Vấn Hiện Trường",
-      "title": "Ghé Thăm Trung Tâm Phân Phối Mega Hub Ứng Dụng ecor WMS & AGV Robot",
-      "desc": "Mục sở thị quy trình điều phối hơn 150.000 đơn hàng/ngày trong khuôn viên kho bãi tự động hóa, nơi phần mềm ecor giao tiếp liền mạch với robot tự hành và hệ thống băng chuyền phân loại tốc độ cao.",
-      "f1": "Đồng bộ AGV không độ trễ",
+      "badge": "Video Demo Hệ Thống",
+      "title": "Xem Nhanh Cách ecor WMS & TMS Vận Hành (Bản Demo)",
+      "desc": "Video demo quy trình từ nhập kho, đóng gói đến giao hàng trên môi trường thử nghiệm, để bạn hình dung cách hệ thống vận hành trước khi dùng thử.",
+      "f1": "Đồng bộ dữ liệu thời gian thực",
       "f2": "Hệ thống phân tầng Dynamic Slotting",
       "f3": "Theo dõi lưu lượng nhiệt (Heatmap)",
-      "f4": "Thời gian triển khai chỉ 6 tuần",
+      "f4": "Triển khai theo từng giai đoạn",
       "duration": "Thời lượng: 04:32",
-      "quality": "4K Ultra HD"
+      "quality": "HD"
     },
     "partners": {
-      "badge": "Mạng Lưới Đối Tác",
-      "title": "Được Đồng Hành Bởi Các Thương Hiệu Đầu Ngành",
-      "p1Name": "Y-Style Retail",
-      "p1Desc": "Chuỗi 45 shop",
-      "p2Name": "GreenFarm Corp",
-      "p2Desc": "Nông nghiệp sạch",
-      "p3Name": "VinaLogistics",
-      "p3Desc": "Hậu cần Chành xe",
-      "p4Name": "PharmaHealth",
-      "p4Desc": "Dược & Y tế GSP",
-      "p5Name": "TechDistribution",
-      "p5Desc": "Điện tử gia dụng",
-      "p6Name": "VietFoods Group",
-      "p6Desc": "bán lẻ đa kênh"
+      "badge": "Hệ Sinh Thái Kết Nối",
+      "title": "Hướng Tới Tích Hợp Với Các Nền Tảng Phổ Biến",
+      "p1Name": "Shopee",
+      "p1Desc": "Sàn TMĐT",
+      "p2Name": "TikTok Shop",
+      "p2Desc": "Sàn TMĐT",
+      "p3Name": "GHN",
+      "p3Desc": "Vận chuyển",
+      "p4Name": "VietQR",
+      "p4Desc": "Thanh toán QR",
+      "p5Name": "MISA",
+      "p5Desc": "Hóa đơn điện tử",
+      "p6Name": "Zalo ZNS",
+      "p6Desc": "Thông báo khách hàng"
     }
   },
   "resources": {
@@ -1605,13 +1655,13 @@
     "flow5": "Bắn mã quét biên bản bàn giao cho shipper/xe tải. Tự động ký số điện tử e-POD và đồng bộ trạng thái đơn hàng sang các kênh bán lẻ tức thì.",
     "modelsDesc": "Dù bạn vận hành kho thương mại điện tử tốc độ cao, chuỗi kho lạnh nhạy cảm hay kho Chành xe đa chủ hàng, ecor WMS đều có kịch bản xử lý chuyên biệt.",
     "ecomTag": "Bán Lẻ & E-Commerce",
-    "ecomDesc": "Được xây dựng cho các chiến dịch Mega Sale lên đến 100.000+ đơn/ngày. Đồng bộ tồn kho tức thì 1 giây sang Shopee, TikTok Shop, Lazada, sàn TMĐT & Chuỗi cửa hàng offline.",
+    "ecomDesc": "Được xây dựng cho các chiến dịch Mega Sale với lượng đơn tăng đột biến. Đồng bộ tồn kho gần như tức thì sang Shopee, TikTok Shop, Lazada, sàn TMĐT & chuỗi cửa hàng offline.",
     "ecomStat": "Xử lý cam kết: &lt; 2 phút / đơn hàng",
     "coldTag": "& Kho Lạnh",
     "coldStat": "Chuẩn an toàn thực phẩm & Y tế",
     "coldDesc": "Quản lý nghiêm ngặt dải nhiệt độ, độ ẩm của từng zone chuyên biệt. Quản lý chặt chẽ date xuất khẩu, chuẩn HACCP, truy vết nguồn gốc lô hàng theo chuỗi cung ứng.",
     "multiDesc": "Kiến trúc Multi-tenant cho phép quản lý hàng trăm chủ hàng (Customers/Shippers) trên cùng một giao diện duy nhất. Tách biệt dữ liệu và cấu hình biểu phí lưu kho CBM tự động.",
-    "multiStat": "Tiết kiệm 80% thời gian chốt công nợ Chành xe",
+    "multiStat": "Tiết kiệm 50% thời gian chốt công nợ Chành xe",
     "compareDesc": "Xem sự chuyển dịch ngoạn mục từ vận hành kho thủ công truyền thống sang trung tâm xử lý dữ liệu số hóa thông minh",
     "formDesc": "Đội ngũ kỹ sư giải pháp ecor sẽ đến khảo sát mặt bằng thực tế, lập mô phỏng ô kệ 3D và tư vấn phương án tinh gọn luồng kho hoàn toàn miễn phí.",
     "areaMin": "Dưới 1,000 m²",
@@ -1621,7 +1671,7 @@
     "tag": "Khám Phá Sức Mạnh eCor",
     "close": "Đóng modal",
     "successTitle": "Đăng Ký Thành Công!",
-    "successDesc": "Chuyên viên giải pháp eCor sẽ liên hệ trực tiếp trong vòng <strong>10 phút</strong> để tư vấn và kích hoạt bản quyền demo miễn phí cho bạn.",
+    "successDesc": "Chuyên viên giải pháp eCor sẽ liên hệ trực tiếp trong vòng <strong>30 phút</strong> để tư vấn và kích hoạt bản quyền demo miễn phí cho bạn.",
     "closeBtn": "Đóng cửa sổ",
     "nameLabel": "Họ và tên *",
     "namePlh": "Ví dụ: Nguyễn Văn A",
@@ -1639,7 +1689,7 @@
     "reqPlh": "Ví dụ: Đang có 3 cửa hàng, 1 kho tổng 2000m² và 10 xe tải vận chuyển...",
     "submitting": "Đang gửi thông tin...",
     "submitBtn": "Gửi Yêu Cầu & Kích Hoạt Bản Demo Ngay",
-    "secure": "Bảo mật chuẩn ISO 27001",
+    "secure": "Bảo mật dữ liệu theo chuẩn ngành",
     "trial": "14 ngày dùng thử miễn phí",
     "eco": "Hệ sinh thái toàn diện",
     "priceBtn": "Nhận Báo Giá Chi Tiết",
@@ -1648,7 +1698,7 @@
   "canvas": {
     "cycle": "Vòng tuần hoàn vận hành liên tục",
     "closed": "Chu trình khép kín không điểm nghẽn",
-    "latency": "Độ trễ &lt; 0.5s",
+    "latency": "Độ trễ &lt; 1s",
     "wms": "1. Kho Vận (WMS)",
     "wmsSub": "Tồn kho & Pick-Pack",
     "tms": "2. Đội Xe (TMS)",
@@ -1673,7 +1723,7 @@
       "t2": "Pháp lý & Bảo mật",
       "t3": "Chính sách bảo mật",
       "t4": "Cập nhật lần\r\n              cuối: 15/02/2025",
-      "t5": "ISO/IEC 27001:2022 & Nghị định 13/2023/NĐ-CP",
+      "t5": "Thực hành bảo mật theo chuẩn ngành & Nghị định 13/2023/NĐ-CP",
       "t6": "Chính Sách Bảo Mật & An Toàn Dữ Liệu Khách Hàng eCor Platform",
       "t7": "ecor.vn cam kết bảo vệ toàn diện dữ liệu kinh doanh, thông tin đơn hàng, hoạt động kho vận và dữ liệu cá\r\n              nhân của Quý khách hàng. Nền tảng được xây dựng trên cấu trúc an ninh điện toán đám mây cấp doanh nghiệp\r\n              với tiêu chuẩn mã hóa đa tầng, quy trình kiểm soát nghiêm ngặt và nguyên tắc tôn trọng quyền sở hữu dữ\r\n              liệu tuyệt đối.",
       "t8": "AES-256 & TLS 1.3",
@@ -1686,7 +1736,7 @@
       "t15": "Tuân thủ chuẩn mực bảo vệ dữ liệu cá nhân (PDPD), đảm bảo quy trình chấp thuận, thu thập và xóa dữ\r\n                  liệu minh bạch.",
       "t16": "Chuẩn mực pháp lý VN",
       "t17": "Bảo Hiểm An Ninh",
-      "t18": "Cam kết SLA 99.9% khả dụng và chịu trách nhiệm pháp lý, đền bù tổn thất rõ ràng nếu vi phạm cam kết\r\n                  bảo mật.",
+      "t18": "Mục tiêu khả dụng 99.5% và trách nhiệm rõ ràng, có cơ chế bồi hoàn dịch vụ theo Điều khoản SLA nếu không đạt cam kết.",
       "t19": "Ràng buộc pháp lý NDA",
       "t20": "Mục lục văn bản",
       "t21": "1. Mục đích & Nguyên tắc thu thập",
@@ -1701,17 +1751,17 @@
       "t30": "Data Protection Office",
       "t31": "Mọi yêu cầu xóa dữ liệu, thẩm định an toàn thông tin (Security Audit) hoặc phản hồi lỗ hổng, vui lòng\r\n                liên hệ trực tiếp:",
       "t32": "security{'@'}ecor.vn",
-      "t33": "1900 6868 (Ext. 102)",
+      "t33": "097 8673 867",
       "t34": "Trưởng ban An toàn: Nguyễn Tuấn Anh",
       "t35": "Thời gian phản hồi SLA:",
       "t36": "< 4 giờ làm việc",
       "t37": "Tình trạng bảo mật hệ thống",
       "t38": "Bình thường",
       "t39": "Thời gian vận hành",
-      "t40": "99.98%",
+      "t40": "99.5%",
       "t41": "Lỗ hổng nghiêm trọng",
       "t42": "0",
-      "t43": "Hệ thống tường lửa ứng dụng WAF & IPS tự động ngăn chặn 14,200+ truy vấn bất thường mỗi ngày.",
+      "t43": "Hệ thống tường lửa ứng dụng và cơ chế giám sát tự động phát hiện, chặn các truy vấn bất thường.",
       "t44": "ĐIỀU 1",
       "t45": "Mục Đích & Nguyên Tắc Thu Thập Dữ Liệu",
       "t46": "Hệ thống phần mềm eCor (bao gồm WMS, TMS, OMS, POS và Cloud ERP) thu thập và xử lý các trường thông tin\r\n                nhằm mục đích duy nhất là cung cấp, tối ưu và duy trì chất lượng dịch vụ quản trị chuỗi cung ứng cho\r\n                Doanh nghiệp:",
@@ -1752,9 +1802,9 @@
       "t81": "Toàn bộ dữ liệu nhạy cảm trên đĩa cứng máy chủ được mã hóa bằng thuật toán chuẩn quân sự AES-256\r\n                    bit. Toàn bộ phiên làm việc web/mobile API sử dụng chứng chỉ mã hóa TLS 1.3 với HSTS bắt buộc.",
       "t82": "03",
       "t83": "Sao lưu Backup Tự động",
-      "t84": "Cơ chế sao lưu gia tăng (Incremental Backup) tự động mỗi giờ và bản Full Backup hàng ngày lưu trữ\r\n                    phân tán tại 2 trung tâm dữ liệu độc lập (Disaster Recovery site) đảm bảo RPO < 15 phút.",
-      "t85": "ISO/IEC 27001:2022",
-      "t86": "Đã được chứng nhận",
+      "t84": "Sao lưu tự động định kỳ (theo giờ hoặc theo ngày tùy gói dịch vụ), lưu trữ tách biệt khỏi hệ thống chính để phục vụ khôi phục khi có sự cố.",
+      "t85": "Tham chiếu ISO/IEC 27001",
+      "t86": "Áp dụng thực hành tương đương, chưa chứng nhận",
       "t87": "SOC 2 Type II Type",
       "t88": "Đang tuân thủ",
       "t89": "2FA & SSO Ready",
@@ -1764,10 +1814,10 @@
       "t93": "ĐIỀU 4",
       "t94": "Thời Hạn Lưu Trữ & Vị Trí Hạ Tầng Máy Chủ",
       "t95": "Vị trí địa lý lưu trữ dữ liệu (Data\r\n                      Residency)",
-      "t96": "Nhằm tuân thủ tuyệt đối Luật An ninh mạng Việt Nam và Nghị định 13/2023/NĐ-CP, 100% dữ liệu phát\r\n                      sinh của khách hàng được lưu trữ trên cụm máy chủ đặt tại các Data Center chuẩn quốc tế Tier 3+ ở",
-      "t97": "TP. Hồ Chí Minh",
-      "t98": "và",
-      "t99": "TP. Hà Nội",
+      "t96": "Dữ liệu của khách hàng được lưu trữ trên hạ tầng đám mây của nhà cung cấp uy tín, tuân thủ Luật An ninh mạng Việt Nam và Nghị định 13/2023/NĐ-CP. Vị trí lưu trữ cụ thể sẽ được nêu rõ trong hợp đồng dịch vụ. Hiện ưu tiên đặt tại",
+      "t97": "Việt Nam",
+      "t98": "hoặc",
+      "t99": "khu vực Đông Nam Á",
       "t100": "(Hạ tầng hợp tác cùng VNPT Cloud\r\n                      và Viettel IDC).",
       "t101": "Thời gian duy trì dữ liệu",
       "t102": "Dữ liệu lịch sử giao dịch kho và vận tải được lưu trữ toàn vẹn trong suốt thời gian hợp đồng dịch\r\n                      vụ có hiệu lực. Sau khi hợp đồng chấm dứt hoặc theo văn bản yêu cầu của khách hàng, dữ liệu sẽ\r\n                      được giữ thêm 30 ngày ở chế độ chỉ đọc (Read-only) để phục vụ việc trích xuất, sau đó sẽ được xóa\r\n                      vĩnh viễn (Secure Erase) khỏi hệ thống máy chủ và bản sao lưu.",
@@ -1803,10 +1853,10 @@
       "t132": "API Token mTLS",
       "t133": "ĐIỀU 7",
       "t134": "Quy Trình Ứng Phó & Thông Báo Sự Cố An Ninh (Incident Response)",
-      "t135": "Nhằm đảm bảo tính chủ động và giảm thiểu tối đa mọi thiệt hại, eCor vận hành Đội ứng cứu khẩn cấp an\r\n                ninh mạng (eCor CSIRT) theo quy trình chuẩn ISO 27035:",
+      "t135": "Để chủ động và giảm thiểu thiệt hại, eCor có quy trình ứng phó sự cố an ninh mạng với các bước chính sau:",
       "t136": "Giai đoạn 1: Phát hiện & Cô lập (0 -\r\n                        2 giờ)",
       "t137": "Tức\r\n                        thì",
-      "t138": "Hệ thống SIEM kích hoạt cơ chế cách ly phân vùng máy chủ bị ảnh hưởng, khóa các tài khoản có dấu\r\n                      hiệu bị xâm phạm và bảo lưu nhật ký chứng cứ số.",
+      "t138": "Hệ thống giám sát phát hiện bất thường, cách ly phân vùng bị ảnh hưởng, khóa các tài khoản có dấu hiệu bị xâm phạm và lưu giữ nhật ký làm bằng chứng.",
       "t139": "Giai đoạn 2: Thông báo Khách hàng &\r\n                        Cơ quan Chức năng (Trong vòng 24 giờ)",
       "t140": "<\r\n                        24h",
       "t141": "Gửi thông báo chính thức qua Email quản trị và Hotline tới các đối tác/khách hàng có nguy cơ chịu\r\n                      ảnh hưởng; đồng thời báo cáo Cục An toàn thông tin (Bộ TT&TT) theo quy định của pháp luật.",
@@ -1836,13 +1886,13 @@
       "t5": "Điều Khoản Dịch Vụ & Quy Định Sử Dụng Nền Tảng eCor SaaS",
       "t6": "Các quy định pháp lý mang tính ràng buộc giữa Nền tảng eCor và Khách hàng tổ chức/doanh nghiệp khai thác, vận hành bộ giải pháp số hóa chuỗi cung ứng: Kho vận WMS, Quản trị vận tải TMS, Quản trị đơn hàng OMS, POS bán lẻ và Cổng kết nối ERP.",
       "t7": "Chuẩn hóa Luật Giao dịch Điện tử 2023",
-      "t8": "Bảo vệ quyền lợi Doanh nghiệp 100%",
+      "t8": "Bảo vệ quyền lợi doanh nghiệp",
       "t9": "Cập nhật định kỳ 6 tháng/lần",
       "t10": "Cấp phép SaaS minh bạch",
       "t11": "Quyền sử dụng phần mềm dạng dịch vụ thuê bao đám mây định lượng rõ theo số lượng kho, xe tải hoặc người dùng thực tế.",
       "t12": "Sở hữu dữ liệu 100%",
       "t13": "Khách hàng toàn quyền sở hữu thông tin hàng hóa, hóa đơn, thông tin đối tác và hồ sơ khách hàng được đưa lên hệ thống.",
-      "t14": "Hỗ trợ kỹ thuật 24/7/365",
+      "t14": "Hỗ trợ kỹ thuật trong giờ làm việc",
       "t15": "Đội ngũ trực kỹ sư trực chiến thường trực nhằm đảm bảo chuỗi cung ứng và nghiệp vụ xuất nhập kho diễn ra thông suốt.",
       "t16": "Minh bạch không phụ phí",
       "t17": "Không chi phí bảo trì phát sinh ngầm, mọi nâng cấp tính năng nền tảng được tự động cập nhật đồng bộ cho toàn bộ tài khoản.",
@@ -1871,7 +1921,7 @@
       "t40": "Doanh nghiệp có thể tải về bản hợp đồng mẫu tích hợp chữ ký số pháp nhân đầy đủ để phục vụ thẩm định pháp chế hoặc nộp chứng từ kế toán.",
       "t41": "Tải Bộ Hợp Đồng Mẫu SaaS (PDF)",
       "t42": "Tình trạng hệ thống đám mây",
-      "t43": "SLA 99.95% Up",
+      "t43": "SLA mục tiêu 99.5%",
       "t44": "Lời ngỏ & Hiệu lực ràng buộc pháp lý",
       "t45": "Bằng việc hoàn tất quy trình tạo tài khoản Master, nhấn vào ô \"Tôi đồng ý với Điều khoản dịch vụ\", hoặc thực tế sử dụng bất kỳ phân hệ nào thuộc hệ sinh thái eCor (WMS, TMS, OMS, POS, ERP Connect), Quý Khách hàng cam kết đã đọc kỹ, thấu hiểu và hoàn toàn đồng ý tuân thủ toàn bộ các nội dung quy định tại văn bản này.",
       "t46": "01",
@@ -1887,7 +1937,7 @@
       "t56": "Mọi thông tin do Khách hàng tải lên, nhập liệu hoặc phát sinh qua hệ thống bao gồm: danh mục SKU hàng hóa, lịch sử lệnh xuất nhập kho, nhật trình định vị GPS của đội xe tải, dữ liệu thông tin khách hàng và số liệu doanh thu.",
       "t57": "Thời gian hoạt động cam kết (Uptime SLA):",
       "t58": "eCor bảo đảm tính khả dụng của nền tảng đạt tối thiểu",
-      "t59": "99.95%",
+      "t59": "99.5%",
       "t60": "mỗi tháng dương lịch, không bao gồm các khung giờ bảo trì nâng cấp định kỳ đã báo trước ít nhất 48 giờ.",
       "t61": "02",
       "t62": "Đăng ký & Quản trị bảo mật tài khoản",
@@ -1960,7 +2010,7 @@
       "t129": "Hệ thống mở cổng xuất dữ liệu chuyên dụng Data Extraction Toolkit. Doanh nghiệp tải về toàn bộ lịch sử đơn hàng, tồn kho, hồ sơ nhà cung ứng dưới dạng file nén mã hóa AES-256.",
       "t130": "3",
       "t131": "Giai đoạn 03: Hủy dữ liệu vĩnh viễn (Sau Ngày 45)",
-      "t132": "Sau 45 ngày kể từ ngày dừng dịch vụ, toàn bộ bản sao lưu (backup image) trên cloud storage sẽ được xóa tự động vĩnh viễn không thể phục hồi theo chuẩn quốc tế DoD 5220.22-M.",
+      "t132": "Sau 45 ngày kể từ ngày dừng dịch vụ, toàn bộ bản sao lưu trên cloud storage sẽ được xóa vĩnh viễn theo quy trình xóa an toàn.",
       "t133": "07",
       "t134": "Giới hạn trách nhiệm & Điều khoản bất khả kháng",
       "t135": "7.1 Giới hạn bồi thường tối đa:",
@@ -1972,12 +2022,12 @@
       "t141": "7.3 Sự kiện bất khả kháng:",
       "t142": "Các sự kiện nằm ngoài tầm kiểm soát hợp lý của các bên bao gồm thiên tai, hỏa hoạn, động đất, lũ lụt, chiến tranh, dịch bệnh, đứt cáp quang biển quốc tế, quyết định cấm vận của cơ quan Nhà nước có thẩm quyền sẽ được xem là sự kiện bất khả kháng và miễn trách nhiệm thực hiện nghĩa vụ trong thời gian diễn ra sự kiện.",
       "t143": "08",
-      "t144": "Bảo mật thông tin & Tiêu chuẩn ISO/IEC 27001",
+      "t144": "Bảo mật thông tin & thực hành tham chiếu ISO/IEC 27001",
       "t145": "Toàn bộ cơ sở dữ liệu trên hạ tầng đám mây của eCor được bảo vệ nghiêm ngặt theo các tiêu chuẩn quốc tế và Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân:",
       "t146": "Mã hóa Rest & Transit",
       "t147": "TLS 1.3 qua đường truyền và AES-256 đối với phân vùng lưu trữ đĩa.",
-      "t148": "Chứng chỉ ISO/IEC 27001",
-      "t149": "Hệ thống quản lý an toàn thông tin được chứng nhận độc lập hàng năm.",
+      "t148": "Tham chiếu ISO/IEC 27001",
+      "t149": "Áp dụng các thực hành quản lý an toàn thông tin theo chuẩn tham chiếu; sẽ đánh giá độc lập khi đủ điều kiện.",
       "t150": "09",
       "t151": "Luật áp dụng & Giải quyết tranh chấp",
       "t152": "9.1 Luật điều chỉnh:",
@@ -1992,30 +2042,30 @@
       "t161": "Đã Ký Số Hợp Lệ",
       "t162": "Phòng Pháp Chế & Hợp Đồng Doanh Nghiệp",
       "t163": "Cần điều chỉnh phụ lục SLA hoặc thỏa thuận bảo mật NDA riêng?",
-      "t164": "Đối với các tập đoàn phân phối đa quốc gia, đơn vị logistics 3PL quy mô trên 50 đầu xe hoặc chuỗi kho vận trên 20.000m², đội ngũ luật sư chuyên trách của eCor sẵn sàng hỗ trợ rà soát và ký kết bộ hợp đồng tùy biến riêng biệt.",
+      "t164": "Đối với doanh nghiệp quy mô lớn cần điều khoản riêng, vui lòng liên hệ để chúng tôi cùng rà soát và thống nhất hợp đồng tùy chỉnh.",
       "t165": "legal{'@'}ecor.vn / cskh{'@'}ecor.vn",
-      "t166": "Hotline Doanh Nghiệp: 1900 6868",
+      "t166": "Hotline Doanh Nghiệp: 097 8673 867",
       "t167": "Yêu cầu ký kết NDA tùy chỉnh"
     },
     "sla": {
       "t1": "Trang chủ",
       "t2": "Hỗ trợ & Cam kết",
       "t3": "Chính sách bảo hành & SLA",
-      "t4": "Cam kết chất lượng SLA 99.98% Uptime • Đền bù dịch vụ rõ ràng • Hỗ trợ 24/7",
+      "t4": "Mục tiêu SLA 99.5% Uptime • Đền bù dịch vụ rõ ràng • Hỗ trợ trong giờ làm việc",
       "t5": "Chính Sách Bảo Trì, Hỗ Trợ Kỹ Thuật & Cam Kết Chất Lượng Dịch Vụ (SLA)",
       "t6": "Toàn bộ quy chuẩn về bảo hành phần mềm, nâng cấp tính năng định kỳ, thời gian phản hồi sự cố khẩn cấp và chính sách bồi hoàn dịch vụ minh bạch tại nền tảng đám mây ecor.vn.",
       "t7": "SLA Tính Khả Dụng",
-      "t8": "99.98%",
-      "t9": "Cam kết Uptime thời gian hoạt động hệ thống toàn quốc",
+      "t8": "99.5%",
+      "t9": "Mục tiêu uptime hệ thống hàng tháng",
       "t10": "Phản Hồi P1 (Khẩn Cấp)",
-      "t11": "< 15 Phút",
-      "t12": "Thời gian kỹ sư chuyên trách phản hồi trực tiếp 24/7/365",
+      "t11": "< 1 Giờ",
+      "t12": "Thời gian phản hồi sự cố khẩn cấp trong giờ làm việc; ngoài giờ qua hotline",
       "t13": "Bản Vá & Nâng Cấp",
-      "t14": "Tự Động 100%",
-      "t15": "Miễn phí trọn đời cập nhật tính năng mới qua Cloud CI/CD",
+      "t14": "Tự Động",
+      "t15": "Cập nhật tính năng mới qua Cloud, không phát sinh phí ẩn",
       "t16": "Cam Kết Bảo Hành",
       "t17": "30 Ngày",
-      "t18": "Bảo hành hoàn tiền 100% nếu không đạt tiêu chuẩn nghiệp vụ",
+      "t18": "Hỗ trợ hoàn tiền theo điều khoản hợp đồng nếu không đạt tiêu chuẩn nghiệp vụ đã thống nhất",
       "t19": "Mục 01 • Ma Trận Phản Ứng Khẩn Cấp",
       "t20": "Phân Cấp Mức Độ Sự Cố & Thời Gian Xử Lý (Incident Severity Matrix)",
       "t21": "Áp dụng đồng bộ cho các phân hệ WMS kho vận, TMS điều phối vận tải và OMS cổng đơn hàng đa kênh.",
@@ -2027,52 +2077,52 @@
       "t27": "P1 - Khẩn cấp",
       "t28": "Toàn bộ hệ thống ngưng trệ",
       "t29": "Không thể nhập - xuất kho, nghẽn cổng đồng bộ sàn thương mại điện tử, tắc nghẽn bàn giao tài xế.",
-      "t30": "< 15 phút (24/7)",
-      "t31": "< 2 giờ",
-      "t32": "< 4 giờ",
+      "t30": "< 1 giờ (giờ làm việc)",
+      "t31": "< 4 giờ",
+      "t32": "< 24 giờ",
       "t33": "P2 - Nghiêm trọng",
       "t34": "Gián đoạn tính năng trọng yếu",
       "t35": "Lỗi in nhãn vận đơn hàng loạt, mất kết nối thiết bị quét mã vạch PDA, ngắt kết nối tạm thời bảng định tuyến xe tải.",
-      "t36": "< 30 phút",
-      "t37": "< 4 giờ",
-      "t38": "< 8 giờ",
+      "t36": "< 2 giờ",
+      "t37": "< 8 giờ",
+      "t38": "< 48 giờ",
       "t39": "P3 - Tiêu chuẩn",
       "t40": "Sai lệch giao diện / Lỗi phụ",
       "t41": "Giao diện tải chậm nhẹ, sai định dạng báo cáo xuất Excel, thắc mắc thao tác quy trình điều chuyển nội bộ kho.",
-      "t42": "< 2 giờ (Giờ HC)",
-      "t43": "< 12 giờ",
-      "t44": "< 24 giờ",
+      "t42": "< 8 giờ (giờ HC)",
+      "t43": "< 2 ngày",
+      "t44": "< 5 ngày",
       "t45": "P4 - Đề xuất",
       "t46": "Yêu cầu tính năng & Góp ý",
       "t47": "Đề xuất tùy biến mẫu hóa đơn, bổ sung bộ lọc nâng cao, tích hợp cổng thanh toán hoặc hệ thống ERP ngoài.",
-      "t48": "< 24 giờ",
+      "t48": "< 2 ngày làm việc",
       "t49": "Lập kế hoạch",
       "t50": "Theo Roadmap phát triển",
       "t51": "Tiến trình phản ứng sự cố P1 (Khẩn cấp theo thời gian thực)",
-      "t52": "SOP Tiêu Chuẩn 24/7",
+      "t52": "Quy Trình Tiêu Chuẩn",
       "t53": "Bước 1",
       "t54": "Phát hiện sự cố & Cảnh báo",
-      "t55": "Hệ thống giám sát APM tự động kích hoạt alert trực tiếp tới Trưởng nhóm Kỹ thuật (On-call Lead).",
+      "t55": "Hệ thống giám sát tự động gửi cảnh báo tới kỹ sư trực.",
       "t56": "0 - 5 phút",
       "t57": "Bước 2",
       "t58": "Thành lập War-Room",
-      "t59": "Kỹ sư hạ tầng, kỹ sư dữ liệu và DevOps phối hợp khoanh vùng module phát sinh lỗi.",
-      "t60": "5 - 15 phút",
+      "t59": "Đội kỹ thuật phối hợp khoanh vùng module phát sinh lỗi.",
+      "t60": "15 - 60 phút",
       "t61": "Bước 3",
       "t62": "Giải pháp Phục hồi nhanh",
-      "t63": "Triển khai dự phòng failover sang cụm máy chủ phụ (Multi-AZ), khôi phục lưu thông đơn hàng.",
-      "t64": "< 120 phút",
+      "t63": "Áp dụng phương án dự phòng hoặc khôi phục từ bản sao lưu, đưa luồng đơn hàng hoạt động trở lại.",
+      "t64": "< 4 giờ",
       "t65": "Bước 4",
       "t66": "Báo cáo Hậu kiểm (PIR)",
       "t67": "Gửi biên bản phân tích nguyên nhân gốc rễ (Root-Cause Analysis) và bồi hoàn theo cam kết.",
-      "t68": "Trong vòng 24 giờ",
+      "t68": "Trong vòng 3 ngày làm việc",
       "t69": "Mục 02 • Bồi Hoàn Dịch Vụ Minh Bạch",
-      "t70": "Cam Kết Uptime 99.98% & Chính Sách Hoàn Tiền (Service Credit)",
-      "t71": "Nếu tỉ lệ sẵn sàng của hệ thống ecor.vn trong bất kỳ tháng dương lịch nào giảm xuống dưới ngưỡng 99.98%, doanh nghiệp sẽ tự động được nhận Điểm bồi hoàn dịch vụ (Service Credits) khấu trừ trực tiếp vào hóa đơn kỳ tiếp theo.",
+      "t70": "Mục Tiêu Uptime 99.5% & Chính Sách Bồi Hoàn (Service Credit)",
+      "t71": "Nếu tỉ lệ sẵn sàng của hệ thống ecor.vn trong bất kỳ tháng dương lịch nào giảm xuống dưới ngưỡng 99.5%, doanh nghiệp sẽ tự động được nhận Điểm bồi hoàn dịch vụ (Service Credits) khấu trừ trực tiếp vào hóa đơn kỳ tiếp theo.",
       "t72": "Tỷ lệ khả dụng hàng tháng (Monthly Uptime)",
       "t73": "Mức Bồi hoàn Dịch vụ (Credit)",
       "t74": "Hình thức thanh toán",
-      "t75": "99.0% - Dưới 99.98%",
+      "t75": "99.0% - Dưới 99.5%",
       "t76": "10% Cước dịch vụ tháng",
       "t77": "Khấu trừ tự động kỳ kế tiếp",
       "t78": "95.0% - Dưới 99.0%",
@@ -2087,24 +2137,24 @@
       "t87": "Uptime Trực Quan 90 Ngày Qua",
       "t88": "ALL SYSTEMS OPERATIONAL",
       "t89": "Core WMS API Gateway",
-      "t90": "99.99%",
+      "t90": "Mục tiêu ≥ 99.5%",
       "t91": "TMS Routing & GPS Tracking",
-      "t92": "99.98%",
+      "t92": "Mục tiêu ≥ 99.5%",
       "t93": "OMS E-commerce Sync Engines",
-      "t94": "99.97%",
-      "t95": "Cổng tra cứu độc lập 24/7",
+      "t94": "Mục tiêu ≥ 99.5%",
+      "t95": "Trang trạng thái hệ thống",
       "t96": "status.ecor.vn",
       "t97": "Kiểm tra Live",
       "t98": "Mục 03 • Trách Nhiệm Kỹ Thuật",
       "t99": "Phạm Vi Bảo Hành Phần Mềm & Lịch Trình Bảo Trì Hệ Thống",
       "t100": "Bản Vá Lỗi & Cập Nhật",
       "t101": "Miễn phí 100% toàn bộ bản sửa lỗi logic (hotfixes).",
-      "t102": "Cập nhật bản vá bảo mật định kỳ tuân chuẩn ISO 27001.",
+      "t102": "Cập nhật bản vá bảo mật định kỳ theo thực hành bảo mật tốt nhất.",
       "t103": "Tự động nhận tính năng nâng cao không phát sinh phí ẩn.",
       "t104": "Tần suất: Phát hành mỗi thứ Ba hàng tuần",
       "t105": "Tương Thích Thiết Bị Ngoại Vi",
-      "t106": "Bảo hành tương thích trọn vẹn máy quét cầm tay PDA Android (Zebra, Honeywell, Urovo).",
-      "t107": "Driver tương thích trực tiếp các loại máy in bill, in mã vạch nhiệt (Xprinter, Godex).",
+      "t106": "Hỗ trợ tương thích với các dòng máy quét PDA Android phổ biến (ví dụ Zebra, Honeywell, Urovo).",
+      "t107": "Hỗ trợ kết nối các loại máy in bill, in mã vạch nhiệt phổ biến (ví dụ Xprinter, Godex).",
       "t108": "Giao thức kết nối cảm biến cân điện tử tự động.",
       "t109": "Hỗ trợ setup từ xa qua Teamviewer/Ultraview",
       "t110": "Bảo Trì Định Kỳ (Scheduled)",
@@ -2117,31 +2167,31 @@
       "t117": "Linh hoạt kết nối tới kỹ sư vận hành ecor.vn thông qua mọi phương thức phù hợp với đặc thù kho bãi và văn phòng điều hành của bạn.",
       "t118": "Kênh 01",
       "t119": "Hotline Khẩn Cấp",
-      "t120": "Đường dây nóng kỹ thuật phục vụ 24/7/365 cho các sự cố gián đoạn vận hành khẩn cấp P1.",
-      "t121": "1900 6868",
-      "t122": "Phím 2: Hỗ trợ Kỹ thuật & Kho",
+      "t120": "Đường dây nóng kỹ thuật hỗ trợ trong giờ làm việc; sự cố khẩn cấp P1 ngoài giờ có thể liên hệ hotline để được ưu tiên xử lý.",
+      "t121": "097 8673 867",
+      "t122": "Ưu tiên cho sự cố P1",
       "t123": "Kênh 02",
-      "t124": "Cổng Ticket Portal",
-      "t125": "Gửi yêu cầu, đính kèm log lỗi, hình ảnh màn hình và theo dõi luồng xử lý của lập trình viên.",
-      "t126": "Truy cập Ticket Hub",
-      "t127": "Hỗ trợ tự động gắn mã SLA ID",
+      "t124": "Email Hỗ Trợ",
+      "t125": "Gửi yêu cầu, đính kèm log lỗi, hình ảnh màn hình và theo dõi tiến trình xử lý qua email.",
+      "t126": "Gửi email tới contact@ecor.vn",
+      "t127": "Mỗi yêu cầu được gắn mã theo dõi",
       "t128": "Kênh 03",
-      "t129": "Nhóm Hỗ Trợ VIP",
-      "t130": "Kênh trao đổi trực tiếp Zalo VIP / Telegram chuyên trách riêng cho doanh nghiệp gói Enterprise.",
+      "t129": "Nhóm Hỗ Trợ Riêng",
+      "t130": "Kênh trao đổi trực tiếp qua nhóm Zalo riêng cho doanh nghiệp gói Enterprise.",
       "t131": "Dành riêng cho Enterprise",
-      "t132": "Dedicated Customer Success Lead",
+      "t132": "Chuyên viên phụ trách riêng",
       "t133": "Kênh 04",
       "t134": "Hỗ Trợ Trực Tiếp (Onsite)",
-      "t135": "Kỹ sư hiện trường có mặt tận kho, trung tâm phân phối và bến bãi để kiểm tra hạ tầng vật lý.",
-      "t136": "Phủ sóng HN - ĐN - TP.HCM",
-      "t137": "Có mặt trong 2-4h (nội thành)",
+      "t135": "Kỹ sư có thể đến kho, trung tâm phân phối theo lịch hẹn để hỗ trợ triển khai.",
+      "t136": "Ưu tiên khu vực TP.HCM",
+      "t137": "Sắp xếp theo lịch hẹn",
       "t138": "Theo dõi trực tiếp hoặc liên hệ kỹ sư",
       "t139": "Đảm Bảo Dòng Chảy Vận Hành Của Doanh Nghiệp Không Gián Đoạn",
-      "t140": "Hơn 1.200 kho vận và chuỗi phân phối tin tưởng vào sự bảo bọc kỹ thuật vững vàng từ ecor.vn. Chúng tôi luôn sẵn sàng hỗ trợ bạn.",
+      "t140": "Chúng tôi là đội ngũ trẻ, đặt việc lắng nghe và hỗ trợ khách hàng lên hàng đầu. Hãy liên hệ khi bạn cần hỗ trợ.",
       "t141": "Xem Trang Trạng Thái Hệ Thống",
       "t142": "Gửi Yêu Cầu Hỗ Trợ Kỹ Thuật",
-      "t143": "Chứng nhận An Toàn ISO/IEC 27001",
-      "t144": "Dữ liệu đơn hàng, kho vận và lịch trình xe được mã hóa chuẩn TLS 1.3 và lưu trữ đa tầng tại Việt Nam.",
+      "t143": "Bảo Mật Dữ Liệu",
+      "t144": "Dữ liệu đơn hàng, kho vận và lịch trình xe được mã hóa khi truyền tải (TLS) và lưu trữ trên hạ tầng đám mây có sao lưu định kỳ.",
       "t145": "Pháp Lý & Hợp Đồng Dịch Vụ",
       "t146": "Điều khoản SLA là phụ lục bắt buộc gắn liền với Hợp đồng cấp phép sử dụng phần mềm có giá trị pháp lý đầy đủ."
     }

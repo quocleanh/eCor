@@ -166,22 +166,22 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">94.5%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('tms.metrics.m1.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m1.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m1.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">-22%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('tms.metrics.m2.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m2.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m2.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">98.2%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('tms.metrics.m3.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m3.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m3.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">100%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('tms.metrics.m4.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('tms.metrics.m4.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('tms.metrics.m4.desc') }}</p>
           </div>

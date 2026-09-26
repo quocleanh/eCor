@@ -40,22 +40,22 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-left">
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">450+</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('customers.metrics.m1.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('customers.metrics.m1.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('customers.metrics.m1.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">1,200,000+</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('customers.metrics.m2.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('customers.metrics.m2.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('customers.metrics.m2.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">99.98%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('customers.metrics.m3.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('customers.metrics.m3.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('customers.metrics.m3.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">35% – 60%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('customers.metrics.m4.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('customers.metrics.m4.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('customers.metrics.m4.desc') }}</p>
           </div>
@@ -157,7 +157,7 @@
 
           <div class="lg:col-span-6">
             <div class="rounded-2xl overflow-hidden border border-zinc-200 shadow-md">
-              <img src="/images/assets/customer-ystyle.png" alt="Y-Style Case Study" class="w-full h-72 sm:h-80 object-cover" />
+              <img src="/images/assets/customer-ystyle.png" alt="Kịch bản minh họa: chuỗi bán lẻ" class="w-full h-72 sm:h-80 object-cover" />
               <div class="p-3 bg-white flex justify-between text-xs text-zinc-600 font-medium">
                 <span>{{ $t('customers.cases.c1.imgNote1') }}</span>
                 <span class="text-amber-600 font-bold">{{ $t('customers.cases.c1.imgNote2') }}</span>
@@ -218,7 +218,7 @@
 
           <div class="lg:col-span-6">
             <div class="rounded-2xl overflow-hidden border border-zinc-200 shadow-md">
-              <img src="/images/assets/customer-greenfarm.png" alt="GreenFarm Case Study" class="w-full h-72 sm:h-80 object-cover" />
+              <img src="/images/assets/customer-greenfarm.png" alt="Kịch bản minh họa: chuỗi cung ứng thực phẩm" class="w-full h-72 sm:h-80 object-cover" />
               <div class="p-3 bg-white flex justify-between text-xs text-zinc-600 font-medium">
                 <span>{{ $t('customers.cases.c2.imgNote1') }}</span>
                 <span class="text-amber-700 font-bold">{{ $t('customers.cases.c2.imgNote2') }}</span>
@@ -279,7 +279,7 @@
 
           <div class="lg:col-span-6">
             <div class="rounded-2xl overflow-hidden border border-zinc-200 shadow-md">
-              <img src="/images/assets/customer-vinalogistics.png" alt="{{ $t('customers.partners.p3Name') }} Case Study" class="w-full h-72 sm:h-80 object-cover" />
+              <img src="/images/assets/customer-vinalogistics.png" alt="Kịch bản minh họa: kho vận nhiều chủ hàng" class="w-full h-72 sm:h-80 object-cover" />
               <div class="p-3 bg-white flex justify-between text-xs text-zinc-600 font-medium">
                 <span>{{ $t('customers.cases.c3.imgNote1') }}</span>
                 <span class="text-amber-700 font-bold">{{ $t('customers.cases.c3.imgNote2') }}</span>
@@ -312,7 +312,7 @@
 
           <div class="lg:col-span-7">
             <div class="relative rounded-2xl overflow-hidden border border-zinc-700 shadow-2xl group">
-              <img src="/images/assets/video-megahub.png" alt="Mega Hub ecor WMS & AGV Robot" class="w-full h-72 sm:h-96 object-cover" />
+              <img src="/images/assets/video-megahub.png" alt="Demo hệ thống ecor WMS" class="w-full h-72 sm:h-96 object-cover" />
               <div class="absolute inset-0 bg-zinc-950/40 flex items-center justify-center group-hover:bg-zinc-950/20 transition-all cursor-pointer">
                 <div class="w-16 h-16 rounded-full bg-amber-400 text-zinc-900 font-bold flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
                   <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -344,7 +344,7 @@
             <div class="text-[10px] text-zinc-400 mt-0.5">{{ $t('customers.partners.p2Desc') }}</div>
           </div>
           <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 text-center">
-            <div class="font-bold text-zinc-800 text-sm">VinaLogistics</div>
+            <div class="font-bold text-zinc-800 text-sm">{{ $t('customers.partners.p3Name') }}</div>
             <div class="text-[10px] text-zinc-400 mt-0.5">{{ $t('customers.partners.p3Desc') }}</div>
           </div>
           <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 text-center">

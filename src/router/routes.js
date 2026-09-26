@@ -90,7 +90,7 @@ export const routeMappings = [
     component: () => import('@/views/TilesView.vue'),
     meta: {
       title: 'ecor Tiles AI & AR — Giải Pháp Số Hóa Ngành Gạch Ốp Lát & VLXD',
-      description: 'ecor Tiles: AI nhận diện vân gạch 0.5 giây, phối cảnh 3D tức thì, quét AR LiDAR đo sàn tường 1:1, kết nối kho WMS và vận tải TMS cho nhà máy, showroom và đại lý gạch.'
+      description: 'ecor Tiles: AI nhận diện vân gạch, phối cảnh 3D nhanh, quét AR LiDAR đo sàn tường 1:1, kết nối kho WMS và vận tải TMS cho nhà máy, showroom và đại lý gạch.'
     },
     paths: {
       vi: '/giai-phap-nganh-gach',

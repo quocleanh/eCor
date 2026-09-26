@@ -72,23 +72,23 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">+35%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('solutions.metrics.m1.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('solutions.metrics.m1.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('solutions.metrics.m1.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">99.98%</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('solutions.metrics.m2.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('solutions.metrics.m2.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('solutions.metrics.m2.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">0 {{ $t('solutions.metrics.m3.unit') }}
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('solutions.metrics.m3.val') }}
             </div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('solutions.metrics.m3.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('solutions.metrics.m3.desc') }}</p>
           </div>
           <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-100 text-left">
-            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">x2.5</div>
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-700">{{ $t('solutions.metrics.m4.val') }}</div>
             <div class="text-sm font-bold text-zinc-800 mt-2">{{ $t('solutions.metrics.m4.title') }}</div>
             <p class="text-xs text-zinc-500 mt-1">{{ $t('solutions.metrics.m4.desc') }}</p>
           </div>
@@ -194,7 +194,7 @@
                   class="w-full h-64 sm:h-72 object-cover" />
                 <div class="p-3 bg-white flex items-center justify-between text-xs text-zinc-600 font-medium">
                   <span>Đồng bộ sàn: Shopee, TikTok Shop, Lazada</span>
-                  <span class="text-amber-600 font-mono font-bold">API Sync: 0.12s</span>
+                  <span class="text-amber-600 font-mono font-bold">API Sync: < 1s</span>
                 </div>
               </div>
             </div>
@@ -269,8 +269,8 @@
                 <img src="/images/assets/solutions-3pl.png" alt="Logistics 3PL / 4PL"
                   class="w-full h-64 sm:h-72 object-cover" />
                 <div class="p-3 bg-white flex items-center justify-between text-xs text-zinc-600 font-medium">
-                  <span>e-POD đã ký điện tử: 1,420 chuyến</span>
-                  <span class="text-amber-600 font-mono font-bold">Tối ưu tải 94.5%</span>
+                  <span>Ký nhận e-POD điện tử</span>
+                  <span class="text-amber-600 font-mono font-bold">Tối ưu tải xe</span>
                 </div>
               </div>
             </div>
@@ -307,8 +307,8 @@
                 <img src="/images/assets/solutions-b2b.png" alt="Sản Xuất & Phân Phối B2B"
                   class="w-full h-64 sm:h-72 object-cover" />
                 <div class="p-3 bg-white flex items-center justify-between text-xs text-zinc-600 font-medium">
-                  <span>Kết nối SAP / Oracle / MISA</span>
-                  <span class="text-amber-600 font-mono font-bold">12 Kho Vùng Liên Thông</span>
+                  <span>Kết nối MISA / KiotViet / Open API</span>
+                  <span class="text-amber-600 font-mono font-bold">Nhiều kho vùng liên thông</span>
                 </div>
               </div>
             </div>
