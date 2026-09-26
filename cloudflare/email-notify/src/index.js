@@ -25,7 +25,7 @@ export default {
 
     const admin = buildAdminEmail(data);
     try {
-      await sendMail(env, { to: env.MAIL_TO, from: env.MAIL_FROM_SYSTEM, ...admin });
+      await sendMail(env, { to: env.MAIL_TO, from: env.MAIL_FROM_SYSTEM, user: env.SMTP_USER_SYSTEM, pass: env.SMTP_PASS_SYSTEM, ...admin });
     } catch (err) {
       // Log for `wrangler tail`, nhưng không chặn trải nghiệm người dùng
       // chỉ vì gửi email nội bộ thất bại.
@@ -35,7 +35,7 @@ export default {
     if (data.email) {
       const customer = buildCustomerEmail(data);
       try {
-        await sendMail(env, { to: data.email, from: env.MAIL_FROM_CUSTOMER, ...customer });
+        await sendMail(env, { to: data.email, from: env.MAIL_FROM_CUSTOMER, user: env.SMTP_USER_CUSTOMER, pass: env.SMTP_PASS_CUSTOMER, ...customer });
       } catch (err) {
         console.error('smtp_send_customer_failed', err && err.message);
       }
@@ -72,7 +72,7 @@ function json(obj, status, cors) {
 const enc = new TextEncoder();
 const dec = new TextDecoder();
 
-async function sendMail(env, { to, from, subject, text, html }) {
+async function sendMail(env, { to, from, user, pass, subject, text, html }) {
   const port = Number(env.SMTP_PORT || 465);
   const implicitTls = String(env.SMTP_SECURE) !== 'false';
 
@@ -105,10 +105,10 @@ async function sendMail(env, { to, from, subject, text, html }) {
   resp = await cmd(writer, reader, 'AUTH LOGIN');
   assertCode(resp, '334', 'auth_login_failed');
 
-  resp = await cmd(writer, reader, btoa(env.SMTP_USER));
+  resp = await cmd(writer, reader, btoa(user));
   assertCode(resp, '334', 'auth_user_failed');
 
-  resp = await cmd(writer, reader, btoa(env.SMTP_PASS));
+  resp = await cmd(writer, reader, btoa(pass));
   assertCode(resp, '235', 'auth_pass_failed');
 
   resp = await cmd(writer, reader, `MAIL FROM:<${from}>`);

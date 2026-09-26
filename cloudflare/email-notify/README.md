@@ -11,24 +11,27 @@ qua dịch vụ trung gian nào khác.
 
 Cần các thông tin SMTP sau (từ nhà cung cấp email của bạn — Gmail, Zoho, hosting riêng...):
 
-- `SMTP_HOST` — ví dụ `smtp.gmail.com`, `smtp.zoho.com`, hoặc `mail.ecor.vn`
+- `SMTP_HOST` — hiện dùng Google Workspace: `smtp.gmail.com`
 - `SMTP_PORT` — thường là `465` (TLS ngay) hoặc `587` (STARTTLS)
-- `SMTP_USER` — tài khoản đăng nhập SMTP (thường là email đầy đủ)
-- `SMTP_PASS` — mật khẩu SMTP. **Với Gmail/Google Workspace bắt buộc dùng "App Password"**
+- `SMTP_USER_CUSTOMER` / `SMTP_PASS_CUSTOMER` — tài khoản gửi thư cho khách (`contact@ecor.vn`) và App Password của nó
+- `SMTP_USER_SYSTEM` / `SMTP_PASS_SYSTEM` — tài khoản gửi thư hệ thống (`no-reply@ecor.vn`) và App Password của nó
+- Mật khẩu SMTP: **Với Gmail/Google Workspace bắt buộc dùng "App Password"**
   (mật khẩu ứng dụng), không dùng mật khẩu đăng nhập thường vì Google chặn SMTP login trực tiếp.
-- `MAIL_FROM` — email hiển thị người gửi (thường trùng `SMTP_USER`)
-- `MAIL_TO` — email nhận thông báo (email của bạn)
+- `MAIL_FROM_CUSTOMER` — người gửi thư cho khách (`contact@ecor.vn`)
+- `MAIL_FROM_SYSTEM` — người gửi thư hệ thống/thông báo lead (`no-reply@ecor.vn`, cần thêm làm alias "Send as" của `contact@ecor.vn` trong Google Workspace)
+- `MAIL_TO` — hộp thư nhận thông báo lead mới (`contact@ecor.vn`)
 
 ## 2. Điền cấu hình không nhạy cảm
 
 Sửa trong `cloudflare/email-notify/wrangler.toml`, mục `[vars]`:
 
 ```toml
-SMTP_HOST = "..."
+SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = "465"      # hoặc "587"
 SMTP_SECURE = "true"   # "true" nếu port 465, "false" nếu port 587 (STARTTLS)
-MAIL_FROM = "..."
-MAIL_TO = "..."
+MAIL_FROM_CUSTOMER = "contact@ecor.vn"
+MAIL_FROM_SYSTEM = "no-reply@ecor.vn"
+MAIL_TO = "contact@ecor.vn"
 ```
 
 ## 3. Deploy Worker (cần đăng nhập Cloudflare)
@@ -38,8 +41,10 @@ cd cloudflare/email-notify
 npm install -g wrangler   # nếu chưa có
 wrangler login
 
-wrangler secret put SMTP_USER
-wrangler secret put SMTP_PASS
+wrangler secret put SMTP_USER_CUSTOMER
+wrangler secret put SMTP_PASS_CUSTOMER
+wrangler secret put SMTP_USER_SYSTEM
+wrangler secret put SMTP_PASS_SYSTEM
 
 wrangler deploy
 ```
