@@ -1,28 +1,6 @@
 <template>
   <div class="bg-white text-slate-900 overflow-hidden">
-    <!-- Breadcrumb bar -->
-    <section class="w-full bg-slate-50 border-b border-slate-200/80 px-4 sm:px-6 lg:px-8 py-2.5">
-      <div class="max-w-7xl mx-auto flex items-center justify-between text-xs font-mono text-slate-500">
-        <div class="flex items-center gap-2 flex-wrap">
-          <router-link :to="$localeRoute('home')" class="hover:text-amber-600 transition-colors flex items-center gap-1 font-semibold text-slate-700">
-            <span class="material-symbols-outlined text-[15px] text-slate-500">home</span>
-            ecor.vn
-          </router-link>
-          <span class="text-slate-300">/</span>
-          <span class="text-slate-600">Hệ Sinh Thái VLXD &amp; Gạch Ốp Lát</span>
-          <span class="text-slate-300">/</span>
-          <span class="text-amber-700 font-bold flex items-center gap-1.5 bg-amber-100/70 px-2 py-0.5 rounded">
-            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            ecor Tiles AI &amp; LiDAR Engine v4.8
-          </span>
-        </div>
-        <div class="hidden sm:flex items-center gap-4 text-[11px]">
-          <span class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-semibold">LiDAR 3D Meshing 60fps</span>
-          <span class="text-slate-500">Độ trễ AI Inference: <strong class="text-emerald-600 font-bold">0.32s</strong></span>
-        </div>
-      </div>
-    </section>
-
+     
     <!-- HERO -->
     <section class="relative w-full py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-white">
       <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[760px] h-[380px] bg-amber-300/15 rounded-full blur-[130px] pointer-events-none"></div>
