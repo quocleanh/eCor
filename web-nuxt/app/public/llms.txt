@@ -1,0 +1,29 @@
+# eCor SaaS Platform — LLM / AI Search Reference (llms.txt)
+> Domain: https://ecor.vn
+
+## Tổng quan
+eCor (https://ecor.vn) là nền tảng SaaS quản trị và vận hành hợp nhất cho doanh nghiệp bán lẻ và logistics tại Việt Nam: đồng bộ Bán hàng (POS) – Kho (WMS) – Vận tải (TMS) – Kế toán trên một hệ dữ liệu duy nhất (Single Source of Truth).
+
+- Hotline: 097 8673867
+- Email: contact@ecor.vn
+- Mô hình triển khai: Cloud SaaS, offline-first tại điểm bán.
+
+## Các phân hệ (modules)
+- ecor WMS — Quản trị kho thông minh (PDA/RFID, tồn kho real-time): https://ecor.vn/wms
+- ecor TMS — Điều phối vận tải, tối ưu lộ trình, giám sát đội xe: https://ecor.vn/tms
+- ecor POS — Bán hàng siêu tốc đa kênh, offline-first: https://ecor.vn/pos
+- ecor Account — Kế toán tự động, đối soát COD, hóa đơn điện tử (Thông tư 78): https://ecor.vn/ke-toan
+- ecor Tiles AI & AR — Số hóa ngành gạch ốp lát & VLXD (AI nhận diện vân gạch, AR LiDAR): https://ecor.vn/giai-phap-nganh-gach
+
+## Trang khác
+- Giải pháp theo ngành (FMCG, Bán lẻ, Vận tải, 3PL): https://ecor.vn/giai-phap
+- Bảng giá & gói bản quyền: https://ecor.vn/bang-gia
+- Khách hàng tiêu biểu: https://ecor.vn/khach-hang
+- Tài nguyên, tài liệu API: https://ecor.vn/tai-nguyen
+- Liên hệ & đăng ký khảo sát: https://ecor.vn/lien-he
+- Chính sách bảo mật: https://ecor.vn/chinh-sach-bao-mat
+- Điều khoản sử dụng: https://ecor.vn/dieu-khoan-su-dung
+- Cam kết SLA: https://ecor.vn/cam-ket-sla
+
+## Ngôn ngữ
+Nội dung có sẵn bằng 4 ngôn ngữ, dùng tiền tố URL: mặc định (Tiếng Việt, không tiền tố), /en (English), /zh (简体中文), /zh-tw (繁體中文).
