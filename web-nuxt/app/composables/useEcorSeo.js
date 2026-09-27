@@ -6,11 +6,12 @@ const OG_LOCALE_MAP = {
 }
 
 const SITE_URL = 'https://ecor.vn'
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
+// Ảnh OG chung (banner "Hệ Sinh Thái Giải Pháp Số Hóa") cho các trang chưa
+// có ảnh riêng theo nhóm sản phẩm (home/wms/tms/account/tiles đã có ảnh riêng).
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og/og-general.jpg`
 
 // Meta SEO chuẩn cho từng trang: canonical tuyệt đối theo đúng URL của trang đó
-// (không bao giờ trỏ về "/"), OG/Twitter đầy đủ. ogImage hiện dùng chung 1 ảnh
-// placeholder cho tới khi có ảnh riêng theo từng nhóm sản phẩm (Bước 4 note).
+// (không bao giờ trỏ về "/"), OG/Twitter đầy đủ.
 export function useEcorSeo({ title, description, image, type = 'website' } = {}) {
   const route = useRoute()
   const { locale } = useI18n()
