@@ -139,6 +139,10 @@ export default defineNuxtConfig({
       crawlLinks: true,
       failOnError: false,
       routes: ['/'],
+      // Xuất "wms.html" thay vì "wms/index.html" để URL không có dấu "/" cuối
+      // khớp đúng với canonical/OG (không trailing slash) và tránh việc
+      // Cloudflare tự 307-redirect "/wms" -> "/wms/" (lệch với canonical).
+      autoSubfolderIndex: false,
     },
   },
 
