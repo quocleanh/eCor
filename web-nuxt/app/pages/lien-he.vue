@@ -442,6 +442,7 @@ const faqs = computed(() => [
 
 useEcorSeo({
   title: 'Liên Hệ & Đăng Ký Khảo Sát Giải Pháp — eCor',
+  description: 'Liên hệ đội ngũ eCor để đăng ký khảo sát, tư vấn giải pháp WMS, TMS, POS, Kế toán phù hợp quy mô doanh nghiệp của bạn.',
 })
 
 useJsonLd({

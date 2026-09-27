@@ -755,7 +755,7 @@ async function submitLead() {
 }
 
 useEcorSeo({
-  title: 'ecor Tiles AI & AR — Giải Pháp Số Hóa Ngành Gạch Ốp Lát & VLXD',
+  title: 'ecor Tiles AI & AR — Số Hóa Ngành Gạch Ốp Lát & VLXD',
   description: 'ecor Tiles: AI nhận diện vân gạch, phối cảnh 3D nhanh, quét AR LiDAR đo sàn tường 1:1, kết nối kho WMS và vận tải TMS cho nhà máy, showroom và đại lý gạch.',
   image: '/images/og/og-tiles.jpg',
 })

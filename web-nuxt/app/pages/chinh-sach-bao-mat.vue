@@ -766,6 +766,7 @@ onUnmounted(() => {
 
 useEcorSeo({
   title: 'Chính Sách Bảo Mật — eCor',
+  description: 'Chính sách bảo mật dữ liệu và quyền riêng tư của người dùng khi sử dụng nền tảng SaaS eCor.',
 })
 
 useJsonLd({

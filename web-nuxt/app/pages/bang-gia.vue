@@ -357,6 +357,7 @@ const faqs = computed(() => [
 
 useEcorSeo({
   title: 'Bảng Giá Dịch Vụ & Gói Bản Quyền — eCor',
+  description: 'Bảng giá các gói eCor: Starter, Professional, Enterprise cho POS, WMS, TMS, Kế toán. So sánh tính năng và chọn gói phù hợp quy mô doanh nghiệp.',
 })
 
 useJsonLd({

@@ -593,6 +593,7 @@ onUnmounted(() => {
 
 useEcorSeo({
   title: 'Điều Khoản Sử Dụng — eCor',
+  description: 'Điều khoản sử dụng dịch vụ nền tảng SaaS eCor: quyền và nghĩa vụ của khách hàng, nhà cung cấp dịch vụ.',
 })
 
 useJsonLd({

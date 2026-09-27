@@ -145,6 +145,7 @@ const { openModal } = useContactModal()
 
 useEcorSeo({
   title: 'Tài Nguyên, Tài Liệu API & Hướng Dẫn Tích Hợp — eCor',
+  description: 'Tài liệu API, hướng dẫn tích hợp ERP và cẩm nang vận hành logistics từ eCor cho đội ngũ kỹ thuật và vận hành doanh nghiệp.',
 })
 
 useJsonLd({

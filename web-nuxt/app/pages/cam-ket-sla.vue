@@ -621,6 +621,7 @@ onUnmounted(() => {
 
 useEcorSeo({
   title: 'Cam Kết SLA & Bảo Hành — eCor',
+  description: 'Cam kết chất lượng dịch vụ (SLA) và chính sách bảo hành, hỗ trợ kỹ thuật của eCor dành cho khách hàng doanh nghiệp.',
 })
 
 useJsonLd({

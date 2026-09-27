@@ -376,6 +376,7 @@ const filter = ref('all')
 
 useEcorSeo({
   title: 'Khách Hàng Tiêu Biểu & Câu Chuyện Thành Công — eCor',
+  description: 'Câu chuyện thành công của khách hàng eCor: chuỗi bán lẻ, FMCG, 3PL logistics đã tối ưu vận hành kho, vận tải và bán hàng đa kênh.',
 })
 
 useJsonLd({

@@ -757,7 +757,7 @@ const liveTabs = computed(() => [
 
 useEcorSeo({
   title: 'eCor — Đồng Bộ Logistics, Kho Bãi & Thương Mại Của Bạn',
-  description: 'ecor.vn - Nền tảng SaaS tối ưu cho WMS (Quản lý kho), TMS (Quản lý vận tải) và tích hợp thương mại đa kênh. Tự động hoá chính xác dòng chảy hàng hóa từ nhà cung cấp đến tay khách hàng.',
+  description: 'Nền tảng SaaS đồng bộ WMS, TMS, POS và Kế toán trên một hệ dữ liệu duy nhất, tự động hoá dòng chảy hàng hóa từ nhà cung cấp đến khách hàng.',
   image: '/images/og/og-home.jpg',
 })
 </script>

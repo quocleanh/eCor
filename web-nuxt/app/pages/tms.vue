@@ -458,7 +458,7 @@ const { openModal } = useContactModal()
 
 useEcorSeo({
   title: 'ecor TMS — Quản Lý & Điều Phối Vận Tải Real-Time',
-  description: 'Phân hệ eCor TMS - Nền tảng điều phối vận tải tối ưu lộ trình, giám sát đội xe và tự động đồng bộ mã vận đơn đa kênh trên Lõi dữ liệu duy nhất (Single Source of Truth).',
+  description: 'Phân hệ eCor TMS - Nền tảng điều phối vận tải tối ưu lộ trình, giám sát đội xe và tự động đồng bộ mã vận đơn đa kênh trên Single Source of Truth.',
   image: '/images/og/og-tms.jpg',
 })
 
