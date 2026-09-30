@@ -79,7 +79,7 @@
     "hero": {
       "badge": "✨ New Gen: Unified Supply Chain Management",
       "title": "One Source of Truth. Entire Operation.",
-      "subtitle": "The ultimate SaaS platform for Warehouse Management (WMS), Transport Management (TMS) and Multi-channel commerce. Automate product flows with precision.",
+      "subtitle": "The ultimate SaaS platform for Warehouse Management (WMS), Transport Management (TMS) and Multi-channel commerce. AI automates and forecasts product flows with precision.",
       "register": "Book a Demo",
       "demo": "Watch 2-min Demo",
       "proof": "— early-access signups are open",
@@ -118,7 +118,7 @@
       "subtitle": "Independent but closely linked modular architecture, supporting businesses to scale instantly without disruption.",
       "wms": {
         "title": "Advanced WMS",
-        "desc": "Accurate control of every shelf location (Bin/Shelf), Barcode/QR scanning support, batch & expiry management, and high-speed automated Pick & Pack.",
+        "desc": "Accurate control of every shelf location (Bin/Shelf) with AI-suggested slotting, Barcode/QR scanning support, batch & expiry management, and high-speed automated Pick & Pack.",
         "f1": "Intuitive 3D warehouse map",
         "f2": "Shortest picking path suggestion",
         "f3": "Mass inventory without closing warehouse",
@@ -126,7 +126,7 @@
       },
       "tms": {
         "title": "Flexible TMS",
-        "desc": "Automated fleet dispatch based on smart route optimization algorithm, real-time GPS tracking and digital e-POD delivery records.",
+        "desc": "AI-based automated fleet dispatch and route optimization, real-time GPS tracking and digital e-POD delivery records.",
         "f1": "Order consolidation & vehicle loading algorithm",
         "f2": "Dedicated app for delivery drivers",
         "f3": "Anti-loss digital e-POD signature",
@@ -135,14 +135,14 @@
       "omni": {
         "title": "Integrated Commerce",
         "desc": "Automated sync of inventory and order status across all sales channels: Shopee, TikTok Shop, Lazada, Brand Website and physical stores in 1 dashboard.",
-        "f1": "Prevent overselling instantly across platforms",
+        "f1": "AI prevents overselling instantly across platforms",
         "f2": "One-touch centralized order processing",
         "f3": "Reconciliation of COD & shipping fees",
         "link": "Explore Omnichannel"
       },
       "account": {
         "title": "Account — Automated Accounting",
-        "desc": "Auto-posts entries from WMS/TMS/POS, reconciles COD instantly, and issues Circular-78-compliant e-invoices right at the point of sale.",
+        "desc": "AI reconciles COD instantly, auto-posts entries from WMS/TMS/POS, and issues Circular-78-compliant e-invoices right at the point of sale.",
         "f1": "Journal entries generated from transactions, less manual entry",
         "f2": "Fast COD & marketplace reconciliation",
         "f3": "E-invoices instantly coded by the tax authority",
@@ -251,19 +251,19 @@
       "f3Desc": "Flags discrepancies between system stock and actual stock early, narrowing down loss risk in real time."
     },
     "desc": {
-      "subtitle": "Intensive cloud WMS solution for omnichannel retail, FMCG distribution chains, and 3PL Logistics. Automates from Inbound to Outbound with 99% inventory accuracy.",
+      "subtitle": "Intensive cloud WMS solution for omnichannel retail, FMCG distribution chains, and 3PL Logistics. AI automates from Inbound to Outbound, forecasts stock and keeps 99% accuracy.",
       "m1": "Thoroughly eliminate inventory loss and discrepancies between actual data and accounting system records.",
       "m2": "Smart Wave picking strategy groups orders, optimizing the shortest travel path in the warehouse.",
       "m3": "Specialized PDA interface with intuitive color-coded guidance, new warehouse workers can start working after just 30 minutes.",
       "m4": "Standardized SKU directory process and automated warehouse data conversion without disrupting sales.",
       "pillarsSub": "Designed based on global warehouse management standards, freeing up manual labor and automating dispatch decisions.",
       "p1": "Comprehensive digitalization of the actual warehouse layout into 3D space. Automatically calculates floor load, storage capacity (CBM), and fill rate in real time.",
-      "p2": "Artificial intelligence algorithms group hundreds of single orders into picking waves, optimizing the shortest route via the TSP (Traveling Salesperson) algorithm.",
-      "p3": "Solves near-expiry and expired goods issues causing millions of USD in losses for FMCG, Pharmaceutical, and {fresh} supply chains.",
+      "p2": "AI groups hundreds of single orders into picking waves, optimizing the shortest route via the TSP (Traveling Salesperson) algorithm.",
+      "p3": "AI flags near-expiry and expired goods early, before they cause millions of USD in losses for FMCG, Pharmaceutical, and {fresh} supply chains.",
       "p4": "Continuous cycle counting by Zone or ABC SKU group without closing or halting distribution center operations for even 1 hour.",
       "stepsSub": "Strictly controls every heartbeat of the goods flow from the Inbound gate until final handover to the Outbound transport unit.",
       "s1": "Scans Barcode/QR to reconcile with supplier PO. Checks for overage/shortage discrepancies, records production lot Barcode right at the warehouse dock.",
-      "s2": "Algorithm accurately recommends optimal empty shelf locations based on dimensions, weight, storage conditions, and entry/exit frequency.",
+      "s2": "AI accurately recommends optimal empty shelf locations based on dimensions, weight, storage conditions, and entry/exit frequency.",
       "s3": "Tracks inventory changes in real time. Automatically notifies transferring goods to clearance areas or pushing dates before expiration.",
       "s4": "Allocates personnel for picking via PDA along the shortest route. Packing table verifies barcode one last time before attaching shipping label.",
       "s5": "Scans handover receipt code for shipper/truck. Automatically signs electronic e-POD and syncs order status to retail channels instantly.",
@@ -467,7 +467,7 @@
     "hero": {
       "badge": "ecor TMS 4.0 • Optimal Route Dispatching",
       "title": "Optimize Every Route, Monitor Delivery Teams & Digitize Delivery Real-Time",
-      "desc": "Smart multi-stop batching algorithm, automatic vehicle load distribution, fuel cost control, and e-POD driver app on a single unified platform.",
+      "desc": "AI batches multi-stop orders and optimizes routes, automatic vehicle load distribution, fuel cost control, and e-POD driver app on a single unified platform.",
       "consult": "Register for TMS Solution Consulting →",
       "demo": "Watch Route Dispatching Demo",
       "badge1": "Cut fleet operating costs by 15%",
@@ -503,7 +503,7 @@
       "p1": {
         "tag": "01 • AI Engine",
         "title": "Smart Route Optimization",
-        "desc": "Automatically batch multi-point orders via smart algorithms, simultaneously solving for vehicle payload, volume (CBM), receiving point open hours, and curfew hours in Tier-I cities.",
+        "desc": "AI automatically batches multi-point orders, simultaneously solving for vehicle payload, volume (CBM), receiving point open hours, and curfew hours in Tier-I cities.",
         "f1": "Balance CBM & Tonnage",
         "f2": "Curfew Hour Alerts",
         "f3": "Reduce routing time by 30%"
@@ -511,7 +511,7 @@
       "p2": {
         "tag": "02 • Delivery Team Hub",
         "title": "Delivery Team & Subcontractor (Owner-operator) Management",
-        "desc": "Closely monitor fuel quotas for each route, integrate fuel sensors, and automate alerts for oil changes, tire maintenance, and inspection deadlines for both internal and satellite fleets.",
+        "desc": "AI monitors fuel quotas for each route via fuel sensors, automating alerts for oil changes, tire maintenance, and inspection deadlines for both internal and satellite fleets.",
         "f1": "Prevent Fuel Loss",
         "f2": "Subcontractor Quota Management",
         "f3": "Proactive Maintenance Scheduling"
@@ -519,7 +519,7 @@
       "p3": {
         "tag": "03 • Mobile Tech",
         "title": "ecor Driver Mobile App (iOS / Android)",
-        "desc": "Drivers receive instant dispatch orders on their phones, with integrated smart navigation to avoid traffic, digital e-POD signing, container seal photos, and paperless documentation.",
+        "desc": "Drivers receive instant dispatch orders on their phones, with AI navigation that automatically avoids traffic, digital e-POD signing, container seal photos, and paperless documentation.",
         "f1": "Real-time e-POD Signing",
         "f2": "Intuitive Driver Interface",
         "f3": "Instant Incident Reporting"
@@ -617,7 +617,7 @@
     "hero": {
       "badge": "ecor POS 4.0 • Ultra-fast Sale Terminal",
       "title": "5-Second Ultra-fast Sales, Multi-point Inventory Sync & Seamless WMS Connection",
-      "desc": "Specialized POS solution for retail chains, F&B, and omnichannel sale points. Automatically deduct real-time inventory to the central WMS, works smoothly even offline.",
+      "desc": "Specialized POS solution for retail chains, F&B, and omnichannel sale points. AI suggests cross-sells right at checkout, automatically deducts real-time inventory to the central WMS, works smoothly even offline.",
       "demo": "Experience POS Demo →",
       "doc": "Download POS Solution Doc (PDF)",
       "badge1": "100% Offline Selling",
@@ -676,7 +676,7 @@
         "desc": "Instant customer recognition via phone number or Zalo Mini App member QR. Bring all online promotions offline seamlessly.",
         "f1": "Real-time point accumulation and tier upgrades (Silver, Gold, Diamond) uniform across branches",
         "f2": "Send e-invoices and automated point notices via Zalo ZNS, saving 50% on SMS costs",
-        "f3": "Personalized birthday vouchers and product suggestions based on multi-channel purchase history"
+        "f3": "AI-personalized birthday vouchers and product suggestions based on multi-channel purchase history"
       },
       "p4": {
         "tag": "Offline-First Architecture",
@@ -739,7 +739,7 @@
     "hero": {
       "badge": "ecor Account 4.0 • Automated Accounting for Retail Chains & Logistics",
       "title": "Real-Time Auto-Posting, Instant COD Reconciliation & Point-of-Sale E-Invoicing",
-      "desc": "A smart financial accounting module tightly linked to POS, WMS and TMS. Auto-generates journal entries from every sales transaction, reconciles COD cash with shipping partners in one click, and issues point-of-sale e-invoices fully compliant with regulations.",
+      "desc": "A smart financial accounting module tightly linked to POS, WMS and TMS. AI auto-reconciles COD cash with shipping partners and flags anomalies, auto-generates journal entries from every sales transaction, and issues point-of-sale e-invoices fully compliant with regulations.",
       "demo": "Experience Accounting Demo →",
       "doc": "Download Accounting Solution Brief (PDF)",
       "badge1": "Compliant with Circular 133 & 200",
@@ -807,9 +807,9 @@
       "p2": {
         "tag": "Pillar 02",
         "title": "Multi-Tier Debt Management & COD Reconciliation",
-        "desc": "Early warnings on receivables by credit limit and aging. Auto-reconciles COD cash from GHTK, GHN, Viettel Post, SPX in a single click.",
+        "desc": "AI gives early warnings on receivables by credit limit and aging. Auto-reconciles COD cash from GHTK, GHN, Viettel Post, SPX in a single click.",
         "f1": "Auto-matches tens of thousands of COD codes against bank statements",
-        "f2": "Instantly detects shipping-fee discrepancies or withheld cash",
+        "f2": "AI instantly detects shipping-fee discrepancies or withheld cash",
         "f3": "Overdue debt alerts per customer / supplier"
       },
       "p3": {
