@@ -143,6 +143,10 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    // Site tĩnh: ép preset static. Trên Cloudflare build, Nitro tự nhận preset "cloudflare-module"
+    // và sinh wrangler.json trỏ tới Worker index.mjs (không có với nuxt generate) → `wrangler deploy` lỗi.
+    // Với static, wrangler.toml (assets = .output/public) được dùng như cũ.
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       failOnError: false,
