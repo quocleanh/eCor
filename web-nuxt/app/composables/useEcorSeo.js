@@ -17,7 +17,8 @@ export function useEcorSeo({ title, description, image, type = 'website' } = {})
   const { locale } = useI18n()
 
   const canonical = `${SITE_URL}${route.path === '/' ? '' : route.path}`
-  const ogImage = image ? `${SITE_URL}${image}` : DEFAULT_OG_IMAGE
+  // Ảnh có thể là đường dẫn trong public/ ("/images/..") hoặc URL tuyệt đối (ảnh bài viết trên Google Cloud Storage)
+  const ogImage = image ? (/^https?:\/\//.test(image) ? image : `${SITE_URL}${image}`) : DEFAULT_OG_IMAGE
 
   useSeoMeta({
     title,
