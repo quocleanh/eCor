@@ -1,5 +1,10 @@
 <template>
   <div class="bg-[#fafcff] text-zinc-800">
+    <!-- Thanh tiến độ đọc -->
+    <div class="sticky top-20 left-0 right-0 h-1 bg-zinc-100 z-40">
+      <div class="h-full bg-amber-400 transition-[width] duration-75" :style="{ width: `${readProgress}%` }" />
+    </div>
+
     <article v-if="post" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
       <!-- Breadcrumb -->
       <nav class="text-xs text-zinc-500 flex items-center flex-wrap gap-1" aria-label="Breadcrumb">
@@ -22,8 +27,15 @@
         <p v-if="post.meta_description" class="mt-4 text-lg text-zinc-600 leading-relaxed">{{ post.meta_description }}</p>
 
         <div class="mt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-zinc-200">
-          <div class="text-sm text-zinc-500">
-            Đội ngũ eCor · <time :datetime="post.published_at">{{ fmtDate(post.published_at) }}</time> · {{ post.reading_minutes }} phút đọc
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <div class="text-sm text-zinc-500">
+              Đội ngũ eCor · <time :datetime="post.published_at">{{ fmtDate(post.published_at) }}</time> · {{ post.reading_minutes }} phút đọc
+            </div>
           </div>
           <div class="flex items-center gap-2">
             <button
@@ -76,15 +88,6 @@
             </NuxtLink>
           </div>
 
-          <!-- CTA sản phẩm liên quan -->
-          <aside class="mt-8 max-w-3xl rounded-3xl border border-amber-200 bg-amber-50/60 p-6 sm:p-8">
-            <div class="text-sm font-semibold text-amber-800">{{ productCta.eyebrow }}</div>
-            <p class="mt-2 text-sm text-zinc-700 leading-relaxed">{{ productCta.desc }}</p>
-            <NuxtLink :to="productCta.href" class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-800">
-              {{ productCta.label }} <span>→</span>
-            </NuxtLink>
-          </aside>
-
           <!-- Bài trước / sau -->
           <div v-if="post.prevPost || post.nextPost" class="mt-10 pt-8 border-t border-zinc-200 max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-4">
             <NuxtLink
@@ -118,6 +121,15 @@
             </ol>
           </div>
 
+          <!-- CTA sản phẩm liên quan -->
+          <div class="rounded-2xl border border-amber-200 bg-amber-50/60 p-5">
+            <div class="text-xs font-bold text-amber-800">{{ productCta.eyebrow }}</div>
+            <p class="mt-2 text-sm text-zinc-700 leading-relaxed">{{ productCta.desc }}</p>
+            <NuxtLink :to="productCta.href" class="mt-3 inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-800">
+              {{ productCta.label }} <span>→</span>
+            </NuxtLink>
+          </div>
+
           <!-- Bài liên quan -->
           <div v-if="post.related.length" class="rounded-2xl border border-zinc-200 bg-white p-5">
             <div class="text-xs font-bold uppercase tracking-wide text-zinc-500 pb-3 border-b border-zinc-100">Bài viết cùng chủ đề</div>
@@ -133,7 +145,12 @@
 
       <!-- Bài liên quan (lưới) -->
       <section v-if="post.related.length" class="mt-16 pt-10 border-t border-zinc-200">
-        <h2 class="text-xl font-bold text-zinc-900">Đọc tiếp</h2>
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+          <h2 class="text-xl font-bold text-zinc-900">Đọc tiếp</h2>
+          <NuxtLink :to="`/kien-thuc?pillar=${encodeURIComponent(post.pillar)}`" class="inline-flex items-center gap-1 text-sm font-bold text-zinc-900 hover:text-amber-700">
+            Xem tất cả bài viết {{ post.pillar }} →
+          </NuxtLink>
+        </div>
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <NuxtLink
             v-for="r in post.related" :key="r.slug" :to="`/kien-thuc/${r.slug}`"
@@ -149,6 +166,10 @@
             </div>
           </NuxtLink>
         </div>
+      </section>
+
+      <section class="mt-16">
+        <NewsletterSection />
       </section>
     </article>
   </div>
@@ -171,6 +192,14 @@ const canonicalUrl = `https://ecor.vn/kien-thuc/${p.slug}`
 const fmtDate = d => new Date(d).toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })
 
 const { isSaved, toggle } = useReadingList(p.slug)
+
+const readProgress = ref(0)
+function updateReadProgress() {
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  readProgress.value = height > 0 ? Math.min(100, (window.scrollY / height) * 100) : 0
+}
+onMounted(() => window.addEventListener('scroll', updateReadProgress, { passive: true }))
+onUnmounted(() => window.removeEventListener('scroll', updateReadProgress))
 
 const copied = ref(false)
 async function copyLink() {

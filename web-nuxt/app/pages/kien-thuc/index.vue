@@ -56,12 +56,17 @@
           </div>
         </div>
 
-        <!-- Bộ lọc chủ đề -->
-        <div v-if="pillars.length > 1" class="mt-8 flex flex-wrap gap-2">
+      </div>
+    </section>
+
+    <!-- Thanh chủ đề -->
+    <section v-if="pillars.length > 1" class="border-y border-zinc-100 bg-white/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-2 overflow-x-auto py-3" style="scrollbar-width: none;">
           <button
             v-for="p in ['Tất cả', ...pillars]" :key="p" type="button"
-            class="px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-colors"
-            :class="active === p ? 'bg-zinc-900 text-white border-zinc-900' : 'bg-white text-zinc-700 border-zinc-200 hover:border-amber-300 hover:text-amber-700'"
+            class="px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors"
+            :class="active === p ? 'bg-amber-400 text-zinc-900 shadow-sm' : 'bg-zinc-100 text-zinc-600 hover:bg-amber-100 hover:text-amber-700'"
             @click="active = p; page = 1"
           >
             {{ p }} ({{ p === 'Tất cả' ? posts.length : posts.filter(x => x.pillar === p).length }})
@@ -99,13 +104,25 @@
             {{ featured.title }}
           </h2>
           <p class="mt-3 text-sm text-zinc-600 leading-relaxed">{{ featured.meta_description }}</p>
-          <div class="mt-5 text-xs text-zinc-500">{{ fmtDate(featured.published_at) }} · {{ featured.reading_minutes }} phút đọc</div>
-          <span class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-zinc-900 group-hover:text-amber-700">
-            Đọc tiếp
-            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </span>
+          <div class="mt-5 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-full bg-amber-100 flex items-center justify-center text-amber-700">
+                <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-zinc-900">Đội ngũ eCor</span>
+                <span class="text-[11px] text-zinc-500">{{ fmtDate(featured.published_at) }} · {{ featured.reading_minutes }} phút đọc</span>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1 text-sm font-bold text-zinc-900 group-hover:text-amber-700">
+              Đọc tiếp
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </div>
         </div>
       </NuxtLink>
 
@@ -176,6 +193,11 @@
         </button>
       </div>
     </section>
+
+    <!-- Bản tin hàng tuần -->
+    <section class="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <NewsletterSection />
+    </section>
   </div>
 </template>
 
@@ -191,7 +213,7 @@ function focusResults() {
 }
 
 const pillars = computed(() => [...new Set(posts.value.map(p => p.pillar).filter(Boolean))])
-const active = ref('Tất cả')
+const active = ref(typeof route.query.pillar === 'string' && pillars.value.includes(route.query.pillar) ? route.query.pillar : 'Tất cả')
 const search = ref(typeof route.query.q === 'string' ? route.query.q : '')
 const page = ref(1)
 const pageSize = 6

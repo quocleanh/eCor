@@ -27,7 +27,7 @@
         </div>
         <h4 class="text-xl font-bold text-zinc-900 mb-2">{{ $t('contactModal.successTitle') }}</h4>
         <p class="text-sm text-zinc-600 mb-6">
-          <span v-html="$t('contactModal.successDesc')"></span>
+          {{ $t('contactModal.successDesc1') }} <strong>{{ $t('contactModal.successDesc2') }}</strong> {{ $t('contactModal.successDesc3') }}
         </p>
         <button
           @click="close"
