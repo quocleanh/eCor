@@ -58,7 +58,7 @@
             :class="active === p ? 'bg-zinc-900 text-white border-zinc-900' : 'bg-white text-zinc-700 border-zinc-200 hover:border-amber-300 hover:text-amber-700'"
             @click="active = p; page = 1"
           >
-            {{ p }}
+            {{ p }} ({{ p === 'Tất cả' ? posts.length : posts.filter(x => x.pillar === p).length }})
           </button>
         </div>
       </div>
@@ -98,7 +98,17 @@
         </div>
       </NuxtLink>
 
-      <div v-if="pageItems.length" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-if="pageItems.length" class="mt-10 flex flex-col md:flex-row md:items-end justify-between gap-2">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Bài viết mới xuất bản</span>
+          <h2 class="text-xl font-extrabold text-zinc-900 tracking-tight">Kiến thức thực chiến vận hành kho</h2>
+        </div>
+        <div class="text-xs text-zinc-500">
+          Hiển thị {{ pageItems.length }} / {{ rest.length }} bài viết
+        </div>
+      </div>
+
+      <div v-if="pageItems.length" class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <NuxtLink
           v-for="p in pageItems" :key="p.slug" :to="`/kien-thuc/${p.slug}`"
           class="group flex flex-col bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all"
