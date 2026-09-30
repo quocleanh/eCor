@@ -22,3 +22,6 @@ logs
 .env
 .env.*
 !.env.example
+
+# Mockup/tham khảo thiết kế (ảnh nặng, không cần cho build)
+template/

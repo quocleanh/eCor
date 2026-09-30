@@ -112,6 +112,7 @@ function extractFaq(md: string) {
 }
 
 export async function getPost(slug: string) {
+  // allPosts() đã sắp xếp published_at DESC (mới nhất trước)
   const posts = await allPosts()
   const i = posts.findIndex(p => p.slug === slug)
   if (i < 0) return null
@@ -122,6 +123,10 @@ export async function getPost(slug: string) {
     .sort((a, b) => Number(b.pillar === p.pillar) - Number(a.pillar === p.pillar))
     .slice(0, 3)
     .map(({ body_md, keywords, ...r }) => ({ ...r, reading_minutes: readingMinutes(body_md) }))
+  // Bài trước (cũ hơn, xuất bản trước) / bài sau (mới hơn) theo thứ tự thời gian đăng
+  const toNav = (x?: PostRow) => x ? { slug: x.slug, title: x.title } : null
+  const prevPost = toNav(posts[i + 1])
+  const nextPost = toNav(i > 0 ? posts[i - 1] : undefined)
   const { body_md, ...rest } = p
-  return { ...rest, html, toc, faq: extractFaq(body_md), reading_minutes: readingMinutes(body_md), related }
+  return { ...rest, html, toc, faq: extractFaq(body_md), reading_minutes: readingMinutes(body_md), related, prevPost, nextPost }
 }

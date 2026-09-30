@@ -10,7 +10,11 @@
           <span class="text-zinc-700">Kiến thức</span>
         </nav>
         <div class="mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-700 shadow-sm">
-          Kiến thức quản lý kho
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+          </span>
+          Trung tâm kiến thức &amp; kinh nghiệm thực chiến
         </div>
         <h1 class="mt-4 text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-zinc-900 tracking-tight leading-[1.2] max-w-3xl">
           Làm kho gọn, đúng, ít thất thoát — <span class="text-amber-600">kinh nghiệm dùng được ngay</span>
@@ -20,12 +24,39 @@
           áp dụng được với sổ sách hiện có.
         </p>
 
+        <!-- Tìm kiếm -->
+        <div class="w-full max-w-2xl mt-8">
+          <div class="p-1.5 bg-white rounded-xl shadow-md border border-zinc-100 flex items-center gap-2">
+            <svg class="w-5 h-5 text-zinc-400 ml-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 1 1 4 10.5a6.5 6.5 0 0 1 13 0Z" />
+            </svg>
+            <input
+              v-model="search"
+              type="text"
+              placeholder="Tìm bài viết, quy trình, từ khóa..."
+              class="w-full py-2.5 bg-transparent text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none"
+            >
+          </div>
+          <div v-if="topKeywords.length" class="flex flex-wrap items-center gap-2 mt-3 text-xs">
+            <span class="text-zinc-500">Tìm nhanh:</span>
+            <button
+              v-for="kw in topKeywords" :key="kw"
+              type="button"
+              class="px-2.5 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-amber-100 hover:text-amber-700 transition-colors"
+              @click="search = kw"
+            >
+              #{{ kw }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Bộ lọc chủ đề -->
         <div v-if="pillars.length > 1" class="mt-8 flex flex-wrap gap-2">
           <button
             v-for="p in ['Tất cả', ...pillars]" :key="p" type="button"
             class="px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-colors"
             :class="active === p ? 'bg-zinc-900 text-white border-zinc-900' : 'bg-white text-zinc-700 border-zinc-200 hover:border-amber-300 hover:text-amber-700'"
-            @click="active = p"
+            @click="active = p; page = 1"
           >
             {{ p }}
           </button>
@@ -35,7 +66,7 @@
 
     <!-- DANH SÁCH BÀI -->
     <section class="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p v-if="!shown.length" class="text-zinc-500">Chưa có bài viết.</p>
+      <p v-if="!filtered.length" class="text-zinc-500">Không tìm thấy bài viết phù hợp.</p>
 
       <!-- Bài mới nhất -->
       <NuxtLink
@@ -43,7 +74,10 @@
         :to="`/kien-thuc/${featured.slug}`"
         class="group grid md:grid-cols-2 gap-6 lg:gap-10 bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all"
       >
-        <div class="aspect-[3/2] md:aspect-auto bg-amber-50 overflow-hidden">
+        <div class="aspect-[3/2] md:aspect-auto bg-amber-50 overflow-hidden relative">
+          <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-amber-400 text-zinc-900 text-[11px] font-bold uppercase tracking-wide shadow">
+            Mới nhất
+          </span>
           <img v-if="featured.image_url" :src="featured.image_url" :alt="featured.image_alt || featured.title"
             class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="eager" width="1536" height="1024">
           <div v-else class="w-full h-full flex items-center justify-center text-5xl">📦</div>
@@ -55,26 +89,70 @@
           </h2>
           <p class="mt-3 text-sm text-zinc-600 leading-relaxed">{{ featured.meta_description }}</p>
           <div class="mt-5 text-xs text-zinc-500">{{ fmtDate(featured.published_at) }} · {{ featured.reading_minutes }} phút đọc</div>
+          <span class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-zinc-900 group-hover:text-amber-700">
+            Đọc tiếp
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
         </div>
       </NuxtLink>
 
-      <div v-if="rest.length" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-if="pageItems.length" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <NuxtLink
-          v-for="p in rest" :key="p.slug" :to="`/kien-thuc/${p.slug}`"
+          v-for="p in pageItems" :key="p.slug" :to="`/kien-thuc/${p.slug}`"
           class="group flex flex-col bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all"
         >
-          <div class="aspect-[3/2] bg-amber-50 overflow-hidden">
+          <div class="aspect-[3/2] bg-amber-50 overflow-hidden relative">
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-white/90 backdrop-blur text-[11px] font-semibold text-amber-700 uppercase">
+              {{ p.pillar }}
+            </span>
             <img v-if="p.image_url" :src="p.image_url" :alt="p.image_alt || p.title"
               class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" loading="lazy" width="1536" height="1024">
             <div v-else class="w-full h-full flex items-center justify-center text-4xl">📦</div>
           </div>
           <div class="p-6 flex flex-col flex-1">
-            <div class="text-xs font-semibold text-amber-700">{{ p.pillar }}</div>
+            <div class="flex items-center gap-2 text-xs text-zinc-500">
+              <span>{{ fmtDate(p.published_at) }}</span>
+              <span>·</span>
+              <span>{{ p.reading_minutes }} phút đọc</span>
+            </div>
             <h3 class="mt-2 text-lg font-bold text-zinc-900 leading-snug group-hover:text-amber-700 transition-colors">{{ p.title }}</h3>
             <p class="mt-2 text-sm text-zinc-600 leading-relaxed line-clamp-3">{{ p.meta_description }}</p>
-            <div class="mt-auto pt-4 text-xs text-zinc-500">{{ fmtDate(p.published_at) }} · {{ p.reading_minutes }} phút đọc</div>
+            <div class="mt-auto pt-4 flex items-center justify-between text-xs text-zinc-500">
+              <span class="font-medium">Đội ngũ eCor</span>
+              <svg class="w-4 h-4 text-zinc-400 group-hover:text-amber-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
           </div>
         </NuxtLink>
+      </div>
+
+      <!-- Phân trang -->
+      <div v-if="totalPages > 1" class="mt-10 flex items-center justify-center gap-2">
+        <button
+          type="button" :disabled="page === 1"
+          class="w-10 h-10 rounded-lg bg-white shadow-sm border border-zinc-200 flex items-center justify-center text-zinc-500 hover:text-zinc-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          @click="page--"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button
+          v-for="n in totalPages" :key="n" type="button"
+          class="w-10 h-10 rounded-lg font-bold text-sm flex items-center justify-center transition-colors"
+          :class="n === page ? 'bg-amber-400 text-zinc-900 shadow-sm' : 'bg-white text-zinc-700 border border-zinc-200 hover:bg-zinc-50'"
+          @click="page = n"
+        >
+          {{ n }}
+        </button>
+        <button
+          type="button" :disabled="page === totalPages"
+          class="w-10 h-10 rounded-lg bg-white shadow-sm border border-zinc-200 flex items-center justify-center text-zinc-500 hover:text-zinc-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          @click="page++"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
       </div>
     </section>
   </div>
@@ -84,13 +162,45 @@
 import { useEcorSeo } from '@/composables/useEcorSeo'
 import { useJsonLd } from '@/composables/useJsonLd'
 
+const route = useRoute()
 const { data: posts } = await useFetch('/api/kien-thuc', { default: () => [] })
 
 const pillars = computed(() => [...new Set(posts.value.map(p => p.pillar).filter(Boolean))])
 const active = ref('Tất cả')
-const shown = computed(() => active.value === 'Tất cả' ? posts.value : posts.value.filter(p => p.pillar === active.value))
-const featured = computed(() => shown.value[0])
-const rest = computed(() => shown.value.slice(1))
+const search = ref(typeof route.query.q === 'string' ? route.query.q : '')
+const page = ref(1)
+const pageSize = 6
+
+const topKeywords = computed(() => {
+  const count = new Map()
+  for (const p of posts.value) {
+    for (const kw of p.keywords || []) count.set(kw, (count.get(kw) || 0) + 1)
+  }
+  return [...count.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([kw]) => kw)
+})
+
+const byCategory = computed(() => active.value === 'Tất cả' ? posts.value : posts.value.filter(p => p.pillar === active.value))
+
+const filtered = computed(() => {
+  const q = search.value.trim().toLowerCase()
+  if (!q) return byCategory.value
+  return byCategory.value.filter(p =>
+    p.title.toLowerCase().includes(q) ||
+    (p.meta_description || '').toLowerCase().includes(q) ||
+    (p.keywords || []).some(k => k.toLowerCase().includes(q)),
+  )
+})
+
+const featured = computed(() => (search.value.trim() ? null : filtered.value[0]))
+const rest = computed(() => (featured.value ? filtered.value.slice(1) : filtered.value))
+
+const totalPages = computed(() => Math.max(1, Math.ceil(rest.value.length / pageSize)))
+const pageItems = computed(() => {
+  const start = (page.value - 1) * pageSize
+  return rest.value.slice(start, start + pageSize)
+})
+
+watch([active, search], () => { page.value = 1 })
 
 const fmtDate = d => new Date(d).toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })
 
