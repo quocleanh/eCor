@@ -26,17 +26,23 @@
 
         <!-- Tìm kiếm -->
         <div class="w-full max-w-2xl mt-8">
-          <div class="p-1.5 bg-white rounded-xl shadow-md border border-zinc-100 flex items-center gap-2">
-            <svg class="w-5 h-5 text-zinc-400 ml-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 1 1 4 10.5a6.5 6.5 0 0 1 13 0Z" />
-            </svg>
-            <input
-              v-model="search"
-              type="text"
-              placeholder="Tìm bài viết, quy trình, từ khóa..."
-              class="w-full py-2.5 bg-transparent text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none"
-            >
-          </div>
+          <form class="p-1.5 bg-white rounded-xl shadow-md border border-zinc-100 flex flex-col sm:flex-row items-center gap-2" @submit.prevent="focusResults">
+            <div class="flex items-center gap-2 px-2 flex-1 w-full">
+              <svg class="w-5 h-5 text-zinc-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 1 1 4 10.5a6.5 6.5 0 0 1 13 0Z" />
+              </svg>
+              <input
+                v-model="search"
+                type="text"
+                placeholder="Tìm bài viết, quy trình, từ khóa..."
+                class="w-full py-2.5 bg-transparent text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none"
+              >
+            </div>
+            <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-amber-400 hover:bg-amber-500 text-zinc-900 text-sm font-bold shadow-sm transition-colors flex items-center justify-center gap-1.5">
+              Tìm kiếm
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </button>
+          </form>
           <div v-if="topKeywords.length" class="flex flex-wrap items-center gap-2 mt-3 text-xs">
             <span class="text-zinc-500">Tìm nhanh:</span>
             <button
@@ -65,7 +71,7 @@
     </section>
 
     <!-- DANH SÁCH BÀI -->
-    <section class="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="ket-qua" class="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p v-if="!filtered.length" class="text-zinc-500">Không tìm thấy bài viết phù hợp.</p>
 
       <!-- Bài mới nhất -->
@@ -74,13 +80,18 @@
         :to="`/kien-thuc/${featured.slug}`"
         class="group grid md:grid-cols-2 gap-6 lg:gap-10 bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all"
       >
-        <div class="aspect-[3/2] md:aspect-auto bg-amber-50 overflow-hidden relative">
+        <div class="aspect-[3/2] md:aspect-auto overflow-hidden relative" :class="featured.image_url ? 'bg-amber-50' : 'bg-gradient-to-br from-zinc-900 to-zinc-800'">
           <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-amber-400 text-zinc-900 text-[11px] font-bold uppercase tracking-wide shadow">
             Mới nhất
           </span>
           <img v-if="featured.image_url" :src="featured.image_url" :alt="featured.image_alt || featured.title"
             class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="eager" width="1536" height="1024">
-          <div v-else class="w-full h-full flex items-center justify-center text-5xl">📦</div>
+          <div v-else class="w-full h-full flex flex-col items-center justify-center gap-3 text-amber-400/90">
+            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+            <span class="text-[11px] font-semibold uppercase tracking-widest text-zinc-400">eCor Kiến thức</span>
+          </div>
         </div>
         <div class="p-6 lg:p-10 flex flex-col justify-center">
           <div class="text-xs font-semibold text-amber-700">{{ featured.pillar }}</div>
@@ -174,6 +185,10 @@ import { useJsonLd } from '@/composables/useJsonLd'
 
 const route = useRoute()
 const { data: posts } = await useFetch('/api/kien-thuc', { default: () => [] })
+
+function focusResults() {
+  document.getElementById('ket-qua')?.scrollIntoView({ behavior: 'smooth' })
+}
 
 const pillars = computed(() => [...new Set(posts.value.map(p => p.pillar).filter(Boolean))])
 const active = ref('Tất cả')
