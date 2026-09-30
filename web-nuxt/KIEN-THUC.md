@@ -13,7 +13,8 @@ Bài viết do hệ thống nội dung (n8n) ghi vào bảng `posts` trên **Neo
 
 ## Chạy local
 
-- Không có `DATABASE_URL` → dùng dữ liệu mẫu `app/server/data/kien-thuc.sample.json` để dựng giao diện.
+- `npm run dev` không có `DATABASE_URL` → dùng dữ liệu mẫu `app/server/data/kien-thuc.sample.json` để dựng giao diện.
+- `npm run generate`/build thật không có `DATABASE_URL` → /kien-thuc trống (không bao giờ đăng bài mẫu).
 - Có `DATABASE_URL` trong `.env` → đọc bài thật từ Neon.
 
 ```bash

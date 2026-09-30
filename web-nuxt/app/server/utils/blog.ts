@@ -29,7 +29,12 @@ const readingMinutes = (md: string) => Math.max(1, Math.round(md.split(/\s+/).fi
 
 async function allPosts(): Promise<PostRow[]> {
   const url = dbUrl()
-  if (!url) return (sample as PostRow[]).slice().sort((a, b) => b.published_at.localeCompare(a.published_at))
+  if (!url) {
+    // Dữ liệu mẫu CHỈ dùng khi chạy `nuxt dev`. Build thật mà thiếu DATABASE_URL → không có bài (tránh đăng bài mẫu lên web thật)
+    if (import.meta.dev) return (sample as PostRow[]).slice().sort((a, b) => b.published_at.localeCompare(a.published_at))
+    console.warn('[kien-thuc] Thiếu DATABASE_URL — trang /kien-thuc sẽ không có bài. Đặt biến này trong Cloudflare (build).')
+    return []
+  }
   const sql = neon(url)
   const rows = await sql`
     SELECT id, slug, title, meta_description, body_md, pillar, keywords, image_url, image_alt,
