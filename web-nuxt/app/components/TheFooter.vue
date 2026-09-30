@@ -138,11 +138,6 @@
               </a>
             </li>
             <li>
-              <NuxtLinkLocale :to="{ name: 'bang-gia' }" class="hover:text-amber-600 transition-colors">
-                {{ $t('footer.resPricing') }}
-              </NuxtLinkLocale>
-            </li>
-            <li>
               <NuxtLinkLocale :to="{ name: 'khach-hang' }" class="hover:text-amber-600 transition-colors">
                 {{ $t('footer.resCustomers') }}
               </NuxtLinkLocale>

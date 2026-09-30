@@ -31,13 +31,13 @@
 
             <!-- Action Buttons -->
             <div class="pt-2 flex flex-wrap items-center gap-4">
-              <button @click="openModal({ type: 'demo', moduleName: 'all' })"
+              <a :href="DASHBOARD_URL" target="_blank" rel="noopener"
                 class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-base shadow-md hover:shadow-lg transition-all transform active:scale-95">
                 <span>{{ $t('home.hero.register') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button>
+              </a>
 
               <button @click="openModal({ type: 'demo', moduleName: 'all' })"
                 class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-700 font-semibold text-base border border-zinc-200 shadow-sm hover:shadow transition-all">
@@ -726,10 +726,10 @@
         </p>
 
         <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
-          <button @click="openModal({ type: 'demo', moduleName: 'all' })"
+          <a :href="DASHBOARD_URL" target="_blank" rel="noopener"
             class="px-8 py-4 rounded-xl bg-white hover:bg-zinc-50 text-amber-700 font-extrabold text-base shadow-lg hover:shadow-xl transition-all transform active:scale-95">
             {{ $t('home.cta.btn') }}
-          </button>
+          </a>
           <a href="tel:0822235858"
             class="px-7 py-4 rounded-xl bg-amber-400/60 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-base border border-white/30 backdrop-blur-sm transition-all">
             {{ $t('home.cta.hotline') }} 097 8673867
@@ -743,6 +743,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useContactModal } from '@/composables/useContactModal'
+import { DASHBOARD_URL } from '@/config/links'
 
 const { t } = useI18n()
 const { openModal } = useContactModal()
