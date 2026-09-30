@@ -330,6 +330,9 @@
       </div>
     </section>
 
+    <!-- 3b. AI TRONG BÁN HÀNG -->
+    <AiFeatureBand ns="pos" />
+
     <!-- 4. HỆ SINH THÁI THIẾT BỊ PHẦN CỨNG PLUG & PLAY -->
     <section class="py-20 bg-white border-y border-zinc-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

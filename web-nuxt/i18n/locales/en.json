@@ -65,6 +65,17 @@
     "hotlineHours": "(business hours)"
   },
   "home": {
+    "ai": {
+      "badge": "AI Everywhere",
+      "title": "AI isn't bolted onto one module — it runs across your whole data layer",
+      "desc": "Because WMS, TMS, POS and Accounting share one data layer, eCor's AI sees the whole supply chain — from stock to delivery to sales — instead of one isolated slice.",
+      "f1Title": "One data source, no manual syncing",
+      "f1Desc": "AI works directly on your real inventory, delivery and sales data — no Excel middleman, no mismatched numbers.",
+      "f2Title": "Learns your actual operating pattern",
+      "f2Desc": "Restock, routing and cross-sell suggestions are tuned to your business's real history, not a generic template.",
+      "f3Title": "Roll out gradually, no system overhaul",
+      "f3Desc": "Start with one module you already use — AI runs on the data you already have, then extend to other modules when you're ready."
+    },
     "hero": {
       "badge": "✨ New Gen: Unified Supply Chain Management",
       "title": "One Source of Truth. Entire Operation.",
@@ -228,6 +239,17 @@
     }
   },
   "wms": {
+    "ai": {
+      "badge": "AI Everywhere",
+      "title": "AI that forecasts stock and learns your sales rhythm",
+      "desc": "ecor WMS doesn't just record stock levels — AI analyzes inbound/outbound history to flag stockout risk early, suggest optimal storage slots, and catch discrepancies before they become losses.",
+      "f1Title": "Demand forecasting & restock suggestions",
+      "f1Desc": "AI learns seasonal sales rhythm and suggests when and how much to restock before inventory hits a critical low.",
+      "f2Title": "Smart slotting",
+      "f2Desc": "Automatically suggests optimal storage locations based on pick frequency, cutting picker travel distance.",
+      "f3Title": "Inventory anomaly detection",
+      "f3Desc": "Flags discrepancies between system stock and actual stock early, narrowing down loss risk in real time."
+    },
     "desc": {
       "subtitle": "Intensive cloud WMS solution for omnichannel retail, FMCG distribution chains, and 3PL Logistics. Automates from Inbound to Outbound with 99% inventory accuracy.",
       "m1": "Thoroughly eliminate inventory loss and discrepancies between actual data and accounting system records.",
@@ -431,6 +453,17 @@
     }
   },
   "tms": {
+    "ai": {
+      "badge": "AI Everywhere",
+      "title": "AI that optimizes routes and predicts accurate arrival times",
+      "desc": "ecor TMS uses AI to compute optimal routes in real time and predict ETAs that match actual traffic conditions instead of fixed estimates.",
+      "f1Title": "Multi-stop route optimization",
+      "f1Desc": "AI computes the shortest route across dozens of stops per trip, balancing load and each vehicle's cutoff time.",
+      "f2Title": "Real-time ETA prediction",
+      "f2Desc": "Combines traffic data and delivery history to give arrival estimates close to reality, cutting late-delivery complaints.",
+      "f3Title": "Driver performance scoring",
+      "f3Desc": "AI analyzes speed, stop time and successful-delivery rate to rank driver performance, supporting fair dispatch."
+    },
     "hero": {
       "badge": "ecor TMS 4.0 • Optimal Route Dispatching",
       "title": "Optimize Every Route, Monitor Delivery Teams & Digitize Delivery Real-Time",
@@ -570,6 +603,17 @@
     }
   },
   "pos": {
+    "ai": {
+      "badge": "AI Everywhere",
+      "title": "AI that suggests cross-sells and keeps customers coming back",
+      "desc": "ecor POS analyzes purchase behavior to suggest the right add-on at the right moment — raising order value without staff memorizing combos manually.",
+      "f1Title": "Cross-sell suggestions at checkout",
+      "f1Desc": "AI suggests frequently bought-together items based on transaction history, shown right on the cashier screen at checkout.",
+      "f2Title": "Near-expiry stock alerts",
+      "f2Desc": "Automatically prompts staff to prioritize selling batches nearing expiry first, cutting dead stock and write-offs.",
+      "f3Title": "Churn-risk prediction",
+      "f3Desc": "Analyzes loyal customers' purchase frequency to flag those likely to stop returning, suggesting when to re-engage them."
+    },
     "hero": {
       "badge": "ecor POS 4.0 • Ultra-fast Sale Terminal",
       "title": "5-Second Ultra-fast Sales, Multi-point Inventory Sync & Seamless WMS Connection",
@@ -681,6 +725,17 @@
     }
   },
   "account": {
+    "ai": {
+      "badge": "AI Everywhere",
+      "title": "AI that reconciles automatically and catches anomalies before they become risk",
+      "desc": "ecor Account uses AI to match thousands of COD transactions and invoices every day — work that used to take hours manually now runs in the background and only flags what actually needs your attention.",
+      "f1Title": "Automated multi-channel COD reconciliation",
+      "f1Desc": "AI auto-matches COD transactions between carriers and internal books, surfacing only the mismatches that need a human check.",
+      "f2Title": "Anomaly detection",
+      "f2Desc": "Catches off-pattern transactions early — suspected duplicates, amount mismatches — before they affect financial reports.",
+      "f3Title": "Automated invoice data extraction",
+      "f3Desc": "AI reads and extracts data from incoming invoices, cutting manual data-entry time for accountants."
+    },
     "hero": {
       "badge": "ecor Account 4.0 • Automated Accounting for Retail Chains & Logistics",
       "title": "Real-Time Auto-Posting, Instant COD Reconciliation & Point-of-Sale E-Invoicing",

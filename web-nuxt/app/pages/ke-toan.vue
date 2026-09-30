@@ -220,6 +220,9 @@
       </div>
     </section>
 
+    <!-- 3b. AI TRONG KẾ TOÁN -->
+    <AiFeatureBand ns="account" />
+
     <!-- 4. 6 PHÂN HỆ KẾ TOÁN -->
     <section class="py-20 bg-white border-y border-zinc-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

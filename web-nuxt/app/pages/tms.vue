@@ -276,6 +276,9 @@
       </div>
     </section>
 
+    <!-- 3b. AI TRONG ĐIỀU PHỐI VẬN TẢI -->
+    <AiFeatureBand ns="tms" />
+
     <!-- 4. WMS SANG TMS PIPELINE -->
     <section class="py-20 bg-white border-y border-zinc-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

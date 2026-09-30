@@ -65,6 +65,17 @@
     "hotlineHours": "(giờ làm việc)"
   },
   "home": {
+    "ai": {
+      "badge": "AI Nền Tảng",
+      "title": "AI không tách rời từng module — vận hành xuyên suốt trên một hệ dữ liệu",
+      "desc": "Vì WMS, TMS, POS và Kế toán dùng chung một hệ dữ liệu, AI của eCor học được bức tranh toàn chuỗi cung ứng — từ tồn kho đến giao hàng đến bán hàng — thay vì chỉ nhìn một mảnh rời rạc.",
+      "f1Title": "Một nguồn dữ liệu, không cần đồng bộ thủ công",
+      "f1Desc": "AI phân tích trực tiếp trên dữ liệu thật của tồn kho, đơn giao và giao dịch bán hàng — không qua file Excel trung gian, không lệch số.",
+      "f2Title": "Học theo đặc thù vận hành của bạn",
+      "f2Desc": "Gợi ý về nhập hàng, tuyến giao hay bán kèm được tinh chỉnh theo lịch sử vận hành thực tế của chính doanh nghiệp bạn.",
+      "f3Title": "Triển khai dần, không cần đổi toàn bộ hệ thống",
+      "f3Desc": "Bắt đầu với một module đang dùng, AI hoạt động ngay trên dữ liệu sẵn có — mở rộng sang module khác khi bạn đã sẵn sàng."
+    },
     "hero": {
       "badge": "✨ Thế Hệ Mới: Nền tảng Quản trị Chuỗi Cung ứng Hợp nhất",
       "title": "Một nguồn dữ liệu. Toàn bộ vận hành.",
@@ -228,6 +239,17 @@
     }
   },
   "wms": {
+    "ai": {
+      "badge": "AI Vận Hành",
+      "title": "AI dự báo tồn kho, tự học nhịp bán hàng của bạn",
+      "desc": "ecor WMS không chỉ ghi nhận tồn kho — AI phân tích lịch sử xuất nhập để cảnh báo sớm rủi ro hết hàng, gợi ý vị trí lưu kho tối ưu và phát hiện bất thường trước khi gây thất thoát.",
+      "f1Title": "Dự báo nhu cầu & đề xuất nhập hàng",
+      "f1Desc": "AI học nhịp bán theo mùa vụ, tự gợi ý thời điểm và số lượng cần nhập trước khi tồn kho chạm ngưỡng cạn.",
+      "f2Title": "Slotting thông minh",
+      "f2Desc": "Tự động đề xuất vị trí lưu kho tối ưu theo tần suất xuất hàng, giảm quãng đường di chuyển của nhân viên soạn hàng.",
+      "f3Title": "Phát hiện bất thường tồn kho",
+      "f3Desc": "Cảnh báo sớm các lệch số liệu giữa tồn hệ thống và tồn thực tế, khoanh vùng rủi ro thất thoát theo thời gian thực."
+    },
     "desc": {
       "subtitle": "Giải pháp WMS đám mây chuyên sâu cho doanh nghiệp bán lẻ đa kênh, chuỗi phân phối FMCG và đơn vị 3PL Logistics. Tự động hóa từ Inbound đến Outbound với độ chuẩn xác tồn kho 99%.",
       "m1": "Khử triệt để thất thoát hàng hóa, sai lệch số liệu thực tế so với sổ sách hệ thống kế toán.",
@@ -430,6 +452,17 @@
     }
   },
   "tms": {
+    "ai": {
+      "badge": "AI Vận Hành",
+      "title": "AI tối ưu tuyến đường, dự đoán giờ đến sát thực tế",
+      "desc": "ecor TMS dùng AI để tính toán lộ trình tối ưu theo thời gian thực, dự đoán ETA sát với tình hình giao thông thực tế thay vì ước lượng cố định.",
+      "f1Title": "Tối ưu tuyến giao đa điểm",
+      "f1Desc": "AI tính toán lộ trình ngắn nhất cho hàng chục điểm giao trong một chuyến, cân bằng tải trọng và thời gian cắt chuyến của từng xe.",
+      "f2Title": "Dự đoán ETA theo thời gian thực",
+      "f2Desc": "Kết hợp dữ liệu giao thông và lịch sử giao hàng để báo giờ đến dự kiến sát thực tế, giảm khiếu nại giao trễ.",
+      "f3Title": "Chấm điểm hiệu suất tài xế",
+      "f3Desc": "AI phân tích tốc độ, thời gian dừng và tỷ lệ giao thành công để xếp hạng hiệu suất từng tài xế, hỗ trợ điều phối công bằng."
+    },
     "hero": {
       "badge": "ecor TMS 4.0 • Điều Phối Tuyến Đường Tối Ưu",
       "title": "Tối Ưu Hóa Mọi Tuyến Đường, Giám Sát Đội Xe & Giao Hàng Số Hóa Real-Time",
@@ -569,6 +602,17 @@
     }
   },
   "pos": {
+    "ai": {
+      "badge": "AI Vận Hành",
+      "title": "AI gợi ý bán kèm, giữ chân khách quay lại",
+      "desc": "ecor POS phân tích hành vi mua hàng để gợi ý sản phẩm bán kèm đúng lúc, đúng khách — tăng giá trị đơn hàng mà không cần nhân viên ghi nhớ combo thủ công.",
+      "f1Title": "Gợi ý bán chéo tại quầy",
+      "f1Desc": "AI đề xuất sản phẩm thường được mua kèm dựa trên lịch sử giao dịch, hiển thị ngay trên màn hình thu ngân khi tính tiền.",
+      "f2Title": "Cảnh báo hàng cận hạn cần đẩy bán",
+      "f2Desc": "Tự động nhắc nhân viên ưu tiên bán các lô hàng sắp hết hạn trước, giảm tồn kho chết và hàng hủy.",
+      "f3Title": "Dự đoán khách có nguy cơ rời bỏ",
+      "f3Desc": "Phân tích tần suất mua hàng của khách thân thiết để cảnh báo sớm nhóm khách sắp ngừng quay lại, gợi ý thời điểm cần chăm sóc."
+    },
     "hero": {
       "badge": "ecor POS 4.0 • Trạm Bán Hàng Siêu Tốc",
       "title": "Bán Hàng Siêu Tốc 5 Giây, Đồng Bộ Tồn Kho Đa Điểm & Kết Nối Liền Mạch WMS",
@@ -680,6 +724,17 @@
     }
   },
   "account": {
+    "ai": {
+      "badge": "AI Vận Hành",
+      "title": "AI đối soát tự động, phát hiện bất thường trước khi thành rủi ro",
+      "desc": "ecor Account dùng AI để đối chiếu hàng nghìn giao dịch COD, hóa đơn mỗi ngày — việc từng tốn hàng giờ thủ công giờ chạy nền và chỉ báo cho bạn những gì thực sự cần xem.",
+      "f1Title": "Tự động đối soát COD đa kênh",
+      "f1Desc": "AI khớp tự động giao dịch COD giữa các đơn vị vận chuyển với sổ sách nội bộ, chỉ đẩy lên các trường hợp lệch số cần người kiểm tra.",
+      "f2Title": "Phát hiện giao dịch bất thường",
+      "f2Desc": "Nhận diện sớm các mẫu giao dịch lệch chuẩn — nghi trùng lặp, sai lệch số tiền — trước khi ảnh hưởng đến báo cáo tài chính.",
+      "f3Title": "Trích xuất dữ liệu hóa đơn tự động",
+      "f3Desc": "AI đọc và trích xuất thông tin từ hóa đơn đầu vào, giảm thời gian nhập liệu thủ công của kế toán."
+    },
     "hero": {
       "badge": "ecor Account 4.0 • Kế Toán Tự Động Cho Chuỗi Bán Lẻ & Logistics",
       "title": "Hạch Toán Tự Động Từng Giây, Đối Soát COD Tức Thì & Xuất Hóa Đơn Điện Tử Chuẩn Thông Tư 78",

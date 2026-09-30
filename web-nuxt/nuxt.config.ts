@@ -44,6 +44,8 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: 'https://ecor.vn',
     defaultLocale: 'vi',
+    // Khóa dịch thiếu ở en/zh/zh-tw sẽ hiện tạm nội dung tiếng Việt thay vì lộ key thô ra UI.
+    fallbackLocale: 'vi',
     strategy: 'prefix_except_default',
     customRoutes: 'config',
     langDir: 'locales',

@@ -286,6 +286,9 @@
       </div>
     </section>
 
+    <!-- 3b. AI TRONG VẬN HÀNH KHO -->
+    <AiFeatureBand ns="wms" />
+
     <!-- 4. QUY TRÌNH 5 BƯỚC KHÉP KÍN -->
     <section class="py-20 bg-white border-y border-zinc-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

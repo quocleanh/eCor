@@ -258,6 +258,9 @@
       </div>
     </section>
 
+    <!-- 2b. AI NỀN TẢNG -->
+    <AiFeatureBand ns="home" />
+
     <!-- 3. EXTENSIONS & ECOSYSTEM -->
     <section class="py-16 bg-[#fafcff]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
