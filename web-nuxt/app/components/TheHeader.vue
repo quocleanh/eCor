@@ -142,6 +142,12 @@
             {{ $t('header.resources') }}
           </NuxtLinkLocale>
 
+          <!-- Kiến thức (chỉ có tiếng Việt) -->
+          <NuxtLink to="/kien-thuc" class="transition-colors hover:text-amber-600"
+            :class="isActive(['/kien-thuc']) ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
+            {{ $t('header.knowledge') }}
+          </NuxtLink>
+
           <!-- Liên hệ -->
           <NuxtLinkLocale :to="{ name: 'lien-he' }" class="transition-colors hover:text-amber-600"
             :class="isActive(['/lien-he', '/contact']) ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
@@ -317,6 +323,12 @@
           :class="isActive(['/tai-nguyen', '/resources']) ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.resourcesApi') }}
         </NuxtLinkLocale>
+
+        <NuxtLink to="/kien-thuc" @click="isMobileMenuOpen = false"
+          class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
+          :class="isActive(['/kien-thuc']) ? 'text-amber-600 bg-amber-50' : ''">
+          {{ $t('header.knowledge') }}
+        </NuxtLink>
 
         <NuxtLinkLocale :to="{ name: 'lien-he' }" @click="isMobileMenuOpen = false"
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"

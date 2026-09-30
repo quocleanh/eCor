@@ -18,6 +18,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    // Chuỗi kết nối Neon cho kênh kiến thức (/kien-thuc). Đặt biến môi trường DATABASE_URL
+    // (hoặc NUXT_DATABASE_URL) trong Cloudflare → Settings → Build. Chỉ dùng lúc build, không lộ ra trình duyệt.
+    databaseUrl: process.env.DATABASE_URL || '',
     public: {
       contactNotifyUrl: process.env.NUXT_PUBLIC_CONTACT_NOTIFY_URL || 'https://ecor-contact-notify.anhquoc-apt.workers.dev',
     },
@@ -60,6 +63,9 @@ export default defineNuxtConfig({
     // Slug riêng theo từng locale, khớp 1:1 với src/router/routes.js của bản SPA cũ.
     // Tên key = tên file trong app/pages (không kèm .vue), là slug của locale mặc định (vi).
     pages: {
+      // Kênh kiến thức chỉ có tiếng Việt
+      'kien-thuc/index': { en: false, zh: false, 'zh-tw': false },
+      'kien-thuc/[slug]': { en: false, zh: false, 'zh-tw': false },
       'ke-toan': {
         en: '/accounting',
         zh: '/accounting',
@@ -140,7 +146,8 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false,
-      routes: ['/'],
+      // /kien-thuc: trang danh sách dẫn link tới từng bài → crawler tự prerender hết các bài
+      routes: ['/', '/kien-thuc'],
       // Xuất "wms.html" thay vì "wms/index.html" để URL không có dấu "/" cuối
       // khớp đúng với canonical/OG (không trailing slash) và tránh việc
       // Cloudflare tự 307-redirect "/wms" -> "/wms/" (lệch với canonical).
@@ -180,6 +187,8 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
+    // Thêm URL các bài kiến thức (đọc từ Neon lúc build)
+    sources: ['/api/sitemap-kien-thuc'],
     exclude: ['/dang-nhap', '/dang-ky', '/en/login', '/en/register', '/zh/login', '/zh/register', '/zh-tw/login', '/zh-tw/register'],
   },
 })
