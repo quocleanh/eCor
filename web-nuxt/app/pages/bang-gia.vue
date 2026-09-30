@@ -91,12 +91,12 @@
           </div>
 
           <div class="pt-8 mt-6">
-            <button
-              @click="openModal({ type: 'pricing', moduleName: 'ecor Starter' })"
-              class="w-full py-3.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 font-bold text-sm transition-all"
+            <a
+              :href="DASHBOARD_URL" target="_blank" rel="noopener"
+              class="block text-center w-full py-3.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 font-bold text-sm transition-all"
             >
               {{ $t('pricing.tiers.t1.btn') }}
-            </button>
+            </a>
           </div>
         </div>
 
@@ -327,6 +327,7 @@
 import HeroCanvas from '@/components/HeroCanvas.vue'
 import { ref, reactive, computed } from 'vue'
 import { useContactModal } from '@/composables/useContactModal'
+import { DASHBOARD_URL } from '@/config/links'
 
 const { t } = useI18n()
 const { openModal } = useContactModal()

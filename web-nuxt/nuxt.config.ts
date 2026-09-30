@@ -53,11 +53,13 @@ export default defineNuxtConfig({
       { code: 'zh', iso: 'zh-CN', language: 'zh-CN', file: 'zh.json', name: '简体中文' },
       { code: 'zh-tw', iso: 'zh-TW', language: 'zh-TW', file: 'zh-tw.json', name: '繁體中文' },
     ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'ecor-lang',
-      redirectOn: 'root',
-    },
+    // Tắt auto-redirect theo ngôn ngữ trình duyệt: trên site tĩnh (SSG), redirect
+    // này chạy client-side sau hydrate và có thể đổi nội dung ($t) sang locale
+    // phát hiện được trong khi UI chọn ngôn ngữ (TheHeader) vẫn hiển thị 'vi' do
+    // đọc route hiện tại trước khi client kịp điều hướng sang /en, /zh...
+    // -> gây lệch trạng thái "nội dung tiếng Anh nhưng bộ chọn ngôn ngữ báo VN".
+    // Mặc định luôn hiển thị tiếng Việt, người dùng tự chọn ngôn ngữ qua UI.
+    detectBrowserLanguage: false,
     // Slug riêng theo từng locale, khớp 1:1 với src/router/routes.js của bản SPA cũ.
     // Tên key = tên file trong app/pages (không kèm .vue), là slug của locale mặc định (vi).
     pages: {

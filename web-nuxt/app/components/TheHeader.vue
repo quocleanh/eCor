@@ -126,11 +126,9 @@
             {{ $t('header.solutions') }}
           </NuxtLinkLocale>
 
-          <!-- Bảng giá -->
-          <NuxtLinkLocale :to="{ name: 'bang-gia' }" class="transition-colors hover:text-amber-600"
-            :class="isActive(['/bang-gia', '/pricing']) ? 'text-amber-600 font-semibold' : 'text-zinc-700'">
-            {{ $t('header.pricing') }}
-          </NuxtLinkLocale>
+          <!-- Bảng giá: tạm ẩn khỏi menu vì giá tính theo từng app trong
+          marketplace, chưa có gói chung cho tất cả app (trang vẫn tồn tại,
+          chỉ ẩn liên kết điều hướng). -->
 
           <!-- Khách hàng -->
           <NuxtLinkLocale :to="{ name: 'khach-hang' }" class="transition-colors hover:text-amber-600"
@@ -312,12 +310,6 @@
           class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
           :class="isActive(['/giai-phap', '/solutions']) ? 'text-amber-600 bg-amber-50' : ''">
           {{ $t('header.mobileMenu.solutionsIndustry') }}
-        </NuxtLinkLocale>
-
-        <NuxtLinkLocale :to="{ name: 'bang-gia' }" @click="isMobileMenuOpen = false"
-          class="block px-3 py-2.5 rounded-lg hover:bg-zinc-100 text-sm font-medium"
-          :class="isActive(['/bang-gia', '/pricing']) ? 'text-amber-600 bg-amber-50' : ''">
-          {{ $t('header.mobileMenu.pricingService') }}
         </NuxtLinkLocale>
 
         <NuxtLinkLocale :to="{ name: 'khach-hang' }" @click="isMobileMenuOpen = false"
