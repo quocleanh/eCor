@@ -141,15 +141,9 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap' },
       ],
-      script: [
-        { src: 'https://www.googletagmanager.com/gtag/js?id=G-R12ZDPKS0D', async: true },
-        {
-          innerHTML: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-R12ZDPKS0D');`,
-        },
-      ],
+      // Google Analytics (gtag) và chat widget Chatbase KHÔNG đặt ở đây: cả hai chỉ được nạp
+      // sau khi khách bấm "Đồng ý" trên banner cookie. Xem app/composables/useCookieConsent.js
+      // (ID: GA G-R12ZDPKS0D, Chatbase rtbRqIiuA1U_XOmKeH5oE).
     },
   },
 

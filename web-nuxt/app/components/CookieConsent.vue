@@ -42,26 +42,29 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useCookieConsent } from '@/composables/useCookieConsent'
 
 const isVisible = ref(false)
-const CONSENT_KEY = 'ecor_cookie_consent'
+const consent = useCookieConsent()
 
 onMounted(() => {
+  // Khách đã đồng ý từ lần trước → nạp Analytics & chat widget ngay, không chờ 1s.
+  consent.loadIfAccepted()
+
   setTimeout(() => {
-    const consent = localStorage.getItem(CONSENT_KEY)
-    if (!consent) {
+    if (!consent.read()) {
       isVisible.value = true
     }
   }, 1000)
 })
 
 const accept = () => {
-  localStorage.setItem(CONSENT_KEY, 'accepted')
+  consent.accept()
   isVisible.value = false
 }
 
 const decline = () => {
-  localStorage.setItem(CONSENT_KEY, 'declined')
+  consent.decline()
   isVisible.value = false
 }
 </script>
