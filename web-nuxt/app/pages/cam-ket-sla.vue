@@ -460,7 +460,7 @@
             {{ $t('policy.sla.t120') }}
           </p>
 <div class="mt-auto pt-space-md">
-<a class="font-headline-sm text-headline-sm text-primary font-bold hover:underline block" href="tel:19006868">{{ $t('policy.sla.t121') }}</a>
+<a class="font-headline-sm text-headline-sm text-primary font-bold hover:underline block" href="tel:0978673867">{{ $t('policy.sla.t121') }}</a>
 <span class="font-label-sm text-label-sm text-on-surface-variant">{{ $t('policy.sla.t122') }}</span>
 </div>
 </div>

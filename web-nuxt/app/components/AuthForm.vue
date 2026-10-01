@@ -204,7 +204,7 @@
       <span>•</span>
       <NuxtLinkLocale :to="{ name: 'tai-nguyen' }" class="hover:text-zinc-800">Tài liệu API & Kết nối ERP</NuxtLinkLocale>
       <span>•</span>
-      <a href="tel:0822235858" class="hover:text-zinc-800">Tư vấn trực tiếp:  097 8673867</a>
+      <a href="tel:0978673867" class="hover:text-zinc-800">Tư vấn trực tiếp:  097 8673867</a>
     </div>
   </div>
 </template>

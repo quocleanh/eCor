@@ -416,7 +416,7 @@
             class="px-8 py-4 rounded-xl bg-white hover:bg-zinc-50 text-amber-950 font-extrabold text-sm shadow-lg transition-all">
             {{ $t('solutions.cta.btn') }}
           </button>
-          <a href="tel:0822235858"
+          <a href="tel:0978673867"
             class="px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-400 text-zinc-900 font-bold font-semibold text-sm border border-amber-700 transition-all">
             {{ $t('solutions.cta.hotline') }} 097 8673867
           </a>

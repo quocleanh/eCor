@@ -310,7 +310,7 @@
           <p class="text-amber-100 text-sm mt-1">{{ $t('pricing.cta.desc') }}</p>
         </div>
         <div class="flex items-center gap-3 shrink-0">
-          <a href="tel:0822235858" class="px-5 py-3 rounded-xl bg-white text-amber-800 font-extrabold text-xs shadow hover:bg-zinc-100 transition-all">Hotline:  097 8673867</a>
+          <a href="tel:0978673867" class="px-5 py-3 rounded-xl bg-white text-amber-800 font-extrabold text-xs shadow hover:bg-zinc-100 transition-all">Hotline:  097 8673867</a>
           <button 
             @click="openModal({ type: 'pricing', moduleName: 'Tư Vấn Gói Giá Phù Hợp' })"
             class="px-5 py-3 rounded-xl bg-amber-900/60 hover:bg-amber-500 text-zinc-900 font-bold font-bold text-xs border border-white/30 transition-all"

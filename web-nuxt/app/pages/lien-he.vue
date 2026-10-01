@@ -55,7 +55,7 @@
               </span>
             </div>
 
-            <a href="tel:0822235858" class="flex items-center justify-between p-3.5 rounded-2xl bg-zinc-50 hover:bg-amber-50 transition-colors group">
+            <a href="tel:0978673867" class="flex items-center justify-between p-3.5 rounded-2xl bg-zinc-50 hover:bg-amber-50 transition-colors group">
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">📞</div>
                 <div>
